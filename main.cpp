@@ -38,6 +38,12 @@ int main(int argc, char** argv){
             install(argv, argc);
         }
         else if(string(argv[1]) == "update"){
+            if(argc > 3 && (string(argv[3]) == "-p" || string(argv[3]) == "--powershell")){
+                use_powershell = true;
+            }
+            else if(argc > 3 && (string(argv[3]) == "-w" || string(argv[3]) == "--wget")){
+                use_powershell = false;
+            }
             update();
         }
         else if(string(argv[1]) == "search"){
@@ -56,7 +62,7 @@ int main(int argc, char** argv){
     else{
         // Windows 2000 or earlier
         cout << "You're using Windows 2000 or earlier, so your OS is not supported.\n";
-        cout << "Press enter to exit.\n";
+        cout << "Press Enter to exit.\n";
         cin.get();
     }
     return 0;

@@ -10,28 +10,68 @@ string winver, architecture;
 bool use_powershell;
 
 void installPackage(string package, string url){
-    string path, command;
+    string path, command, filename;
     path = "C:\\pmfow\\Downloads\\";
-    string filename = package + ".exe";
+    if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
+        filename = package + ".exe";
+    }
+    else{
+        filename = package + ".zip";
+    }
     string fullpath = path + filename;
     if(use_powershell){
         command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('" + url + "', '" + fullpath + "')\"";
     }
     else{
-        command = "wget -O " + fullpath + filename + " " + url;
+        command = "wget -O " + fullpath + filename + " " + url + " --no-check-certificate";
     }
     system(command.c_str());
-    command = "start " + fullpath;
-    system(command.c_str());
+    if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
+        command = "start " + fullpath;
+        system(command.c_str());
+    }
+    else{
+        cout << "Please install " << filename << " manually. You can find the file at C:\\pmfow\\Downloads\\" << endl;
+    }
 }
 
 void updateRepositories(){
-    string command;
+    string command1, command2, command3, command4, command5;
     if(use_powershell){
-        command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/PMF-Official/pmfow/main/pmfow.exe', 'C:\\pmfow\\pmfow.exe')\"";
+        if(architecture == "x64"){
+            command1 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winxp.txt')\"";
+            command2 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winvista.txt')\"";
+            command3 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win7.txt')\"";
+            command4 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win8.txt')\"";
+            command5 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win10.txt')\"";
+        }
+        else if(architecture == "x86"){
+            command1 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt')\"";
+            command2 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt')\"";
+            command3 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt')\"";
+            command4 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt')\"";
+            command5 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt')\"";
+        }
     }
     else{
-        command = "wget -O C:\\pmfow\\pmfow.exe https://raw.githubusercontent.com/PMF-Official/pmfow/main/pmfow.exe";
+        if(architecture == "x64"){
+            command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winxp.txt --no-check-certificate";
+            command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winvista.txt --no-check-certificate";
+            command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win7.txt --no-check-certificate";
+            command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win8.txt --no-check-certificate";
+            command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win10.txt --no-check-certificate";
+        }
+        else if(architecture == "x86"){
+            command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt --no-check-certificate";
+            command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt --no-check-certificate";
+            command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt --no-check-certificate";
+            command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt --no-check-certificate";
+            command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt --no-check-certificate";
+        }
     }
-    system(command.c_str());
+    system(command1.c_str());
+    system(command2.c_str());
+    system(command3.c_str());
+    system(command4.c_str());
+    system(command5.c_str());
 }

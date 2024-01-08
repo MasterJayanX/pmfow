@@ -86,7 +86,7 @@ string getWindowsVersion(int majorVersion, int minorVersion){
     else{
         winver = "Other Windows version";
     }
-    if(winver == "Windows XP"){
+    if(winver == "Windows XP" || winver == "Windows Vista"){
         use_powershell = false;
     }
     else{

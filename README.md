@@ -51,5 +51,7 @@ Then, you have to open a terminal window and compile the main.cpp file with the 
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
+- If you use the update command in a different directory than the one pmfow is installed in, you will have to copy or move the updated repository files to pmfow's folder manually.
+- Uninstalling applications from pmfow and silent installers are not supported yet.
 
 If you find any issues with pmfow, open a report in the Issues section and I will check it out.

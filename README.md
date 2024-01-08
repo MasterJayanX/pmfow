@@ -1,6 +1,4 @@
-# pmfow
- Package Manager for Old Windows
- 
+# Package Manager for Old Windows
  [![GitHub release](https://img.shields.io/github/v/release/MasterJayanX/pmfow.svg)](https://github.com/MasterJayanX/pmfow/releases) [![GitHub all releases](https://img.shields.io/github/downloads/MasterJayanX/pmfow/total)](https://github.com/MasterJayanX/pmfow/releases) 
 ## Description
 pmfow (Package Manager for Old Windows) is a program that allows you to install applications from the command line in older versions of Windows similarly to how you would do it on Linux or on Windows 10 with [winget](https://github.com/microsoft/winget-cli).
@@ -38,6 +36,8 @@ Here's a list of commands you can use:
 If you are using the install or update commands, you can use these flags:
 - `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. Note: This is not needed on Windows 7 or above, since those versions use Powershell by default. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
 - `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed on Windows XP or Vista, since those versions use wget by default. Keep in mind that you will have to install wget on Windows in order to be able to use it with pmfow (I provided links in the step 4 of the Installation).
+- `-c` or `--check-certificates`: Forces wget to check for certificates when downloading a package.
+- `--force-os`: Forces pmfow to install packages for a different version of Windows.
 
 This is useful if either Powershell or wget fails or just refuses to work.
 

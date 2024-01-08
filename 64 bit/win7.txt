@@ -1,6 +1,4 @@
 supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_64_setup.exe
-mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win64.installer.exe
-mypal68=https://www.mypal-browser.org/release/mypal-68.13.1.en-US.win32.zip
 vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win64.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.x64.exe
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win64/en-US/Firefox%20Setup%20115.6.0esr.exe
@@ -29,3 +27,7 @@ cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab84
 qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.5.5_x64_setup.exe
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
+rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
+vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.x64.exe
+open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe

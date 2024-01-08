@@ -24,3 +24,7 @@ python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
+rufus=https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
+vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.5.3206.50.x64.exe
+open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe

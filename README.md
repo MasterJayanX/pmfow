@@ -33,8 +33,8 @@ Here's a list of commands you can use:
 - `pmfow help`: This command will show you a list of commands with a description for each one, like the one you are seeing here.
 
 If you are using the install or update commands, you can use these flags:
-- `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. Note: This is not needed on Windows 7 or above, since those versions use Powershell by default. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
-- `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed on Windows XP or Vista, since those versions use wget by default. Keep in mind that you will have to install wget on Windows in order to be able to use it with pmfow (I provided links in the step 4 of the Installation).
+- `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
+- `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed most of the time since wget is used by pmfow by default.
 - `-c` or `--check-certificates`: Forces wget to check for certificates when downloading a package.
 - `--force-os`: Forces pmfow to install packages for a different version of Windows.
 
@@ -42,14 +42,16 @@ This is useful if either Powershell or wget fails or just refuses to work.
 
 ## Compiling
 ### Requirements
-- Having the g++ compiler installed on your computer (for Windows users, you can install it with MinGW or use WSL).
+- Having the g++ compiler installed on your Windows computer (you can install it with MinGW).
 
 To compile this program yourself, you need to download the .cpp files and save them in the same directory. Alternatively, you can download the repository files using the following command on a terminal window: `git clone https://github.com/MasterJayanX/pmfow`. 
 Then, you have to open a terminal window and compile the main.cpp file with the following command: `g++ main.cpp -o output.exe` (you can replace output with any name you want).
 
-## Limitations
+## Limitations and known issues
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
+- If you use the update command in a different directory than the one pmfow is installed in, you will have to copy or move the updated repository files to pmfow's folder manually.
+- Uninstalling applications from pmfow and silent installers are not supported yet.
 
-If you find any issues with pmfow, open a report in the Issues section and I will check it out.
+If you find any issues with pmfow, open an issue in the Issues section and I will check it out.

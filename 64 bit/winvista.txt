@@ -15,3 +15,11 @@ winrar=https://www.rarlab.com/rar/winrar-x64-602.exe
 irfanview=https://www.fosshub.com/IrfanView.html?dwl=iview466_x64_setup.exe#
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
+libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
+mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x64.exe
+retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
+python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
+cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
+qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.1.9.1_x64_setup.exe
+lightshot=https://app.prntscr.com/build/setup-lightshot.exe
+sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe

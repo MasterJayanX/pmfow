@@ -1,9 +1,9 @@
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win64.installer.exe
 mypal68=https://www.mypal-browser.org/release/mypal-68.13.1.en-US.win32.zip
 firefox=https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win64/en-US/Firefox%20Setup%2052.9.0esr.exe
-vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win64.exe
+vlc=https://mirror.lstn.net/videolan/vlc/3.0.20/win64/vlc-3.0.20-win64.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.9.2/npp.7.9.2.Installer.exe
-chromium=https://chromium.woolyss.com/f/chromium_win32_49.0.2623.112_r403382_sync.exe
+chromium=https://web.archive.org/web/20210603163609/https://github.com/henrypp/chromium/releases/download/v49.0.2623.112-r403382-win32/chromium_sync.exe
 sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/3.1.2/SumatraPDF-3.1.2-64-install.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-3.exe
@@ -15,3 +15,11 @@ irfanview=https://www.fosshub.com/IrfanView.html?dwl=iview466_x64_setup.exe#
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/download/3.0.4/One-Core-API-Binaries-3.0.4.zip
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
+libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
+mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x64.exe
+retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
+python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
+cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_minimal.exe
+qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.1.9.1_x64_setup.exe
+lightshot=https://app.prntscr.com/build/setup-lightshot.exe
+sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe

@@ -7,13 +7,18 @@
 using namespace std;
 
 string winver, architecture;
-bool use_powershell;
+bool use_powershell = false, check_cert = false;
 
 void installPackage(string package, string url){
     string path, command, filename;
     path = "C:\\pmfow\\Downloads\\";
+    command = "mkdir " + path;
+    system(command.c_str());
     if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
         filename = package + ".exe";
+    }
+    else if(package == "libreoffice" || package == "python"){
+        filename = package + ".msi";
     }
     else{
         filename = package + ".zip";
@@ -23,7 +28,12 @@ void installPackage(string package, string url){
         command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('" + url + "', '" + fullpath + "')\"";
     }
     else{
-        command = "wget -O " + fullpath + filename + " " + url + " --no-check-certificate";
+        if(check_cert){
+            command = "wget -O " + fullpath + " " + url;
+        }
+        else{
+            command = "wget -O " + fullpath + " " + url + " --no-check-certificate";
+        }
     }
     system(command.c_str());
     if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
@@ -55,18 +65,36 @@ void updateRepositories(){
     }
     else{
         if(architecture == "x64"){
-            command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winxp.txt --no-check-certificate";
-            command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winvista.txt --no-check-certificate";
-            command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win7.txt --no-check-certificate";
-            command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win8.txt --no-check-certificate";
-            command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win10.txt --no-check-certificate";
+            if(check_cert){
+                command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winxp.txt";
+                command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winvista.txt";
+                command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win7.txt";
+                command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win8.txt";
+                command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win10.txt";
+            }
+            else{
+                command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winxp.txt --no-check-certificate";
+                command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/winvista.txt --no-check-certificate";
+                command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win7.txt --no-check-certificate";
+                command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win8.txt --no-check-certificate";
+                command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/64%20bit/win10.txt --no-check-certificate";
+            }
         }
         else if(architecture == "x86"){
-            command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt --no-check-certificate";
-            command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt --no-check-certificate";
-            command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt --no-check-certificate";
-            command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt --no-check-certificate";
-            command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt --no-check-certificate";
+            if(check_cert){
+                command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt";
+                command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt";
+                command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt";
+                command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt";
+                command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt";
+            }
+            else{
+                command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt --no-check-certificate";
+                command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt --no-check-certificate";
+                command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt --no-check-certificate";
+                command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt --no-check-certificate";
+                command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt --no-check-certificate";
+            }
         }
     }
     system(command1.c_str());

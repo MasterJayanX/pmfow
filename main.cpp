@@ -29,22 +29,22 @@ int main(int argc, char** argv){
     if(osv.dwMajorVersion > 5 || (osv.dwMajorVersion == 5 && osv.dwMinorVersion >= 1)){
         // Windows XP or later
         if(string(argv[1]) == "install"){
-            if(argc > 3 && (string(argv[3]) == "-p" || string(argv[3]) == "--powershell")){
-                use_powershell = true;
+            int success = checkFlags(argc, argv);
+            if(success == 0){
+                return 0;
             }
-            else if(argc > 3 && (string(argv[3]) == "-w" || string(argv[3]) == "--wget")){
-                use_powershell = false;
+            else{
+                install(argv, argc);
             }
-            install(argv, argc);
         }
         else if(string(argv[1]) == "update"){
-            if(argc > 3 && (string(argv[3]) == "-p" || string(argv[3]) == "--powershell")){
-                use_powershell = true;
+            int success = checkFlags(argc, argv);
+            if(success == 0){
+                return 0;
             }
-            else if(argc > 3 && (string(argv[3]) == "-w" || string(argv[3]) == "--wget")){
-                use_powershell = false;
+            else{
+                update();
             }
-            update();
         }
         else if(string(argv[1]) == "search"){
             search(argv, argc);

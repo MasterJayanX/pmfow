@@ -86,12 +86,6 @@ string getWindowsVersion(int majorVersion, int minorVersion){
     else{
         winver = "Other Windows version";
     }
-    if(winver == "Windows XP" || winver == "Windows Vista"){
-        use_powershell = false;
-    }
-    else{
-        use_powershell = true;
-    }
     return winver;
 }
 
@@ -165,6 +159,10 @@ void help(){
     cout << "pmfow search <package> - Searches for a package\n";
     cout << "pmfow help - Shows this help message\n";
     cout << "pmfow version - Shows the version of pmfow that you are running\n";
+    cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS\n";
+    cout << "pmfow install <package> --powershell - Installs a package using PowerShell (not needed for Windows 7 or above)\n";
+    cout << "pmfow install <package> --wget - Installs a package using wget (not needed for Windows XP or Vista)\n";
+    cout << "pmfow install <package> --check-certificates - Installs a package using wget with certificate checking\n";
 }
 
 void version(){
@@ -172,4 +170,63 @@ void version(){
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << endl;
     cout << "Architecture: " << architecture << endl;
+}
+
+int checkFlags(int argc, char** argv){
+    int success = 1;
+    if(argc > 3){
+        for(int i = 3; i < argc; i++){
+            if(string(argv[i]) == "-p" || string(argv[i]) == "--powershell"){
+                use_powershell = true;
+            }
+            else if(string(argv[i]) == "-w" || string(argv[i]) == "--wget"){
+                use_powershell = false;
+            }
+            if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
+                if(use_powershell){
+                    cout << "PowerShell doesn't support the --check-certificates flag.\n";
+                    cout << "Please use this alongside the --wget flag instead.\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    check_cert = true;
+                }
+            }
+            if(string(argv[i]) == "--force-os"){
+                if(argc < i+1){
+                    cout << "Usage: pmfow install <package> --force-os <os>\n";
+                    cout << "Valid options: xp, vista, 7, 8, 8.1, 10\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                        winver = "Windows XP";
+                    }
+                    else if(string(argv[i+1]) == "vista" || string(argv[i+1]) == "Vista" || string(argv[i+1]) == "WinVista" || string(argv[i+1]) == "winvista"){
+                        winver = "Windows Vista";
+                    }
+                    else if(string(argv[i+1]) == "7" || string(argv[i+1]) == "Win7" || string(argv[i+1]) == "win7"){
+                        winver = "Windows 7";
+                    }
+                    else if(string(argv[i+1]) == "8" || string(argv[i+1]) == "Win8" || string(argv[i+1]) == "win8"){
+                        winver = "Windows 8";
+                    }
+                    else if(string(argv[i+1]) == "8.1" || string(argv[i+1]) == "Win8.1" || string(argv[i+1]) == "win8.1"){
+                        winver = "Windows 8.1";
+                    }
+                    else if(string(argv[i+1]) == "10" || string(argv[i+1]) == "Win10" || string(argv[i+1]) == "win10"){
+                        winver = "Windows 10";
+                    }
+                    else{
+                        cout << "Invalid OS.\n";
+                        success = 0;
+                        return success;
+                    }
+                }
+            }
+        }
+    }
+    return success;
 }

@@ -1,19 +1,22 @@
 # List of softwares you can install with pmfow
 
- - `7zip`: 7-zip. Operating systems: Windows XP to Windows 10.
+ - `7-zip`: 7-zip. Operating systems: Windows 2000 to Windows 10.
  - `audacity`: Audacity. Operating systems: Windows XP to Windows 10.
  - `bitwarden`: Bitwarden. Operating systems: Windows 7 to Windows 10.
  - `cdburnerxp`: CDBurnerXP. Operating systems: Windows XP to Windows 10.
  - `chromium`: Chromium. Operating systems: Windows XP to Windows 10.
  - `chromium-nosync`: Chromium-nosync. Operating systems: Windows 7 to Windows 10.
+ - `clamav`: ClamAV. Operating systems: Windows 7 to Windows 10.
+ - `clamsentinel`: ClamSentinel. Operating systems: Windows 2000 to Windows 10.
+ - `clamwin`: ClamWin. Operating systems: Windows 2000 to Windows 10.
  - `everything`: Everything. Operating systems: Windows XP to Windows 10.
- - `firefox`: Firefox. Operating systems: Windows XP to Windows 10.
- - `firefox-esr`: Firefox ESR. Operating systems: Windows 10 only.
+ - `firefox`: Firefox. Operating systems: Windows 2000 to Windows 10.
+ - `firefox-esr`: Firefox ESR. Operating systems: Windows 2000 and Windows 10 only.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
  - `irfanview`: IrfanView. Operating systems: Windows XP to Windows 10.
  - `libreoffice`: LibreOffice. Operating systems: Windows XP to Windows 10.
  - `lightshot`: Lightshot. Operating systems: Windows XP to Windows 10.
- - `mgba`: mGBA. Operating systems: Windows 7 to Windows 10.
+ - `mgba`: mGBA. Operating systems: Windows Vista to Windows 10.
  - `mpc-be`: MPC-BE. Operating systems: Windows 7 to Windows 10.
  - `mpc-hc`: MPC-HC. Operating systems: Windows XP to Windows 10.
  - `mypal`: Mypal 29.3.0. Operating systems: Windows XP and Windows Vista.
@@ -21,8 +24,7 @@
  - `notepad++`: Notepad++. Operating systems: Windows XP to Windows 10.
  - `obs-studio`: OBS Studio. Operating systems: Windows 7 to Windows 10.
  - `onecoreapi`: OneCore API. Operating systems: Windows XP only.
- - `openoffice`: OpenOffice. Operating systems: Windows XP and Windows Vista.
- - `open-shell`: Open-Shell. Operating systems: Windows 7 to Windows 10.
+ - `openoffice`: OpenOffice. Operating systems: Windows 2000 to Windows Vista.
  - `paint.net`: Paint.NET. Operating systems: Windows XP to Windows 10.
  - `pale-moon`: Pale Moon. Operating systems: Windows 7 to Windows 10.
  - `python`: Python 2. Operating systems: Windows XP to Windows 10.
@@ -30,12 +32,24 @@
  - `qbittorrent`: qBitTorrent. Operating systems: Windows XP to Windows 10.
  - `retroarch`: RetroArch. Operating systems: Windows XP to Windows 10.
  - `rufus`: Rufus. Operating systems: Windows XP to Windows 10.
+ - `seamonkey`: SeaMonkey. Operating systems: Windows 2000 to Windows 10.
  - `sharex`: ShareX. Operating systems: Windows XP to Windows 10.
- - `sumatrapdf`: SumatraPDF. Operating systems: Windows XP to Windows 10.
+ - `sumatrapdf`: SumatraPDF. Operating systems: Windows 2000 to Windows 10.
  - `supermium`: Supermium. Operating systems: Windows Vista to Windows 8.1.
  - `thunderbird`: Thunderbird. Operating systems: Windows XP to Windows 10.
+ - `ungoogled-chromium`: Ungoogled Chromium. Operating systems: Windows 7 to Windows 10.
  - `vivaldi`: Vivaldi. Operating systems: Windows 7 to Windows 10.
- - `vlc`: VLC Media Player. Operating systems: Windows XP to Windows 10.
+ - `vlc`: VLC Media Player. Operating systems: Windows 2000 to Windows 10.
  - `vscode`: Visual Studio Code. Operating systems: Windows 7 to Windows 10.
  - `winrar`: WinRAR. Operating systems: Windows XP to Windows 10.
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
+
+## Changelog
+
+9/1/2024:
+- Added ClamAV, ClamWin, ClamSentinel, Ungoogled-chromium and SeaMonkey
+- Added support for Windows 2000
+- Added mGBA for Windows Vista
+
+8/1/2024:
+- Initial version of this file.

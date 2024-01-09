@@ -16,6 +16,7 @@ pmfow will run in most versions of Windows from Windows XP onwards. It will tech
 **This is the list of partially supported versions:**
 
 - Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's repository are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
+- Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
 - Windows Server versions from Server 2003 to Server 2012: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work.
 
 ## Installation
@@ -37,8 +38,7 @@ If you are using the install or update commands, you can use these flags:
 - `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed most of the time since wget is used by pmfow by default.
 - `-c` or `--check-certificates`: Forces wget to check for certificates when downloading a package.
 - `--force-os`: Forces pmfow to install packages for a different version of Windows.
-
-This is useful if either Powershell or wget fails or just refuses to work.
+- `--show-url`: Shows the URL from which the package you are installing or searching for is downloaded.
 
 ## Compiling
 ### Requirements

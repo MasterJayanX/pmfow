@@ -1,0 +1,10 @@
+firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20Setup%2012.0.exe
+firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/10.0.9esr/win32/en-US/Firefox%20Setup%2010.0.9esr.exe
+vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
+clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
+7-zip=https://www.7-zip.org/a/7z2301.exe
+sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/1.5.1/SumatraPDF-1.5.1-install.exe
+winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
+openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
+seamonkey=https://archive.seamonkey-project.org/releases/2.9.1/win32/en-US/SeaMonkey%20Setup%202.9.1.exe

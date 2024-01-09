@@ -26,7 +26,7 @@ int main(int argc, char** argv){
     int minorVersion = osv.dwMinorVersion;
     winver = getWindowsVersion(majorVersion, minorVersion);
     architecture = getArchitecture();
-    if(osv.dwMajorVersion > 5 || (osv.dwMajorVersion == 5 && osv.dwMinorVersion >= 1)){
+    if(osv.dwMajorVersion >= 5){
         // Windows XP or later
         if(string(argv[1]) == "install"){
             int success = checkFlags(argc, argv);
@@ -47,7 +47,13 @@ int main(int argc, char** argv){
             }
         }
         else if(string(argv[1]) == "search"){
-            search(argv, argc);
+            int success = checkSearchFlags(argc, argv);
+            if(success == 0){
+                return 0;
+            }
+            else{
+                search(argv, argc);
+            }
         }
         else if(string(argv[1]) == "help"){
             help();
@@ -61,7 +67,7 @@ int main(int argc, char** argv){
     }
     else{
         // Windows 2000 or earlier
-        cout << "You're using Windows 2000 or earlier, so your OS is not supported.\n";
+        cout << "You're using Windows 98/ME or earlier, so your OS is not supported.\n";
         cout << "Press Enter to exit.\n";
         cin.get();
     }

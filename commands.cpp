@@ -28,7 +28,10 @@ private:
 
     void loadRepos(const string& os) {
         ifstream file;
-        if(os == "Windows XP"){
+        if(os == "Windows 2000"){
+            file.open("win2000.txt");
+        }
+        else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003"){
             file.open("winxp.txt");
         }
         else if(os == "Windows Vista"){
@@ -65,8 +68,14 @@ private:
 
 string getWindowsVersion(int majorVersion, int minorVersion){
     string winver;
-    if(majorVersion == 5 && minorVersion == 1){
+    if(majorVersion == 5 && minorVersion == 0){
+        winver = "Windows 2000";
+    }
+    else if(majorVersion == 5 && (minorVersion == 1)){
         winver = "Windows XP";
+    }
+    else if(majorVersion == 5 && (minorVersion == 2 || minorVersion == 3)){
+        winver = "Windows XP Professional x64/Windows Server 2003";
     }
     else if(majorVersion == 6 && minorVersion == 0){
         winver = "Windows Vista";
@@ -121,6 +130,10 @@ void install(char** argv, int argc){
     else{
         cout << "Installing " << argv[2] << "...\n";
         repo r(winver);
+        if(r.repos(argv[2]) == "Package not found"){
+            cout << "Package not found.\n";
+            return;
+        }
         string url = r.repos(argv[2]);
         string packagename = string(argv[2]);
         cout << url << endl;
@@ -148,6 +161,9 @@ void search(char** argv, int argc){
         }
         else{
             cout << "Package found: " << argv[2] << endl;
+            if(show_url){
+                cout << "URL: " << r.repos(argv[2]) << endl;
+            }
         }
     }
 }
@@ -160,9 +176,12 @@ void help(){
     cout << "pmfow help - Shows this help message\n";
     cout << "pmfow version - Shows the version of pmfow that you are running\n";
     cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS\n";
-    cout << "pmfow install <package> --powershell - Installs a package using PowerShell (not needed for Windows 7 or above)\n";
-    cout << "pmfow install <package> --wget - Installs a package using wget (not needed for Windows XP or Vista)\n";
-    cout << "pmfow install <package> --check-certificates - Installs a package using wget with certificate checking\n";
+    cout << "pmfow install <package> --powershell - Installs a package using PowerShell's DownloadFile function\n";
+    cout << "pmfow install <package> --wget - Installs a package using wget (not needed in most cases)\n";
+    cout << "pmfow install <package> --check-certificates / pmfow update --check-certificates - Installs a package using wget with certificate checking\n";
+    cout << "pmfow install <package> --show-url - Shows the URL of the package\n";
+    cout << "pmfow search <package> --force-os <os> - Searches for a package for a different OS\n";
+    cout << "pmfow search <package> --show-url - Shows the URL of the package\n";
 }
 
 void version(){
@@ -194,14 +213,17 @@ int checkFlags(int argc, char** argv){
                 }
             }
             if(string(argv[i]) == "--force-os"){
-                if(argc < i+1){
+                if(argc < i+1 || string(argv[1]) != "install"){
                     cout << "Usage: pmfow install <package> --force-os <os>\n";
                     cout << "Valid options: xp, vista, 7, 8, 8.1, 10\n";
                     success = 0;
                     return success;
                 }
                 else{
-                    if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
+                        winver = "Windows 2000";
+                    }
+                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
                         winver = "Windows XP";
                     }
                     else if(string(argv[i+1]) == "vista" || string(argv[i+1]) == "Vista" || string(argv[i+1]) == "WinVista" || string(argv[i+1]) == "winvista"){
@@ -225,6 +247,57 @@ int checkFlags(int argc, char** argv){
                         return success;
                     }
                 }
+            }
+            if(string(argv[i]) == "-u" || string(argv[i]) == "--show-url"){
+                show_url = true;
+            }
+        }
+    }
+    return success;
+}
+
+int checkSearchFlags(int argc, char** argv){
+    int success = 1;
+    if(argc > 3){
+        for(int i = 3; i < argc; i++){
+            if(string(argv[i]) == "--force-os"){
+                if(argc < i+1){
+                    cout << "Usage: pmfow search <package> --force-os <os>\n";
+                    cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
+                        winver = "Windows 2000";
+                    }
+                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                        winver = "Windows XP";
+                    }
+                    else if(string(argv[i+1]) == "vista" || string(argv[i+1]) == "Vista" || string(argv[i+1]) == "WinVista" || string(argv[i+1]) == "winvista"){
+                        winver = "Windows Vista";
+                    }
+                    else if(string(argv[i+1]) == "7" || string(argv[i+1]) == "Win7" || string(argv[i+1]) == "win7"){
+                        winver = "Windows 7";
+                    }
+                    else if(string(argv[i+1]) == "8" || string(argv[i+1]) == "Win8" || string(argv[i+1]) == "win8"){
+                        winver = "Windows 8";
+                    }
+                    else if(string(argv[i+1]) == "8.1" || string(argv[i+1]) == "Win8.1" || string(argv[i+1]) == "win8.1"){
+                        winver = "Windows 8.1";
+                    }
+                    else if(string(argv[i+1]) == "10" || string(argv[i+1]) == "Win10" || string(argv[i+1]) == "win10"){
+                        winver = "Windows 10";
+                    }
+                    else{
+                        cout << "Invalid OS.\n";
+                        success = 0;
+                        return success;
+                    }
+                }
+            }
+            if(string(argv[i]) == "-u" || string(argv[i]) == "--show-url"){
+                show_url = true;
             }
         }
     }

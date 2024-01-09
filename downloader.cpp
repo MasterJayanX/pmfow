@@ -7,7 +7,7 @@
 using namespace std;
 
 string winver, architecture;
-bool use_powershell = false, check_cert = false;
+bool use_powershell = false, check_cert = false, show_url = false;
 
 void installPackage(string package, string url){
     string path, command, filename;
@@ -17,11 +17,14 @@ void installPackage(string package, string url){
     if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
         filename = package + ".exe";
     }
-    else if(package == "libreoffice" || package == "python"){
+    else if(package == "libreoffice" || package == "python" || package == "clamav"){
         filename = package + ".msi";
     }
     else{
         filename = package + ".zip";
+    }
+    if(show_url){
+        cout << "URL: " << url << endl;
     }
     string fullpath = path + filename;
     if(use_powershell){
@@ -61,6 +64,7 @@ void updateRepositories(){
             command3 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt')\"";
             command4 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt')\"";
             command5 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt')\"";
+            string command6 = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win2000.txt')\"";
         }
     }
     else{
@@ -81,12 +85,14 @@ void updateRepositories(){
             }
         }
         else if(architecture == "x86"){
+            string command6;
             if(check_cert){
                 command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt";
                 command2 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winvista.txt";
                 command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt";
                 command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt";
                 command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt";
+                command6 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win2000.txt";
             }
             else{
                 command1 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/winxp.txt --no-check-certificate";
@@ -94,6 +100,7 @@ void updateRepositories(){
                 command3 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win7.txt --no-check-certificate";
                 command4 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win8.txt --no-check-certificate";
                 command5 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win10.txt --no-check-certificate";
+                command6 = "wget https://raw.githubusercontent.com/MasterJayanX/pmfow/main/32%20bit/win2000.txt --no-check-certificate";
             }
         }
     }

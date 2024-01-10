@@ -29,3 +29,5 @@ everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win64/en-US/seamonkey-2.49.5.installer.exe
+bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v4.16/BCUninstaller_4.16_setup.exe
+legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe

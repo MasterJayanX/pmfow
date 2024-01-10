@@ -15,7 +15,7 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.e
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win32/en-US/Thunderbird%20Setup%20115.6.0.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86/LibreOffice_7.6.4_Win_x86.msi
-mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x86.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x86.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5.1/Bitwarden-Installer-2022.5.1.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86/RetroArch-Win32-setup.exe
@@ -35,3 +35,8 @@ clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.
 clamav=https://www.clamav.net/downloads/production/clamav-1.0.4.win.win32.msi
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
+bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
+legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
+bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
+krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
+playnite=https://playnite.link/download/PlayniteInstaller.exe

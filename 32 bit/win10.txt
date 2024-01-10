@@ -3,7 +3,7 @@ pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=32&type=installer
 supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_32_setup.exe
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://www.mypal-browser.org/release/mypal-68.13.1.en-US.win32.zip
-vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.exe
+vlc=https://mirror.lstn.net/videolan/vlc/3.0.20/win32/vlc-3.0.20-win32.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe

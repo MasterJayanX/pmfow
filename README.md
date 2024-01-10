@@ -55,3 +55,8 @@ pmfow is in an early stage of development, so you can expect some things to not 
 - Uninstalling applications from pmfow and silent installers are not supported yet.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it out.
+
+## Donations
+I accept donations through Ko-fi:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D37FMC3)

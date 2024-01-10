@@ -1,10 +1,11 @@
 # Package Manager for Old Windows
  [![GitHub release](https://img.shields.io/github/v/release/MasterJayanX/pmfow.svg)](https://github.com/MasterJayanX/pmfow/releases) [![GitHub all releases](https://img.shields.io/github/downloads/MasterJayanX/pmfow/total)](https://github.com/MasterJayanX/pmfow/releases) 
 ## Description
-pmfow (Package Manager for Old Windows) is a program that allows you to install applications from the command line in older versions of Windows similarly to how you would do it on Linux or on Windows 10 with [winget](https://github.com/microsoft/winget-cli).
+pmfow (Package Manager for Old Windows) is a program that allows you to install applications from the command line in older versions of Windows similarly to how you would do it in Linux or in Windows 10 with [winget](https://github.com/microsoft/winget-cli).
 
 ## Requirements
-pmfow will run in most versions of Windows from Windows XP onwards. It will technically work on Windows 2000, but I flagged that version as "unsupported", so you will need to do some modifications to get it to work.
+pmfow will run in most versions of Windows from Windows 2000 onwards.
+
 **This is the list of fully supported versions:**
 
 - Windows XP
@@ -17,13 +18,13 @@ pmfow will run in most versions of Windows from Windows XP onwards. It will tech
 
 - Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's repository are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
 - Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
-- Windows Server versions from Server 2003 to Server 2012: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work.
+- Windows Server versions from Server 2003 to Server 2022: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work (the only exception is Server 2003, but NT 5.2 is supported).
 
 ## Installation
 To install pmfow, you need to follow these steps:
 1. Download the .exe file from the Releases page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
 2. Open the .exe file and extract the files in a new folder. To do this, open the .exe, click the three dots, create a new folder and select it.
-3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
+3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example, `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
 ## Usage
 To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead.
 Here's a list of commands you can use:

@@ -55,7 +55,21 @@ pmfow is in an early stage of development, so you can expect some things to not 
 - If you use the update command in a different directory than the one pmfow is installed in, you will have to copy or move the updated repository files to pmfow's folder manually.
 - Uninstalling applications from pmfow and silent installers are not supported yet.
 
-If you find any issues with pmfow, open an issue in the Issues section and I will check it out.
+If you find any issues with pmfow, open an issue in the Issues section and I will check it.
+
+## FAQ (Frequently Asked Questions)
+### What versions of Windows are supported?
+As I said above, pmfow works on the following Windows versions: Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, Windows 8, Windows Server 2012, Windows 8.1, Windows 10, Windows Server 2016/2019/2022 and Windows 11. It should also work on ReactOS, but I haven't tested it yet.
+### What are the .txt files that come alongside pmfow's files?
+Those .txt files are just the lists of softwares that pmfow can install. They are basically like repositories. I might change them to files without extensions in later updates.
+### What applications can I install with pmfow?
+You can find the full list of applications that can be installed in [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md).
+### Does pmfow work on Windows 9x?
+Unfortunately, due to these versions of Windows being too old for wget to work reliably on them, I decided to not add support for them with this project.
+### Will this project support other operating systems?
+Unfortunately no, because other OSes probably already have package managers for them. For example, for old versions of macOS, you can use [Tigerbrew](https://github.com/mistydemeo/tigerbrew) and most Linux distributions come with a package manager.
+### What things do you plan to add?
+I'm planning to add the option of installing multiple packages at once, more flags to configure the way you install packages or update the repositories, the option of using silent installers and of course, I will add more applications to the repositories.
 
 ## Donations
 I accept donations through Ko-fi:

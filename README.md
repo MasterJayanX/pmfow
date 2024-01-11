@@ -38,8 +38,10 @@ If you are using the install or update commands, you can use these flags:
 - `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
 - `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed most of the time since wget is used by pmfow by default.
 - `-c` or `--check-certificates`: Forces wget to check for certificates when downloading a package.
-- `--force-os`: Forces pmfow to install packages for a different version of Windows.
+- `--force-os <version>`: Forces pmfow to install packages for a different version of Windows.
 - `--show-url`: Shows the URL from which the package you are installing or searching for is downloaded.
+- `-o` or `--one-file`: The update command will only update the repository file that corresponds to your current version of Windows.
+- `--wget-version <version>`: Forces the install or update command to use a version of wget for a specific version of Windows (for example: Windows XP) instead of renaming the file of the version you need to use.
 
 ## Compiling
 ### Requirements
@@ -52,7 +54,6 @@ Then, you have to open a terminal window and compile the main.cpp file with the 
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
-- If you use the update command in a different directory than the one pmfow is installed in, you will have to copy or move the updated repository files to pmfow's folder manually.
 - Uninstalling applications from pmfow and silent installers are not supported yet.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it.

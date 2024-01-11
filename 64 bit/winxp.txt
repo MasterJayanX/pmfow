@@ -20,7 +20,7 @@ mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_minimal.exe
-qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.1.9.1_x64_setup.exe
+qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_x64_setup.exe/download
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
@@ -30,3 +30,5 @@ clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win64/en-US/seamonkey-2.49.5.installer.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v4.16/BCUninstaller_4.16_setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
+virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
+vscode=https://update.code.visualstudio.com/1.14.2/win32/stable

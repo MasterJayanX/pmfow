@@ -28,23 +28,24 @@ private:
 
     void loadRepos(const string& os) {
         ifstream file;
+        string fullpath = programpath + "\\";
         if(os == "Windows 2000"){
-            file.open("win2000.txt");
+            file.open(fullpath + "win2000.txt");
         }
         else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003"){
-            file.open("winxp.txt");
+            file.open(fullpath + "winxp.txt");
         }
         else if(os == "Windows Vista"){
-            file.open("winvista.txt");
+            file.open(fullpath + "winvista.txt");
         }
         else if(os == "Windows 7"){
-            file.open("win7.txt");
+            file.open(fullpath + "win7.txt");
         }
         else if(os == "Windows 8" || os == "Windows 8.1"){
-            file.open("win8.txt");
+            file.open(fullpath + "win8.txt");
         }
         else if(os == "Windows 10"){
-            file.open("win10.txt");
+            file.open(fullpath + "win10.txt");
         }
         else{
             cout << "Invalid OS.\n";
@@ -67,6 +68,7 @@ private:
 };
 
 string getWindowsVersion(int majorVersion, int minorVersion){
+    // This function returns the Windows version you are running
     string winver;
     if(majorVersion == 5 && minorVersion == 0){
         winver = "Windows 2000";
@@ -99,6 +101,7 @@ string getWindowsVersion(int majorVersion, int minorVersion){
 }
 
 string getArchitecture(){
+    // This function returns the architecture of your Windows installation
     string arch;
     SYSTEM_INFO sysInfo;
     GetSystemInfo(&sysInfo);
@@ -122,7 +125,16 @@ string getArchitecture(){
     return arch;
 }
 
+string getEXEpath(){
+    // This function returns the path of pmfow's executable
+    char buffer[MAX_PATH];
+    GetModuleFileName(NULL, buffer, MAX_PATH);
+    string::size_type pos = string(buffer).find_last_of("\\/");
+    return string(buffer).substr(0, pos);
+}
+
 void install(char** argv, int argc){
+    // This function installs a package
     if(argc < 3){
         cout << "Usage: pmfow install <package>\n";
         return;
@@ -143,12 +155,14 @@ void install(char** argv, int argc){
 }
 
 void update(){
+    // This function updates the repositories
     cout << "Updating repositories...\n";
     updateRepositories();
     cout << "Done.\n";
 }
 
 void search(char** argv, int argc){
+    // This function searches for a package
     if(argc < 3){
         cout << "Usage: pmfow search <package>\n";
         return;
@@ -169,32 +183,37 @@ void search(char** argv, int argc){
 }
 
 void help(){
+    // This function shows the help message
     cout << "Command list:\n";
-    cout << "pmfow install <package> - Installs a package\n";
-    cout << "pmfow update - Updates the repositories\n";
-    cout << "pmfow search <package> - Searches for a package\n";
-    cout << "pmfow help - Shows this help message\n";
-    cout << "pmfow version - Shows the version of pmfow that you are running\n";
-    cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS\n";
-    cout << "pmfow install <package> --powershell - Installs a package using PowerShell's DownloadFile function\n";
-    cout << "pmfow install <package> --wget - Installs a package using wget (not needed in most cases)\n";
-    cout << "pmfow install <package> --check-certificates / pmfow update --check-certificates - Installs a package using wget with certificate checking\n";
-    cout << "pmfow install <package> --show-url - Shows the URL of the package\n";
-    cout << "pmfow search <package> --force-os <os> - Searches for a package for a different OS\n";
-    cout << "pmfow search <package> --show-url - Shows the URL of the package\n";
+    cout << "pmfow install <package> - Installs a package.\n";
+    cout << "pmfow update - Updates the repositories.\n";
+    cout << "pmfow search <package> - Searches for a package.\n";
+    cout << "pmfow help - Shows this help message.\n";
+    cout << "pmfow version - Shows the version of pmfow that you are running.\n";
+    cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS.\n";
+    cout << "pmfow install <package> -p/--powershell - Installs a package using PowerShell's DownloadFile function.\n";
+    cout << "pmfow install <package> -w/--wget - Installs a package using wget (not needed in most cases).\n";
+    cout << "pmfow install <package> --check-certificates / pmfow update --check-certificates - Installs a package using wget with certificate checking.\n";
+    cout << "pmfow install <package> --show-url - Shows the URL of the package.\n";
+    cout << "pmfow install <package> --wget-version <os> - Installs a package using a different version of wget.\n";
+    cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
+    cout << "pmfow search <package> --force-os <os> - Searches for a package for a different OS.\n";
+    cout << "pmfow search <package> -u/--show-url - Shows the URL of the package.\n";
 }
 
-void version(){
-    cout << "Package Manager for Old Windows v0.1.0" << endl;
+void version(int majorVersion, int minorVersion, int build){
+    // This function shows the version of pmfow that you are running
+    cout << "Package Manager for Old Windows v0.1.2" << endl;
     cout << "Made by MasterJayanX" << endl;
-    cout << "Windows Version: " << winver << endl;
+    cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;
 }
 
 int checkFlags(int argc, char** argv){
+    // This function checks the flags
     int success = 1;
-    if(argc > 3){
-        for(int i = 3; i < argc; i++){
+    if(argc >= 3){
+        for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "-p" || string(argv[i]) == "--powershell"){
                 use_powershell = true;
             }
@@ -213,9 +232,9 @@ int checkFlags(int argc, char** argv){
                 }
             }
             if(string(argv[i]) == "--force-os"){
-                if(argc < i+1 || string(argv[1]) != "install"){
-                    cout << "Usage: pmfow install <package> --force-os <os>\n";
-                    cout << "Valid options: xp, vista, 7, 8, 8.1, 10\n";
+                if(argc < i+1){
+                    cout << "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>\n";
+                    cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
                     success = 0;
                     return success;
                 }
@@ -251,12 +270,39 @@ int checkFlags(int argc, char** argv){
             if(string(argv[i]) == "-u" || string(argv[i]) == "--show-url"){
                 show_url = true;
             }
+            if(string(argv[i]) == "-o" || string(argv[i]) == "--os-file"){
+                onefile = true;
+            }
+            if(string(argv[i]) == "--wget-version"){
+                if(argc < i+1){
+                    cout << "Usage: pmfow install --wget-version <os>\n";
+                    cout << "Valid options: 2000, xp\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
+                        wget_os = 5.0;
+                    }
+                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                        wget_os = 5.1;
+                    }
+                    else{
+                        cout << "Usage: pmfow install --wget-version <os>\n";
+                        cout << "Valid options: 2000, xp\n";
+                        success = 0;
+                        return success;
+                    }
+                
+                }
+            }
         }
     }
     return success;
 }
 
 int checkSearchFlags(int argc, char** argv){
+    // This function checks the flags for the search command
     int success = 1;
     if(argc > 3){
         for(int i = 3; i < argc; i++){

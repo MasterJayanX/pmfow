@@ -13,19 +13,12 @@ using namespace std;
 int main(int argc, char** argv){
     OSVERSIONINFOW osv;
     osv.dwOSVersionInfoSize = sizeof(OSVERSIONINFOW);
-    if (GetVersionExW(&osv)){
-        cout << "Windows Version: "
-            << osv.dwMajorVersion << "." 
-            << osv.dwMinorVersion << "." 
-            << osv.dwBuildNumber << "\n";
-    }
-    else{
-        cout << "Error getting Windows version.\n";
-    }
-    int majorVersion = osv.dwMajorVersion;
-    int minorVersion = osv.dwMinorVersion;
+    osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0; 
+    GetVersionExW(&osv);
+    int majorVersion = osv.dwMajorVersion, minorVersion = osv.dwMinorVersion, build = osv.dwBuildNumber;
     winver = getWindowsVersion(majorVersion, minorVersion);
     architecture = getArchitecture();
+    programpath = getEXEpath();
     if(osv.dwMajorVersion >= 5){
         // Windows XP or later
         if(string(argv[1]) == "install"){
@@ -59,7 +52,7 @@ int main(int argc, char** argv){
             help();
         }
         else if(string(argv[1]) == "version"){
-            version();
+            version(majorVersion, minorVersion, build);
         }
         else{
             cout << "Invalid command.\n";

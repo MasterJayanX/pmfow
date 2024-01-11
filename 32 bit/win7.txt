@@ -19,11 +19,12 @@ mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x86
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5.1/Bitwarden-Installer-2022.5.1.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86/RetroArch-Win32-setup.exe
+vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
 cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_minimal.exe
-qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.4.5_setup.exe
+qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
@@ -40,3 +41,8 @@ legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 playnite=https://playnite.link/download/PlayniteInstaller.exe
+virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
+filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
+winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
+vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
+librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/115.0.2-2/librewolf-115.0.2-2-windows-i686-setup.exe

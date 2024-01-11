@@ -24,7 +24,7 @@ mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
-qbittorrent=https://www.fosshub.com/qBittorrent-old.html?dwl=qbittorrent_4.5.5_x64_setup.exe
+qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
@@ -41,3 +41,8 @@ legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 playnite=https://playnite.link/download/PlayniteInstaller.exe
+virtualbox=https://download.virtualbox.org/virtualbox/6.1.48/VirtualBox-6.1.48-159471-Win.exe
+filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=ssqGLDXbSuBX4Ga3DwaDPQ&x=1704996793
+winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
+vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
+librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/115.0.2-2/librewolf-115.0.2-2-windows-x86_64-setup.exe

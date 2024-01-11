@@ -12,6 +12,7 @@
  - `clamsentinel`: ClamSentinel. Operating systems: Windows 2000 to Windows 10.
  - `clamwin`: ClamWin. Operating systems: Windows 2000 to Windows 10.
  - `everything`: Everything. Operating systems: Windows XP to Windows 10.
+ - `filezilla`: Filezilla. Operating systems: Windows 7 to Windows 10.
  - `firefox`: Firefox. Operating systems: Windows 2000 to Windows 10.
  - `firefox-esr`: Firefox ESR. Operating systems: Windows 2000 and Windows 10 only.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
@@ -19,6 +20,7 @@
  - `krita`: Krita. Operating systems: Windows 7 to Windows 10.
  - `legacyupdate`: Legacy Update. Operating systems: Windows 2000 to Windows 8.
  - `libreoffice`: LibreOffice. Operating systems: Windows XP to Windows 10.
+ - `librewolf`: LibreWolf. Operating systems: Windows 7 to Windows 10.
  - `lightshot`: Lightshot. Operating systems: Windows XP to Windows 10.
  - `mgba`: mGBA. Operating systems: Windows Vista to Windows 10.
  - `mpc-be`: MPC-BE. Operating systems: Windows 7 to Windows 10.
@@ -34,7 +36,7 @@
  - `playnite`: Playnite. Operating systems: Windows 7 to Windows 10.
  - `python`: Python 2. Operating systems: Windows XP to Windows 10.
  - `python3`: Python 3. Operating systems: Windows 7 to Windows 10.
- - `qbittorrent`: qBitTorrent. Operating systems: Windows XP to Windows 10.
+ - `qbittorrent`: qBitTorrent. Operating systems: Windows 2000 to Windows 10.
  - `retroarch`: RetroArch. Operating systems: Windows 2000 to Windows 10.
  - `rufus`: Rufus. Operating systems: Windows XP to Windows 10.
  - `seamonkey`: SeaMonkey. Operating systems: Windows 2000 to Windows 10.
@@ -43,13 +45,21 @@
  - `supermium`: Supermium. Operating systems: Windows Vista to Windows 8.1.
  - `thunderbird`: Thunderbird. Operating systems: Windows 2000 to Windows 10.
  - `ungoogled-chromium`: Ungoogled Chromium. Operating systems: Windows 7 to Windows 10.
+ - `virtualbox`: Oracle VM Virtualbox. Operating systems: Windows XP to Windows 10.
  - `vivaldi`: Vivaldi. Operating systems: Windows 7 to Windows 10.
  - `vlc`: VLC Media Player. Operating systems: Windows 2000 to Windows 10.
- - `vscode`: Visual Studio Code. Operating systems: Windows 7 to Windows 10.
+ - `vscode`: Visual Studio Code. Operating systems: Windows XP to Windows 10.
+ - `vscodium`: VSCodium. Operating systems: Windows 7 to Windows 10.
  - `winrar`: WinRAR. Operating systems: Windows XP to Windows 10.
+ - `winscp`: WinSCP. Operating systems: Windows 7 to Windows 10.
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
 
 ## Changelog
+
+11/1/2024:
+- Added Virtualbox, FileZilla, WinSCP, VSCodium and LibreWolf.
+- Added Visual Studio Code for Windows XP and Vista and qBitTorrent for Windows 2000.
+- Replaced qBitTorrent's links with ones that work with wget.
 
 10/1/2024:
 - Added BCUninstaller, Legacy Update, BleachBit, Krita and Playnite.

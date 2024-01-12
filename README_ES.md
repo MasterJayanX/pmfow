@@ -1,5 +1,8 @@
 # Package Manager for Old Windows
  [![GitHub release](https://img.shields.io/github/v/release/MasterJayanX/pmfow.svg)](https://github.com/MasterJayanX/pmfow/releases) [![GitHub all releases](https://img.shields.io/github/downloads/MasterJayanX/pmfow/total)](https://github.com/MasterJayanX/pmfow/releases) 
+
+## Idiomas
+[English](https://github.com/MasterJayanX/pmfow/blob/main/README.md) | [Español](https://github.com/MasterJayanX/pmfow/blob/main/README_ES.md)
 ## Descripción
 pmfow (Package Manager for Old Windows) es un programa que te permite instalar aplicaciones desde la línea de comandos en versiones antiguas de Windows de manera similar a como lo harías en Linux o en Windows 10 con [winget](https://github.com/microsoft/winget-cli).
 
@@ -52,10 +55,10 @@ Aquí tienes una lista de comandos que puedes usar:
 - `pmfow version`: Este comando te mostrará la versión de pmfow que estás ejecutando, así como tu versión de Windows.
 - `pmfow help`: Este comando te mostrará una lista de comandos con una descripción para cada uno, como la que estás viendo aquí.
 
-Si estás utilizando los comandos install o update, puedes usar estas banderas:
+Si usas los comandos install o update, puedes usar estas "flags":
 - `-p` o `--powershell`: Fuerza al comando install a utilizar la función DownloadFile de Powershell para descargar los archivos de instalación o actualizar los archivos del repositorio. Para Windows XP y Vista, debes descargar Powershell 2.0 desde [aquí](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) para poder usarlo (también deberás instalar .NET 2.0 SP1 desde [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
 - `-w` o `--wget`: Fuerza al comando install a utilizar wget para descargar los archivos de instalación o actualizar los archivos del repositorio. Esto no es necesario la mayoría de las veces, ya que wget se utiliza por defecto en pmfow.
-- `-c` o `--check-certificates`: Fuerza a wget a verificar los certificados al descargar un paquete.
+- `-c` o `--check-certificates`: Le pide a wget que verifique los certificados al descargar un paquete.
 - `--force-os <versión>`: Fuerza a pmfow a instalar paquetes para una versión diferente de Windows.
 - `--show-url`: Muestra la URL desde la cual se descarga el paquete que estás instalando o buscando.
 - `-o` o `--one-file`: El comando update solo actualizará el archivo del repositorio que corresponda a tu versión actual de Windows.
@@ -63,7 +66,7 @@ Si estás utilizando los comandos install o update, puedes usar estas banderas:
 
 ## Compilación
 ### Requisitos
-- Tener el compilador g++ instalado en tu computadora con Windows (puedes instalarlo con MinGW).
+- Tener el compilador g++ instalado en un computador con Windows (puedes instalarlo con MinGW).
 
 Para compilar este programa tú mismo, debes descargar los archivos .cpp y guardarlos en el mismo directorio. Alternativamente, puedes descargar los archivos del repositorio usando el siguiente comando en una ventana de terminal: `git clone https://github.com/MasterJayanX/pmfow`. 
 Luego, debes abrir una ventana de terminal y compilar el archivo main.cpp con el siguiente comando: `g++ main.cpp -o output.exe` (puedes reemplazar output con el nombre que desees).
@@ -77,11 +80,11 @@ pmfow está en una etapa temprana de desarrollo, por lo que puedes esperar que a
 
 Si encuentras algún problema con pmfow, abre un problema en la sección de Issues y lo revisaré.
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 ### ¿Qué versiones de Windows son compatibles?
 Como mencioné anteriormente, pmfow funciona en las siguientes versiones de Windows: Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, Windows 8, Windows Server 2012, Windows 8.1, Windows 10, Windows Server 2016/2019/2022 y Windows 11. También debería funcionar en ReactOS, pero aún no lo he probado.
 ### ¿Qué son los archivos .txt que vienen junto con los archivos de pmfow?
-Esos archivos .txt son simplemente las listas de software que pmfow puede instalar. Básicamente, son como repositorios. Es posible que los cambie a archivos sin extensiones en futuras actualizaciones.
+Esos archivos .txt son simplemente las listas de software que pmfow puede instalar. Básicamente, son como repositorios. Es posible que los cambie a archivos .dat en futuras actualizaciones.
 ### ¿Qué aplicaciones puedo instalar con pmfow?
 Puedes encontrar la lista completa de aplicaciones que se pueden instalar en [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md).
 ### ¿Funciona pmfow en Windows 9x?
@@ -89,7 +92,7 @@ Desafortunadamente, debido a que estas versiones de Windows son demasiado antigu
 ### ¿Este proyecto admitirá otros sistemas operativos?
 Desafortunadamente no, porque es probable que otros sistemas operativos ya tengan gestores de paquetes para ellos. Por ejemplo, para versiones antiguas de macOS, puedes usar [Tigerbrew](https://github.com/mistydemeo/tigerbrew) y la mayoría de las distribuciones de Linux vienen con un gestor de paquetes.
 ### ¿Qué cosas planeas agregar?
-Estoy planeando agregar la opción de instalar varios paquetes a la vez, más banderas para configurar la forma en que se instalan los paquetes o se actualizan los repositorios, la opción de usar instaladores silenciosos y, por supuesto, agregar más aplicaciones a los repositorios.
+Estoy planeando agregar la opción de instalar varios paquetes a la vez, más flags para configurar la forma en que se instalan los paquetes o se actualizan los repositorios, la opción de usar instaladores silenciosos y, por supuesto, agregar más aplicaciones a los repositorios.
 
 ## Donaciones
 Acepto donaciones a través de Ko-fi:

@@ -4,6 +4,22 @@
 pmfow (Package Manager for Old Windows) is a program that allows you to install applications from the command line in older versions of Windows similarly to how you would do it in Linux or in Windows 10 with [winget](https://github.com/microsoft/winget-cli).
 
 ## Requirements
+### Hardware requirements
+pmfow will run on anything that runs Windows 2000 or XP and has an internet connection.
+
+**Minimum requirements**
+- A CPU
+- Some RAM
+- Storage (optional)
+- An internet connection (not optional)
+
+**Recommended requirements**
+- A Pentium or Celeron CPU
+- 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser
+- Enough storage to store at least a couple of .exe files (300 MB of free space should be more than enough)
+- A good internet connection (at least 5 Mbps, but even something slightly better than a 56k modem should be enough)
+
+### Software requirements
 pmfow will run in most versions of Windows from Windows 2000 onwards.
 
 **This is the list of fully supported versions:**

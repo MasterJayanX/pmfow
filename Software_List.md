@@ -15,8 +15,10 @@
  - `filezilla`: Filezilla. Operating systems: Windows 7 to Windows 10.
  - `firefox`: Firefox. Operating systems: Windows 2000 to Windows 10.
  - `firefox-esr`: Firefox ESR. Operating systems: Windows 2000 and Windows 10 only.
+ - `freedownloadmanager`: Free Download Manager. Operating systems: Windows XP to Windows 10.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
  - `irfanview`: IrfanView. Operating systems: Windows XP to Windows 10.
+ - `k-lite-codec`: K-Lite Codec Pack. Operating systems: Windows XP to Windows 10.
  - `krita`: Krita. Operating systems: Windows 7 to Windows 10.
  - `legacyupdate`: Legacy Update. Operating systems: Windows 2000 to Windows 8.
  - `libreoffice`: LibreOffice. Operating systems: Windows XP to Windows 10.
@@ -29,6 +31,7 @@
  - `mypal68`: Mypal 68.13.1. Operating systems: Windows XP and Windows Vista.
  - `notepad++`: Notepad++. Operating systems: Windows XP to Windows 10.
  - `obs-studio`: OBS Studio. Operating systems: Windows 7 to Windows 10.
+ - `oneclickappinstaller`: OneClickAppInstaller. Operating systems: Windows 7 to Windows 10.
  - `onecoreapi`: OneCore API. Operating systems: Windows XP only.
  - `openoffice`: OpenOffice. Operating systems: Windows 2000 to Windows Vista.
  - `paint.net`: Paint.NET. Operating systems: Windows XP to Windows 10.
@@ -55,6 +58,13 @@
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
 
 ## Changelog
+
+12/1/2024:
+- Added [OneClickAppInstaller](https://github.com/MasterJayanX/OneClickAppInstaller), K-Lite Codec Pack and Free Download Manager
+- Downgraded VLC Media Player to 3.0.18 due to an issue with the current version's installer.
+- Added OBS Studio for Windows Vista.
+- Added Notepad++ for Windows 2000.
+- Updated Audacity to version 3.4.2 on supported versions of Windows.
 
 11/1/2024:
 - Added Virtualbox, FileZilla, WinSCP, VSCodium and LibreWolf.

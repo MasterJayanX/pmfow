@@ -12,3 +12,4 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.9.1/win32/en-US/SeaMo
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/12.0.1/win32/en-US/Thunderbird%20Setup%2012.0.1.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-2.4.9.1/qbittorrent_2.4.9.1_setup.exe/download
+notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer.exe

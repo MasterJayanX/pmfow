@@ -1,14 +1,14 @@
 firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win64/en-US/Firefox%20Setup%20115.6.0esr.exe
 pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=64&type=installer
-vlc=https://mirror.lstn.net/videolan/vlc/3.0.20/win64/vlc-3.0.20-win64.exe
+vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.x64.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
 7-zip=https://www.7-zip.org/a/7z2301-x64.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
-audacity=https://www.fosshub.com/Audacity.html?dwl=audacity-win-3.1.3.exe
+audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
 irfanview=https://www.fosshub.com/IrfanView.html?dwl=iview466_x64_setup.exe#
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win64/en-US/Thunderbird%20Setup%20115.6.0.exe
@@ -43,3 +43,6 @@ filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-se
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.1.23348/VSCodiumSetup-x64-1.85.1.23348.exe
 librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/121.0-1/librewolf-121.0-1-windows-x86_64-setup.exe
+oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
+freedownloadmanager=https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe

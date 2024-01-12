@@ -25,6 +25,7 @@ To install pmfow, you need to follow these steps:
 1. Download the .exe file from the Releases page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
 2. Open the .exe file and extract the files in a new folder. To do this, open the .exe, click the three dots, create a new folder and select it.
 3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example, `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
+4. For Windows 2000 and XP users, you will have to change the wget executable that is used by pmfow. To do this, you have two options. 1: Delete the wget.exe file from pmfow's folder, then rename one of the other wget files to wget.exe (for Windows 2000 you have to rename the file named wget_2k.exe and for Windows XP users you have to rename the file named wget_xp.exe). 2: Run the install and update commands with the `--wget-version <version>` flag, changing the `<version>` part with either 2000 or win2000 for Windows 2000 or xp or winxp for Windows XP. Keep in mind that you will have to do this every time, so the first method is recommended.
 ## Usage
 To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead.
 Here's a list of commands you can use:
@@ -55,6 +56,7 @@ pmfow is in an early stage of development, so you can expect some things to not 
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
 - Uninstalling applications from pmfow and silent installers are not supported yet.
+- pmfow doesn't handle spaced directories well, so if you're using Windows XP, don't install pmfow inside the Documents and Settings folder. Instead, you could just create a folder directly in the C: drive and extract the files there.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it.
 

@@ -14,10 +14,11 @@ void installPackage(string package, string url){
     // Install package
     string command, filename, wget_exe = "wget", fullpath = programpath + "\\";
     system(command.c_str());
-    if(package != "mypal68" && package != "onecoreapi" && package != "paint.net"){
+    if(package != "mypal68" && package != "xpchrome" && package != "onecoreapi" && package != "paint.net" && package != "blendercompat" && package != "libreoffice" && package != "python" && package != "clamav" 
+    && (package != "blender" || winver == "Windows 2000")){
         filename = package + ".exe";
     }
-    else if(package == "libreoffice" || package == "python" || package == "clamav"){
+    else if(package == "libreoffice" || package == "python" || package == "clamav" || (package == "blender" && winver != "Windows 2000")){
         filename = package + ".msi";
     }
     else{

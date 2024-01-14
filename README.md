@@ -46,18 +46,19 @@ To install pmfow, you need to follow these steps:
 3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example, `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
 4. For Windows 2000 and XP users, you will have to change the wget executable that is used by pmfow. To do this, you have two options. 1: Delete the wget.exe file from pmfow's folder, then rename one of the other wget files to wget.exe (for Windows 2000 you have to rename the file named wget_2k.exe and for Windows XP users you have to rename the file named wget_xp.exe). 2: Run the install and update commands with the `--wget-version <version>` flag, changing the `<version>` part with either 2000 or win2000 for Windows 2000 or xp or winxp for Windows XP. Keep in mind that you will have to do this every time, so the first method is recommended.
 ## Usage
-To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead.
+To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead).
 Here's a list of commands you can use:
 - `pmfow install <package>`: This command will allow you to install the program you want.
 - `pmfow update`: This will update the repositories, which are just .txt files, but still.
 - `pmfow search <package>`: This command will allow you to search for a specific package in the repositories of your operating system.
 - `pmfow version`: This command will show you the version of pmfow that you are running, as well as your version of Windows.
 - `pmfow help`: This command will show you a list of commands with a description for each one, like the one you are seeing here.
+- `pmfow list`: This command lists all the available packages in your current repository.
 
 If you are using the install or update commands, you can use these flags:
 - `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
 - `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed most of the time since wget is used by pmfow by default.
-- `-c` or `--check-certificates`: Forces wget to check for certificates when downloading a package.
+- `-c` or `--check-certificates`: Makes wget check for certificates when downloading a package.
 - `--force-os <version>`: Forces pmfow to install packages for a different version of Windows.
 - `--show-url`: Shows the URL from which the package you are installing or searching for is downloaded.
 - `-o` or `--one-file`: The update command will only update the repository file that corresponds to your current version of Windows.

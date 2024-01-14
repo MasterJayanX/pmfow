@@ -54,6 +54,7 @@ Aquí tienes una lista de comandos que puedes usar:
 - `pmfow search <paquete>`: Este comando te permitirá buscar un paquete específico en los repositorios de tu sistema operativo.
 - `pmfow version`: Este comando te mostrará la versión de pmfow que estás ejecutando, así como tu versión de Windows.
 - `pmfow help`: Este comando te mostrará una lista de comandos con una descripción para cada uno, como la que estás viendo aquí.
+- `pmfow list`: Este comando lista todos los paquetes que se pueden instalar desde tu repositorio.
 
 Si usas los comandos install o update, puedes usar estas "flags":
 - `-p` o `--powershell`: Fuerza al comando install a utilizar la función DownloadFile de Powershell para descargar los archivos de instalación o actualizar los archivos del repositorio. Para Windows XP y Vista, debes descargar Powershell 2.0 desde [aquí](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) para poder usarlo (también deberás instalar .NET 2.0 SP1 desde [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
@@ -86,8 +87,8 @@ Como mencioné anteriormente, pmfow funciona en las siguientes versiones de Wind
 ### ¿Qué son los archivos .txt que vienen junto con los archivos de pmfow?
 Esos archivos .txt son simplemente las listas de software que pmfow puede instalar. Básicamente, son como repositorios. Es posible que los cambie a archivos .dat en futuras actualizaciones.
 ### ¿Qué aplicaciones puedo instalar con pmfow?
-Puedes encontrar la lista completa de aplicaciones que se pueden instalar en [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md).
-### ¿Funciona pmfow en Windows 9x?
+Puedes encontrar la lista completa de aplicaciones que se pueden instalar en [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md) (ten en cuenta que está en inglés).
+### ¿Se puede usar pmfow en Windows 9x?
 Desafortunadamente, debido a que estas versiones de Windows son demasiado antiguas para que wget funcione de manera confiable en ellas, decidí no agregar soporte para ellas en este proyecto.
 ### ¿Este proyecto admitirá otros sistemas operativos?
 Desafortunadamente no, porque es probable que otros sistemas operativos ya tengan gestores de paquetes para ellos. Por ejemplo, para versiones antiguas de macOS, puedes usar [Tigerbrew](https://github.com/mistydemeo/tigerbrew) y la mayoría de las distribuciones de Linux vienen con un gestor de paquetes.

@@ -39,6 +39,15 @@ int main(int argc, char** argv){
                 update();
             }
         }
+        else if(string(argv[1]) == "list"){
+            int success = checkSearchFlags(argc, argv);
+            if(success == 0){
+                return 0;
+            }
+            else{
+                list();
+            }
+        }
         else if(string(argv[1]) == "search"){
             int success = checkSearchFlags(argc, argv);
             if(success == 0){

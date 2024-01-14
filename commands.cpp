@@ -161,6 +161,51 @@ void update(){
     cout << "Done.\n";
 }
 
+void list(){
+    // This function lists all the packages
+    cout << "Listing all packages...\n";
+    Sleep(1000);
+    ifstream file;
+    string fullpath = programpath + "\\";
+    if(winver == "Windows 2000"){
+        file.open(fullpath + "win2000.txt");
+    }
+    else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+        file.open(fullpath + "winxp.txt");
+    }
+    else if(winver == "Windows Vista"){
+        file.open(fullpath + "winvista.txt");
+    }
+    else if(winver == "Windows 7"){
+        file.open(fullpath + "win7.txt");
+    }
+    else if(winver == "Windows 8" || winver == "Windows 8.1"){
+        file.open(fullpath + "win8.txt");
+    }
+    else if(winver == "Windows 10"){
+        file.open(fullpath + "win10.txt");
+    }
+    else{
+        cout << "Invalid OS.\n";
+        return;
+    }
+    if (!file.is_open()) {
+        cerr << "Repository not found" << endl;
+        return;
+    }
+    string line;
+    while (getline(file, line)) {
+        size_t delimiterPos = line.find('=');
+        if (delimiterPos != string::npos) {
+            string key = line.substr(0, delimiterPos);
+            string value = line.substr(delimiterPos + 1);
+            cout << key << endl;
+        }
+        Sleep(10);
+    }
+    file.close();
+}
+
 void search(char** argv, int argc){
     // This function searches for a package
     if(argc < 3){
@@ -188,6 +233,7 @@ void help(){
     cout << "pmfow install <package> - Installs a package.\n";
     cout << "pmfow update - Updates the repositories.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
+    cout << "pmfow list - Lists all the packages.\n";
     cout << "pmfow help - Shows this help message.\n";
     cout << "pmfow version - Shows the version of pmfow that you are running.\n";
     cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS.\n";
@@ -203,7 +249,7 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-    cout << "Package Manager for Old Windows v0.1.2" << endl;
+    cout << "Package Manager for Old Windows v0.1.3" << endl;
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;
@@ -304,8 +350,8 @@ int checkFlags(int argc, char** argv){
 int checkSearchFlags(int argc, char** argv){
     // This function checks the flags for the search command
     int success = 1;
-    if(argc > 3){
-        for(int i = 3; i < argc; i++){
+    if(argc >= 3){
+        for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "--force-os"){
                 if(argc < i+1){
                     cout << "Usage: pmfow search <package> --force-os <os>\n";

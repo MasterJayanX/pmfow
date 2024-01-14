@@ -1,10 +1,13 @@
 # Software List
 
- - `7-zip`: 7-zip. Operating systems: Windows 2000 to Windows 10.
+ - `7-zip`: 7-zip 23.01. Operating systems: Windows 2000 to Windows 10.
+ - `7-zip-old`: 7-zip 9.20. Operating systems: Windows 2000 only.
  - `audacity`: Audacity. Operating systems: Windows XP to Windows 10.
  - `bcuninstaller`: Bulk Crap Uninstaller. Operating systems: Windows XP to Windows 10.
  - `bitwarden`: Bitwarden. Operating systems: Windows 7 to Windows 10.
  - `bleachbit`: BleachBit. Operating systems: Windows 7 to Windows 10.
+ - `blender`: Blender. Operating systems: Windows 2000 to Windows 10.
+ - `blendercompat`: BlenderCompat. Operating systems: Windows 7 and Windows 8 (64-bit only).
  - `cdburnerxp`: CDBurnerXP. Operating systems: Windows XP to Windows 10.
  - `chromium`: Chromium. Operating systems: Windows XP to Windows 10.
  - `chromium-nosync`: Chromium-nosync. Operating systems: Windows 7 to Windows 10.
@@ -58,6 +61,11 @@
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
 
 ## Changelog
+
+13/1/2024:
+- Added Blender, BlenderCompat for Windows 7 and 7-zip 9.20 for Windows 2000.
+- Ordered the package names alphabetically in each repository (see the changelog of version 0.1.3 to know why).
+- Changed the download links for IrfanView and WinRAR with ones that work.
 
 12/1/2024:
 - Added [OneClickAppInstaller](https://github.com/MasterJayanX/OneClickAppInstaller), K-Lite Codec Pack and Free Download Manager

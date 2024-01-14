@@ -38,3 +38,5 @@ vscode=https://update.code.visualstudio.com/1.14.2/win32/stable
 vsync=https://www.vsynctester.com/download/vsynctester_1.7_setup.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
+
+# Version: 6

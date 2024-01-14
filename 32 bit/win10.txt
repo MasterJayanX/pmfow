@@ -48,3 +48,5 @@ virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-1
 vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-624.exe
+
+# Version: 6

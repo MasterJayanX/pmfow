@@ -51,3 +51,5 @@ vscode=https://update.code.visualstudio.com/1.70.2/win32-x64-user/stable
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
+
+# Version: 6

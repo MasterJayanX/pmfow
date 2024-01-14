@@ -62,32 +62,32 @@
 
 ## Changelog
 
-13/1/2024:
+Version 6 (13/1/2024) (Current):
 - Added Blender, BlenderCompat for Windows 7 and 7-zip 9.20 for Windows 2000.
 - Ordered the package names alphabetically in each repository (see the changelog of version 0.1.3 to know why).
 - Changed the download links for IrfanView and WinRAR with ones that work.
 
-12/1/2024:
+Version 5 (12/1/2024):
 - Added [OneClickAppInstaller](https://github.com/MasterJayanX/OneClickAppInstaller), K-Lite Codec Pack and Free Download Manager
 - Downgraded VLC Media Player to 3.0.18 due to an issue with the current version's installer.
 - Added OBS Studio for Windows Vista.
 - Added Notepad++ for Windows 2000.
 - Updated Audacity to version 3.4.2 on supported versions of Windows.
 
-11/1/2024:
+Version 4 (11/1/2024):
 - Added Virtualbox, FileZilla, WinSCP, VSCodium and LibreWolf.
 - Added Visual Studio Code for Windows XP and Vista and qBitTorrent for Windows 2000.
 - Replaced qBitTorrent's links with ones that work with wget.
 
-10/1/2024:
+Version 3 (10/1/2024):
 - Added BCUninstaller, Legacy Update, BleachBit, Krita and Playnite.
 - Replaced the original version of MPC-HC with the latest release from [this fork](https://github.com/clsid2/mpc-hc) on Windows 7 and above.
 - Added RetroArch and Thunderbird for Windows 2000.
 
-9/1/2024:
+Version 2 (9/1/2024):
 - Added ClamAV, ClamWin, ClamSentinel, Ungoogled-chromium and SeaMonkey.
 - Added support for Windows 2000.
 - Added mGBA for Windows Vista.
 
-8/1/2024:
+Version 1 (8/1/2024):
 - Initial version of this file.

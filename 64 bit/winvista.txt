@@ -38,3 +38,5 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64
 vscode=https://update.code.visualstudio.com/1.14.2/win32/stable
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
+
+# Version: 6

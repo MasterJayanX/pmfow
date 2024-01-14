@@ -15,3 +15,5 @@ sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/1.5.1/SumatraPDF-1.5.1-inst
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/12.0.1/win32/en-US/Thunderbird%20Setup%2012.0.1.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
+
+# Version: 6

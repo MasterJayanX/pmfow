@@ -64,7 +64,11 @@
 
 ## Changelog
 
-Version 6 (13/1/2024) (Current):
+Version 7 (15/1/2024) (Current):
+- Added balenaEtcher and Scratch.
+- Downgraded Python to 2.7.9 on Windows XP and to 3.8.10 on Windows 7 due to the versions used before aren't compatible with these operating systems.
+
+Version 6 (13/1/2024):
 - Added Blender, BlenderCompat for Windows 7 and 7-zip 9.20 for Windows 2000.
 - Ordered the package names alphabetically in each repository (see the changelog of version 0.1.3 to know why).
 - Changed the download links for IrfanView and WinRAR with ones that work.

@@ -10,6 +10,7 @@ notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer
 openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-2.4.9.1/qbittorrent_2.4.9.1_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2005/x86/RetroArch-MSVC05-Win32-setup.exe
+scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.9.1/win32/en-US/SeaMonkey%20Setup%202.9.1.exe
 sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/1.5.1/SumatraPDF-1.5.1-install.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/12.0.1/win32/en-US/Thunderbird%20Setup%2012.0.1.exe

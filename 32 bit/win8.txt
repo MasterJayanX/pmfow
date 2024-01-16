@@ -1,5 +1,6 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
+balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5.1/Bitwarden-Installer-2022.5.1.exe
 bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
@@ -37,6 +38,7 @@ python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_x86.exe
+scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_32_setup.exe

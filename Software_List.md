@@ -3,6 +3,7 @@
  - `7-zip`: 7-zip 23.01. Operating systems: Windows 2000 to Windows 10.
  - `7-zip-old`: 7-zip 9.20. Operating systems: Windows 2000 only.
  - `audacity`: Audacity. Operating systems: Windows XP to Windows 10.
+ - `balenaetcher`: balenaEtcher. Operating systems: Windows 7 to Windows 10.
  - `bcuninstaller`: Bulk Crap Uninstaller. Operating systems: Windows XP to Windows 10.
  - `bitwarden`: Bitwarden. Operating systems: Windows 7 to Windows 10.
  - `bleachbit`: BleachBit. Operating systems: Windows 7 to Windows 10.
@@ -45,6 +46,7 @@
  - `qbittorrent`: qBitTorrent. Operating systems: Windows 2000 to Windows 10.
  - `retroarch`: RetroArch. Operating systems: Windows 2000 to Windows 10.
  - `rufus`: Rufus. Operating systems: Windows XP to Windows 10.
+ - `scratch`: Scratch. Operating systems: Windows 2000 to Windows 10.
  - `seamonkey`: SeaMonkey. Operating systems: Windows 2000 to Windows 10.
  - `sharex`: ShareX. Operating systems: Windows XP to Windows 10.
  - `sumatrapdf`: SumatraPDF. Operating systems: Windows 2000 to Windows 10.

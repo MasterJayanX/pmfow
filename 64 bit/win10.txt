@@ -19,6 +19,7 @@ freedownloadmanager=https://files2.freedownloadmanager.org/6/latest/fdm_x64_setu
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
+kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
 librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/121.0-1/librewolf-121.0-1-windows-x86_64-setup.exe
@@ -26,6 +27,7 @@ lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win64-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x64-installer.zip/download
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x64.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/30.0.2/OBS-Studio-30.0.2-Full-Installer-x64.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
@@ -51,4 +53,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.1.23348/VSC
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 
-# Version: 6
+# Version: 8

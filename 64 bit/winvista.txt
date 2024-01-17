@@ -20,6 +20,7 @@ mgba=https://github.com/mgba-emu/mgba/releases/download/0.9.1/mGBA-0.9.1-win64-i
 mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x64.exe
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win64.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win64.zip
+naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
@@ -36,8 +37,7 @@ supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
-vscode=https://update.code.visualstudio.com/1.14.2/win32/stable
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 6
+# Version: 8

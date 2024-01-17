@@ -8,6 +8,7 @@ firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/10.0.9esr/win32/en-US/F
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer.exe
 openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
+python=https://www.python.org/ftp/python/2.7.2/python-2.7.2.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-2.4.9.1/qbittorrent_2.4.9.1_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2005/x86/RetroArch-MSVC05-Win32-setup.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
@@ -17,4 +18,4 @@ thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/12.0.1/win32/en
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 
-# Version: 6
+# Version: 8

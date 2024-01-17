@@ -1,0 +1,5 @@
+64%20bit
+32%20bit
+
+# This file lists the directories for the 64 bit and 32 bit repositories respectively. These should not be changed manually. 
+# This file is updated automatically when running the pmfow update command.

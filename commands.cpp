@@ -76,7 +76,7 @@ string getWindowsVersion(int majorVersion, int minorVersion){
     else if(majorVersion == 5 && (minorVersion == 1)){
         winver = "Windows XP";
     }
-    else if(majorVersion == 5 && (minorVersion == 2 || minorVersion == 3)){
+    else if(majorVersion == 5 && (minorVersion == 2)){
         winver = "Windows XP Professional x64/Windows Server 2003";
     }
     else if(majorVersion == 6 && minorVersion == 0){
@@ -194,15 +194,18 @@ void list(){
         return;
     }
     string line;
+    int i = 0;
     while (getline(file, line)) {
         size_t delimiterPos = line.find('=');
         if (delimiterPos != string::npos) {
             string key = line.substr(0, delimiterPos);
             string value = line.substr(delimiterPos + 1);
             cout << key << endl;
+            i++;
         }
         Sleep(10);
     }
+    cout << "Total packages: " << i << endl;
     file.close();
 }
 
@@ -249,7 +252,7 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-    cout << "Package Manager for Old Windows v0.1.3" << endl;
+    cout << "Package Manager for Old Windows v0.1.4 (2024-01-17)" << endl;
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;

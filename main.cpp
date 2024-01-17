@@ -20,7 +20,7 @@ int main(int argc, char** argv){
     architecture = getArchitecture();
     programpath = getEXEpath();
     if(osv.dwMajorVersion >= 5){
-        // Windows XP or later
+        // Windows 2000 or later
         if(string(argv[1]) == "install"){
             int success = checkFlags(argc, argv);
             if(success == 0){
@@ -68,7 +68,7 @@ int main(int argc, char** argv){
         }
     }
     else{
-        // Windows 2000 or earlier
+        // Windows 98 or earlier
         cout << "You're using Windows 98/ME or earlier, so your OS is not supported.\n";
         cout << "Press Enter to exit.\n";
         cin.get();

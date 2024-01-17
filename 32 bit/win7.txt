@@ -11,11 +11,14 @@ clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
+dotnet4=https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+dotnet4.6=https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win32/en-US/Firefox%20Setup%20115.6.0esr.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
+imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
@@ -27,6 +30,7 @@ lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x86.exe
+multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
@@ -55,4 +59,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win32/vlc-3.0.18-win32
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.exe
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 
-# Version: 8
+# Version: 9

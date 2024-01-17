@@ -7,10 +7,14 @@ cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_mi
 chromium=https://chromium.woolyss.com/f/chromium_win32_49.0.2623.112_r403382_sync.exe
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
+dotnet3.5=https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe
+dotnet4=https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+dotnet4.6=https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 firefox=https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win32/en-US/Firefox%20Setup%2052.9.0esr.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-2.exe
+imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 k-lite-codec=hhttps://files3.codecguide.com/K-Lite_Codec_Pack_1676_Basic.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -18,6 +22,7 @@ libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.9.1/mGBA-0.9.1-win32-installer.exe
 mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x86.exe
+multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
@@ -26,6 +31,7 @@ obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
+python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2010/x86/RetroArch-MSVC10-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
@@ -40,4 +46,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win32/vlc-3.0.18-win32
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 8
+# Version: 9

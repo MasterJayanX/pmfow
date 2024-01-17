@@ -15,12 +15,16 @@
  - `clamav`: ClamAV. Operating systems: Windows 7 to Windows 10.
  - `clamsentinel`: ClamSentinel. Operating systems: Windows 2000 to Windows 10.
  - `clamwin`: ClamWin. Operating systems: Windows 2000 to Windows 10.
+ - `dotnet3.5`: .NET 3.5 SP1. Operating systems: Windows XP and Windows Vista.
+ - `dotnet4`: .NET 4.0. Operating systems: Windows XP to Windows 7.
+ - `dotnet4.6`: .NET 4.6. Operating systems: Windows Vista to Windows 8.1.
  - `everything`: Everything. Operating systems: Windows XP to Windows 10.
  - `filezilla`: Filezilla. Operating systems: Windows 7 to Windows 10.
  - `firefox`: Firefox. Operating systems: Windows 2000 to Windows 10.
  - `firefox-esr`: Firefox ESR. Operating systems: Windows 2000 and Windows 10 only.
  - `freedownloadmanager`: Free Download Manager. Operating systems: Windows XP to Windows 10.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
+ - `imdisk`: ImDisk. Operating systems: Windows 2000 to Windows 10.
  - `irfanview`: IrfanView. Operating systems: Windows XP to Windows 10.
  - `k-lite-codec`: K-Lite Codec Pack. Operating systems: Windows XP to Windows 10.
  - `kodi`: Kodi. Operating systems: Windows 7 to Windows 10.
@@ -32,6 +36,7 @@
  - `mgba`: mGBA. Operating systems: Windows Vista to Windows 10.
  - `mpc-be`: Media Player Classic Black Edition (MPC-BE). Operating systems: Windows 7 to Windows 10.
  - `mpc-hc`: Media Player Classic Home Cinema (MPC-HC). Operating systems: Windows XP to Windows 10.
+ - `multimc`: MultiMC. Operating systems: Windows XP to Windows 10.
  - `mypal`: Mypal 29.3.0. Operating systems: Windows XP and Windows Vista.
  - `mypal68`: Mypal 68.13.1. Operating systems: Windows XP and Windows Vista.
  - `naps2`: NAPS2. Operating systems: Windows XP to Windows 10.
@@ -44,7 +49,7 @@
  - `pale-moon`: Pale Moon. Operating systems: Windows 7 to Windows 10.
  - `playnite`: Playnite. Operating systems: Windows 7 to Windows 10.
  - `python`: Python 2. Operating systems: Windows 2000 to Windows 10.
- - `python3`: Python 3. Operating systems: Windows 7 to Windows 10.
+ - `python3`: Python 3. Operating systems: Windows 2000 to Windows 10.
  - `qbittorrent`: qBitTorrent. Operating systems: Windows 2000 to Windows 10.
  - `retroarch`: RetroArch. Operating systems: Windows 2000 to Windows 10.
  - `rufus`: Rufus. Operating systems: Windows XP to Windows 10.
@@ -66,7 +71,11 @@
 
 ## Changelog
 
-Version 8 (16/1/2024) (Current):
+Version 9 (17/1/2024) (Current):
+- Added .NET 3.5, 4.0 and 4.6, ImDisk and MultiMC.
+- Added Python 3 for Windows 2000, XP and Vista.
+
+Version 8 (16/1/2024):
 - Added Kodi and NAPS2.
 - Added Python for Windows 2000.
 - Removed Visual Studio Code from Windows XP and Vista due to it not being compatible with these versions of Windows.

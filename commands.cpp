@@ -252,7 +252,7 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-    cout << "Package Manager for Old Windows v0.1.4 (2024-01-17)" << endl;
+    cout << "Package Manager for Old Windows v0.1.4.1 (2024-01-20)" << endl;
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;

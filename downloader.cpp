@@ -15,9 +15,9 @@ void installPackage(string package, string url){
     // Install package
     string command, filename, wget_exe = "wget", fullpath = programpath + "\\";
     system(command.c_str());
-    if(package != "mypal68" && package != "xpchrome" && package != "onecoreapi" && package != "paint.net" && package != "blendercompat" && package != "libreoffice" && package != "python" && package != "clamav" 
-    && package != "multimc" && (package != "blender" || winver == "Windows 2000") && (package == "python3" && (winver != "Windows 2000" && winver != "Windows XP" && winver != "Windows XP Professional x64/Windows Server 2003" && winver != "Windows Vista"))
-    && package != "imdisk"){
+    if((package != "mypal68" && package != "xpchrome" && package != "onecoreapi" && package != "paint.net" && package != "blendercompat" && package != "libreoffice" && package != "python" && package != "clamav" 
+    && package != "multimc" && (package != "blender" || winver == "Windows 2000") && package != "imdisk") || 
+    (package == "python3" && winver != "Windows 2000" && winver != "Windows XP" && winver != "Windows XP Professional x64/Windows Server 2003" && winver != "Windows Vista")){
         filename = package + ".exe";
     }
     else if(package == "libreoffice" || package == "python" || package == "clamav" || (package == "blender" && winver != "Windows 2000") || (package == "python3" && (winver == "Windows 2000" || winver == "Windows XP" 

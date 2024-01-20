@@ -79,7 +79,7 @@ Version 10 (20/1/2024) (Current):
 - Added Brave, Java and iTunes.
 - Added Vivaldi for Windows XP and Vista.
 
-Version 9 (17/1/2024) (Current):
+Version 9 (17/1/2024):
 - Added .NET 3.5, 4.0 and 4.6, ImDisk and MultiMC.
 - Added Python 3 for Windows 2000, XP and Vista.
 

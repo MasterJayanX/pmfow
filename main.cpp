@@ -16,7 +16,7 @@ int main(int argc, char** argv){
     osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0; 
     GetVersionExW(&osv);
     int majorVersion = osv.dwMajorVersion, minorVersion = osv.dwMinorVersion, build = osv.dwBuildNumber;
-    winver = getWindowsVersion(majorVersion, minorVersion);
+    winver = getWindowsVersion(majorVersion, minorVersion, build);
     architecture = getArchitecture();
     programpath = getEXEpath();
     if(osv.dwMajorVersion >= 5){
@@ -64,7 +64,7 @@ int main(int argc, char** argv){
             version(majorVersion, minorVersion, build);
         }
         else{
-            cout << "Invalid command.\n";
+            cout << "Invalid command. Use pmfow help to see what commands are supported.\n";
         }
     }
     else{

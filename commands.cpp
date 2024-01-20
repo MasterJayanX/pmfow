@@ -67,7 +67,7 @@ private:
     }
 };
 
-string getWindowsVersion(int majorVersion, int minorVersion){
+string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
     // This function returns the Windows version you are running
     string winver;
     if(majorVersion == 5 && minorVersion == 0){
@@ -91,8 +91,11 @@ string getWindowsVersion(int majorVersion, int minorVersion){
     else if(majorVersion == 6 && minorVersion == 3){
         winver = "Windows 8.1";
     }
-    else if(majorVersion == 10 && minorVersion == 0){
+    else if(majorVersion == 10 && minorVersion == 0 && buildNumber <= 19045){
         winver = "Windows 10";
+    }
+    else if(majorVersion == 10 && minorVersion == 0 && buildNumber >= 22000){
+        winver = "Windows 11";
     }
     else{
         winver = "Other Windows version";
@@ -182,7 +185,7 @@ void list(){
     else if(winver == "Windows 8" || winver == "Windows 8.1"){
         file.open(fullpath + "win8.txt");
     }
-    else if(winver == "Windows 10"){
+    else if(winver == "Windows 10" || winver == "Windows 11"){
         file.open(fullpath + "win10.txt");
     }
     else{
@@ -252,7 +255,7 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-    cout << "Package Manager for Old Windows v0.1.4 (2024-01-17)" << endl;
+    cout << "Package Manager for Old Windows v0.1.5 (2024-01-20)" << endl;
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;

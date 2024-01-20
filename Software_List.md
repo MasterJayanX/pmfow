@@ -9,12 +9,14 @@
  - `bleachbit`: BleachBit. Operating systems: Windows 7 to Windows 10.
  - `blender`: Blender. Operating systems: Windows 2000 to Windows 10.
  - `blendercompat`: BlenderCompat. Operating systems: Windows 7 and Windows 8 (64-bit only).
+ - `brave`: Brave. Operating systems: Windows 7 to Windows 10.
  - `cdburnerxp`: CDBurnerXP. Operating systems: Windows XP to Windows 10.
  - `chromium`: Chromium. Operating systems: Windows XP to Windows 10.
  - `chromium-nosync`: Chromium-nosync. Operating systems: Windows 7 to Windows 10.
  - `clamav`: ClamAV. Operating systems: Windows 7 to Windows 10.
  - `clamsentinel`: ClamSentinel. Operating systems: Windows 2000 to Windows 10.
  - `clamwin`: ClamWin. Operating systems: Windows 2000 to Windows 10.
+ - `deluge`: Deluge. Operating systems: Windows XP to Windows 10.
  - `dotnet3.5`: .NET 3.5 SP1. Operating systems: Windows XP and Windows Vista.
  - `dotnet4`: .NET 4.0. Operating systems: Windows XP to Windows 7.
  - `dotnet4.6`: .NET 4.6. Operating systems: Windows Vista to Windows 8.1.
@@ -26,6 +28,8 @@
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
  - `imdisk`: ImDisk. Operating systems: Windows 2000 to Windows 10.
  - `irfanview`: IrfanView. Operating systems: Windows XP to Windows 10.
+ - `itunes`: iTunes. Operating systems: Windows XP to Windows 10.
+ - `java`: Java. Operating systems: Windows 2000 to Windows 10.
  - `k-lite-codec`: K-Lite Codec Pack. Operating systems: Windows XP to Windows 10.
  - `kodi`: Kodi. Operating systems: Windows 7 to Windows 10.
  - `krita`: Krita. Operating systems: Windows 7 to Windows 10.
@@ -61,7 +65,7 @@
  - `thunderbird`: Thunderbird. Operating systems: Windows 2000 to Windows 10.
  - `ungoogled-chromium`: Ungoogled Chromium. Operating systems: Windows 7 to Windows 10.
  - `virtualbox`: Oracle VM Virtualbox. Operating systems: Windows XP to Windows 10.
- - `vivaldi`: Vivaldi. Operating systems: Windows 7 to Windows 10.
+ - `vivaldi`: Vivaldi. Operating systems: Windows XP to Windows 10.
  - `vlc`: VLC Media Player. Operating systems: Windows 2000 to Windows 10.
  - `vscode`: Visual Studio Code. Operating systems: Windows 7 to Windows 10.
  - `vscodium`: VSCodium. Operating systems: Windows 7 to Windows 10.
@@ -70,6 +74,10 @@
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
 
 ## Changelog
+
+Version 10 (20/1/2024) (Current):
+- Added Brave, Java and iTunes.
+- Added Vivaldi for Windows XP and Vista.
 
 Version 9 (17/1/2024) (Current):
 - Added .NET 3.5, 4.0 and 4.6, ImDisk and MultiMC.

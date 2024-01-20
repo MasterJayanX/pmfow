@@ -5,8 +5,9 @@ bleachbit=https://sourceforge.net/projects/bleachbit/files/bleachbit/2.2/BleachB
 blender=https://download.blender.org/release/Blender2.76/blender-2.76b-windows32.msi
 cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_minimal.exe
 chromium=https://web.archive.org/web/20210603163609/https://github.com/henrypp/chromium/releases/download/v49.0.2623.112-r403382-win32/chromium_sync.exe
-clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
+clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+deluge=https://ftp.osuosl.org/pub/deluge/archive/1.3/deluge-1.3.15-win32-py2.7.exe
 dotnet3.5=https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe
 dotnet4=https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
@@ -15,6 +16,8 @@ freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-2.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
+itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
+java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
 k-lite-codec=http://files2.codecguide.com/K-Lite_Codec_Pack_1385_Basic.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
@@ -28,6 +31,7 @@ notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/downlo
 onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/download/3.0.4/One-Core-API-Binaries-3.0.4.zip
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
+pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.4/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.9/python-2.7.9.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_setup.exe/download
@@ -40,7 +44,8 @@ sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/3.1.2/SumatraPDF-3.1.2-inst
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win32/vlc-3.0.18-win32.exe
+vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 9
+# Version: 10

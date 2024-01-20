@@ -6,12 +6,14 @@ bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5
 bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
 blender=https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi/
 blendercompat=https://github.com/nalexandru/BlenderCompat/releases/download/4.0.2/blender-4.0.2-windows-7.zip
+brave=https://github.com/brave/brave-browser/releases/download/v1.46.144/BraveBrowserSetup.exe
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
 clamav=https://www.clamav.net/downloads/production/clamav-1.0.4.win.x64.msi
-clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
+clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
 dotnet4.6=https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
@@ -20,6 +22,8 @@ freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x64_setu
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk-x64.zip/download
 irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.exe
+itunes=https://tinyurl.com/yckernyf
+java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
@@ -39,6 +43,7 @@ open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.
 pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=64&type=installer
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
 playnite=https://playnite.link/download/PlayniteInstaller.exe
+pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.4/pmfow64.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
@@ -59,4 +64,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSC
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 
-# Version: 9
+# Version: 10

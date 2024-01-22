@@ -17,6 +17,7 @@
  - `clamsentinel`: ClamSentinel. Operating systems: Windows 2000 to Windows 10.
  - `clamwin`: ClamWin. Operating systems: Windows 2000 to Windows 10.
  - `deluge`: Deluge. Operating systems: Windows XP to Windows 10.
+ - `dosbox`: DOSBox. Operating systems: Windows XP to Windows 10.
  - `dotnet3.5`: .NET 3.5 SP1. Operating systems: Windows XP and Windows Vista.
  - `dotnet4`: .NET 4.0. Operating systems: Windows XP to Windows 7.
  - `dotnet4.6`: .NET 4.6. Operating systems: Windows Vista to Windows 8.1.
@@ -63,6 +64,7 @@
  - `sumatrapdf`: SumatraPDF. Operating systems: Windows 2000 to Windows 10.
  - `supermium`: Supermium. Operating systems: Windows Vista to Windows 8.1.
  - `thunderbird`: Thunderbird. Operating systems: Windows 2000 to Windows 10.
+ - `timezones`: 2017 timezones for Windows NT 5.x. Operating systems: Windows 2000 and Windows XP.
  - `ungoogled-chromium`: Ungoogled Chromium. Operating systems: Windows 7 to Windows 10.
  - `virtualbox`: Oracle VM Virtualbox. Operating systems: Windows XP to Windows 10.
  - `vivaldi`: Vivaldi. Operating systems: Windows XP to Windows 10.
@@ -72,10 +74,17 @@
  - `winrar`: WinRAR. Operating systems: Windows XP to Windows 10.
  - `winscp`: WinSCP. Operating systems: Windows 7 to Windows 10.
  - `xpchrome`: XPChrome. Operating systems: Windows XP and Windows Vista.
+ - `xpmode`: Windows XP Mode. Operating systems: Windows 7 only.
 
 ## Changelog
 
-Version 10 (20/1/2024) (Current):
+Version 11 (22/1/2024) (Current):
+- Added DOSBox, NT 5.x Timezones and XP Mode.
+- Updated Rufus to version 4.4.
+- Updated OneCore API to version 3.0.5.
+- Added Audacity for Windows 2000.
+
+Version 10 (20/1/2024):
 - Added Brave, Java and iTunes.
 - Added Vivaldi for Windows XP and Vista.
 

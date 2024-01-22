@@ -1,5 +1,6 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
 7-zip-old=https://www.7-zip.org/a/7z920.exe
+audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
 blender=https://download.blender.org/release/Blender2.42/blender-2.42a-windows.exe
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
@@ -18,7 +19,8 @@ scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.9.1/win32/en-US/SeaMonkey%20Setup%202.9.1.exe
 sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/1.5.1/SumatraPDF-1.5.1-install.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/12.0.1/win32/en-US/Thunderbird%20Setup%2012.0.1.exe
+timezones=http://web.archive.org/web/20220422005301/https://07.sendcdn.com/d/bfyqde3f6gosj4l4652fnf5uq5lz33xod76y3ccdcljmoex54iylf2cvcurbsnk5c6opwomy/Windows%20NT%205.x%20-%202017%20Time%20Zones.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 
-# Version: 10
+# Version: 11

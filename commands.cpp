@@ -10,6 +10,8 @@
 
 using namespace std;
 
+string programversion = "Package Manager for Old Windows v0.1.5 (2024-01-22)";
+
 class repo {
 public:
     repo(const string& os) {
@@ -18,6 +20,7 @@ public:
     }
 
     string repos(const string& key) const {
+        // This function returns the URL of the package
         auto it = packages.find(key);
         return (it != packages.end()) ? it->second : "Package not found";
     }
@@ -158,6 +161,7 @@ void update(){
     // This function updates the repositories
     cout << "Updating repositories...\n";
     updateRepositories();
+    cout << "To update pmfow, run \"pmfow-updater\".\n";
     cout << "Done.\n";
 }
 
@@ -232,28 +236,36 @@ void search(char** argv, int argc){
 
 void help(){
     // This function shows the help message
-    cout << "Command list:\n";
+    cout << "Usage: pmfow <command> [options]\n";
+    cout << "\n";
+    cout << "List of commands:\n";
     cout << "pmfow install <package> - Installs a package.\n";
     cout << "pmfow update - Updates the repositories.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
     cout << "pmfow list - Lists all the packages.\n";
     cout << "pmfow help - Shows this help message.\n";
     cout << "pmfow version - Shows the version of pmfow that you are running.\n";
+    cout << "pmfow-updater - Updates the pmfow executable to the latest version.\n";
+    cout << "\n";
+    cout << "List of flags:\n";
     cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -p/--powershell - Installs a package using PowerShell's DownloadFile function.\n";
     cout << "pmfow install <package> -w/--wget - Installs a package using wget (not needed in most cases).\n";
-    cout << "pmfow install <package> --check-certificates / pmfow update --check-certificates - Installs a package using wget with certificate checking.\n";
-    cout << "pmfow install <package> --show-url - Shows the URL of the package.\n";
+    cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
+    cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow install <package> --wget-version <os> - Installs a package using a different version of wget.\n";
     cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
-    cout << "pmfow search <package> --force-os <os> - Searches for a package for a different OS.\n";
-    cout << "pmfow search <package> -u/--show-url - Shows the URL of the package.\n";
+    cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
+    cout << "\n";
 }
 
-void version(int majorVersion, int minorVersion, int build){
+void about(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-    cout << "Package Manager for Old Windows v0.1.4.1 (2024-01-20)" << endl;
+    cout << programversion << endl;
     cout << "Made by MasterJayanX" << endl;
+    cout << "This program is licensed under the GNU GPL 3 License. See LICENSE for more information." << endl;
+    cout << "Github repository: https://github.com/MasterJayanX/pmfow" << endl;
+    cout << "Path: " << programpath << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;
 }
@@ -280,7 +292,7 @@ int checkFlags(int argc, char** argv){
                     check_cert = true;
                 }
             }
-            if(string(argv[i]) == "--force-os"){
+            if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
                 if(argc < i+1){
                     cout << "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>\n";
                     cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
@@ -355,7 +367,7 @@ int checkSearchFlags(int argc, char** argv){
     int success = 1;
     if(argc >= 3){
         for(int i = 2; i < argc; i++){
-            if(string(argv[i]) == "--force-os"){
+            if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
                 if(argc < i+1){
                     cout << "Usage: pmfow search <package> --force-os <os>\n";
                     cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";

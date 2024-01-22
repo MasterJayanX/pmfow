@@ -7,26 +7,28 @@
 
 using namespace std;
 
+// Global variables
 string winver, architecture, programpath;
 bool use_powershell = false, check_cert = false, show_url = false, onefile = false;
 float wget_os = 0;
 
 void installPackage(string package, string url){
     // Install package
-    string command, filename, wget_exe = "wget", fullpath = programpath + "\\";
+    string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\";
     system(command.c_str());
     if((package != "mypal68" && package != "xpchrome" && package != "onecoreapi" && package != "paint.net" && package != "blendercompat" && package != "libreoffice" && package != "python" && package != "clamav" 
     && package != "multimc" && (package != "blender" || winver == "Windows 2000") && package != "imdisk") || 
     (package == "python3" && winver != "Windows 2000" && winver != "Windows XP" && winver != "Windows XP Professional x64/Windows Server 2003" && winver != "Windows Vista")){
-        filename = package + ".exe";
+        extension = ".exe";
     }
     else if(package == "libreoffice" || package == "python" || package == "clamav" || (package == "blender" && winver != "Windows 2000") || (package == "python3" && (winver == "Windows 2000" || winver == "Windows XP" 
     || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "Windows Vista"))){
-        filename = package + ".msi";
+        extension = ".msi";
     }
     else{
-        filename = package + ".zip";
+        extension = ".zip";
     }
+    filename = package + extension;
     fullpath += filename;
     if(show_url){
         cout << "URL: " << url << endl;
@@ -52,7 +54,7 @@ void installPackage(string package, string url){
         }
     }
     system(command.c_str());
-    if (package != "mypal68" && package != "onecoreapi" && package != "paint.net" && package != "xpchrome" && package != "blendercompat" && package != "multimc" && package != "imdisk") {
+    if (extension != ".zip") {
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
@@ -77,6 +79,7 @@ void installPackage(string package, string url){
 }
 
 vector<string> repoDirectories(){
+    // Get directories from directories.txt
     vector<string> directories(2);
     ifstream file;
     string fullpath = programpath + "\\";

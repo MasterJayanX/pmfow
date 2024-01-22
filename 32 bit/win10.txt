@@ -22,7 +22,7 @@ freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setu
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
-itunes=itunes=https://tinyurl.com/munxjvr3
+itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
@@ -46,7 +46,7 @@ python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86/RetroArch-Win32-setup.exe
-rufus=https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_x86.exe
+rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4_x86.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe

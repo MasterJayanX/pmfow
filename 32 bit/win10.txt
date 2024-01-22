@@ -41,7 +41,7 @@ open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
 pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=32&type=installer
 playnite=https://playnite.link/download/PlayniteInstaller.exe
-pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.4/pmfow32.exe
+pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download

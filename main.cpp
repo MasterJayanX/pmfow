@@ -19,7 +19,7 @@ int main(int argc, char** argv){
     winver = getWindowsVersion(majorVersion, minorVersion, build);
     architecture = getArchitecture();
     programpath = getEXEpath();
-    if(osv.dwMajorVersion >= 5){
+    if(osv.dwMajorVersion >= 5 && argc > 1){
         // Windows 2000 or later
         if(string(argv[1]) == "install"){
             int success = checkFlags(argc, argv);
@@ -66,6 +66,10 @@ int main(int argc, char** argv){
         else{
             cout << "Invalid command. Use pmfow help to see what commands are supported.\n";
         }
+    }
+    else if(argc == 1){
+        cerr << "Error: no command specified. Usage: pmfow <command>. Use pmfow help to see what commands are supported.\n";
+        return 1;
     }
     else{
         // Windows 98 or earlier

@@ -245,13 +245,15 @@ void search(char** argv, int argc){
 
 void help(){
     // This function shows the help message
-    cout << "Command list:\n";
+    cout << "List of commands:\n";
     cout << "pmfow install <package> - Installs a package.\n";
     cout << "pmfow update - Updates the repositories.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
     cout << "pmfow list - Lists all the packages.\n";
     cout << "pmfow help - Shows this help message.\n";
     cout << "pmfow version - Shows the version of pmfow that you are running.\n";
+    cout << "pmfow-updater - Updates the pmfow executable to the latest version.\n";
+    cout << "List of flags:\n";
     cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -p/--powershell - Installs a package using PowerShell's DownloadFile function.\n";
     cout << "pmfow install <package> -w/--wget - Installs a package using wget (not needed in most cases).\n";
@@ -265,11 +267,7 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
-<<<<<<< Updated upstream
     cout << "Package Manager for Old Windows v0.1.5 (2024-01-20)" << endl;
-=======
-    cout << "Package Manager for Old Windows v0.1.5 (2024-01-19)" << endl;
->>>>>>> Stashed changes
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;

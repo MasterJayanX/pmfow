@@ -161,6 +161,16 @@ void update(){
     // This function updates the repositories
     cout << "Updating repositories...\n";
     updateRepositories();
+    cout << "Updating pmfow...\n";
+    repo r(winver);
+    if(r.repos("pmfow") == "Package not found"){
+        cout << "pmfow's download link has not been found.\n";
+        cout << "Done.\n";
+        return;
+    }
+    string url = r.repos("pmfow");
+    string packagename = "pmfow.exe";
+    updatepmfow(packagename, url);
     cout << "Done.\n";
 }
 
@@ -255,7 +265,11 @@ void help(){
 
 void version(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
+<<<<<<< Updated upstream
     cout << "Package Manager for Old Windows v0.1.5 (2024-01-20)" << endl;
+=======
+    cout << "Package Manager for Old Windows v0.1.5 (2024-01-19)" << endl;
+>>>>>>> Stashed changes
     cout << "Made by MasterJayanX" << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;

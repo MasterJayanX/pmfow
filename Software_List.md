@@ -50,6 +50,8 @@
  - `oneclickappinstaller`: OneClickAppInstaller. Operating systems: Windows 7 to Windows 10.
  - `onecoreapi`: OneCore API. Operating systems: Windows XP only.
  - `openoffice`: OpenOffice. Operating systems: Windows 2000 to Windows Vista.
+ - `open-shell`: Open-Shell. Operating systems: Windows 7 to Windows 10.
+ - `openttd`: OpenTTD. Operating systems: Windows 2000 to Windows 10.
  - `paint.net`: Paint.NET. Operating systems: Windows XP to Windows 10.
  - `pale-moon`: Pale Moon. Operating systems: Windows 7 to Windows 10.
  - `playnite`: Playnite. Operating systems: Windows 7 to Windows 10.
@@ -64,6 +66,7 @@
  - `sumatrapdf`: SumatraPDF. Operating systems: Windows 2000 to Windows 10.
  - `supermium`: Supermium. Operating systems: Windows Vista to Windows 8.1.
  - `thunderbird`: Thunderbird. Operating systems: Windows 2000 to Windows 10.
+ - `tor`: Tor Browser. Operating systems: Windows XP to Windows 10.
  - `timezones`: 2017 timezones for Windows NT 5.x. Operating systems: Windows 2000 and Windows XP.
  - `ungoogled-chromium`: Ungoogled Chromium. Operating systems: Windows 7 to Windows 10.
  - `virtualbox`: Oracle VM Virtualbox. Operating systems: Windows XP to Windows 10.
@@ -78,14 +81,18 @@
 
 ## Changelog
 
-Version 11 (22/1/2024) (Current):
+Version 12 (23/1/2024) (Current):
+- Added Tor and OpenTTD.
+- Updated Notepad++ to version 8.6.2.
+
+Version 11 (22/1/2024):
 - Added DOSBox, NT 5.x Timezones and XP Mode.
 - Updated Rufus to version 4.4.
 - Updated OneCore API to version 3.0.5.
 - Added Audacity for Windows 2000.
 
 Version 10 (20/1/2024):
-- Added Brave, Java and iTunes.
+- Added Brave, Deluge, Java and iTunes.
 - Added Vivaldi for Windows XP and Vista.
 
 Version 9 (17/1/2024):

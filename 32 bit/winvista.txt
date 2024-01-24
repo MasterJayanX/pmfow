@@ -30,9 +30,10 @@ multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.1/npp.8.6.1.Installer.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
+openttd=https://cdn.openttd.org/openttd-releases/12.2/openttd-12.2-windows-win32.exe
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
@@ -46,10 +47,11 @@ sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_32_setup.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
+tor=https://archive.torproject.org/tor-package-archive/torbrowser/7.5.6/torbrowser-install-7.5.6_en-US.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win32/vlc-3.0.18-win32.exe
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 11
+# Version: 12

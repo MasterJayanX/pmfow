@@ -7,8 +7,8 @@ bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.e
 blender=https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi/
 brave=https://laptop-updates.brave.com/latest/winx64
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
-chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v120.0.6099.217-r1217362/mini_installer.sync.exe
-chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v120.0.6099.217-r1217362/mini_installer.nosync.exe
+chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v121.0.6167.86-r1233107/mini_installer.sync.exe
+chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v121.0.6167.86-r1233107/mini_installer.nosync.exe
 clamav=https://www.clamav.net/downloads/production/clamav-1.2.1.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
@@ -16,8 +16,9 @@ deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
-firefox=https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US
-firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win64/en-US/Firefox%20Setup%20115.6.0esr.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/122.0/win64/en-US/Firefox%20Setup%20122.0.exe
+firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/115.7.0esr/win64/en-US/Firefox%20Setup%20115.7.0esr.exe
+foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk-x64.zip/download
@@ -28,11 +29,11 @@ k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
-librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/121.0-1/librewolf-121.0-1-windows-x86_64-setup.exe
+librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/122.0-1/librewolf-122.0-1-windows-x86_64-setup.exe
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win64-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x64-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x64.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.4/MPC-HC.2.1.4.x64.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.x64.exe
@@ -63,4 +64,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.1.23348/VSC
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 
-# Version: 12
+# Version: 13

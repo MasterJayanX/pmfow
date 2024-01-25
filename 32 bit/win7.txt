@@ -18,7 +18,8 @@ dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-
 dotnet4.6=https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
-firefox=https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win32/en-US/Firefox%20Setup%20115.6.0esr.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/115.7.0esr/win32/en-US/Firefox%20Setup%20115.7.0esr.exe
+foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
@@ -34,7 +35,7 @@ libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.3/MPC-HC.2.1.3.x86.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.4/MPC-HC.2.1.4.x86.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.exe
@@ -68,4 +69,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.e
 winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 12
+# Version: 13

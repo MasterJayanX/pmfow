@@ -25,6 +25,7 @@
  - `filezilla`: Filezilla. Operating systems: Windows 7 to Windows 10.
  - `firefox`: Firefox. Operating systems: Windows 2000 to Windows 10.
  - `firefox-esr`: Firefox ESR. Operating systems: Windows 2000 and Windows 10 only.
+ - `foobar2000`: foobar2000. Operating systems: Windows XP to Windows 10.
  - `freedownloadmanager`: Free Download Manager. Operating systems: Windows XP to Windows 10.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
  - `imdisk`: ImDisk. Operating systems: Windows 2000 to Windows 10.
@@ -81,7 +82,14 @@
 
 ## Changelog
 
-Version 12 (23/1/2024) (Current):
+Version 13 (24/1/2024) (Current):
+- Added foobar2000.
+- Updated MPC-HC to version 2.1.4.
+- Updated Firefox to version 115.7.0 for Windows 7 and 8.1 and to version 122.0 for Windows 10.
+- Updated Librewolf to version 122.0 (Windows 10 only).
+- Updated Chromium to version 121.0.6167.86 (Windows 10 only).
+
+Version 12 (23/1/2024):
 - Added Tor and OpenTTD.
 - Updated Notepad++ to version 8.6.2.
 

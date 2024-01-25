@@ -10,7 +10,7 @@
 
 using namespace std;
 
-string programversion = "Package Manager for Old Windows v0.1.5 (2024-01-22)";
+string programversion = "Package Manager for Old Windows v0.2.0 (2024-01-23)";
 
 class repo {
 public:
@@ -33,22 +33,22 @@ private:
         ifstream file;
         string fullpath = programpath + "\\";
         if(os == "Windows 2000"){
-            file.open(fullpath + "win2000.txt");
+            file.open(fullpath + "win2000.dat");
         }
         else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003"){
-            file.open(fullpath + "winxp.txt");
+            file.open(fullpath + "winxp.dat");
         }
         else if(os == "Windows Vista"){
-            file.open(fullpath + "winvista.txt");
+            file.open(fullpath + "winvista.dat");
         }
         else if(os == "Windows 7"){
-            file.open(fullpath + "win7.txt");
+            file.open(fullpath + "win7.dat");
         }
         else if(os == "Windows 8" || os == "Windows 8.1"){
-            file.open(fullpath + "win8.txt");
+            file.open(fullpath + "win8.dat");
         }
         else if(os == "Windows 10"){
-            file.open(fullpath + "win10.txt");
+            file.open(fullpath + "win10.dat");
         }
         else{
             cout << "Invalid OS.\n";
@@ -251,9 +251,8 @@ void help(){
     cout << "pmfow-updater - Updates the pmfow executable to the latest version.\n";
     cout << "\n";
     cout << "List of flags:\n";
-    cout << "pmfow install <package> --force-os <os> - Installs a package for a different OS.\n";
+    cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -p/--powershell - Installs a package using PowerShell's DownloadFile function.\n";
-    cout << "pmfow install <package> -w/--wget - Installs a package using wget (not needed in most cases).\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
     cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow install <package> --wget-version <os> - Installs a package using a different version of wget.\n";
@@ -280,9 +279,6 @@ int checkFlags(int argc, char** argv){
         for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "-p" || string(argv[i]) == "--powershell"){
                 use_powershell = true;
-            }
-            else if(string(argv[i]) == "-w" || string(argv[i]) == "--wget"){
-                use_powershell = false;
             }
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
                 if(use_powershell){

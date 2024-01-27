@@ -22,6 +22,7 @@ foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
+inkscape=https://inkscape.org/gallery/item/44618/inkscape-1.3.2_2023-11-25_091e20ef0f-x86.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
@@ -42,6 +43,7 @@ open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win32.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
 pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=32&type=installer
+peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WINDOWS.exe
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
@@ -62,7 +64,7 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSC
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win32/vlc-3.0.18-win32.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
-winscp=https://cdn.winscp.net/files/WinSCP-6.1.2-Setup.exe?secure=uTpRuR_99uY0iU1C9o7bFQ==,1704996882
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-624.exe
+winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 13
+# Version: 14

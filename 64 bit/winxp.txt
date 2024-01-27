@@ -17,6 +17,7 @@ foobar2000=https://www.foobar2000.org/files/foobar2000_v1.5.11.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-3.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk-x64.zip/download
+inkscape=https://inkscape.org/gallery/item/12189/inkscape-0.92.3-x64.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.exe
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
@@ -34,6 +35,7 @@ onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/downl
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 openttd=https://cdn.openttd.org/openttd-releases/1.10.3/openttd-1.10.3-windows-win64.exe
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
+peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow64.exe
 python=https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
@@ -53,4 +55,4 @@ vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.c
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 13
+# Version: 14

@@ -29,6 +29,7 @@
  - `freedownloadmanager`: Free Download Manager. Operating systems: Windows XP to Windows 10.
  - `gimp`: GIMP. Operating systems: Windows XP to Windows 10.
  - `imdisk`: ImDisk. Operating systems: Windows 2000 to Windows 10.
+ - `inkscape`: Inkscape. Operating systems: Windows 2000 to Windows 10.
  - `irfanview`: IrfanView. Operating systems: Windows XP to Windows 10.
  - `itunes`: iTunes. Operating systems: Windows XP to Windows 10.
  - `java`: Java. Operating systems: Windows 2000 to Windows 10.
@@ -55,6 +56,7 @@
  - `openttd`: OpenTTD. Operating systems: Windows 2000 to Windows 10.
  - `paint.net`: Paint.NET. Operating systems: Windows XP to Windows 10.
  - `pale-moon`: Pale Moon. Operating systems: Windows 7 to Windows 10.
+ - `peazip`: PeaZip. Operating systems: Windows 2000 to Windows 10.
  - `playnite`: Playnite. Operating systems: Windows 7 to Windows 10.
  - `python`: Python 2. Operating systems: Windows 2000 to Windows 10.
  - `python3`: Python 3. Operating systems: Windows 2000 to Windows 10.
@@ -82,7 +84,13 @@
 
 ## Changelog
 
-Version 13 (24/1/2024) (Current):
+Version 14 (26/1/2024) (Current):
+- Added Inkscape and PeaZip.
+- Updated Virtualbox to version 6.1.50 (Windows 7 and 8/8.1) and version 7.0.14 (Windows 10).
+- Updated qbittorrent to version 4.6.3 (Windows 10 only).
+- Replaced download links for WinSCP because the old ones weren't working.
+
+Version 13 (24/1/2024):
 - Added foobar2000.
 - Updated MPC-HC to version 2.1.4.
 - Updated Firefox to version 115.7.0 for Windows 7 and 8.1 and to version 122.0 for Windows 10.

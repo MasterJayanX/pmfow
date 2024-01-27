@@ -10,17 +10,25 @@
 
 using namespace std;
 
-string programversion = "Package Manager for Old Windows v0.2.0 (2024-01-23)";
+string programversion = "Package Manager for Old Windows v0.2.0 (2024-01-26)";
 
 class repo {
 public:
-    repo(const string& os) {
+    repo(const string& os, string operation) {
         // This constructor calls the loadRepos function
-        loadRepos(os);
+        if(operation == "loadRepo"){
+            loadRepos(os);
+        }
+        else if(operation == "loadUninstaller"){
+            loadUninstaller();
+        }
+        else{
+            cout << "Invalid operation.\n";
+        }
     }
 
     string repos(const string& key) const {
-        // This function returns the URL of the package
+        // This function returns the info of the package
         auto it = packages.find(key);
         return (it != packages.end()) ? it->second : "Package not found";
     }
@@ -28,7 +36,6 @@ public:
 private:
     // This map contains the packages for each repo
     map<string, string> packages;
-
     void loadRepos(const string& os) {
         ifstream file;
         string fullpath = programpath + "\\";
@@ -67,6 +74,27 @@ private:
             }
         }
         file.close();
+    }
+    void loadUninstaller(){
+        // This function loads the uninstaller
+        string fullpath = programpath + "\\";
+        ifstream file;
+        file.open(fullpath + "uninstallers.dat");
+        if(!file.is_open()){
+            cerr << "Error: uninstallers.dat could not be opened.\n";
+            return;
+        }
+        string line;
+        while(getline(file, line)){
+            size_t delimiterPos = line.find('=');
+            if(delimiterPos != string::npos){
+                string key = line.substr(0, delimiterPos);
+                string value = line.substr(delimiterPos + 1);
+                packages[key] = value;
+            }
+        }
+        file.close();
+    
     }
 };
 
@@ -147,7 +175,7 @@ void install(char** argv, int argc){
     }
     else{
         cout << "Installing " << argv[2] << "...\n";
-        repo r(winver);
+        repo r(winver, "loadRepo");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
             return;
@@ -157,6 +185,29 @@ void install(char** argv, int argc){
         cout << url << endl;
         installPackage(packagename, url);
         cout << "Done.\n";
+    }
+}
+
+void uninstall(char** argv, int argc){
+    // This function uninstalls a package
+    string command, uninstaller;
+    if(argc < 3){
+        cout << "Usage: pmfow uninstall <package>\n";
+        return;
+    }
+    else{
+        cout << "Uninstalling " << argv[2] << "...\n";
+        repo r(winver, "loadUninstaller");
+        if(r.repos(argv[2]) == "Package not found"){
+            cout << argv[2] << "The uninstaller for the specified software could not be found. " << argv[2] << " is either not installed or is installed in a different directory.\n";
+            return;
+        }
+        else{
+            uninstaller = r.repos(argv[2]);
+            command = uninstaller;
+            system(command.c_str());
+            cout << "Done.\n";
+        }
     }
 }
 
@@ -224,7 +275,7 @@ void search(char** argv, int argc){
     }
     else{
         cout << "Searching for " << argv[2] << "...\n";
-        repo r(winver);
+        repo r(winver, "loadRepo");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
         }

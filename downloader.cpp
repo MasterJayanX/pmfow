@@ -56,7 +56,7 @@ void installPackage(string package, string url){
         }
     }
     system(command.c_str());
-    if (extension != ".zip") {
+    if (extension != ".zip" && extension != ".7z") {
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;

@@ -1,4 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301-x64.exe
+arduino=https://downloads.arduino.cc/arduino-ide/arduino-ide_2.2.1_Windows_64bit.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
@@ -66,4 +67,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.1.23348/VSC
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 14
+# Version: 15

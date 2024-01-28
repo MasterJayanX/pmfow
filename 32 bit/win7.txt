@@ -1,4 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
+arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
@@ -58,7 +59,7 @@ scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_32_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_32_setup.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win32/en-US/Thunderbird%20Setup%20115.6.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
@@ -71,4 +72,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 14
+# Version: 15

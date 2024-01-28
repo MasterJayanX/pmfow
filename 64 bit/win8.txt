@@ -1,4 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301-x64.exe
+arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
@@ -57,7 +58,7 @@ rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_64_setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win64/en-US/Thunderbird%20Setup%20115.6.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
@@ -70,4 +71,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSC
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 
-# Version: 14
+# Version: 15

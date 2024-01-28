@@ -10,7 +10,7 @@
 
 using namespace std;
 
-string programversion = "Package Manager for Old Windows v0.2.0 (2024-01-26)";
+string programversion = "Package Manager for Old Windows v0.2.0-rc1 (Codename \"Adora\") (2024-01-28)";
 
 class repo {
 public:
@@ -21,6 +21,9 @@ public:
         }
         else if(operation == "loadUninstaller"){
             loadUninstaller();
+        }
+        else if(operation == "loadUpdater"){
+            loadUpdater();
         }
         else{
             cout << "Invalid operation.\n";
@@ -94,7 +97,26 @@ private:
             }
         }
         file.close();
-    
+    }
+    void loadUpdater(){
+        // This function loads the updater
+        string fullpath = programpath + "\\";
+        ifstream file;
+        file.open(fullpath + "updater.dat");
+        if(!file.is_open()){
+            cerr << "Error: updater.dat could not be opened.\n";
+            return;
+        }
+        string line;
+        while(getline(file, line)){
+            size_t delimiterPos = line.find('=');
+            if(delimiterPos != string::npos){
+                string key = line.substr(0, delimiterPos);
+                string value = line.substr(delimiterPos + 1);
+                packages[key] = value;
+            }
+        }
+        file.close();
     }
 };
 
@@ -214,7 +236,19 @@ void uninstall(char** argv, int argc){
 void update(){
     // This function updates the repositories
     cout << "Updating repositories...\n";
-    updateRepositories();
+    string url;
+    repo r(winver, "loadUpdater");
+    if(architecture == "x64"){
+        url = r.repos("pmfow-updater64");
+    }
+    else if(architecture == "x86"){
+        url = r.repos("pmfow-updater32");
+    }
+    else{
+        cout << "Invalid architecture.\n";
+        return;
+    }
+    updateRepositories(url);
     cout << "To update pmfow, run \"pmfow-updater\".\n";
     cout << "Done.\n";
 }
@@ -294,6 +328,7 @@ void help(){
     cout << "\n";
     cout << "List of commands:\n";
     cout << "pmfow install <package> - Installs a package.\n";
+    cout << "pmfow uninstall <package> - Uninstalls a package. Keep in mind that this command is experimental.\n";
     cout << "pmfow update - Updates the repositories.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
     cout << "pmfow list - Lists all the packages.\n";

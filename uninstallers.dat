@@ -1,2 +1,13 @@
-brave=C:\\"Program Files"\\BraveSoftware\\Brave-Browser\\Application\\121.1.62.153\\Installer\\setup.exe --uninstall --system-level
-firefox=C:\\"Program Files"\\"Mozilla Firefox"\\uninstall\\helper.exe
+7-zip=C:\"Program Files"\7-Zip\Uninstall.exe
+audacity=C:\"Program Files"\Audacity\unins000.exe
+bcuninstaller=C:\"Program Files"\BCUninstaller\unins000.exe
+brave=C:\"Program Files"\BraveSoftware\Brave-Browser\Application\121.1.62.153\Installer\setup.exe --uninstall --system-level
+cdburnerxp=C:\"Program Files (x86)"\CDBurnerXP\unins000.exe
+firefox=C:\"Program Files"\"Mozilla Firefox"\uninstall\helper.exe
+imdisk=C:\"Program Files"\ImDisk\config.exe /u
+librewolf=C:\"Program Files"\LibreWolf\uninstall.exe
+mgba=C:\"Program Files"\mGBA\unins000.exe
+obs-studio=C:\"Program Files"\obs-studio\uninstall.exe
+pale-moon=C:\"Program Files"\"Pale Moon"\uninstall\helper.exe
+thunderbird=C:\"Program Files"\"Mozilla Thunderbird"\uninstall\helper.exe
+winrar=C:\"Program Files"\WinRAR\Uninstall.exe

@@ -31,7 +31,7 @@ int main(int argc, char** argv){
                 install(argv, argc);
             }
         }
-        else if(string(argv[1]) == "uninstall" || string(argv[1]) == "un" || string(argv[1]) == "remove" || string(argv[1]) == "rm"){
+        else if(string(argv[1]) == "uninstall" || string(argv[1]) == "remove" || string(argv[1]) == "rm"){
             // Uninstall package
             int success = checkFlags(argc, argv);
             if(success == 0){

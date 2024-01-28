@@ -1,4 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
+arduino=https://downloads.arduino.cc/arduino-1.8.9-windows.exe
 audacity=http://web.archive.org/web/20220108024104/https://cloud13.send.cm/d/azyrurs36gosj4l4oz2epgxk33pb7f4offexkhzcu4qdhmqy5ntxlftr64f5tu5uhtkaqgvx/audacity-win-2.1.3.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v4.16/BCUninstaller_4.16_setup.exe
 bleachbit=https://sourceforge.net/projects/bleachbit/files/bleachbit/2.2/BleachBit-2.2-setup.exe/download
@@ -18,6 +19,7 @@ foobar2000=https://www.foobar2000.org/files/foobar2000_v1.5.11.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-2.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
+inkscape=https://inkscape.org/gallery/item/12192/inkscape-0.92.3-x86.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
@@ -36,7 +38,7 @@ obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 openttd=https://cdn.openttd.org/openttd-releases/12.2/openttd-12.2-windows-win32.exe
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
-pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
+peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WINDOWS.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_setup.exe/download
@@ -46,7 +48,7 @@ scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win32/en-US/seamonkey-2.49.5.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v119/supermium_119_32_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_32_setup.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 tor=https://archive.torproject.org/tor-package-archive/torbrowser/7.5.6/torbrowser-install-7.5.6_en-US.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
@@ -55,4 +57,4 @@ vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.c
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 13
+# Version: 15

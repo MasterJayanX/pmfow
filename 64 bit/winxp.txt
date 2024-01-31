@@ -36,7 +36,9 @@ onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/downl
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 openttd=https://cdn.openttd.org/openttd-releases/1.10.3/openttd-1.10.3-windows-win64.exe
 paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
+pale-moon=http://web.archive.org/web/20170319043844/http://rm-us.palemoon.org/release/palemoon-26.5.0.Atom.WinXP.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
+pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow64.exe
 python=https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
@@ -55,6 +57,5 @@ virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-1
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
-xpchrome=https://github.com/weolar/xpchrome/releases/download/20231121/M115xp.zip
 
-# Version: 15
+# Version: 16

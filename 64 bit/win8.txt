@@ -28,7 +28,7 @@ inkscape=https://inkscape.org/gallery/item/37363/inkscape-1.2.2_2022-12-09_732a0
 irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.exe
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1805_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -45,14 +45,16 @@ obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win64.exe
-pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=64&type=installer
-peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.0.win64.installer.exe
+peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
+pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow64.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/122.0.1-beta-branded/r3dfox-122.0.1.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -71,4 +73,4 @@ vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSC
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 
-# Version: 15
+# Version: 16

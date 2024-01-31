@@ -27,7 +27,7 @@ inkscape=https://inkscape.org/gallery/item/44618/inkscape-1.3.2_2023-11-25_091e2
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1805_Basic.exe
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/122.0-1/librewolf-122.0-1-windows-i686-setup.exe
@@ -43,8 +43,9 @@ oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releas
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win32.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
-pale-moon=https://www.palemoon.org/download.php?mirror=us&bits=32&type=installer
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.0.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WINDOWS.exe
+pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
@@ -67,4 +68,4 @@ vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 15
+# Version: 16

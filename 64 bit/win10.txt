@@ -57,6 +57,8 @@ rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
+thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M120.0.6099.235/thorium_AVX2_mini_installer.exe
+thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M120.0.6099.235/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win64/en-US/Thunderbird%20Setup%20115.6.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/120.0.6099.199-1.1/ungoogled-chromium_120.0.6099.199-1.1_installer_x64.exe
@@ -64,8 +66,8 @@ virtualbox=https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-1
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.5.3206.50.x64.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
 vscode=https://update.code.visualstudio.com/1.85.1/win32-x64-user/stable
-vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.1.23348/VSCodiumSetup-x64-1.85.1.23348.exe
+vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.2.24019/VSCodiumSetup-x64-1.85.2.24019.exe
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 15
+# Version: 17

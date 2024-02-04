@@ -1,4 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
+aimp=https://www.aimp.ru/files/windows/builds/aimp_5.30.2533_w32.exe
 arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
@@ -15,13 +16,14 @@ clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win32-setup.exe
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
-dotnet4.6=https://download.microsoft.com/download/C/3/A/C3A5200B-D33C-47E9-9D70-2F7C65DAAD94/NDP46-KB3045557-x86-x64-AllOS-ENU.exe
+dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.7.0esr/win32/en-US/Firefox%20Setup%20115.7.0esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
+handbrake=https://github.com/HandBrake/HandBrake/releases/download/1.0.7/HandBrake-1.0.7-i686-Win_GUI.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 inkscape=https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a01da63-x86.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
@@ -72,4 +74,4 @@ vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 17
+# Version: 18

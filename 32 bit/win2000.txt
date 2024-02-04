@@ -1,5 +1,6 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
 7-zip-old=https://www.7-zip.org/a/7z920.exe
+aimp=https://www.aimp.ru/files/windows/builds/aimp_1.77.9.exe
 arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
 blender=https://download.blender.org/release/Blender2.42/blender-2.42a-windows.exe
@@ -27,4 +28,4 @@ timezones=http://web.archive.org/web/20220422005301/https://07.sendcdn.com/d/bfy
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 
-# Version: 17
+# Version: 18

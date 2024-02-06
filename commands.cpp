@@ -6,11 +6,14 @@
 #include <windows.h>
 #include <winver.h>
 #include <functional>
+#include <sstream>
+#include <vector>
 #include "downloader.cpp"
 
 using namespace std;
 
-string programversion = "Package Manager for Old Windows v0.2.0-rc1 (Codename \"Adora\") (2024-01-28)";
+int major = 0, minor = 2, patch = 0;
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc2 (Codename \"Adora\") (2024-02-06)";
 
 class repo {
 public:
@@ -189,6 +192,40 @@ string getEXEpath(){
     return string(buffer).substr(0, pos);
 }
 
+bool updateURL(string url){
+    string part;
+    int altmajor, altminor, altpatch;
+    size_t startPos = url.find("/download/") + 10;
+    size_t endPos = url.find('/', startPos);
+    if (startPos != string::npos && endPos != string::npos) {
+        part = url.substr(startPos, endPos - startPos);
+        cout << part << endl;
+        istringstream iss(part);
+        vector<int> versionNumbers;
+        string token;
+        while(getline(iss, token, '.')){
+            versionNumbers.push_back(stoi(token));
+        }
+        if (versionNumbers.size() == 3) {
+            altmajor = versionNumbers[0];
+            altminor = versionNumbers[1];
+            altpatch = versionNumbers[2];
+            if(altmajor > major || (altminor > minor && altmajor >= major) || (altpatch > patch && altminor  >= minor)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+}
+
 void install(char** argv, int argc){
     // This function installs a package
     if(argc < 3){
@@ -236,21 +273,38 @@ void uninstall(char** argv, int argc){
 void update(){
     // This function updates the repositories
     cout << "Updating repositories...\n";
-    string url;
+    string url, pmfow;
     repo r(winver, "loadUpdater");
     if(architecture == "x64"){
         url = r.repos("pmfow-updater64");
+        if(unstable){
+            pmfow = r.repos("pmfow-unstable64");
+        }
+        else{
+            pmfow = r.repos("pmfow64");
+        }
     }
     else if(architecture == "x86"){
         url = r.repos("pmfow-updater32");
+        if(unstable){
+            pmfow = r.repos("pmfow-unstable32");
+        }
+        else{
+            pmfow = r.repos("pmfow32");
+        }
     }
     else{
         cout << "Invalid architecture.\n";
         return;
     }
+    bool updateAvailable = updateURL(pmfow);
     updateRepositories(url);
-    cout << "To update pmfow, run \"pmfow-updater\".\n";
-    cout << "Done.\n";
+    if(updateAvailable){
+        cout << "There is an update available for pmfow. Run \"pmfow-updater\" to install it." << endl;
+    }
+    else{
+        cout << "You are running the latest version of pmfow." << endl;
+    }
 }
 
 void list(){
@@ -260,22 +314,22 @@ void list(){
     ifstream file;
     string fullpath = programpath + "\\";
     if(winver == "Windows 2000"){
-        file.open(fullpath + "win2000.txt");
+        file.open(fullpath + "win2000.dat");
     }
     else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
-        file.open(fullpath + "winxp.txt");
+        file.open(fullpath + "winxp.dat");
     }
     else if(winver == "Windows Vista"){
-        file.open(fullpath + "winvista.txt");
+        file.open(fullpath + "winvista.dat");
     }
     else if(winver == "Windows 7"){
-        file.open(fullpath + "win7.txt");
+        file.open(fullpath + "win7.dat");
     }
     else if(winver == "Windows 8" || winver == "Windows 8.1"){
-        file.open(fullpath + "win8.txt");
+        file.open(fullpath + "win8.dat");
     }
     else if(winver == "Windows 10" || winver == "Windows 11"){
-        file.open(fullpath + "win10.txt");
+        file.open(fullpath + "win10.dat");
     }
     else{
         cout << "Invalid OS.\n";
@@ -285,9 +339,10 @@ void list(){
         cerr << "Repository not found" << endl;
         return;
     }
-    string line;
+    string line, finalLine;
     int i = 0;
     while (getline(file, line)) {
+        finalLine = line;
         size_t delimiterPos = line.find('=');
         if (delimiterPos != string::npos) {
             string key = line.substr(0, delimiterPos);
@@ -297,7 +352,11 @@ void list(){
         }
         Sleep(10);
     }
+    string ver = finalLine.substr(finalLine.find(":") + 2);
+    int repoversion = stoi(ver);
     cout << "Total packages: " << i << endl;
+    cout << "To see a full list of programs and their descriptions, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List." << endl;
+    cout << "Version of the repository: " << repoversion << endl;
     file.close();
 }
 
@@ -343,6 +402,7 @@ void help(){
     cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow install <package> --wget-version <os> - Installs a package using a different version of wget.\n";
     cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
+    cout << "pmfow update <package> --unstable" - "Will check if there is a new unstable/development release of pmfow instead of a stable one.";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
     cout << "\n";
 }
@@ -363,19 +423,8 @@ int checkFlags(int argc, char** argv){
     int success = 1;
     if(argc >= 3){
         for(int i = 2; i < argc; i++){
-            if(string(argv[i]) == "-p" || string(argv[i]) == "--powershell"){
-                use_powershell = true;
-            }
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
-                if(use_powershell){
-                    cout << "PowerShell doesn't support the --check-certificates flag.\n";
-                    cout << "Please use this alongside the --wget flag instead.\n";
-                    success = 0;
-                    return success;
-                }
-                else{
-                    check_cert = true;
-                }
+                check_cert = true;
             }
             if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
                 if(argc < i+1){
@@ -441,6 +490,9 @@ int checkFlags(int argc, char** argv){
                     }
                 
                 }
+            }
+            if(string(argv[i]) == "--unstable"){
+                unstable = true;
             }
         }
     }

@@ -9,7 +9,7 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath;
-bool use_powershell = false, check_cert = false, show_url = false, onefile = false;
+bool check_cert = false, show_url = false, onefile = false, unstable = false;
 float wget_os = 0;
 
 string getExtension(string url){
@@ -44,16 +44,11 @@ void installPackage(string package, string url){
     else{
         wget_exe = "wget";
     }
-    if(use_powershell){
-        command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('" + url + "', '" + fullpath + "')\"";
+    if(check_cert){
+        command = wget_exe + " -O " + fullpath + " " + url;
     }
     else{
-        if(check_cert){
-            command = wget_exe + " -O " + fullpath + " " + url;
-        }
-        else{
-            command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate";
-        }
+        command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate";
     }
     system(command.c_str());
     if (extension != ".zip" && extension != ".7z") {
@@ -128,57 +123,37 @@ void updateRepositories(string link){
         wget_exe = "wget";
     }
     vector<string> directories = repoDirectories();
-    if (use_powershell) {
-        string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
-        string versionFile = (architectureFolder + "/" + file_winver + ".dat");
-        if (onefile) {
-            command = "del " + fullpath + file_winver + ".dat";
-            system(command.c_str());
-            command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + versionFile + "', '" + fullpath + file_winver + ".dat" + "')\"";
-            system(command.c_str());
-        } else {
-            command = "del " + fullpath + "directories.txt";
-            system(command.c_str());
-            command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt', '" + fullpath + "directories.txt" + "')\"";
-            system(command.c_str());
-            for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
-                command = "del " + fullpath + version + ".dat";
-                system(command.c_str());
-                command = "del " + fullpath + "directories.txt";
-                system(command.c_str());
-                command = "powershell -Command \"(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + architectureFolder + "/" + version + ".dat', '" + fullpath + version + ".dat" + "')\"";
-                system(command.c_str());
-            }
-        }
-    } else {
         string certFlag = (check_cert) ? "" : " --no-check-certificate";
         string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
         string versionFile = (architectureFolder + "/" + file_winver + ".dat");
 
-        if (onefile) {
-            command = "del " + fullpath + file_winver + ".dat";
+    if (onefile) {
+        command = "del " + fullpath + file_winver + ".dat";
+        system(command.c_str());
+        command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + versionFile + certFlag;
+        system(command.c_str());
+    } else {
+        command = "del " + fullpath + "directories.txt";
+        system(command.c_str());
+        command = wget_exe + " -O " + fullpath + "directories.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag;
+        system(command.c_str());
+        command = "del " + fullpath + "updater.dat";
+        system(command.c_str());
+        command = wget_exe + " -O " + fullpath + "updater.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag;
+        system(command.c_str());
+        command = "del " + fullpath + "uninstallers.dat";
+        system(command.c_str());
+        command = wget_exe + " -O " + fullpath + "uninstallers.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag;
+        system(command.c_str());
+        command = "del " + fullpath + "pmfow-updater.exe";
+        system(command.c_str());
+        command = wget_exe + " -O " + fullpath + "pmfow-updater.exe " + link + certFlag;
+        system(command.c_str());
+        for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
+            command = "del " + fullpath + version + ".dat";
             system(command.c_str());
-            command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + versionFile + certFlag;
+            command = wget_exe + " -O " + fullpath + version + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + architectureFolder + "/" + version + ".dat" + certFlag;
             system(command.c_str());
-        } else {
-            command = "del " + fullpath + "directories.txt";
-            system(command.c_str());
-            command = wget_exe + " -O " + fullpath + "directories.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag;
-            system(command.c_str());
-            command = "del " + fullpath + "updater.dat";
-            system(command.c_str());
-            command = wget_exe + " -O " + fullpath + "updater.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag;
-            system(command.c_str());
-            command = "del " + fullpath + "pmfow-updater.exe";
-            system(command.c_str());
-            command = wget_exe + " -O " + fullpath + "pmfow-updater.exe " + link + certFlag;
-            system(command.c_str());
-            for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
-                command = "del " + fullpath + version + ".dat";
-                system(command.c_str());
-                command = wget_exe + " -O " + fullpath + version + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + architectureFolder + "/" + version + ".dat" + certFlag;
-                system(command.c_str());
-            }
         }
     }
 

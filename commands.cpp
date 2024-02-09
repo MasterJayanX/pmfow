@@ -13,7 +13,8 @@
 using namespace std;
 
 int major = 0, minor = 2, patch = 0;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc2 (Codename \"Adora\") (2024-02-06)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-02-09)";
+bool list_uninstall = false, onlyCheck = false;
 
 class repo {
 public:
@@ -126,7 +127,21 @@ private:
 string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
     // This function returns the Windows version you are running
     string winver;
-    if(majorVersion == 5 && minorVersion == 0){
+    if(majorVersion == 4){
+        if(minorVersion == 0 && buildNumber < 1096){
+            winver = "Windows 95";
+        }
+        else if(minorVersion == 0 && buildNumber >= 1096){
+            winver = "Windows NT 4.0";
+        }
+        else if(minorVersion == 10){
+            winver = "Windows 98";
+        }
+        else if(minorVersion == 90){
+            winver = "Windows ME";
+        }
+    }
+    else if(majorVersion == 5 && minorVersion == 0){
         winver = "Windows 2000";
     }
     else if(majorVersion == 5 && (minorVersion == 1)){
@@ -148,10 +163,12 @@ string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
         winver = "Windows 8.1";
     }
     else if(majorVersion == 10 && minorVersion == 0 && buildNumber <= 19045){
-        winver = "Windows 10";
-    }
-    else if(majorVersion == 10 && minorVersion == 0 && buildNumber >= 22000){
-        winver = "Windows 11";
+        if(buildNumber <= 19045){
+            winver = "Windows 10";
+        }
+        else if(buildNumber >= 22000){
+            winver = "Windows 11";
+        }
     }
     else{
         winver = "Other Windows version";
@@ -199,7 +216,6 @@ bool updateURL(string url){
     size_t endPos = url.find('/', startPos);
     if (startPos != string::npos && endPos != string::npos) {
         part = url.substr(startPos, endPos - startPos);
-        cout << part << endl;
         istringstream iss(part);
         vector<int> versionNumbers;
         string token;
@@ -272,7 +288,13 @@ void uninstall(char** argv, int argc){
 
 void update(){
     // This function updates the repositories
-    cout << "Updating repositories...\n";
+    if(onlyCheck){
+        cout << "Checking for updates...\n";
+        Sleep(500);
+    }
+    else{
+        cout << "Updating repositories...\n";
+    }
     string url, pmfow;
     repo r(winver, "loadUpdater");
     if(architecture == "x64"){
@@ -298,12 +320,14 @@ void update(){
         return;
     }
     bool updateAvailable = updateURL(pmfow);
-    updateRepositories(url);
+    if(!onlyCheck){
+        updateRepositories(url);
+    }
     if(updateAvailable){
         cout << "There is an update available for pmfow. Run \"pmfow-updater\" to install it." << endl;
     }
     else{
-        cout << "You are running the latest version of pmfow." << endl;
+        cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
     }
 }
 
@@ -360,6 +384,29 @@ void list(){
     file.close();
 }
 
+void listUninstall(){
+    // This function lists all the packages that can be uninstalled
+    cout << "Listing all packages...\n";
+    Sleep(1000);
+    ifstream file;
+    string fullpath = programpath + "\\";
+    file.open(fullpath + "uninstallers.dat");
+    string line;
+    int i = 0;
+    while (getline(file, line)) {
+        size_t delimiterPos = line.find('=');
+        if (delimiterPos != string::npos) {
+            string key = line.substr(0, delimiterPos);
+            string value = line.substr(delimiterPos + 1);
+            cout << key << endl;
+            i++;
+        }
+        Sleep(10);
+    }
+    cout << "Total packages: " << i << endl;
+    file.close();
+}
+
 void search(char** argv, int argc){
     // This function searches for a package
     if(argc < 3){
@@ -387,7 +434,7 @@ void help(){
     cout << "\n";
     cout << "List of commands:\n";
     cout << "pmfow install <package> - Installs a package.\n";
-    cout << "pmfow uninstall <package> - Uninstalls a package. Keep in mind that this command is experimental.\n";
+    cout << "pmfow uninstall <package> - Uninstalls a package.\n";
     cout << "pmfow update - Updates the repositories.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
     cout << "pmfow list - Lists all the packages.\n";
@@ -397,14 +444,14 @@ void help(){
     cout << "\n";
     cout << "List of flags:\n";
     cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
-    cout << "pmfow install <package> -p/--powershell - Installs a package using PowerShell's DownloadFile function.\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
     cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
-    cout << "pmfow install <package> --wget-version <os> - Installs a package using a different version of wget.\n";
+    cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget.\n";
     cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
-    cout << "pmfow update <package> --unstable" - "Will check if there is a new unstable/development release of pmfow instead of a stable one.";
+    cout << "pmfow update <package> --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
+    cout << "pmfow update <package> --check - Only checks for pmfow updates instead of also updating the repositories.\n";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
-    cout << "\n";
+    cout << "pmfow list --uninstall - Lists all programs that can be uninstalled with pmfow.\n";
 }
 
 void about(int majorVersion, int minorVersion, int build){
@@ -416,6 +463,9 @@ void about(int majorVersion, int minorVersion, int build){
     cout << "Path: " << programpath << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     cout << "Architecture: " << architecture << endl;
+    if(majorVersion < 5){
+        cout << "Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.\n";
+    }
 }
 
 int checkFlags(int argc, char** argv){
@@ -468,8 +518,8 @@ int checkFlags(int argc, char** argv){
             if(string(argv[i]) == "-o" || string(argv[i]) == "--os-file"){
                 onefile = true;
             }
-            if(string(argv[i]) == "--wget-version"){
-                if(argc < i+1){
+            if(string(argv[i]) == "-w" || string(argv[i]) == "--wget-version"){
+                if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update")){
                     cout << "Usage: pmfow install --wget-version <os>\n";
                     cout << "Valid options: 2000, xp\n";
                     success = 0;
@@ -494,54 +544,18 @@ int checkFlags(int argc, char** argv){
             if(string(argv[i]) == "--unstable"){
                 unstable = true;
             }
-        }
-    }
-    return success;
-}
-
-int checkSearchFlags(int argc, char** argv){
-    // This function checks the flags for the search command
-    int success = 1;
-    if(argc >= 3){
-        for(int i = 2; i < argc; i++){
-            if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
-                if(argc < i+1){
-                    cout << "Usage: pmfow search <package> --force-os <os>\n";
-                    cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
+            if(string(argv[i]) == "--uninstall"){
+                if(string(argv[1]) != "list"){
+                    cout << "You are trying to use this flag with a command that isn't list. Usage: pmfow list --uninstall" << endl;
                     success = 0;
                     return success;
                 }
                 else{
-                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
-                        winver = "Windows 2000";
-                    }
-                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
-                        winver = "Windows XP";
-                    }
-                    else if(string(argv[i+1]) == "vista" || string(argv[i+1]) == "Vista" || string(argv[i+1]) == "WinVista" || string(argv[i+1]) == "winvista"){
-                        winver = "Windows Vista";
-                    }
-                    else if(string(argv[i+1]) == "7" || string(argv[i+1]) == "Win7" || string(argv[i+1]) == "win7"){
-                        winver = "Windows 7";
-                    }
-                    else if(string(argv[i+1]) == "8" || string(argv[i+1]) == "Win8" || string(argv[i+1]) == "win8"){
-                        winver = "Windows 8";
-                    }
-                    else if(string(argv[i+1]) == "8.1" || string(argv[i+1]) == "Win8.1" || string(argv[i+1]) == "win8.1"){
-                        winver = "Windows 8.1";
-                    }
-                    else if(string(argv[i+1]) == "10" || string(argv[i+1]) == "Win10" || string(argv[i+1]) == "win10"){
-                        winver = "Windows 10";
-                    }
-                    else{
-                        cout << "Invalid OS.\n";
-                        success = 0;
-                        return success;
-                    }
+                    list_uninstall = true;
                 }
             }
-            if(string(argv[i]) == "-u" || string(argv[i]) == "--show-url"){
-                show_url = true;
+            if(string(argv[i]) == "--check"){
+                onlyCheck = true;
             }
         }
     }

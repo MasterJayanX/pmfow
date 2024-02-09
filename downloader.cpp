@@ -71,7 +71,7 @@ void installPackage(string package, string url){
         }
     }
     else{
-        cout << "Please install " << filename << " manually. You can find the file at pmfow's root folder." << endl;
+        cout << "Please install " << filename << " manually. You can find the file at " << programpath << endl;
     }
 }
 
@@ -130,7 +130,7 @@ void updateRepositories(string link){
     if (onefile) {
         command = "del " + fullpath + file_winver + ".dat";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + versionFile + certFlag;
+        command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + versionFile + certFlag;
         system(command.c_str());
     } else {
         command = "del " + fullpath + "directories.txt";
@@ -152,7 +152,7 @@ void updateRepositories(string link){
         for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
             command = "del " + fullpath + version + ".dat";
             system(command.c_str());
-            command = wget_exe + " -O " + fullpath + version + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + architectureFolder + "/" + version + ".dat" + certFlag;
+            command = wget_exe + " -O " + fullpath + version + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + architectureFolder + "/" + version + ".dat" + certFlag;
             system(command.c_str());
         }
     }
@@ -161,7 +161,7 @@ void updateRepositories(string link){
         // Additional file for Windows 2000
         command = "del " + fullpath + "win2000.txt";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "win2000.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/dev/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate");
+        command = wget_exe + " -O " + fullpath + "win2000.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate");
         system(command.c_str());
     }
 }

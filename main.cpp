@@ -53,17 +53,22 @@ int main(int argc, char** argv){
         }
         else if(string(argv[1]) == "list" || string(argv[1]) == "l"){
             // List packages
-            int success = checkSearchFlags(argc, argv);
+            int success = checkFlags(argc, argv);
             if(success == 0){
                 return 0;
             }
             else{
-                list();
+                if(list_uninstall){
+                    listUninstall();
+                }
+                else{
+                    list();
+                }
             }
         }
         else if(string(argv[1]) == "search" || string(argv[1]) == "s"){
             // Search for packages
-            int success = checkSearchFlags(argc, argv);
+            int success = checkFlags(argc, argv);
             if(success == 0){
                 return 0;
             }
@@ -90,14 +95,22 @@ int main(int argc, char** argv){
         }
         else{
             // Windows 98 or earlier (command not specified)
-            cerr << "You're using Windows 98/ME or earlier, so your OS is not supported.\n";
+            cerr << "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.\n";
         }
         return 1;
     }
     else{
         // Windows 98 or earlier
-        cout << "You're using Windows 98/ME or earlier, so your OS is not supported.\n";
-        return 1;
+        if(string(argv[1]) == "version" || string(argv[1]) == "v" || string(argv[1]) == "about" || string(argv[1]) == "a"){
+            // Show the about section
+            about(majorVersion, minorVersion, build);
+        }
+        else{
+            cout << "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.\n";
+            return 1;
+        }
+        cin.ignore();
+        cin.get();
     }
     return 0;
 }

@@ -26,10 +26,10 @@ pmfow will run on anything that runs Windows 2000 or later and has an internet c
 - An internet connection (not optional)
 
 **Recommended requirements**
-- A Pentium or Celeron CPU
-- 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser
-- Enough storage to store at least a couple of .exe files (300 MB of free space should be more than enough)
-- A good internet connection (at least 5 Mbps, but even something slightly better than a 56k modem should be enough)
+- A Pentium or better CPU.
+- 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser.
+- Enough storage to store at least a couple of .exe files (300 MB of free space should be more than enough).
+- A good internet connection (at least 5 Mbps, but even something slightly better than a 56k modem should be enough).
 
 ### Software requirements
 pmfow will run in most versions of Windows from Windows 2000 onwards.
@@ -45,6 +45,7 @@ pmfow will run in most versions of Windows from Windows 2000 onwards.
 **This is the list of partially supported versions:**
 
 - Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's repository are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
+- Windows 11 for the same reason as Windows 10.
 - Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
 - Windows Server versions from Server 2003 to Server 2022: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work (the only exception is Server 2003, but NT 5.2 is supported).
 
@@ -58,21 +59,23 @@ To install pmfow, you need to follow these steps:
 To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead).
 Here's a list of commands you can use:
 - `pmfow install <package>`: This command will allow you to install the program you want. Alternatively, you can use `pmfow i <package>`.
+- `pmfow uninstall <package>`: This command will allow you to uninstall the program you want. Alternatively, you can use `pmfow remove <package>` or `pmfow rm <package>`.
 - `pmfow update`: This will update the repositories, which are just .txt files, but still. Alternatively, you can use `pmfow u`.
 - `pmfow search <package>`: This command will allow you to search for a specific package in the repositories of your operating system. Alternatively, you can use `pmfow s <package>`.
 - `pmfow version`: This command will show you the version of pmfow that you are running, as well as your version of Windows. Alternatively, you can use `pmfow about` or `pmfow v`.
 - `pmfow help`: This command will show you a list of commands with a description for each one, like the one you are seeing here. Alternatively, you can use `pmfow h`.
 - `pmfow list`: This command lists all the available packages in your current repository. Alternatively, you can use `pmfow l`.
 
-If you are using the install or update commands, you can use these flags:
-- `-p` or `--powershell`: Forces the install command to use Powershell's DownloadFile function to download the installation files or update the repository files. For Windows XP and Vista, you must download Powershell 2.0 from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) to be able to use it (you will also need to install .NET 2.0 SP1 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
-- `-w` or `--wget`: Forces the install command to use wget to download the installation files or update the repository files. This is not needed most of the time since wget is used by pmfow by default.
+If you are using the install, uninstall, update, list or search commands, you can use these flags:
 - `-c` or `--check-certificates`: Makes wget check for certificates when downloading a package.
 - `-f <version>` or `--force-os <version>`: Forces pmfow to install packages for a different version of Windows.
 - `--show-url`: Shows the URL from which the package you are installing or searching for is downloaded.
 - `-o` or `--one-file`: The update command will only update the repository file that corresponds to your current version of Windows.
-- `--wget-version <version>`: Forces the install or update command to use a version of wget for a specific version of Windows (for example: Windows XP) instead of renaming the file of the version you need to use.
+- `-w <version>` or `--wget-version <version>`: Forces the install or update command to use a version of wget for a specific version of Windows (for example: Windows XP) instead of renaming the file of the version you need to use.
 - `-u` or `--show-url`: Shows the URL of the package.
+- `--check`: Only checks for pmfow updates instead of also updating the repositories.
+- `--unstable`: Will check if there is a new unstable/development release of pmfow instead of a stable one.
+- `--uninstall`: Lists all programs that can be uninstalled with pmfow (only usable with list command).
 
 ## Compiling
 ### Requirements
@@ -85,16 +88,14 @@ Then, you have to open a terminal window and compile the main.cpp file with the 
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
-- Uninstalling applications from pmfow and silent installers are not supported yet.
-- pmfow doesn't handle spaced directories well, so if you're using Windows XP, don't install pmfow inside the Documents and Settings folder. Instead, you could just extract the files directly in the C: drive.
+- The update command doesn't work correctly on Windows 2000 due to SSL limitations.
+- If you are using Windows 8.1 or later, your OS will be detected as Windows 8 due to limitations with the API.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it.
 
 ## FAQ (Frequently Asked Questions)
 ### What versions of Windows are supported?
 As I said above, pmfow works on the following Windows versions: Windows 2000, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11 and their server equivalents. It should also work on ReactOS and Linux with Wine, but I haven't tested those yet.
-### What are the .txt files that come alongside pmfow's files?
-Those .txt files are just the lists of softwares that pmfow can install. They are basically like repositories. I might change them to .dat files in later updates to avoid confusions from new users.
 ### What applications can I install with pmfow?
 You can find the full list of applications that can be installed in [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md).
 ### Does pmfow work on Windows 9x?
@@ -105,6 +106,6 @@ Unfortunately no, because other OSes probably already have package managers for 
 I'm planning to add the option of installing multiple packages at once, more flags to configure the way you install packages or update the repositories, the option of using silent installers and of course, I will keep adding more applications to the repositories.
 
 ## Donations
-I accept donations through Ko-fi:
+I accept donations through GitHub Sponsors and Ko-fi:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D37FMC3)

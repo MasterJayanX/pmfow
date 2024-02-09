@@ -26,10 +26,10 @@ pmfow funciona en cualquier equipo con Windows 2000 o posterior y tenga una cone
 - Una conexión a internet (no opcional)
 
 **Requisitos recomendados**
-- Un CPU Pentium o Celeron
-- 512 MB de RAM (necesarios para ejecutar versiones de Windows más nuevas que XP) o suficiente RAM para usar un navegador web
-- Suficiente almacenamiento para almacenar al menos un par de archivos .exe (300 MB de espacio libre deberían ser más que suficientes)
-- Una buena conexión a internet (al menos 5 Mbps, pero incluso algo ligeramente mejor que un módem de 56k debería ser suficiente)
+- Un procesador Pentium o mejor.
+- 512 MB de RAM (necesarios para ejecutar versiones de Windows más nuevas que XP) o suficiente RAM para usar un navegador web.
+- Suficiente almacenamiento para almacenar al menos un par de archivos .exe (300 MB de espacio libre deberían ser más que suficientes).
+- Una buena conexión a internet (al menos 5 Mbps, pero incluso algo ligeramente mejor que un módem de 56k debería ser suficiente).
 
 ### Requisitos de software
 pmfow funciona en la mayoría de las versiones de Windows desde Windows 2000 en adelante.
@@ -44,7 +44,7 @@ pmfow funciona en la mayoría de las versiones de Windows desde Windows 2000 en 
 
 **Esta es la lista de versiones parcialmente compatibles:**
 
-- Windows 10: Windows 10 es parcialmente compatible, ya que la mayoría de los paquetes en el repositorio de Windows 10 son los mismos paquetes que los de Windows 8/8.1. Para Windows 10 y 11, utiliza winget en su lugar.
+- Windows 10: Windows 10 es parcialmente compatible, ya que la mayoría de los paquetes en el repositorio de Windows 10 son los mismos paquetes que los de Windows 8/8.1. Para Windows 10 y 11, es mejor usar winget.
 - Windows 2000: Selección limitada de paquetes disponibles para esta versión de Windows y solo se puede usar con una versión antigua de wget, que puede no funcionar correctamente.
 - Versiones de Windows Server desde Server 2003 hasta Server 2022: Solo se detectan las versiones "regulares" de Windows, pero dado que las versiones de Windows Server comparten las mismas versiones de NT que las versiones regulares, deberían funcionar (la única excepción es Server 2003, pero se admite NT 5.2).
 
@@ -56,23 +56,25 @@ Para instalar pmfow, debes seguir estos pasos:
 
 ## Uso
 Para usar pmfow, abre una ventana de CMD y ejecuta el siguiente comando: `pmfow <comando>` (Nota: si no seguiste el paso 3 de la instalación, deberás abrir la ventana de cmd en la misma carpeta donde extrajiste el ejecutable de pmfow y escribir `pmfow.exe <comando>` en su lugar).
-Aquí tienes una lista de comandos que puedes usar:
+Aquí tienes una lista de comandos que puedes utilizar:
 - `pmfow install <paquete>`: Este comando te permitirá instalar el programa que desees. Alternativamente, puedes usar `pmfow i <paquete>`.
+- `pmfow uninstall <paquete>`: Este comando te permitirá desinstalar el programa que desees. Alternativamente, puedes usar `pmfow remove <paquete>` o `pmfow rm <paquete>`.
 - `pmfow update`: Esto actualizará los repositorios, que son simplemente archivos .txt, pero aún así. Alternativamente, puedes usar `pmfow u`.
 - `pmfow search <paquete>`: Este comando te permitirá buscar un paquete específico en los repositorios de tu sistema operativo. Alternativamente, puedes usar `pmfow s <paquete>`.
-- `pmfow version`: Este comando te mostrará la versión de pmfow que estás ejecutando, así como tu versión de Windows. Alternativamente, puedes usar `pmfow about` o `pmfow v`.
+- `pmfow version`: Este comando te mostrará la versión de pmfow que estás utilizando, así como tu versión de Windows. Alternativamente, puedes usar `pmfow about` o `pmfow v`.
 - `pmfow help`: Este comando te mostrará una lista de comandos con una descripción para cada uno, como la que estás viendo aquí. Alternativamente, puedes usar `pmfow h`.
-- `pmfow list`: Este comando lista todos los paquetes que se pueden instalar desde tu repositorio. Alternativamente, puedes usar `pmfow l`.
+- `pmfow list`: Este comando lista todos los paquetes disponibles en tu repositorio actual. Alternativamente, puedes usar `pmfow l`.
 
-Si usas los comandos install o update, puedes usar estas "flags":
-- `-p` o `--powershell`: Fuerza al comando install a utilizar la función DownloadFile de Powershell para descargar los archivos de instalación o actualizar los archivos del repositorio. Para Windows XP y Vista, debes descargar Powershell 2.0 desde [aquí](https://www.catalog.update.microsoft.com/Search.aspx?q=powershell%202.0) para poder usarlo (también deberás instalar .NET 2.0 SP1 desde [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=16614)).
-- `-w` o `--wget`: Fuerza al comando install a utilizar wget para descargar los archivos de instalación o actualizar los archivos del repositorio. Esto no es necesario la mayoría de las veces, ya que wget se utiliza por defecto en pmfow.
-- `-c` o `--check-certificates`: Le pide a wget que verifique los certificados al descargar un paquete.
-- `-f <versión>` o `--force-os <versión>`: Fuerza a pmfow a instalar paquetes para una versión diferente de Windows.
+Si estás utilizando los comandos install, uninstall, update, list o search, puedes utilizar estas flags (opciones):
+- `-c` o `--check-certificates`: Hace que wget verifique los certificados al descargar un paquete.
+- `-f <versión>` o `--force-os <versión>`: Obliga a pmfow a instalar paquetes para una versión diferente de Windows.
 - `--show-url`: Muestra la URL desde la cual se descarga el paquete que estás instalando o buscando.
-- `-o` o `--one-file`: El comando update solo actualizará el archivo del repositorio que corresponda a tu versión actual de Windows.
-- `--wget-version <versión>`: Fuerza al comando install o update a utilizar una versión de wget para una versión específica de Windows (por ejemplo: Windows XP) en lugar de cambiar el nombre del archivo de la versión que necesitas usar.
+- `-o` o `--one-file`: El comando update solo actualizará el archivo de repositorio que corresponde a tu versión actual de Windows.
+- `-w <versión>` o `--wget-version <versión>`: Obliga al comando install o update a utilizar una versión de wget para una versión específica de Windows (por ejemplo: Windows XP) en lugar de cambiar el nombre del archivo de la versión que necesitas usar.
 - `-u` o `--show-url`: Muestra la URL del paquete.
+- `--check`: Solo verifica las actualizaciones de pmfow en lugar de actualizar también los repositorios.
+- `--unstable`: Comprueba si hay una nueva versión inestable/desarrollo de pmfow en lugar de una estable.
+- `--uninstall`: Lista todos los programas que se pueden desinstalar con pmfow (solo se puede usar con el comando list).
 
 ## Compilación
 ### Requisitos
@@ -85,16 +87,14 @@ Luego, debes abrir una ventana de terminal y compilar el archivo main.cpp con el
 pmfow está en una etapa temprana de desarrollo, por lo que puedes esperar que algunas cosas no funcionen como deberían. Algunas de las limitaciones que tiene en este momento son:
 - A diferencia de otros gestores de paquetes, pmfow solo te permitirá instalar un paquete a la vez.
 - Los repositorios actualmente tienen una selección muy limitada de software.
-- Aún no se admiten la desinstalación de aplicaciones desde pmfow y los instaladores silenciosos.
-- pmfow no maneja bien los directorios con espacios, por lo que si estás utilizando Windows XP, no instales pmfow dentro de la carpeta Documents and Settings. En su lugar, podrías extraer los archivos directamente en la unidad C:.
+- El comando update no funciona correctamente en Windows 2000, debido a limitaciones de SSL.
+- Si usas Windows 8.1 o posterior, el sistema operativo es detectado como Windows 8, debido a limitaciones de la API.
 
 Si encuentras algún problema con pmfow, abre un problema en la sección de Issues y lo revisaré.
 
 ## Preguntas frecuentes
 ### ¿Qué versiones de Windows son compatibles?
 Como mencioné anteriormente, pmfow funciona en las siguientes versiones de Windows: Windows 2000, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11 y sus equivalentes para servidores. También debería funcionar en ReactOS y en Linux mediante Wine, pero aún no los he probado.
-### ¿Qué son los archivos .txt que vienen junto con los archivos de pmfow?
-Esos archivos .txt son simplemente las listas de software que pmfow puede instalar. Básicamente, son como repositorios. Es posible que los cambie a archivos .dat en futuras actualizaciones para evitar confusiones de usuarios nuevos.
 ### ¿Qué aplicaciones puedo instalar con pmfow?
 Puedes encontrar la lista completa de aplicaciones que se pueden instalar en [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md) (ten en cuenta que está en inglés).
 ### ¿Se puede usar pmfow en Windows 9x?
@@ -105,6 +105,6 @@ Desafortunadamente no, porque es probable que otros sistemas operativos ya tenga
 Estoy planeando agregar la opción de instalar varios paquetes a la vez, más flags para configurar la forma en que se instalan los paquetes o se actualizan los repositorios, la opción de usar instaladores silenciosos y, por supuesto, seguiré agregando más aplicaciones a los repositorios.
 
 ## Donaciones
-Acepto donaciones a través de Ko-fi:
+Acepto donaciones a través de GitHub Sponsors y Ko-fi:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D37FMC3)

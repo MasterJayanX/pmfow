@@ -9,6 +9,7 @@ bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.e
 blender=https://download.blender.org/release/Blender2.92/blender-2.92.0-windows64.msi
 blendercompat=https://github.com/nalexandru/BlenderCompat/releases/download/4.0.2/blender-4.0.2-windows-7.zip
 brave=https://github.com/brave/brave-browser/releases/download/v1.46.144/BraveBrowserSetup.exe
+calibre=https://download.calibre-ebook.com/3.48.0/calibre-64bit-3.48.0.msi
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
@@ -16,9 +17,11 @@ clamav=https://www.clamav.net/downloads/production/clamav-1.0.4.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
+dolphin=https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
 dotnet4=https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
 dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe
+epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=ssqGLDXbSuBX4Ga3DwaDPQ&x=1704996793
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.7.0esr/win64/en-US/Firefox%20Setup%20115.7.0esr.exe
@@ -32,6 +35,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1805_Basic.exe
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240203.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -57,7 +61,7 @@ pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow64.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/122.0.1-beta-ua/r3dfox-122.0.1.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/122.0.1-2-beta/r3dfox-122.0.1.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -72,11 +76,11 @@ tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-por
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x64.exe
 virtualbox=https://download.virtualbox.org/virtualbox/6.1.50/VirtualBox-6.1.50-161033-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.x64.exe
-vlc=https://download.videolan.org/pub/videolan/vlc/3.0.18/win64/vlc-3.0.18-win64.exe
+vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
 vscode=https://update.code.visualstudio.com/1.70.2/win32-x64-user/stable
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 18
+# Version: 19

@@ -34,7 +34,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1805_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240203.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240210.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -67,7 +67,7 @@ scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121-hf/supermium_121_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win64/en-US/Thunderbird%20Setup%20115.6.0.exe

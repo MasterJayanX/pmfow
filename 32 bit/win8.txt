@@ -33,7 +33,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1805_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240203.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240210.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -65,9 +65,9 @@ scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_32_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121-hf/supermium_121_32_setup.exe
 thorium=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214-1/thorium_WIN32_SSE3_mini_installer.exe
-thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.6.0/win32/en-US/Thunderbird%20Setup%20115.6.0.exe
+thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win32/en-US/Thunderbird%20Setup%20115.7.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.exe
@@ -78,4 +78,4 @@ vscode=https://update.code.visualstudio.com/1.55.2/win32-user/stable
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 19
+# Version: 20

@@ -29,7 +29,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
 k-lite-codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1676_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240203.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240210.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
@@ -58,7 +58,7 @@ scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win64/en-US/seamonkey-2.49.5.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v121/supermium_121_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v121-hf/supermium_121_64_setup.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 tor=https://archive.torproject.org/tor-package-archive/torbrowser/7.5.6/torbrowser-install-7.5.6_en-US.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
@@ -66,4 +66,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 19
+# Version: 20

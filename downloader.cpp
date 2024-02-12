@@ -113,6 +113,13 @@ void updateRepositories(string link){
     else if(winver == "Windows 10" || winver == "Windows 11"){
         file_winver = "win10";
     }
+    else if(winver == "Windows 2000"){
+        file_winver = "win2000";
+    }
+    else{
+        cout << "Error: Windows version not supported." << endl;
+        return;
+    }
     if(wget_os == 5.0 || winver == "Windows 2000"){
         wget_exe = "wget_2k";
     }

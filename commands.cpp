@@ -12,8 +12,9 @@
 
 using namespace std;
 
-int major = 0, minor = 2, patch = 0;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-02-09)";
+int major = 0, minor = 2, patch = 1;
+int altmajor, altminor, altpatch;
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-02-11)";
 bool list_uninstall = false, onlyCheck = false;
 
 class repo {
@@ -211,7 +212,6 @@ string getEXEpath(){
 
 bool updateURL(string url){
     string part;
-    int altmajor, altminor, altpatch;
     size_t startPos = url.find("/download/") + 10;
     size_t endPos = url.find('/', startPos);
     if (startPos != string::npos && endPos != string::npos) {
@@ -324,7 +324,7 @@ void update(){
         updateRepositories(url);
     }
     if(updateAvailable){
-        cout << "There is an update available for pmfow. Run \"pmfow-updater\" to install it." << endl;
+        cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
     }
     else{
         cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
@@ -446,12 +446,13 @@ void help(){
     cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
     cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
-    cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget.\n";
+    cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget (options: 2000, xp, win).\n";
     cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
     cout << "pmfow update <package> --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
     cout << "pmfow update <package> --check - Only checks for pmfow updates instead of also updating the repositories.\n";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
     cout << "pmfow list --uninstall - Lists all programs that can be uninstalled with pmfow.\n";
+    cout << "pmfow version -c/--check - Checks for updates when showing the version of pmfow you are running.\n";
 }
 
 void about(int majorVersion, int minorVersion, int build){
@@ -466,6 +467,37 @@ void about(int majorVersion, int minorVersion, int build){
     if(majorVersion < 5){
         cout << "Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.\n";
     }
+    if(onlyCheck){
+        string pmfow;
+        repo r(winver, "loadUpdater");
+        if(architecture == "x64"){
+            if(unstable){
+                pmfow = r.repos("pmfow-unstable64");
+            }
+            else{
+                pmfow = r.repos("pmfow64");
+            }
+        }
+        else if(architecture == "x86"){
+            if(unstable){
+                pmfow = r.repos("pmfow-unstable32");
+            }
+            else{
+                pmfow = r.repos("pmfow32");
+            }
+        }
+        else{
+            cout << "Invalid architecture.\n";
+            return;
+        }
+        bool updateAvailable = updateURL(pmfow);
+        if(updateAvailable){
+            cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
+        }
+        else{
+            cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
+        }
+    }
 }
 
 int checkFlags(int argc, char** argv){
@@ -474,10 +506,17 @@ int checkFlags(int argc, char** argv){
     if(argc >= 3){
         for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
-                check_cert = true;
+                if(string(argv[1]) != "install" && string(argv[1]) != "update"){
+                    cout << "This flag is not compatible with the " << argv[1] << " command.\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    check_cert = true;
+                }
             }
             if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
-                if(argc < i+1){
+                if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update" && string(argv[1]) != "search" && string(argv[1]) != "list")){
                     cout << "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>\n";
                     cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
                     success = 0;
@@ -516,12 +555,19 @@ int checkFlags(int argc, char** argv){
                 show_url = true;
             }
             if(string(argv[i]) == "-o" || string(argv[i]) == "--os-file"){
-                onefile = true;
+                if(string(argv[1]) != "update"){
+                    cout << "This flag is not compatible with the " << argv[1] << " command.\n";
+                    success = 0;
+                    return success;
+                }
+                else{
+                    onefile = true;
+                }
             }
             if(string(argv[i]) == "-w" || string(argv[i]) == "--wget-version"){
                 if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update")){
                     cout << "Usage: pmfow install --wget-version <os>\n";
-                    cout << "Valid options: 2000, xp\n";
+                    cout << "Valid options: 2000, xp, win\n";
                     success = 0;
                     return success;
                 }
@@ -532,9 +578,12 @@ int checkFlags(int argc, char** argv){
                     else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
                         wget_os = 5.1;
                     }
+                    else if(string(argv[i+1]) == "standard" || string(argv[i+1]) == "win" || string(argv[i+1]) == "Win"){
+                        wget_os = 6.0;
+                    }
                     else{
                         cout << "Usage: pmfow install --wget-version <os>\n";
-                        cout << "Valid options: 2000, xp\n";
+                        cout << "Valid options: 2000, xp, win\n";
                         success = 0;
                         return success;
                     }

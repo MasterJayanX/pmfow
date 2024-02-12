@@ -44,7 +44,8 @@ mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.4/MPC-HC.2.1.4.x86.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
+nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win32.exe
@@ -59,7 +60,7 @@ pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
-retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86/RetroArch-Win32-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4_x86.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
@@ -78,4 +79,4 @@ vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/3c4e3d
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 20
+# Version: 21

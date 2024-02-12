@@ -46,7 +46,8 @@ mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win64
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x64-installer.zip/download
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.4/MPC-HC.2.1.4.x64.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.0/naps2-7.3.0-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
+nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x64.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
@@ -62,7 +63,7 @@ python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
 r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/122.0.1-2-beta/r3dfox-122.0.1.en-US.win64.installer.exe
-retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86_64/RetroArch-Win64-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
@@ -83,4 +84,4 @@ winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-62
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 20
+# Version: 21

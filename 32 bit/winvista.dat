@@ -40,6 +40,7 @@ mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
 new-moon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win32-git-20240203-d849524bd-uxp-0db181d2b7-xpmod.7z
+nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
@@ -52,7 +53,7 @@ pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_setup.exe/download
-retroarch=https://buildbot.libretro.com/stable/1.16.0/windows-msvc2010/x86/RetroArch-MSVC10-Win32-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.17.0/windows-msvc2010/x86/RetroArch-MSVC10-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win32/en-US/seamonkey-2.49.5.installer.exe
@@ -66,4 +67,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 19
+# Version: 21

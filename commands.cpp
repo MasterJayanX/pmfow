@@ -6,6 +6,8 @@
 #include <windows.h>
 #include <winver.h>
 #include <functional>
+#include <sstream>
+#include <vector>
 #include "downloader.cpp"
 
 using namespace std;
@@ -17,13 +19,24 @@ bool list_uninstall = false, onlyCheck = false;
 
 class repo {
 public:
-    repo(const string& os) {
+    repo(const string& os, string operation) {
         // This constructor calls the loadRepos function
-        loadRepos(os);
+        if(operation == "loadRepo"){
+            loadRepos(os);
+        }
+        else if(operation == "loadUninstaller"){
+            loadUninstaller();
+        }
+        else if(operation == "loadUpdater"){
+            loadUpdater();
+        }
+        else{
+            cout << "Invalid operation.\n";
+        }
     }
 
     string repos(const string& key) const {
-        // This function returns the URL of the package
+        // This function returns the info of the package
         auto it = packages.find(key);
         return (it != packages.end()) ? it->second : "Package not found";
     }
@@ -31,27 +44,26 @@ public:
 private:
     // This map contains the packages for each repo
     map<string, string> packages;
-
     void loadRepos(const string& os) {
         ifstream file;
         string fullpath = programpath + "\\";
         if(os == "Windows 2000"){
-            file.open(fullpath + "win2000.txt");
+            file.open(fullpath + "win2000.dat");
         }
         else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003"){
-            file.open(fullpath + "winxp.txt");
+            file.open(fullpath + "winxp.dat");
         }
         else if(os == "Windows Vista"){
-            file.open(fullpath + "winvista.txt");
+            file.open(fullpath + "winvista.dat");
         }
         else if(os == "Windows 7"){
-            file.open(fullpath + "win7.txt");
+            file.open(fullpath + "win7.dat");
         }
         else if(os == "Windows 8" || os == "Windows 8.1"){
-            file.open(fullpath + "win8.txt");
+            file.open(fullpath + "win8.dat");
         }
         else if(os == "Windows 10"){
-            file.open(fullpath + "win10.txt");
+            file.open(fullpath + "win10.dat");
         }
         else{
             cout << "Invalid OS.\n";
@@ -71,9 +83,49 @@ private:
         }
         file.close();
     }
+    void loadUninstaller(){
+        // This function loads the uninstaller
+        string fullpath = programpath + "\\";
+        ifstream file;
+        file.open(fullpath + "uninstallers.dat");
+        if(!file.is_open()){
+            cerr << "Error: uninstallers.dat could not be opened.\n";
+            return;
+        }
+        string line;
+        while(getline(file, line)){
+            size_t delimiterPos = line.find('=');
+            if(delimiterPos != string::npos){
+                string key = line.substr(0, delimiterPos);
+                string value = line.substr(delimiterPos + 1);
+                packages[key] = value;
+            }
+        }
+        file.close();
+    }
+    void loadUpdater(){
+        // This function loads the updater
+        string fullpath = programpath + "\\";
+        ifstream file;
+        file.open(fullpath + "updater.dat");
+        if(!file.is_open()){
+            cerr << "Error: updater.dat could not be opened.\n";
+            return;
+        }
+        string line;
+        while(getline(file, line)){
+            size_t delimiterPos = line.find('=');
+            if(delimiterPos != string::npos){
+                string key = line.substr(0, delimiterPos);
+                string value = line.substr(delimiterPos + 1);
+                packages[key] = value;
+            }
+        }
+        file.close();
+    }
 };
 
-string getWindowsVersion(int majorVersion, int minorVersion){
+string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
     // This function returns the Windows version you are running
     string winver;
     if(majorVersion == 4){
@@ -198,7 +250,7 @@ void install(char** argv, int argc){
     }
     else{
         cout << "Installing " << argv[2] << "...\n";
-        repo r(winver);
+        repo r(winver, "loadRepo");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
             return;
@@ -208,6 +260,29 @@ void install(char** argv, int argc){
         cout << url << endl;
         installPackage(packagename, url);
         cout << "Done.\n";
+    }
+}
+
+void uninstall(char** argv, int argc){
+    // This function uninstalls a package
+    string command, uninstaller;
+    if(argc < 3){
+        cout << "Usage: pmfow uninstall <package>\n";
+        return;
+    }
+    else{
+        cout << "Uninstalling " << argv[2] << "...\n";
+        repo r(winver, "loadUninstaller");
+        if(r.repos(argv[2]) == "Package not found"){
+            cout << argv[2] << "The uninstaller for the specified software could not be found. " << argv[2] << " is either not installed or is installed in a different directory.\n";
+            return;
+        }
+        else{
+            uninstaller = r.repos(argv[2]);
+            command = uninstaller;
+            system(command.c_str());
+            cout << "Done.\n";
+        }
     }
 }
 
@@ -263,22 +338,22 @@ void list(){
     ifstream file;
     string fullpath = programpath + "\\";
     if(winver == "Windows 2000"){
-        file.open(fullpath + "win2000.txt");
+        file.open(fullpath + "win2000.dat");
     }
     else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
-        file.open(fullpath + "winxp.txt");
+        file.open(fullpath + "winxp.dat");
     }
     else if(winver == "Windows Vista"){
-        file.open(fullpath + "winvista.txt");
+        file.open(fullpath + "winvista.dat");
     }
     else if(winver == "Windows 7"){
-        file.open(fullpath + "win7.txt");
+        file.open(fullpath + "win7.dat");
     }
     else if(winver == "Windows 8" || winver == "Windows 8.1"){
-        file.open(fullpath + "win8.txt");
+        file.open(fullpath + "win8.dat");
     }
-    else if(winver == "Windows 10"){
-        file.open(fullpath + "win10.txt");
+    else if(winver == "Windows 10" || winver == "Windows 11"){
+        file.open(fullpath + "win10.dat");
     }
     else{
         cout << "Invalid OS.\n";
@@ -288,9 +363,10 @@ void list(){
         cerr << "Repository not found" << endl;
         return;
     }
-    string line;
+    string line, finalLine;
     int i = 0;
     while (getline(file, line)) {
+        finalLine = line;
         size_t delimiterPos = line.find('=');
         if (delimiterPos != string::npos) {
             string key = line.substr(0, delimiterPos);
@@ -300,7 +376,11 @@ void list(){
         }
         Sleep(10);
     }
+    string ver = finalLine.substr(finalLine.find(":") + 2);
+    int repoversion = stoi(ver);
     cout << "Total packages: " << i << endl;
+    cout << "To see a full list of programs and their descriptions, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List." << endl;
+    cout << "Version of the repository: " << repoversion << endl;
     file.close();
 }
 
@@ -335,7 +415,7 @@ void search(char** argv, int argc){
     }
     else{
         cout << "Searching for " << argv[2] << "...\n";
-        repo r(winver);
+        repo r(winver, "loadRepo");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
         }
@@ -425,12 +505,6 @@ int checkFlags(int argc, char** argv){
     int success = 1;
     if(argc >= 3){
         for(int i = 2; i < argc; i++){
-            if(string(argv[i]) == "-p" || string(argv[i]) == "--powershell"){
-                use_powershell = true;
-            }
-            else if(string(argv[i]) == "-w" || string(argv[i]) == "--wget"){
-                use_powershell = false;
-            }
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
                 if(string(argv[1]) != "install" && string(argv[1]) != "update"){
                     cout << "This flag is not compatible with the " << argv[1] << " command.\n";

@@ -72,7 +72,13 @@ int main(int argc, char** argv){
         }
         else if(string(argv[1]) == "version" || string(argv[1]) == "v" || string(argv[1]) == "about" || string(argv[1]) == "a"){
             // Show the about section
-            about(majorVersion, minorVersion, build);
+            int success = checkFlags(argc, argv);
+            if(success == 0){
+                return 0;
+            }
+            else{
+                about(majorVersion, minorVersion, build);
+            }
         }
         else{
             cout << "Invalid command. Usage: pmfow <command>. Use pmfow help to see what commands are supported.\n";

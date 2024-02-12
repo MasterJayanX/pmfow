@@ -27,7 +27,7 @@ string getExtension(string url){
 
 void installPackage(string package, string url){
     // Install package
-    string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\";
+    string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
     system(command.c_str());
     extension = getExtension(url);
     filename = package + extension;
@@ -79,7 +79,7 @@ vector<string> repoDirectories(){
     // Get directories from directories.txt
     vector<string> directories(2);
     ifstream file;
-    string fullpath = programpath + "\\";
+    string fullpath = programpath + "\\files\\";
     file.open(fullpath + "directories.txt");
     if(file.is_open()){
         for(int i = 0; i < 2; i++){
@@ -97,7 +97,7 @@ vector<string> repoDirectories(){
 
 void updateRepositories(string link){
     // Update repositories
-    string command, file_winver, wget_exe = "wget", fullpath = programpath + "\\";
+    string command, file_winver, wget_exe = "wget", fullpath = programpath + "\\files\\", pmfowpath = programpath + "\\";
     if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
         file_winver = "winxp";
     }
@@ -152,9 +152,9 @@ void updateRepositories(string link){
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + "uninstallers.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag;
         system(command.c_str());
-        command = "del " + fullpath + "pmfow-updater.exe";
+        command = "del " + pmfowpath + "pmfow-updater.exe";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "pmfow-updater.exe " + link + certFlag;
+        command = wget_exe + " -O " + pmfowpath + "pmfow-updater.exe " + link + certFlag;
         system(command.c_str());
         for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
             command = "del " + fullpath + version + ".dat";

@@ -12,9 +12,9 @@
 
 using namespace std;
 
-int major = 0, minor = 2, patch = 1;
+int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-02-11)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (WIP) (2024-02-12)";
 bool list_uninstall = false, onlyCheck = false;
 
 class repo {
@@ -46,7 +46,7 @@ private:
     map<string, string> packages;
     void loadRepos(const string& os) {
         ifstream file;
-        string fullpath = programpath + "\\";
+        string fullpath = programpath + "\\files\\";
         if(os == "Windows 2000"){
             file.open(fullpath + "win2000.dat");
         }
@@ -85,7 +85,7 @@ private:
     }
     void loadUninstaller(){
         // This function loads the uninstaller
-        string fullpath = programpath + "\\";
+        string fullpath = programpath + "\\files\\";
         ifstream file;
         file.open(fullpath + "uninstallers.dat");
         if(!file.is_open()){
@@ -105,7 +105,7 @@ private:
     }
     void loadUpdater(){
         // This function loads the updater
-        string fullpath = programpath + "\\";
+        string fullpath = programpath + "\\files\\";
         ifstream file;
         file.open(fullpath + "updater.dat");
         if(!file.is_open()){
@@ -336,7 +336,7 @@ void list(){
     cout << "Listing all packages...\n";
     Sleep(1000);
     ifstream file;
-    string fullpath = programpath + "\\";
+    string fullpath = programpath + "\\files\\";
     if(winver == "Windows 2000"){
         file.open(fullpath + "win2000.dat");
     }
@@ -389,7 +389,7 @@ void listUninstall(){
     cout << "Listing all packages...\n";
     Sleep(1000);
     ifstream file;
-    string fullpath = programpath + "\\";
+    string fullpath = programpath + "\\files\\";
     file.open(fullpath + "uninstallers.dat");
     string line;
     int i = 0;

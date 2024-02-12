@@ -16,10 +16,10 @@ int main(int argc, char** argv){
     osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0; 
     GetVersionExW(&osv);
     int majorVersion = osv.dwMajorVersion, minorVersion = osv.dwMinorVersion, build = osv.dwBuildNumber;
-    winver = getWindowsVersion(majorVersion, minorVersion);
+    winver = getWindowsVersion(majorVersion, minorVersion, build);
     architecture = getArchitecture();
     programpath = getEXEpath();
-    if(osv.dwMajorVersion >= 5){
+    if(osv.dwMajorVersion >= 5 && argc > 1){
         // Windows 2000 or later
         if(string(argv[1]) == "install" || string(argv[1]) == "i"){
             // Install package
@@ -29,6 +29,16 @@ int main(int argc, char** argv){
             }
             else{
                 install(argv, argc);
+            }
+        }
+        else if(string(argv[1]) == "uninstall" || string(argv[1]) == "remove" || string(argv[1]) == "rm"){
+            // Uninstall package
+            int success = checkFlags(argc, argv);
+            if(success == 0){
+                return 0;
+            }
+            else{
+                uninstall(argv, argc);
             }
         }
         else if(string(argv[1]) == "update" || string(argv[1]) == "u"){

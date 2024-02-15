@@ -9,7 +9,7 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath;
-bool check_cert = false, show_url = false, onefile = false, unstable = false;
+bool check_cert = false, show_url = false, onefile = false, unstable = false, silent = true;
 float wget_os = 0;
 
 string getExtension(string url){
@@ -25,9 +25,9 @@ string getExtension(string url){
     return extension;
 }
 
-void installPackage(string package, string url){
+void installPackage(string package, string url, string silentinst){
     // Install package
-    string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
+    string command, app, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
     system(command.c_str());
     extension = getExtension(url);
     filename = package + extension;
@@ -51,6 +51,12 @@ void installPackage(string package, string url){
         command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate";
     }
     system(command.c_str());
+    if(silent){
+        app = "\"" + fullpath + " " + silentinst + "\"";
+    }
+    else{
+        app = fullpath;
+    }
     if (extension != ".zip" && extension != ".7z") {
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);

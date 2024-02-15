@@ -9,12 +9,13 @@
 #include <sstream>
 #include <vector>
 #include "downloader.cpp"
+#include "config.cpp"
 
 using namespace std;
 
 int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (WIP) (2024-02-12)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-beta1 (2024-02-14 <3)";
 bool list_uninstall = false, onlyCheck = false;
 
 class repo {
@@ -29,6 +30,9 @@ public:
         }
         else if(operation == "loadUpdater"){
             loadUpdater();
+        }
+        else if(operation == "loadSilent"){
+            loadSilent();
         }
         else{
             cout << "Invalid operation.\n";
@@ -122,6 +126,27 @@ private:
             }
         }
         file.close();
+    }
+    void loadSilent(){
+        // This function loads the silent installers
+        string fullpath = programpath + "\\files\\";
+        ifstream file;
+        file.open(fullpath + "silent-installers.dat");
+        if(!file.is_open()){
+            cerr << "Error: silent-installers.dat could not be opened.\n";
+            return;
+        }
+        string line;
+        while(getline(file, line)){
+            size_t delimiterPos = line.find('=');
+            if(delimiterPos != string::npos){
+                string key = line.substr(0, delimiterPos);
+                string value = line.substr(delimiterPos + 1);
+                packages[key] = value;
+            }
+        }
+        file.close();
+    
     }
 };
 
@@ -251,14 +276,18 @@ void install(char** argv, int argc){
     else{
         cout << "Installing " << argv[2] << "...\n";
         repo r(winver, "loadRepo");
+        repo s(winver, "loadSilent");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
             return;
         }
+        if(s.repos(argv[2]) == "Package not found"){
+            silent = false;
+        }
         string url = r.repos(argv[2]);
         string packagename = string(argv[2]);
         cout << url << endl;
-        installPackage(packagename, url);
+        installPackage(packagename, url, s.repos(argv[2]));
         cout << "Done.\n";
     }
 }

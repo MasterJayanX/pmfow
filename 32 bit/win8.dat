@@ -56,9 +56,8 @@ pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.0.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
-pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
-python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
-python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1.exe
+python=https://www.python.org/ftp/python/3.12.2/python-3.12.2.exe
+python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
 retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4_x86.exe
@@ -76,7 +75,8 @@ virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-1
 vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/VSCodeUserSetup-ia32-1.55.2.exe
+winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-624.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 21
+# Version: 22

@@ -23,6 +23,7 @@ foobar2000=https://www.foobar2000.org/files/foobar2000_v1.5.11.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
 gimp=https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup-2.exe
 handbrake=https://github.com/HandBrake/HandBrake/releases/download/1.0.7/HandBrake-1.0.7-i686-Win_GUI.exe
+iexplore=https://web.archive.org/web/20140307173648mp_/http://download.microsoft.com/download/0/8/7/08768091-35BC-48E0-9F7F-B9802A0EE2D6/IE9-WindowsVista-x86-enu.exe
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 inkscape=https://inkscape.org/gallery/item/12192/inkscape-0.92.3-x86.exe
 irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
@@ -49,7 +50,6 @@ paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
 pale-moon=http://web.archive.org/web/20170319043844/http://rm-us.palemoon.org/release/palemoon-26.5.0.Atom.WinXP.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
-pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow32.exe
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_setup.exe/download
@@ -67,4 +67,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 21
+# Version: 22

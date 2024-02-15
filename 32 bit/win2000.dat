@@ -1,5 +1,4 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
-7-zip-old=https://www.7-zip.org/a/7z920.exe
 aimp=https://www.aimp.ru/files/windows/builds/aimp_1.77.9.exe
 arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
@@ -7,7 +6,8 @@ blender=https://download.blender.org/release/Blender2.42/blender-2.42a-windows.e
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20Setup%2012.0.exe
-firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/10.0.9esr/win32/en-US/Firefox%20Setup%2010.0.9esr.exe
+firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en-US/Firefox%20Setup%2010.0.12esr.exe
+iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -27,4 +27,4 @@ timezones=http://web.archive.org/web/20220422005301/https://07.sendcdn.com/d/bfy
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 
-# Version: 18
+# Version: 22

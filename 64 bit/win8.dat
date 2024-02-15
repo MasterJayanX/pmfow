@@ -56,9 +56,8 @@ pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.0.win64.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
-pmfow=https://github.com/MasterJayanX/pmfow/releases/download/0.1.5/pmfow64.exe
-python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
-python3=https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe
+python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
+python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
 r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/122.0.1-2-beta/r3dfox-122.0.1.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.16.0/windows/x86_64/RetroArch-Win64-setup.exe
@@ -78,7 +77,8 @@ vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.x64.exe
 vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vscode=https://update.code.visualstudio.com/1.70.2/win32-x64-user/stable
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
-winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
+winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
+winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 19
+# Version: 22

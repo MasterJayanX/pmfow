@@ -25,6 +25,7 @@ qbittorrent=C:\"Program Files"\qBittorrent\uninst.exe
 r3dfox=C:\"Program Files"\"Eclipse r3dfox"\uninstall\helper.exe
 retroarch=C:\RetroArch\uninstall.exe
 seamonkey=C:\"Program Files"\SeaMonkey\uninstall\helper.exe
+supermium=%LocalAppData%\Supermium\Application\121.0.6167.81\Installer\setup.exe --uninstall
 thunderbird=C:\"Program Files"\"Mozilla Thunderbird"\uninstall\helper.exe
 vlc=MsiExec.exe /I{9675011C-2395-4AD7-B1CC-92910F991F58}
 vscode=%LocalAppData%\Programs\"Microsoft VS Code"\unins000.exe

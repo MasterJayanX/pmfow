@@ -1,6 +1,6 @@
 pmfow32=https://github.com/MasterJayanX/pmfow/releases/download/0.2.1/pmfow32.exe
 pmfow64=https://github.com/MasterJayanX/pmfow/releases/download/0.2.1/pmfow64.exe
-pmfow-unstable32=https://github.com/MasterJayanX/pmfow/releases/download/0.2.0-rc2/pmfow32.exe
-pmfow-unstable64=https://github.com/MasterJayanX/pmfow/releases/download/0.2.0-rc2/pmfow64.exe
+pmfow-unstable32=https://github.com/MasterJayanX/pmfow/releases/download/0.3.0-beta1/pmfow32.exe
+pmfow-unstable64=https://github.com/MasterJayanX/pmfow/releases/download/0.3.0-beta1/pmfow64.exe
 pmfow-updater32=https://github.com/MasterJayanX/pmfow-updater/releases/download/1.1.0/pmfow-updater32.exe
 pmfow-updater64=https://github.com/MasterJayanX/pmfow-updater/releases/download/1.1.0/pmfow-updater64.exe

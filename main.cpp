@@ -15,12 +15,15 @@ int main(int argc, char** argv){
     osv.dwOSVersionInfoSize = sizeof(OSVERSIONINFOW);
     osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0; 
     GetVersionExW(&osv);
-    int majorVersion = osv.dwMajorVersion, minorVersion = osv.dwMinorVersion, build = osv.dwBuildNumber;
-    winver = getWindowsVersion(majorVersion, minorVersion, build);
+    majorVersion = osv.dwMajorVersion; 
+    minorVersion = osv.dwMinorVersion; 
+    build = osv.dwBuildNumber;
+    winver = getWindowsVersion();
     architecture = getArchitecture();
     programpath = getEXEpath();
     if(osv.dwMajorVersion >= 5 && argc > 1){
         // Windows 2000 or later
+        loadConfig();
         if(string(argv[1]) == "install" || string(argv[1]) == "i"){
             // Install package
             int success = checkFlags(argc, argv);

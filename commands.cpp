@@ -9,14 +9,12 @@
 #include <sstream>
 #include <vector>
 #include "downloader.cpp"
-#include "config.cpp"
 
 using namespace std;
 
 int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-beta1 (2024-02-14 <3)";
-bool list_uninstall = false, onlyCheck = false;
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-beta1 (2024-02-25)";
 
 class repo {
 public:
@@ -150,14 +148,14 @@ private:
     }
 };
 
-string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
+string getWindowsVersion(){
     // This function returns the Windows version you are running
     string winver;
     if(majorVersion == 4){
-        if(minorVersion == 0 && buildNumber < 1096){
+        if(minorVersion == 0 && build < 1096){
             winver = "Windows 95";
         }
-        else if(minorVersion == 0 && buildNumber >= 1096){
+        else if(minorVersion == 0 && build >= 1096){
             winver = "Windows NT 4.0";
         }
         else if(minorVersion == 10){
@@ -188,11 +186,11 @@ string getWindowsVersion(int majorVersion, int minorVersion, int buildNumber){
     else if(majorVersion == 6 && minorVersion == 3){
         winver = "Windows 8.1";
     }
-    else if(majorVersion == 10 && minorVersion == 0 && buildNumber <= 19045){
-        if(buildNumber <= 19045){
+    else if(majorVersion == 10 && minorVersion == 0 && build <= 19045){
+        if(build <= 19045){
             winver = "Windows 10";
         }
-        else if(buildNumber >= 22000){
+        else if(build >= 22000){
             winver = "Windows 11";
         }
     }
@@ -496,7 +494,7 @@ void about(int majorVersion, int minorVersion, int build){
     if(majorVersion < 5){
         cout << "Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.\n";
     }
-    if(onlyCheck){
+    if(checkUpd){
         string pmfow;
         repo r(winver, "loadUpdater");
         if(architecture == "x64"){
@@ -633,6 +631,9 @@ int checkFlags(int argc, char** argv){
                 }
             }
             if(string(argv[i]) == "--check"){
+                checkUpd = true;
+            }
+            if(string(argv[i]) == "--only-check"){
                 onlyCheck = true;
             }
         }

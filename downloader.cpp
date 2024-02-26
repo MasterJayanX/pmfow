@@ -4,13 +4,9 @@
 #include <cstdio>
 #include <windows.h>
 #include <vector>
+#include "config.cpp"
 
 using namespace std;
-
-// Global variables
-string winver, architecture, programpath;
-bool check_cert = false, show_url = false, onefile = false, unstable = false, silent = true;
-float wget_os = 0;
 
 string getExtension(string url){
     // Get extension from URL

@@ -30,7 +30,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
 k-lite-codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1676_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240217.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240302.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
@@ -42,7 +42,7 @@ mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.1
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
 new-moon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win32-git-20240203-d849524bd-uxp-0db181d2b7-xpmod.7z
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.x64.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 openttd=https://cdn.openttd.org/openttd-releases/12.2/openttd-12.2-windows-win64.exe
@@ -67,4 +67,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 23
+# Version: 24

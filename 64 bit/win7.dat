@@ -36,7 +36,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1810_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240217.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240302.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -49,13 +49,13 @@ mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.5/MPC-HC.2.1.5.x64
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.2/npp.8.6.2.Installer.x64.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x64.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win64.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
-pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.0.win64.installer.exe
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.1.win64.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
@@ -82,8 +82,8 @@ vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/e4503b
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
 waterfox=https://cdn1.waterfox.net/waterfox/releases/G6.0.9/WINNT_x86_64/Waterfox%20Setup%20G6.0.9.exe
 winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
-winrar=https://d.winrar.es/d/101z1704676813/Ne0CvzE19mDgw_g00wY6Vg/winrar-x64-624.exe
+winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 23
+# Version: 24

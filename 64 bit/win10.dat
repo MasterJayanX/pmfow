@@ -15,6 +15,7 @@ chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v121
 clamav=https://www.clamav.net/downloads/production/clamav-1.2.1.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_2.09-en.exe
 deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
 dolphin=https://dl.dolphin-emu.org/builds/c8/35/dolphin-master-5.0-20347-x64.7z
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
@@ -52,8 +53,8 @@ open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win64.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
 pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.1.win64.installer.exe
-peazip=https://github.com/peazip/PeaZip/releases/download/9.6.0/peazip-9.6.0.WIN64.exe
-pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.12/pidgin-2.14.12.exe/download
+peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WIN64.exe
+pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
@@ -78,4 +79,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 24
+# Version: 25

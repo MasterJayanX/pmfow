@@ -15,6 +15,7 @@ chromium-nosync=/silent
 clamav=/quiet
 clamsentinel=/S
 clamwin=/S
+cpu-z=/VERYSILENT /NORESTART
 deluge=/S
 dosbox=/S
 dotnet3.5=/q /norestart

@@ -10,7 +10,7 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath;
-bool check_cert = false, show_url = false, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
 
@@ -20,7 +20,7 @@ public:
         ifstream file(filename);
         string line;
         while(getline(file, line)) {
-            if(line[0] != '#' && line[0] != ';') {
+            if(line[0] != '#' && line[0] != ';' && line[0] != '`'){
                 int pos = line.find("=");
                 string key = line.substr(0, pos);
                 string value = line.substr(pos + 1);
@@ -90,5 +90,17 @@ void loadConfig() {
     }
     else if(config.get("check_for_dev") == "false"){
         unstable = false;
+    }
+    if(config.get("check_certificates") == "true"){
+        check_cert = true;
+    }
+    else if(config.get("check_certificates") == "false"){
+        check_cert = false;
+    }
+    if(config.get("run_compressed_files_as_executables") == "true"){
+        runasexe = true;
+    }
+    else if(config.get("run_compressed_files_as_executables") == "false"){
+        runasexe = false;
     }
 }

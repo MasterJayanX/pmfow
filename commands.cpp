@@ -14,7 +14,7 @@ using namespace std;
 
 int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-beta1 (2024-02-25)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc1 (2024-03-05)";
 
 class repo {
 public:

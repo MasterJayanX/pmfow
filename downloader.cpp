@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <windows.h>
 #include <vector>
-#include "config.cpp"
+#include "config.hpp"
 
 using namespace std;
 
@@ -23,14 +23,11 @@ string getExtension(string url){
 
 void installPackage(string package, string url, string silentinst){
     // Install package
-    string command, app, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
+    string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
     system(command.c_str());
     extension = getExtension(url);
     filename = package + extension;
     fullpath += filename;
-    if(show_url){
-        cout << "URL: " << url << endl;
-    }
     if(wget_os == 5.0 || (winver == "Windows 2000" && wget_os == 0)){
         wget_exe = "wget_2k";
     }
@@ -47,17 +44,14 @@ void installPackage(string package, string url, string silentinst){
         command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate";
     }
     system(command.c_str());
-    if(silent){
-        app = "\"" + fullpath + " " + silentinst + "\"";
-    }
-    else{
-        app = fullpath;
-    }
-    if (extension != ".zip" && extension != ".7z") {
+    if (runasexe || (extension != ".zip" && extension != ".7z")) {
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
         ShExecInfo.lpFile = fullpath.c_str();
+        if(silent){
+            ShExecInfo.lpParameters = silentinst.c_str();
+        }
         ShExecInfo.nShow = SW_SHOWNORMAL;
 
         if (ShellExecuteEx(&ShExecInfo)) {

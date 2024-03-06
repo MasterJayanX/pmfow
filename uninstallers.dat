@@ -7,6 +7,7 @@ bitwarden=%LocalAppData%\Programs\Bitwarden\"Uninstall Bitwarden.exe"
 brave=C:\"Program Files"\BraveSoftware\Brave-Browser\Application\121.1.62.153\Installer\setup.exe --uninstall --system-level
 calibre=MsiExec.exe /I{9E38FA2A-6295-45FA-880A-C7F3E151B248}
 cdburnerxp=C:\"Program Files (x86)"\CDBurnerXP\unins000.exe
+cpu-z=C:\"Program Files"\CPUID\CPU-Z\unins000.exe
 everything=C:\"Program Files"\Everything\Uninstall.exe
 filezilla=C:\"Program Files"\"FileZilla FTP Client"\uninstall.exe
 firefox=C:\"Program Files"\"Mozilla Firefox"\uninstall\helper.exe

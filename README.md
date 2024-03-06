@@ -7,11 +7,11 @@
 pmfow (Package Manager for Old Windows) is a program that allows you to install applications from the command line in older versions of Windows similarly to how you would do it in Linux or in Windows 10 with [winget](https://github.com/microsoft/winget-cli).
 
 <figure>
- <img src="screenshots/1.png" width=720 /> 
+ <img src="docs/1.png" width=720 /> 
  <figcaption>Screenshot of pmfow installing Legacy Update on a Windows XP VM.</figcaption>
 </figure>
 <figure>
- <img src="screenshots/2.png" width=720 />
+ <img src="docs/2.png" width=720 />
  <figcaption>Screenshot of pmfow installing VLC Media Player on the same Windows XP VM.</figcaption>
 </figure>
 

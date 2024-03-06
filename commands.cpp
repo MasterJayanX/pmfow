@@ -12,9 +12,9 @@
 
 using namespace std;
 
-int major = 0, minor = 2, patch = 1;
+int major = 0, minor = 2, patch = 2;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-02-11)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-03-06)";
 bool list_uninstall = false, onlyCheck = false;
 
 class repo {

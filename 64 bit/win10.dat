@@ -6,7 +6,7 @@ balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.18.11/bale
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2023.12.1/Bitwarden-Installer-2023.12.1.exe
 bleachbit=https://www.bleachbit.org/download/file/t?file=BleachBit-4.6.0-setup.exe
-blender=https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi/
+blender=https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi
 brave=https://laptop-updates.brave.com/latest/winx64
 calibre=https://github.com/kovidgoyal/calibre/releases/download/v7.5.1/calibre-64bit-7.5.1.msi
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
@@ -35,7 +35,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1810_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240302.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240309.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
@@ -44,6 +44,7 @@ lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win64-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x64-installer.zip/download
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.5/MPC-HC.2.1.5.x64.exe
+mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.x64.exe
@@ -51,7 +52,7 @@ obs-studio=https://github.com/obsproject/obs-studio/releases/download/30.0.2/OBS
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win64.exe
-paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.12/paint.net.5.0.12.install.anycpu.web.zip
+paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
 pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.1.win64.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
@@ -79,4 +80,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.1.2/WinSCP-6.1.2-Setup.exe/download
 
-# Version: 25
+# Version: 26

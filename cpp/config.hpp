@@ -10,7 +10,7 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath;
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
 
@@ -102,5 +102,11 @@ void loadConfig() {
     }
     else if(config.get("run_compressed_files_as_executables") == "false"){
         runasexe = false;
+    }
+    if(config.get("is_reactos") == "true"){
+        is_reactos = true;
+    }
+    else if(config.get("is_reactos") == "false"){
+        is_reactos = false;
     }
 }

@@ -14,7 +14,7 @@ using namespace std;
 
 int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc1 (2024-03-05)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc1 (2024-03-12)";
 
 class repo {
 public:
@@ -52,7 +52,7 @@ private:
         if(os == "Windows 2000"){
             file.open(fullpath + "win2000.dat");
         }
-        else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003"){
+        else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003" || os == "ReactOS"){
             file.open(fullpath + "winxp.dat");
         }
         else if(os == "Windows Vista"){
@@ -172,7 +172,12 @@ string getWindowsVersion(){
         winver = "Windows XP";
     }
     else if(majorVersion == 5 && (minorVersion == 2)){
-        winver = "Windows XP Professional x64/Windows Server 2003";
+        if(is_reactos){
+            winver = "ReactOS";
+        }
+        else{
+            winver = "Windows XP Professional x64/Windows Server 2003";
+        }
     }
     else if(majorVersion == 6 && minorVersion == 0){
         winver = "Windows Vista";
@@ -630,7 +635,7 @@ int checkFlags(int argc, char** argv){
                     list_uninstall = true;
                 }
             }
-            if(string(argv[i]) == "--check"){
+            if(string(argv[i]) == "-ch" || string(argv[i]) == "--check"){
                 checkUpd = true;
             }
             if(string(argv[i]) == "--only-check"){

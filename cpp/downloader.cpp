@@ -94,7 +94,7 @@ vector<string> repoDirectories(){
 void updateRepositories(string link){
     // Update repositories
     string command, file_winver, wget_exe = "wget", fullpath = programpath + "\\files\\", pmfowpath = programpath + "\\";
-    if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+    if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
         file_winver = "winxp";
     }
     else if(winver == "Windows Vista"){

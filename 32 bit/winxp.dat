@@ -44,7 +44,7 @@ notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/downlo
 onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/download/3.0.5/One-Core-API-Binaries-3.0.5.zip
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
 openttd=https://cdn.openttd.org/openttd-releases/1.10.3/openttd-1.10.3-windows-win32.exe
-paint.net=https://www.dotpdn.com/files/paint.net.4.2.16.install.zip
+paint.net=https://web.archive.org/web/20140209153608/http://www.dotpdn.com/files/Paint.NET.3.5.11.Install.zip
 pale-moon=http://web.archive.org/web/20170319043844/http://rm-us.palemoon.org/release/palemoon-26.5.0.Atom.WinXP.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
@@ -66,4 +66,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 26
+# Version: 27

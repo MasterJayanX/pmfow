@@ -477,12 +477,12 @@ void help(){
     cout << "List of flags:\n";
     cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
-    cout << "pmfow install <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget (options: 2000, xp, win).\n";
     cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
     cout << "pmfow update <package> --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
     cout << "pmfow update <package> --check - Only checks for pmfow updates instead of also updating the repositories.\n";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
+    cout << "pmfow search <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow list --uninstall - Lists all programs that can be uninstalled with pmfow.\n";
     cout << "pmfow version -c/--check - Checks for updates when showing the version of pmfow you are running.\n";
 }

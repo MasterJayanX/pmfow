@@ -10,7 +10,7 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath;
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
 

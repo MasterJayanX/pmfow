@@ -191,12 +191,15 @@ string getWindowsVersion(){
     else if(majorVersion == 6 && minorVersion == 3){
         winver = "Windows 8.1";
     }
-    else if(majorVersion == 10 && minorVersion == 0 && build <= 19045){
+    else if(majorVersion == 10 && minorVersion == 0){
         if(build <= 19045){
             winver = "Windows 10";
         }
         else if(build >= 22000){
             winver = "Windows 11";
+        }
+        else{
+            winver = "Windows 10";
         }
     }
     else{
@@ -478,9 +481,10 @@ void help(){
     cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
     cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget (options: 2000, xp, win).\n";
-    cout << "pmfow update <package> -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
-    cout << "pmfow update <package> --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
-    cout << "pmfow update <package> --check - Only checks for pmfow updates instead of also updating the repositories.\n";
+    cout << "pmfow update -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
+    cout << "pmfow update --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
+    cout << "pmfow update --check - Checks for pmfow updates when updating the app repositories.\n";
+    cout << "pmfow update --only-check - Only checks for pmfow updates and does not update the repositories.\n";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
     cout << "pmfow search <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow list --uninstall - Lists all programs that can be uninstalled with pmfow.\n";

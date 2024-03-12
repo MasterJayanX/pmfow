@@ -13,10 +13,10 @@ using namespace std;
 int main(int argc, char** argv){
     OSVERSIONINFOW osv;
     osv.dwOSVersionInfoSize = sizeof(OSVERSIONINFOW);
-    osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0; 
+    osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0;
     GetVersionExW(&osv);
     majorVersion = osv.dwMajorVersion; 
-    minorVersion = osv.dwMinorVersion; 
+    minorVersion = osv.dwMinorVersion;
     build = osv.dwBuildNumber;
     winver = getWindowsVersion();
     architecture = getArchitecture();
@@ -110,7 +110,11 @@ int main(int argc, char** argv){
     }
     else{
         // Windows 98 or earlier
-        if(string(argv[1]) == "version" || string(argv[1]) == "v" || string(argv[1]) == "about" || string(argv[1]) == "a"){
+        if(string(argv[1]) == "help" || string(argv[1]) == "h"){
+            // Show help
+            help();
+        }
+        else if(string(argv[1]) == "version" || string(argv[1]) == "v" || string(argv[1]) == "about" || string(argv[1]) == "a"){
             // Show the about section
             about(majorVersion, minorVersion, build);
         }

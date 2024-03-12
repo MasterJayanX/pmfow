@@ -162,9 +162,9 @@ void updateRepositories(string link){
 
     if (!onefile && architecture == "x86") {
         // Additional file for Windows 2000
-        command = "del " + fullpath + "win2000.txt";
+        command = "del " + fullpath + "win2000.dat";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "win2000.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate");
+        command = wget_exe + " -O " + fullpath + "win2000.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate");
         system(command.c_str());
     }
 }

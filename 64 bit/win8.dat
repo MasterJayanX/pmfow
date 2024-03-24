@@ -35,7 +35,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1820_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240309.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240323.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -62,7 +62,7 @@ playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/123.0.2-2-beta-aero/r3dfox-123.0.2.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/124.0.2/r3dfox-124.0.2.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe

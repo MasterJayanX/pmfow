@@ -23,7 +23,7 @@ dotnet4.8=https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/123.0/win64/en-US/Firefox%20Setup%20123.0.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/124.0.1/win64/en-US/Firefox%20Setup%20124.0.1.exe
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/115.8.0esr/win64/en-US/Firefox%20Setup%20115.8.0esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe
@@ -35,7 +35,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1820_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240309.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240323.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
@@ -71,7 +71,7 @@ thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win64/en-US
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/120.0.6099.199-1.1/ungoogled-chromium_120.0.6099.199-1.1_installer_x64.exe
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe
-vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.5.3206.50.x64.exe
+vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.6.3271.53.x64.exe
 vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/31c37ee8f63491495ac49e43b8544550fbae4533/VSCodeUserSetup-x64-1.86.1.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.2.24019/VSCodiumSetup-x64-1.85.2.24019.exe
@@ -80,4 +80,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 27
+# Version: 28

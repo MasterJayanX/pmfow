@@ -29,7 +29,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
 k-lite-codec=http://files2.codecguide.com/K-Lite_Codec_Pack_1385_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240309.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240323.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
@@ -38,7 +38,7 @@ multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
-new-moon=https://o.rthost.win/palemoon/palemoon-27.10.0.win32-git-20240309-c6ee756140-xpmod.7z
+new-moon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win32-git-20240323-d849524bd-uxp-d8ac621203-xpmod.7z
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.9.2/npp.7.9.2.Installer.exe
 onecoreapi=https://github.com/Skulltrail192/One-Core-API-Binaries/releases/download/3.0.5/One-Core-API-Binaries-3.0.5.zip
@@ -66,4 +66,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 27
+# Version: 28

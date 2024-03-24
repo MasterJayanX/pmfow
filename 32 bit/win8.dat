@@ -34,7 +34,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1820_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240309.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240323.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -81,4 +81,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 27
+# Version: 28

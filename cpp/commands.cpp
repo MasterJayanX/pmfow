@@ -475,6 +475,7 @@ void help(){
     cout << "pmfow list - Lists all the packages.\n";
     cout << "pmfow help - Shows this help message.\n";
     cout << "pmfow version - Shows the version of pmfow that you are running.\n";
+    cout << "pmfow about - Shows information about pmfow.\n";
     cout << "pmfow-updater - Updates the pmfow executable to the latest version.\n";
     cout << "\n";
     cout << "List of flags:\n";
@@ -491,6 +492,41 @@ void help(){
     cout << "pmfow version -c/--check - Checks for updates when showing the version of pmfow you are running.\n";
 }
 
+void version(int majorVersion, int minorVersion, int build){
+    cout << programversion << endl;
+    if(checkUpd){
+        string pmfow;
+        repo r(winver, "loadUpdater");
+        if(architecture == "x64"){
+            if(unstable){
+                pmfow = r.repos("pmfow-unstable64");
+            }
+            else{
+                pmfow = r.repos("pmfow64");
+            }
+        }
+        else if(architecture == "x86"){
+            if(unstable){
+                pmfow = r.repos("pmfow-unstable32");
+            }
+            else{
+                pmfow = r.repos("pmfow32");
+            }
+        }
+        else{
+            cout << "Invalid architecture.\n";
+            return;
+        }
+        bool updateAvailable = updateURL(pmfow);
+        if(updateAvailable){
+            cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
+        }
+        else{
+            cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
+        }
+    }
+
+}
 void about(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
     cout << programversion << endl;

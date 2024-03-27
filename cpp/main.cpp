@@ -83,8 +83,17 @@ int main(int argc, char** argv){
             // Show help
             help();
         }
-        else if(string(argv[1]) == "version" || string(argv[1]) == "v" || string(argv[1]) == "about" || string(argv[1]) == "a"){
+        else if(string(argv[1]) == "version" || string(argv[1]) == "v"){
             // Show the about section
+            int success = checkFlags(argc, argv);
+            if(success == 0){
+                return 0;
+            }
+            else{
+                about(majorVersion, minorVersion, build);
+            }
+        }
+        else if(string(argv[1]) == "about" || string(argv[1]) == "a"){
             int success = checkFlags(argc, argv);
             if(success == 0){
                 return 0;

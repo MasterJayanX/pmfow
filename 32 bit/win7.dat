@@ -1,5 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
-aimp=https://www.aimp.ru/files/windows/builds/aimp_5.30.2533_w32.exe
+aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w32-ints.exe
 arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
@@ -48,7 +48,7 @@ mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.1.7/MPC-HC.2.1.7.2.x86.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-i686.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.4.0/naps2-7.4.0-win.exe
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
@@ -70,7 +70,7 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v122-hf/supermium_122_32_setup.exe
-thorium=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214-1/thorium_WIN32_SSE3_mini_installer.exe
+thorium=https://github.com/Alex313031/thorium-win7/releases/download/M122.0.6261.132/thorium_WIN32_SSE2_mini_installer.exe
 thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win32/en-US/Thunderbird%20Setup%20115.7.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
@@ -84,4 +84,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 28
+# Version: 29

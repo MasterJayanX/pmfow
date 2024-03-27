@@ -12,6 +12,7 @@ iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6set
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
+libreoffice=https://archive.org/download/lib-363-32b-win-2000-multi/LibO_3.6.3_Win_x86_install_multi.msi
 notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer.exe
 openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
 openttd=https://cdn.openttd.org/openttd-releases/1.8.0/openttd-1.8.0-windows-win32.exe
@@ -29,4 +30,4 @@ timezones=http://web.archive.org/web/20220422005301/https://07.sendcdn.com/d/bfy
 vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.exe
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 
-# Version: 25
+# Version: 29

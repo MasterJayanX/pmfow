@@ -1,5 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301-x64.exe
-aimp=https://www.aimp.ru/files/windows/builds/aimp_5.30.2533_w64.exe
+aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w64-inst.exe
 arduino=https://downloads.arduino.cc/arduino-ide/arduino-ide_2.2.1_Windows_64bit.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe
@@ -10,7 +10,7 @@ blender=https://www.blender.org/download/release/Blender4.0/blender-4.0.2-window
 brave=https://laptop-updates.brave.com/latest/winx64
 calibre=https://github.com/kovidgoyal/calibre/releases/download/v7.5.1/calibre-64bit-7.5.1.msi
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
-chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v121.0.6167.86-r1233107/mini_installer.sync.exe
+chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v123.0.6312.59-r1262506/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v121.0.6167.86-r1233107/mini_installer.nosync.exe
 clamav=https://www.clamav.net/downloads/production/clamav-1.2.1.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
@@ -65,8 +65,8 @@ rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
-thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M121.0.6167.204/thorium_AVX2_mini_installer.exe
-thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M121.0.6167.204/thorium_SSE3_mini_installer.exe
+thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_AVX2_mini_installer.exe
+thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_SSE3_mini_installer.exe
 thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win64/en-US/Thunderbird%20Setup%20115.7.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/120.0.6099.199-1.1/ungoogled-chromium_120.0.6099.199-1.1_installer_x64.exe
@@ -80,4 +80,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 28
+# Version: 29

@@ -1,5 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301-x64.exe
-aimp=https://www.aimp.ru/files/windows/builds/aimp_5.30.2533_w64.exe
+aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w64-inst.exe
 arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
@@ -72,8 +72,8 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v122-hf/supermium_122_64_setup.exe
-thorium=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214/thorium_AVX2_mini_installer.exe
-thorium-sse3=https://github.com/Alex313031/thorium-win7/releases/download/M119.0.6045.214/thorium_SSE3_mini_installer.exe
+thorium=https://github.com/Alex313031/thorium-win7/releases/download/M122.0.6261.132/thorium_AVX2_mini_installer.exe
+thorium-sse3=https://github.com/Alex313031/thorium-win7/releases/download/M122.0.6261.132/thorium_SSE3_mini_installer.exe
 thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win64/en-US/Thunderbird%20Setup%20115.7.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x64.exe
@@ -88,4 +88,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 28
+# Version: 29

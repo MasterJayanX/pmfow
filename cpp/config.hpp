@@ -18,6 +18,10 @@ class Config {
 public:
     Config(string filename) {
         ifstream file(filename);
+        if(!file.is_open()) {
+            cout << "Error: Could not open file " << filename << endl;
+            return;
+        }
         string line;
         while(getline(file, line)) {
             if(line[0] != '#' && line[0] != ';' && line[0] != '`'){

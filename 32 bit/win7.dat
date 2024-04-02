@@ -24,7 +24,7 @@ dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
-firefox=https://ftp.mozilla.org/pub/firefox/releases/115.8.0esr/win32/en-US/Firefox%20Setup%20115.8.0esr.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/115.9.1esr/win32/en-US/Firefox%20Setup%20115.9.1esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
@@ -36,7 +36,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1820_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240323.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.1-Goanna-20240330.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -56,7 +56,7 @@ oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releas
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win32.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
-pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.1.win32.installer.exe
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.2.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
@@ -71,17 +71,18 @@ sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v122-hf/supermium_122_32_setup.exe
 thorium=https://github.com/Alex313031/thorium-win7/releases/download/M122.0.6261.132/thorium_WIN32_SSE2_mini_installer.exe
-thunderbird=https://ftp.mozilla.org/pub/thunderbird/releases/115.7.0/win32/en-US/Thunderbird%20Setup%20115.7.0.exe
+thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.9.0/win32/en-US/Thunderbird%20Setup%20115.9.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.exe
 vlc=https://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
-vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/VSCodeUserSetup-ia32-1.55.2.exe
+vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
+vxkex=https://github.com/vxiiduu/VxKex/releases/download/Version1.1.1.1375/KexSetup_Release_1_1_1_1375.exe
 winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 29
+# Version: 30

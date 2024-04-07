@@ -5,12 +5,15 @@
 #include <map>
 #include <windows.h>
 #include <winver.h>
+#include <time.h>
+#define DTTMFMT "%Y-%m-%d %H:%M:%S "
+#define DTTMSZ 21
 
 using namespace std;
 
 // Global variables
-string winver, architecture, programpath;
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url;
+string winver, architecture, programpath, log_file = "pmfow.log";
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
 
@@ -112,5 +115,58 @@ void loadConfig() {
     }
     else if(config.get("is_reactos") == "false"){
         is_reactos = false;
+    }
+    if(config.get("write_to_log") == "true"){
+        write_to_log = true;
+    }
+    else if(config.get("write_to_log") == "false"){
+        write_to_log = false;
+    }
+    if(config.get("log_file") != "pmfow.log"){
+        log_file = programpath + "\\" + config.get("log_file");
+    }
+    else{
+        log_file = programpath + "\\" + log_file;
+    }
+}
+
+static char *getDtTm (char *buff) {
+    time_t t = time (0);
+    strftime (buff, DTTMSZ, DTTMFMT, localtime (&t));
+    return buff;
+}
+
+void log(string message){
+    // This function writes to the log file
+    ofstream logg;
+    if(write_to_log){
+        logg.open(log_file, ios::app);
+        if(!logg.is_open()){
+            return;
+        }
+        logg << message << endl;
+        logg.close();
+    }
+}
+
+void log_from_main(char** argv, int argc, string message){
+    // This function writes to the log file from the main function
+    ofstream logg;
+    if(write_to_log){
+        char buff[DTTMSZ];
+        logg.open(log_file, ios::app);
+        if(!logg.is_open()){
+            return;
+        }
+        logg << getDtTm(buff) << endl;
+        logg << "Command: ";
+        for(int i = 0; i < argc; i++){
+            logg << argv[i] << " ";
+        }
+        logg << endl;
+        if(message != "no_message"){
+            logg << message << endl;
+        }
+        logg.close();
     }
 }

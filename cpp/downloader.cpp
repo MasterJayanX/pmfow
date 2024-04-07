@@ -37,6 +37,7 @@ void installPackage(string package, string url, string silentinst){
     else{
         wget_exe = "wget";
     }
+    log("wget executable used: " + wget_exe + ".exe");
     if(check_cert){
         command = wget_exe + " -O " + fullpath + " " + url;
     }
@@ -44,7 +45,7 @@ void installPackage(string package, string url, string silentinst){
         command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate";
     }
     system(command.c_str());
-    if (runasexe || (extension != ".zip" && extension != ".7z")) {
+    if (runasexe || (extension != ".zip" && extension != ".7z" && extension != ".rar")) {
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
@@ -61,13 +62,16 @@ void installPackage(string package, string url, string silentinst){
             // Now, the file is closed, and it can be deleted.
             if (remove(fullpath.c_str()) != 0) {
                 cerr << "Error deleting file: " << strerror(errno) << endl;
+                log("Error deleting file " + fullpath);
             }
         } else {
             cerr << "Error executing command: " << GetLastError() << endl;
+            log("Error executing command");
         }
     }
     else{
         cout << "Please install " << filename << " manually. You can find the file at " << programpath << endl;
+        log(filename + " has to be installed manually. You can find the file at " + programpath);
     }
 }
 
@@ -85,6 +89,7 @@ vector<string> repoDirectories(){
     }
     else{
         cout << "Error: directories.txt was not found. The default directories will be used." << endl;
+        log("Error: directories.txt was not found. The default directories will be used.");
         directories[0] = "64%20bit";
         directories[1] = "32%20bit";
     }
@@ -113,7 +118,8 @@ void updateRepositories(string link){
         file_winver = "win2000";
     }
     else{
-        cout << "Error: Windows version not supported." << endl;
+        cout << "Error: your Windows version not supported." << endl;
+        log("Error: your Windows version not supported.");
         return;
     }
     if(wget_os == 5.0 || winver == "Windows 2000"){
@@ -139,19 +145,24 @@ void updateRepositories(string link){
         command = "del " + fullpath + "directories.txt";
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + "directories.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag;
+        log("Downloading directories.txt");
         system(command.c_str());
         command = "del " + fullpath + "updater.dat";
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + "updater.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag;
+        log("Downloading updater.dat");
         system(command.c_str());
         command = "del " + fullpath + "uninstallers.dat";
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + "uninstallers.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag;
+        log("Downloading uninstallers.dat");
         system(command.c_str());
         command = "del " + pmfowpath + "pmfow-updater.exe";
         system(command.c_str());
         command = wget_exe + " -O " + pmfowpath + "pmfow-updater.exe " + link + certFlag;
+        log("Downloading pmfow-updater.exe");
         system(command.c_str());
+        log("Updating repositories");
         for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
             command = "del " + fullpath + version + ".dat";
             system(command.c_str());
@@ -163,8 +174,10 @@ void updateRepositories(string link){
     if (!onefile && architecture == "x86") {
         // Additional file for Windows 2000
         command = "del " + fullpath + "win2000.dat";
+        log("Deleting " + fullpath + "win2000.dat");
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + "win2000.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate");
+        log("Downloading win2000.dat");
         system(command.c_str());
     }
 }

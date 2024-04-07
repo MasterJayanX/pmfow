@@ -28,9 +28,11 @@ int main(int argc, char** argv){
             // Install package
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
+                log_from_main(argv, argc, "no_message");
                 install(argv, argc);
             }
         }
@@ -38,9 +40,11 @@ int main(int argc, char** argv){
             // Uninstall package
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
+                log_from_main(argv, argc, "no_message");
                 uninstall(argv, argc);
             }
         }
@@ -48,9 +52,11 @@ int main(int argc, char** argv){
             // Update repositories
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
+                log_from_main(argv, argc, "no_message");
                 update();
             }
         }
@@ -58,13 +64,15 @@ int main(int argc, char** argv){
             // List packages
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
                 if(list_uninstall){
                     listUninstall();
                 }
                 else{
+                    log_from_main(argv, argc, "no_message");
                     list();
                 }
             }
@@ -73,9 +81,11 @@ int main(int argc, char** argv){
             // Search for packages
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
+                log_from_main(argv, argc, "no_message");
                 search(argv, argc);
             }
         }
@@ -87,34 +97,43 @@ int main(int argc, char** argv){
             // Show the about section
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
-                about(majorVersion, minorVersion, build);
+                log_from_main(argv, argc, "no_message");
+                version();
             }
         }
         else if(string(argv[1]) == "about" || string(argv[1]) == "a"){
             int success = checkFlags(argc, argv);
             if(success == 0){
-                return 0;
+                log_from_main(argv, argc, "Execution ended with code 1.");
+                return 1;
             }
             else{
+                log_from_main(argv, argc, "no_message");
                 about(majorVersion, minorVersion, build);
             }
         }
         else{
             cout << "Invalid command. Usage: pmfow <command>. Use pmfow help to see what commands are supported.\n";
+            log_from_main(argv, argc, "Invalid command. Use pmfow help to see what commands are supported.");
         }
     }
     else if(argc == 1){
+        string message;
         if(osv.dwMajorVersion >= 5){
             // Windows 2000 or later (command not specified)
-            cerr << "Error: no command specified. Usage: pmfow <command>. Use pmfow help to see what commands are supported.\n";
+            message = "Error: no command specified. Usage: pmfow <command>. Use pmfow help to see what commands are supported.";
         }
         else{
             // Windows 98 or earlier (command not specified)
-            cerr << "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.\n";
+            message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
         }
+        cerr << message << endl;
+        log_from_main(argv, argc, message);
+        log("Execution ended with code 1.");
         return 1;
     }
     else{
@@ -125,13 +144,16 @@ int main(int argc, char** argv){
         }
         else if(string(argv[1]) == "version" || string(argv[1]) == "v"){
             // Show the about section
-            version(majorVersion, minorVersion, build);
+            version();
         }
         else if(string(argv[1]) == "about" || string(argv[1]) == "a"){
             about(majorVersion, minorVersion, build);
         }
         else{
-            cout << "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.\n";
+            string message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
+            cout << message << endl;
+            log_from_main(argv, argc, message);
+            log("Execution ended with code 1.");
             return 1;
         }
         cin.ignore();

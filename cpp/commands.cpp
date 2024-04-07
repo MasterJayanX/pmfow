@@ -14,7 +14,7 @@ using namespace std;
 
 int major = 0, minor = 3, patch = 0;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc1 (2024-03-12)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc2 (2024-04-06)";
 
 class repo {
 public:
@@ -277,6 +277,7 @@ void install(char** argv, int argc){
     // This function installs a package
     if(argc < 3){
         cout << "Usage: pmfow install <package>\n";
+        log("Usage: pmfow install <package>");
         return;
     }
     else{
@@ -285,6 +286,7 @@ void install(char** argv, int argc){
         repo s(winver, "loadSilent");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
+            log("Package not found.");
             return;
         }
         if(s.repos(argv[2]) == "Package not found"){
@@ -295,6 +297,7 @@ void install(char** argv, int argc){
         cout << url << endl;
         installPackage(packagename, url, s.repos(argv[2]));
         cout << "Done.\n";
+        log("Installation of " + packagename + " completed.");
     }
 }
 
@@ -303,6 +306,7 @@ void uninstall(char** argv, int argc){
     string command, uninstaller;
     if(argc < 3){
         cout << "Usage: pmfow uninstall <package>\n";
+        log("Usage: pmfow uninstall <package>");
         return;
     }
     else{
@@ -310,6 +314,7 @@ void uninstall(char** argv, int argc){
         repo r(winver, "loadUninstaller");
         if(r.repos(argv[2]) == "Package not found"){
             cout << argv[2] << "The uninstaller for the specified software could not be found. " << argv[2] << " is either not installed or is installed in a different directory.\n";
+            log("The uninstaller for the specified software could not be found. " + string(argv[2]) + " is either not installed or is installed in a different directory.");
             return;
         }
         else{
@@ -317,6 +322,7 @@ void uninstall(char** argv, int argc){
             command = uninstaller;
             system(command.c_str());
             cout << "Done.\n";
+            log("Uninstallation of " + string(argv[2]) + " completed.");
         }
     }
 }
@@ -352,23 +358,28 @@ void update(){
     }
     else{
         cout << "Invalid architecture.\n";
+        log("Invalid architecture.");
         return;
     }
+    log("Updating repositories...");
     bool updateAvailable = updateURL(pmfow);
     if(!onlyCheck){
         updateRepositories(url);
     }
     if(updateAvailable){
         cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
+        log("There is an update available for pmfow (" + to_string(altmajor) + "." + to_string(altminor) + "." + to_string(altpatch) + "). Run \"pmfow-updater\" to install it.");
     }
     else{
         cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
+        log("You are running the latest version of pmfow (" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + ").");
     }
 }
 
 void list(){
     // This function lists all the packages
     cout << "Listing all packages...\n";
+    log("Listing all packages...");
     Sleep(1000);
     ifstream file;
     string fullpath = programpath + "\\files\\";
@@ -392,10 +403,12 @@ void list(){
     }
     else{
         cout << "Invalid OS.\n";
+        log("Invalid OS.");
         return;
     }
     if (!file.is_open()) {
         cerr << "Repository not found" << endl;
+        log("Repository not found.");
         return;
     }
     string line, finalLine;
@@ -416,6 +429,7 @@ void list(){
     cout << "Total packages: " << i << endl;
     cout << "To see a full list of programs and their descriptions, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List." << endl;
     cout << "Version of the repository: " << repoversion << endl;
+    log("Total packages: " + to_string(i) + "\n" + "Version of the repository: " + to_string(repoversion));
     file.close();
 }
 
@@ -439,6 +453,7 @@ void listUninstall(){
         Sleep(10);
     }
     cout << "Total packages: " << i << endl;
+    log("Total packages that can be uninstalled: " + to_string(i));
     file.close();
 }
 
@@ -446,6 +461,7 @@ void search(char** argv, int argc){
     // This function searches for a package
     if(argc < 3){
         cout << "Usage: pmfow search <package>\n";
+        log("Usage: pmfow search <package>");
         return;
     }
     else{
@@ -453,12 +469,14 @@ void search(char** argv, int argc){
         repo r(winver, "loadRepo");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
+            log("Package not found.");
         }
         else{
             cout << "Package found: " << argv[2] << endl;
             if(show_url){
                 cout << "URL: " << r.repos(argv[2]) << endl;
             }
+            log("Package found: " + string(argv[2]));
         }
     }
 }
@@ -492,8 +510,9 @@ void help(){
     cout << "pmfow version -c/--check - Checks for updates when showing the version of pmfow you are running.\n";
 }
 
-void version(int majorVersion, int minorVersion, int build){
+void version(){
     cout << programversion << endl;
+    log(programversion);
     if(checkUpd){
         string pmfow;
         repo r(winver, "loadUpdater");
@@ -525,11 +544,13 @@ void version(int majorVersion, int minorVersion, int build){
             cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
         }
     }
+    log("Execution ended with code 0 (success).");
 
 }
 void about(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
     cout << programversion << endl;
+    log(programversion);
     cout << "Made by MasterJayanX" << endl;
     cout << "This program is licensed under the GNU GPL 3 License. See LICENSE for more information." << endl;
     cout << "Github repository: https://github.com/MasterJayanX/pmfow" << endl;
@@ -570,6 +591,7 @@ void about(int majorVersion, int minorVersion, int build){
             cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
         }
     }
+    log("Execution ended with code 0 (success).");
 }
 
 int checkFlags(int argc, char** argv){
@@ -580,6 +602,8 @@ int checkFlags(int argc, char** argv){
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
                 if(string(argv[1]) != "install" && string(argv[1]) != "update"){
                     cout << "This flag is not compatible with the " << argv[1] << " command.\n";
+                    string to_log = "This flag is not compatible with the " + string(argv[1]) + " command.";
+                    log(to_log);
                     success = 0;
                     return success;
                 }
@@ -589,8 +613,10 @@ int checkFlags(int argc, char** argv){
             }
             if(string(argv[i]) == "-f" || string(argv[i]) == "--force-os"){
                 if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update" && string(argv[1]) != "search" && string(argv[1]) != "list")){
-                    cout << "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>\n";
+                    string message = "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>";
+                    cout << message << endl;
                     cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
+                    log(message);
                     success = 0;
                     return success;
                 }

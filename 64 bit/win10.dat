@@ -60,6 +60,7 @@ playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.6.3/qbittorrent_4.6.3_lt20_qt6_x64_setup.exe/download
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/124.0.3-hotfix/r3dfox-124.0.3.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
@@ -69,7 +70,7 @@ thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.
 thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.9.0/win64/en-US/Thunderbird%20Setup%20115.9.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
-ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/120.0.6099.199-1.1/ungoogled-chromium_120.0.6099.199-1.1_installer_x64.exe
+ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/123.0.6312.105-1.1/ungoogled-chromium_123.0.6312.105-1.1_installer_x64.exe
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.6.3271.53.x64.exe
 vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
@@ -80,4 +81,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 30
+# Version: 31

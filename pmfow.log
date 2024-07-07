@@ -1,0 +1,11 @@
+2024-07-07 13:41:48 
+Command: C:\Users\jayan\OneDrive\Documents\GitHub\pmfow\pmfow.exe install thorium-sse3 
+wget executable used: wget.exe
+Installation of thorium-sse3 completed.
+2024-07-07 13:53:54 
+pmfow version: 0.3.0
+Command: C:\Users\jayan\OneDrive\Documents\GitHub\pmfow\pmfow.exe install mpv 
+wget executable used: wget.exe
+mpv.7z has to be installed manually. You can find the file at C:\Users\jayan\OneDrive\Documents\GitHub\pmfow
+Installation of mpv completed successfully.
+Execution ended with code 0 (success).

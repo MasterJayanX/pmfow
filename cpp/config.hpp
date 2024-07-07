@@ -16,6 +16,10 @@ string winver, architecture, programpath, log_file = "pmfow.log";
 bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
+int major = 0, minor = 3, patch = 0;
+int altmajor, altminor, altpatch;
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-07-07)";
+string versionshort = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
 
 class Config {
 public:
@@ -159,6 +163,7 @@ void log_from_main(char** argv, int argc, string message){
             return;
         }
         logg << getDtTm(buff) << endl;
+        logg << "pmfow version: " << versionshort << endl;
         logg << "Command: ";
         for(int i = 0; i < argc; i++){
             logg << argv[i] << " ";

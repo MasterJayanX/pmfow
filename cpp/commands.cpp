@@ -12,10 +12,6 @@
 
 using namespace std;
 
-int major = 0, minor = 3, patch = 0;
-int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + "-rc2 (2024-04-06)";
-
 class repo {
 public:
     repo(const string& os, string operation) {
@@ -64,7 +60,7 @@ private:
         else if(os == "Windows 8" || os == "Windows 8.1"){
             file.open(fullpath + "win8.dat");
         }
-        else if(os == "Windows 10"){
+        else if(os == "Windows 10" || os == "Windows 11"){
             file.open(fullpath + "win10.dat");
         }
         else{
@@ -278,6 +274,7 @@ void install(char** argv, int argc){
     if(argc < 3){
         cout << "Usage: pmfow install <package>\n";
         log("Usage: pmfow install <package>");
+        log("Execution ended with code 1 (error).");
         return;
     }
     else{
@@ -286,7 +283,7 @@ void install(char** argv, int argc){
         repo s(winver, "loadSilent");
         if(r.repos(argv[2]) == "Package not found"){
             cout << "Package not found.\n";
-            log("Package not found.");
+            log("Package not found. The installation of " + string(argv[2]) + " failed.");
             return;
         }
         if(s.repos(argv[2]) == "Package not found"){
@@ -297,7 +294,8 @@ void install(char** argv, int argc){
         cout << url << endl;
         installPackage(packagename, url, s.repos(argv[2]));
         cout << "Done.\n";
-        log("Installation of " + packagename + " completed.");
+        log("Installation of " + packagename + " completed successfully.");
+        log("Execution ended with code 0 (success).");
     }
 }
 
@@ -307,6 +305,7 @@ void uninstall(char** argv, int argc){
     if(argc < 3){
         cout << "Usage: pmfow uninstall <package>\n";
         log("Usage: pmfow uninstall <package>");
+        log("Execution ended with code 1 (error).");
         return;
     }
     else{
@@ -322,7 +321,8 @@ void uninstall(char** argv, int argc){
             command = uninstaller;
             system(command.c_str());
             cout << "Done.\n";
-            log("Uninstallation of " + string(argv[2]) + " completed.");
+            log("Uninstallation of " + string(argv[2]) + " completed successfully.");
+            log("Execution ended with code 0 (success).");
         }
     }
 }

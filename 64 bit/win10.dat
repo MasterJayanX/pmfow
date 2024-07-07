@@ -1,4 +1,4 @@
-7-zip=https://www.7-zip.org/a/7z2301-x64.exe
+7-zip=https://www.7-zip.org/a/7z2407-x64.exe
 aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w64-inst.exe
 arduino=https://downloads.arduino.cc/arduino-ide/arduino-ide_2.2.1_Windows_64bit.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
@@ -35,7 +35,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=https://tinyurl.com/yckernyf
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249553_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1820_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.3-Goanna-20240511.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.4-Goanna-20240706.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
@@ -46,21 +46,21 @@ mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.2.1/MPC-HC.2.2.1.x64.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.3.1/naps2-7.3.1-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.4.3/naps2-7.4.3-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.x64.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/30.0.2/OBS-Studio-30.0.2-Full-Installer-x64.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win64.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
-pale-moon=https://rm-us.palemoon.org/release/palemoon-33.0.2.win64.installer.exe
-peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WIN64.exe
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.2.0.win64.installer.exe
+peazip=https://github.com/peazip/PeaZip/releases/download/9.8.0/peazip-9.8.0.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.6.3/qbittorrent_4.6.3_lt20_qt6_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/125.0.3/r3dfox-125.0.3.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v127.0.2/r3dfox-127.0.2.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
@@ -68,7 +68,7 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_SSE3_mini_installer.exe
-thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.9.0/win64/en-US/Thunderbird%20Setup%20115.9.0.exe
+thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.12.2/win64/en-US/Thunderbird%20Setup%20115.12.2.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/123.0.6312.105-1.1/ungoogled-chromium_123.0.6312.105-1.1_installer_x64.exe
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.18/VirtualBox-7.0.18-162988-Win.exe
@@ -81,4 +81,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 32
+# Version: 33

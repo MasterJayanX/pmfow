@@ -1,4 +1,4 @@
-7-zip=https://www.7-zip.org/a/7z2301-x64.exe
+7-zip=https://www.7-zip.org/a/7z2407-x64.exe
 aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w64-inst.exe
 arduino=https://downloads.arduino.cc/arduino-1.8.9-windows.exe
 audacity=http://web.archive.org/web/20220108024104/https://cloud13.send.cm/d/azyrurs36gosj4l4oz2epgxk33pb7f4offexkhzcu4qdhmqy5ntxlftr64f5tu5uhtkaqgvx/audacity-win-2.1.3.exe
@@ -31,7 +31,7 @@ irfanview=https://download.betanews.com/download/967963863-1/iview462_x64_setup.
 itunes=http://ia801900.us.archive.org/4/items/i-tunes-setup-12.1.3.6-windows-xp-32-bit/iTunesSetup%2012.1.3.6%20(Windows%20XP).exe
 java=http://web.archive.org/web/20210924002132if_/https://i430vx.net/files/XP/EOL/jre-8u152-windows-i586.exe
 k-lite-codec=https://files3.codecguide.com/K-Lite_Codec_Pack_1676_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.3-Goanna-20240511.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.4-Goanna-20240706.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
@@ -55,13 +55,14 @@ pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_x64_setup.exe/download
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v115.13.0esr/r3dfox_esr-115.13.0.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.17.0/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win64/en-US/seamonkey-2.49.5.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v122-r4/supermium_122_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v124-pre/supermium_124_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158-XP/Thorium_SSE2_122.0.6261.158_WINXP.zip
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 tor=https://archive.torproject.org/tor-package-archive/torbrowser/7.5.6/torbrowser-install-7.5.6_en-US.exe
@@ -70,4 +71,4 @@ vlc=https://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 32
+# Version: 33

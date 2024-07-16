@@ -17,7 +17,6 @@ pmfow (Package Manager for Old Windows) is a program that allows you to install 
 
 ## Requirements
 ### Hardware requirements
-pmfow will run on anything that runs Windows 2000 or later and has an internet connection.
 
 **Minimum requirements**
 - A CPU
@@ -29,7 +28,7 @@ pmfow will run on anything that runs Windows 2000 or later and has an internet c
 - A Pentium or better CPU.
 - 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser.
 - Enough storage to store at least a couple of .exe files (300 MB of free space should be more than enough).
-- A good internet connection (at least 5 Mbps, but even something slightly better than a 56k modem should be enough).
+- A good internet connection (good enough to download somewhat large files).
 
 ### Software requirements
 pmfow will run in most versions of Windows from Windows 2000 onwards.
@@ -48,10 +47,11 @@ pmfow will run in most versions of Windows from Windows 2000 onwards.
 - Windows 11 for the same reason as Windows 10.
 - Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
 - Windows Server versions from Server 2003 to Server 2022: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work (the only exception is Server 2003, but NT 5.2 is supported).
+- ReactOS: It will run, but certain applications that can be installed with pmfow will not work by default.
 
 ## Installation
 To install pmfow, you need to follow these steps:
-1. Download the .exe file from the Releases page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
+1. Download the .exe file from the [Releases](https://github.com/MasterJayanX/pmfow/releases) page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
 2. Open the .exe file and extract the files in a new folder. To do this, open the .exe, click the three dots, create a new folder and select it.
 3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example, `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
 
@@ -88,8 +88,7 @@ Then, you have to open a terminal window and compile the main.cpp file with the 
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
 - Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
-- The update command doesn't work correctly on Windows 2000 due to SSL limitations.
-- If you are using Windows 8.1 or later, your OS will be detected as Windows 8 due to limitations with the API.
+- The update command doesn't work correctly on Windows 2000 due to SSL limitations. This also affects other downloads.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it.
 
@@ -103,7 +102,7 @@ Unfortunately, due to these versions of Windows being too old for wget to work r
 ### Will this project support other operating systems?
 Unfortunately no, because other OSes probably already have package managers for them. For example, for old versions of macOS, you can use [Tigerbrew](https://github.com/mistydemeo/tigerbrew) and most Linux distributions come with a package manager.
 ### What things do you plan to add?
-I'm planning to add the option of installing multiple packages at once, more flags to configure the way you install packages or update the repositories, the option of using silent installers and of course, I will keep adding more applications to the repositories.
+I'm planning to add the option of installing multiple packages at once, more flags to configure the way you install packages or update the repositories and of course, I will keep adding more applications to the repositories.
 
 ## Donations
 I accept donations through GitHub Sponsors and Ko-fi:

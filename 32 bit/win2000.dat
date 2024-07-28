@@ -12,6 +12,7 @@ firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20
 firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en-US/Firefox%20Setup%2010.0.12esr.exe
 iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
+irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
 libreoffice=https://archive.org/download/lib-363-32b-win-2000-multi/LibO_3.6.3_Win_x86_install_multi.msi
@@ -33,4 +34,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 34
+# Version: 35

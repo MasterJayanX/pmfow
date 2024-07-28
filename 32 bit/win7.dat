@@ -32,11 +32,11 @@ handbrake=https://github.com/HandBrake/HandBrake/releases/download/1.0.7/HandBra
 iexplore=https://download.microsoft.com/download/9/0/8/908B5C6B-F23E-4DED-9906-77CE4E9E8528/EIE11_EN-US_MCM_WIN7.EXE
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.zip/download
 inkscape=https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a01da63-x86.exe
-irfanview=https://download.betanews.com/download/967963863-1/iview462_setup.exe
+irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1845_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.4-Goanna-20240706.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240727.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -50,12 +50,12 @@ mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.3
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.4.3/naps2-7.4.3-win.exe
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.4/npp.8.6.4.Installer.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.9/npp.8.6.9.Installer.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/NotoEmoji-Regular.ttf.zip
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win32.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
-openttd=https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-windows-win32.exe
+openttd=https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-windows-win32.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
 pale-moon=https://rm-us.palemoon.org/release/palemoon-33.2.0.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.8.0/peazip-9.8.0.WINDOWS.exe
@@ -64,7 +64,7 @@ playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe
 python3=https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0-hotfix/r3dfox-128.0.en-US.win32.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.2-2/r3dfox-128.0.2.en-US.win32.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -88,4 +88,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 34
+# Version: 35

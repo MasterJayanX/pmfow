@@ -65,7 +65,7 @@ playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
 python3=https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.2-2/r3dfox-128.0.2.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.3-hotfix/r3dfox-128.0.3.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -75,7 +75,7 @@ sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-ins
 supermium=https://github.com/win32ss/supermium/releases/download/v124/supermium_124_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/122.0.6261.171/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.171/thorium_SSE3_mini_installer.exe
-thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.12.2/win64/en-US/Thunderbird%20Setup%20115.12.2.exe
+thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.13.0/win64/en-US/Thunderbird%20Setup%20115.13.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x64.exe
 virtualbox=https://download.virtualbox.org/virtualbox/6.1.50/VirtualBox-6.1.50-161033-Win.exe
@@ -90,4 +90,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 35
+# Version: 36

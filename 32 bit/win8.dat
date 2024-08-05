@@ -58,12 +58,12 @@ pale-moon=https://rm-us.palemoon.org/release/palemoon-33.2.0.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.8.0/peazip-9.8.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
-python=https://www.python.org/ftp/python/3.12.2/python-3.12.2.exe
-python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2.exe
+python=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe
+python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.2-2/r3dfox-128.0.2.en-US.win32.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.3-hotfix/r3dfox-128.0.3.en-US.win32.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86/RetroArch-Win32-setup.exe
-rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4_x86.exe
+rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5_x86.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
@@ -71,7 +71,7 @@ sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-instal
 supermium=https://github.com/win32ss/supermium/releases/download/v124/supermium_124_32_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/thorium_WIN32_SSE3_mini_installer.exe
 thorium-sse2=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/thorium_WIN32_SSE2_mini_installer.exe
-thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.12.2/win32/en-US/Thunderbird%20Setup%20115.12.2.exe
+thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.13.0/win32/en-US/Thunderbird%20Setup%20115.13.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
@@ -83,4 +83,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 35
+# Version: 36

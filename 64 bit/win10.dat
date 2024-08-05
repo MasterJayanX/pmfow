@@ -23,7 +23,7 @@ dotnet4.8=https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/128.0/win64/en-US/Firefox%20Setup%20128.0.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/128.0.3/win64/en-US/Firefox%20Setup%20128.0.3.exe
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/115.13.0esr/win64/en-US/Firefox%20Setup%20115.13.0esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe
@@ -57,20 +57,20 @@ pale-moon=https://rm-us.palemoon.org/release/palemoon-33.2.0.win64.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.8.0/peazip-9.8.0.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
-python=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
-python3=https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
+python=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
+python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.6.3/qbittorrent_4.6.3_lt20_qt6_x64_setup.exe/download
 r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.2-2/r3dfox-128.0.2.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86_64/RetroArch-Win64-setup.exe
-rufus=https://github.com/pbatard/rufus/releases/download/v4.4/rufus-4.4.exe
+rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
 thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M122.0.6261.132/thorium_SSE3_mini_installer.exe
-thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.12.2/win64/en-US/Thunderbird%20Setup%20115.12.2.exe
+thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/128.0.1esr/win64/en-US/Thunderbird%20Setup%20128.0.1esr.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-x86_64-portable-13.0.9.exe
-ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/123.0.6312.105-1.1/ungoogled-chromium_123.0.6312.105-1.1_installer_x64.exe
+ungoogled-chromium=https://github.com/macchrome/winchrome/releases/download/v127.6533.89-M127.0.6533.89-r1313161-Win64/127.0.6533.89_ungoogled_mini_installer.exe
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.18/VirtualBox-7.0.18-162988-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.7.3329.24.x64.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe
@@ -81,4 +81,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 35
+# Version: 36

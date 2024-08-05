@@ -55,7 +55,7 @@ pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.2-2/r3dfox-128.0.2.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.3-hotfix/r3dfox-128.0.3.en-US.win64.installer.exe
 r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v115.13.0esr-stable/r3dfox_esr-115.13.0.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
@@ -73,4 +73,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 35
+# Version: 36

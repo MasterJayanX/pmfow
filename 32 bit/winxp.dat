@@ -65,8 +65,8 @@ thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en
 timezones=http://web.archive.org/web/20220422005301/https://07.sendcdn.com/d/bfyqde3f6gosj4l4652fnf5uq5lz33xod76y3ccdcljmoex54iylf2cvcurbsnk5c6opwomy/Windows%20NT%205.x%20-%202017%20Time%20Zones.exe
 tor=https://archive.torproject.org/tor-package-archive/torbrowser/7.5.6/torbrowser-install-7.5.6_en-US.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
-vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win32/vlc-3.0.21-win32.exe
+vlc=https://download.videolan.org/pub/videolan/vlc/3.0.20/win32/vlc-3.0.20-win32.msi
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 35
+# Version: 36

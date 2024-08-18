@@ -23,7 +23,7 @@ dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/115.13.0esr/win32/en-US/Firefox%20Setup%20115.13.0esr.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/115.14.0esr/win32/en-US/Firefox%20Setup%20115.14.0esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
@@ -32,9 +32,9 @@ imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20240113/ImDiskTk.z
 inkscape=https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a01da63-x86.exe
 irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/munxjvr3
-java=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249551_4d245f941845490c91360409ecffb3b4
+java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe&BHost=javadl.sun.com&File=jre-8u421-windows-i586.exe&AuthParam=1724002063_e762398f1a45c038608fe33ede81f737&ext=.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1845_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240727.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240817.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.9.exe
@@ -43,7 +43,7 @@ libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.2/MPC-HC.2.3.2.x86.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.4/MPC-HC.2.3.4.x86.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-i686.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.4.3/naps2-7.4.3-win.exe
@@ -61,7 +61,7 @@ playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe
 python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.0.3-hotfix/r3dfox-128.0.3.en-US.win32.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v129.0.1/r3dfox-129.0.1.en-US.win32.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5_x86.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -83,4 +83,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 36
+# Version: 37

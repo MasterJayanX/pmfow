@@ -1,4 +1,4 @@
-7-zip=https://www.7-zip.org/a/7z2407-x64.exe
+7-zip=https://www.7-zip.org/a/7z2408-x64.exe
 aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w64-inst.exe
 arduino=https://downloads.arduino.cc/arduino-ide/arduino-ide_2.2.1_Windows_64bit.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.exe
@@ -15,7 +15,7 @@ chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v121
 clamav=https://www.clamav.net/downloads/production/clamav-1.2.1.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
-cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_2.09-en.exe
+cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_2.10-en.exe
 deluge=https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
 dolphin=https://dl.dolphin-emu.org/builds/90/d3/dolphin-master-5.0-21264-x64.7z
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
@@ -35,7 +35,7 @@ irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/yckernyf
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe&BHost=javadl.sun.com&File=jre-8u421-windows-x64.exe&AuthParam=1724001962_c20e64404085d04573d4652d6d38df4c&ext=.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1845_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240817.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240907.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
 libreoffice=https://download.documentfoundation.org/libreoffice/stable/7.6.4/win/x86_64/LibreOffice_7.6.4_Win_x86-64.msi
@@ -46,21 +46,21 @@ mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.
 mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.4/MPC-HC.2.3.4.x64.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.4.3/naps2-7.4.3-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.1/naps2-7.5.1-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.9/npp.8.6.9.Installer.x64.exe
 obs-studio=https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.2.2-Windows-Installer.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win64.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-windows-win64.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
-pale-moon=https://rm-us.palemoon.org/release/palemoon-33.2.0.win64.installer.exe
+pale-moon=https://rm-us.palemoon.org/release/palemoon-33.3.0.win64.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/9.8.0/peazip-9.8.0.WIN64.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
 python=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.6.3/qbittorrent_4.6.3_lt20_qt6_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v129.0.1/r3dfox-129.0.1.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v129.0.2/r3dfox-129.0.2.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
@@ -81,4 +81,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-700.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 37
+# Version: 38

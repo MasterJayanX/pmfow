@@ -34,9 +34,10 @@ irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe&BHost=javadl.sun.com&File=jre-8u421-windows-i586.exe&AuthParam=1724002063_e762398f1a45c038608fe33ede81f737&ext=.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1845_Basic.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240907.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20240928.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
+libreoffice=https://download.documentfoundation.org/libreoffice/stable/24.8.2/win/x86/LibreOffice_24.8.2_Win_x86.msi
 librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/122.0-1/librewolf-122.0-1-windows-i686-setup.exe
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.3/mGBA-0.10.3-win32-installer.exe
@@ -46,6 +47,7 @@ mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.3
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.1/naps2-7.5.1-win.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.9/npp.8.6.9.Installer.exe
+obsidian=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/Obsidian-1.6.7.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
 oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releases/download/1.2.2/oneclickappinstaller_win32.exe
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
@@ -67,7 +69,7 @@ sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/thorium_WIN32_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/128.0.1esr/win32/en-US/Thunderbird%20Setup%20128.0.1esr.exe
-tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
+tor=https://dist.torproject.org/torbrowser/13.5.5/tor-browser-windows-i686-portable-13.5.5.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/123.0.6312.105-1.1/ungoogled-chromium_123.0.6312.105-1.1_installer_x86.exe
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.7.3329.24.exe
@@ -75,7 +77,7 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win32/vlc-3.0.21-win32
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/VSCodeUserSetup-ia32-1.55.2.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
 winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
-winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-700.exe
+winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 38
+# Version: 39

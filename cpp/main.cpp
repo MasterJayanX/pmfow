@@ -143,13 +143,15 @@ int main(int argc, char** argv){
             help();
         }
         else if(string(argv[1]) == "version" || string(argv[1]) == "v"){
-            // Show the about section
+            // Show the pmfow version
             version();
         }
         else if(string(argv[1]) == "about" || string(argv[1]) == "a"){
+            // Show the about section
             about(majorVersion, minorVersion, build);
         }
         else{
+            // Other commands are not supported in these old versions
             string message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
             cout << message << endl;
             log_from_main(argv, argc, message);

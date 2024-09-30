@@ -13,20 +13,23 @@ using namespace std;
 
 // Global variables
 string winver, architecture, programpath, log_file = "pmfow.log";
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time;
 float wget_os = 0;
 int majorVersion, minorVersion, build;
-int major = 0, minor = 3, patch = 0;
+int major = 0, minor = 3, patch = 1;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-07-07)";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-09-30)";
 string versionshort = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
+bool configExists = true;
 
 class Config {
+    // This class reads the config file
 public:
     Config(string filename) {
         ifstream file(filename);
         if(!file.is_open()) {
             cout << "Error: Could not open file " << filename << endl;
+            configExists = false;
             return;
         }
         string line;
@@ -47,8 +50,12 @@ private:
 };
 
 void loadConfig() {
+    // This function loads the config file
     string fullpath = programpath + "\\files\\" + "config.ini";
     Config config(fullpath);
+    if(!configExists){
+        return;
+    }
     if(config.get("winver") != "auto"){
         winver = config.get("winver");
     }
@@ -132,9 +139,16 @@ void loadConfig() {
     else{
         log_file = programpath + "\\" + log_file;
     }
+    if(config.get("log_date_time") == "true"){
+        log_date_time = true;
+    }
+    else if(config.get("log_date_time") == "false"){
+        log_date_time = false;
+    }
 }
 
 static char *getDtTm (char *buff) {
+    // This function gets the date and time
     time_t t = time (0);
     strftime (buff, DTTMSZ, DTTMFMT, localtime (&t));
     return buff;
@@ -162,7 +176,9 @@ void log_from_main(char** argv, int argc, string message){
         if(!logg.is_open()){
             return;
         }
-        logg << getDtTm(buff) << endl;
+        if(log_date_time){
+            logg << getDtTm(buff) << endl;
+        }
         logg << "pmfow version: " << versionshort << endl;
         logg << "Command: ";
         for(int i = 0; i < argc; i++){
@@ -172,6 +188,7 @@ void log_from_main(char** argv, int argc, string message){
         if(message != "no_message"){
             logg << message << endl;
         }
+        logg << endl;
         logg.close();
     }
 }

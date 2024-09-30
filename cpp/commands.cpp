@@ -148,17 +148,11 @@ string getWindowsVersion(){
     // This function returns the Windows version you are running
     string winver;
     if(majorVersion == 4){
-        if(minorVersion == 0 && build < 1096){
-            winver = "Windows 95";
+        if(build == 1381){
+            winver = "Windows NT 4.0 (unsupported)";
         }
-        else if(minorVersion == 0 && build >= 1096){
-            winver = "Windows NT 4.0";
-        }
-        else if(minorVersion == 10){
-            winver = "Windows 98";
-        }
-        else if(minorVersion == 90){
-            winver = "Windows ME";
+        else{
+            winver = "Windows 95/98/ME (unsupported)";
         }
     }
     else if(majorVersion == 5 && minorVersion == 0){
@@ -556,9 +550,12 @@ void about(int majorVersion, int minorVersion, int build){
     cout << "Github repository: https://github.com/MasterJayanX/pmfow" << endl;
     cout << "Path: " << programpath << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
+    log("Windows Version: " + winver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
     cout << "Architecture: " << architecture << endl;
+    log("Architecture: " + architecture);
     if(majorVersion < 5){
         cout << "Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.\n";
+        log("Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.");
     }
     if(checkUpd){
         string pmfow;
@@ -586,9 +583,11 @@ void about(int majorVersion, int minorVersion, int build){
         bool updateAvailable = updateURL(pmfow);
         if(updateAvailable){
             cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
+            log("There is an update available for pmfow (" + to_string(altmajor) + "." + to_string(altminor) + "." + to_string(altpatch) + "). Run \"pmfow-updater\" to install it.");
         }
         else{
             cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
+            log("You are running the latest version of pmfow (" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + ").");
         }
     }
     log("Execution ended with code 0 (success).");

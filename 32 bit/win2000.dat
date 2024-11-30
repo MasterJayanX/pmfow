@@ -1,5 +1,5 @@
 7-zip=https://www.7-zip.org/a/7z2301.exe
-7-zip-new=https://www.7-zip.org/a/7z2408.exe
+7-zip-new=https://www.7-zip.org/a/7z2409.exe
 aimp=https://www.aimp.ru/files/windows/builds/aimp_1.77.9.exe
 arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
@@ -35,4 +35,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 40
+# Version: 41

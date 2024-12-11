@@ -16,7 +16,7 @@ dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-
 dotnet3.5=https://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe
 dotnet4=https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
 epsxe=http://www.epsxe.com/files/ePSXe202-1.zip
-everything=https://www.voidtools.com/Everything-1.4.1.1024.x86-Setup.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 firefox=https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win32/en-US/Firefox%20Setup%2052.9.0esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v1.5.11.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdminst.exe
@@ -48,7 +48,7 @@ openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/bi
 openttd=https://cdn.openttd.org/openttd-releases/1.10.3/openttd-1.10.3-windows-win32.exe
 paint.net=https://web.archive.org/web/20140209153608/http://www.dotpdn.com/files/Paint.NET.3.5.11.Install.zip
 pale-moon=http://web.archive.org/web/20170319043844/http://rm-us.palemoon.org/release/palemoon-26.5.0.Atom.WinXP.installer.exe
-peazip=https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip-9.7.1.WINDOWS.exe
+peazip=https://github.com/peazip/PeaZip/releases/download/10.1.0/peazip-10.1.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 python=https://www.python.org/ftp/python/2.7.9/python-2.7.9.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi
@@ -70,4 +70,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.20/win32/vlc-3.0.20-win32
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 41
+# Version: 42

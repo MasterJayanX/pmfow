@@ -21,6 +21,13 @@ string getExtension(string url){
     return extension;
 }
 
+wstring string_to_wstring(const string& str){
+    // This function converts a string to a wstring
+    wstring wstr(str.length(), L' ');
+    copy(str.begin(), str.end(), wstr.begin());
+    return wstr;
+}
+
 void installPackage(string package, string url, string silentinst){
     // Install package
     string command, filename, extension, wget_exe = "wget", fullpath = programpath + "\\files\\";
@@ -49,9 +56,11 @@ void installPackage(string package, string url, string silentinst){
         SHELLEXECUTEINFO ShExecInfo = {0};
         ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
-        ShExecInfo.lpFile = fullpath.c_str();
+        wstring wFullPath = string_to_wstring(fullpath);
+        ShExecInfo.lpFile = wFullPath.c_str();
         if(silent){
-            ShExecInfo.lpParameters = silentinst.c_str();
+            wstring wSilentInst = string_to_wstring(silentinst);
+            ShExecInfo.lpParameters = wSilentInst.c_str();
         }
         ShExecInfo.nShow = SW_SHOWNORMAL;
 
@@ -132,10 +141,11 @@ void updateRepositories(string link){
         wget_exe = "wget";
     }
     vector<string> directories = repoDirectories();
-        string certFlag = (check_cert) ? "" : " --no-check-certificate";
-        string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
-        string versionFile = (architectureFolder + "/" + file_winver + ".dat");
+    string certFlag = (check_cert) ? "" : " --no-check-certificate";
+    string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
+    string versionFile = (architectureFolder + "/" + file_winver + ".dat");
 
+    // checks if the user wants to update only one file
     if (onefile) {
         command = "del " + fullpath + file_winver + ".dat";
         system(command.c_str());

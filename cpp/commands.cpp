@@ -8,9 +8,8 @@
 #include <functional>
 #include <sstream>
 #include <vector>
+#include <random>
 #include "downloader.cpp"
-
-using namespace std;
 
 class repo {
 public:
@@ -223,15 +222,25 @@ string getArchitecture(){
     return arch;
 }
 
+string wchar_to_string(const wchar_t* wchar){
+    // This function converts a wchar_t to a string
+    string str;
+    for(int i = 0; wchar[i] != '\0'; i++){
+        str += static_cast<char>(wchar[i]);
+    }
+    return str;
+}
+
 string getEXEpath(){
     // This function returns the path of pmfow's executable
-    char buffer[MAX_PATH];
+    wchar_t buffer[MAX_PATH];
     GetModuleFileName(NULL, buffer, MAX_PATH);
-    string::size_type pos = string(buffer).find_last_of("\\/");
-    return string(buffer).substr(0, pos);
+    wstring::size_type pos = wstring(buffer).find_last_of(L"\\/");
+    return wchar_to_string(buffer).substr(0, pos);
 }
 
 bool updateURL(string url){
+    // This function checks if there is an update available
     string part;
     size_t startPos = url.find("/download/") + 10;
     size_t endPos = url.find('/', startPos);
@@ -263,6 +272,64 @@ bool updateURL(string url){
     }
 }
 
+string chooseRandom(repo r){
+    // This function chooses a random package
+    cout << "Choosing a random package...\n";
+    log("Choosing a random package...");
+    Sleep(1000);
+    ifstream file;
+    string fullpath = programpath + "\\files\\";
+    if(winver == "Windows 2000"){
+        file.open(fullpath + "win2000.dat");
+    }
+    else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+        file.open(fullpath + "winxp.dat");
+    }
+    else if(winver == "Windows Vista"){
+        file.open(fullpath + "winvista.dat");
+    }
+    else if(winver == "Windows 7"){
+        file.open(fullpath + "win7.dat");
+    }
+    else if(winver == "Windows 8" || winver == "Windows 8.1"){
+        file.open(fullpath + "win8.dat");
+    }
+    else if(winver == "Windows 10" || winver == "Windows 11"){
+        file.open(fullpath + "win10.dat");
+    }
+    else{
+        cout << "Invalid OS.\n";
+        log("Invalid OS.");
+        return "Invalid OS";
+    }
+    if (!file.is_open()) {
+        cerr << "Repository not found" << endl;
+        log("Repository not found.");
+        return "Repository not found";
+    }
+    string line, finalLine;
+    vector<string> packages;
+    int i = 0;
+    while (getline(file, line)) {
+        finalLine = line;
+        size_t delimiterPos = line.find('=');
+        if (delimiterPos != string::npos) {
+            string key = line.substr(0, delimiterPos);
+            string value = line.substr(delimiterPos + 1);
+            packages.push_back(key);
+            i++;
+        }
+        Sleep(10);
+    }
+    file.close();
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(1, i);
+    int random = dis(gen);
+    string packagename = packages[random];
+    return packagename;
+}
+
 void install(char** argv, int argc){
     // This function installs a package
     if(argc < 3){
@@ -272,21 +339,46 @@ void install(char** argv, int argc){
         return;
     }
     else{
-        cout << "Installing " << argv[2] << "...\n";
-        repo r(winver, "loadRepo");
-        repo s(winver, "loadSilent");
-        if(r.repos(argv[2]) == "Package not found"){
-            cout << "Package not found.\n";
-            log("Package not found. The installation of " + string(argv[2]) + " failed.");
-            return;
+        string packagename;
+        if(argv[2] == "random"){
+            cout << "Installing a random package...\n";
+            repo r(winver, "loadRepo");
+            string packagename = chooseRandom(r);
+            cout << "The random package is " << packagename << ".\n";
+            log("The random package is " + packagename + ".");
+            cout << "Installing " << packagename << "...\n";
+            log("Installing " + packagename + "...");
+            repo s(winver, "loadSilent");
+            string url = r.repos(packagename);
+            if(r.repos(packagename) == "Package not found"){
+                cout << "Package not found.\n";
+                log("Package not found. The installation of " + packagename + " failed.");
+                return;
+            }
+            if(s.repos(packagename) == "Package not found"){
+                silent = false;
+            }
+            cout << url << endl;
+            installPackage(packagename, url, s.repos(packagename));
         }
-        if(s.repos(argv[2]) == "Package not found"){
-            silent = false;
+        else{
+            cout << "Installing " << argv[2] << "...\n";
+            log("Installing " + string(argv[2]) + "...");
+            repo r(winver, "loadRepo");
+            repo s(winver, "loadSilent");
+            if(r.repos(argv[2]) == "Package not found"){
+                cout << "Package not found.\n";
+                log("Package not found. The installation of " + string(argv[2]) + " failed.");
+                return;
+            }
+            if(s.repos(argv[2]) == "Package not found"){
+                silent = false;
+            }
+            string url = r.repos(argv[2]);
+            string packagename = string(argv[2]);
+            cout << url << endl;
+            installPackage(packagename, url, s.repos(argv[2]));
         }
-        string url = r.repos(argv[2]);
-        string packagename = string(argv[2]);
-        cout << url << endl;
-        installPackage(packagename, url, s.repos(argv[2]));
         cout << "Done.\n";
         log("Installation of " + packagename + " completed successfully.");
         log("Execution ended with code 0 (success).");
@@ -505,6 +597,7 @@ void help(){
 }
 
 void version(){
+    // This function shows the version of pmfow that you are running
     cout << programversion << endl;
     log(programversion);
     if(checkUpd){

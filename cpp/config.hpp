@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <winver.h>
 #include <time.h>
+// Defines the date and time format
 #define DTTMFMT "%Y-%m-%d %H:%M:%S "
 #define DTTMSZ 21
 
@@ -15,10 +16,13 @@ using namespace std;
 string winver, architecture, programpath, log_file = "pmfow.log";
 bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time;
 float wget_os = 0;
+// majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
-int major = 0, minor = 3, patch = 1;
+// major, minor, patch are used to get the pmfow version
+int major = 0, minor = 3, patch = 2;
 int altmajor, altminor, altpatch;
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-09-30)";
+// programversion is the full version of pmfow, including the compile date
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-12-12) \"A Holly Jolly Update\"";
 string versionshort = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
 bool configExists = true;
 
@@ -26,6 +30,7 @@ class Config {
     // This class reads the config file
 public:
     Config(string filename) {
+        // This function reads the config file
         ifstream file(filename);
         if(!file.is_open()) {
             cout << "Error: Could not open file " << filename << endl;
@@ -43,6 +48,7 @@ public:
         }
     }
     string get(string key) {
+        // This function gets the value of a key
         return data[key];
     }
 private:
@@ -70,6 +76,7 @@ void loadConfig() {
             wget_os = 6.0;
         }
     }
+    // Checks what flags are set in the config file
     if(config.get("architecture") != "auto"){
         architecture = config.get("architecture");
     }

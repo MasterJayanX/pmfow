@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <winver.h>
 #include <functional>
+// I'm too lazy to use a Makefile, sorry
 #include "commands.cpp"
 
 using namespace std;
@@ -13,8 +14,10 @@ using namespace std;
 int main(int argc, char** argv){
     OSVERSIONINFOW osv;
     osv.dwOSVersionInfoSize = sizeof(OSVERSIONINFOW);
+    // initialize the variables for the Windows version
     osv.dwMajorVersion = 0, osv.dwMinorVersion = 0, osv.dwBuildNumber = 0;
     GetVersionExW(&osv);
+    // get the Windows version
     majorVersion = osv.dwMajorVersion; 
     minorVersion = osv.dwMinorVersion;
     build = osv.dwBuildNumber;

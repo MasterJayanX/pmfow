@@ -6,15 +6,35 @@
 #include <windows.h>
 #include <winver.h>
 #include <time.h>
+#include <iomanip>
+
 // Defines the date and time format
 #define DTTMFMT "%Y-%m-%d %H:%M:%S "
 #define DTTMSZ 21
-
 using namespace std;
+
+string getCompileDate() {
+    string timestamp = __TIMESTAMP__;
+    istringstream iss(timestamp);
+    string dayOfWeek, month, day, time, year;
+    iss >> dayOfWeek >> month >> day >> time >> year;
+
+    map<string, string> month_map = {
+        {"Jan", "01"}, {"Feb", "02"}, {"Mar", "03"}, {"Apr", "04"},
+        {"May", "05"}, {"Jun", "06"}, {"Jul", "07"}, {"Aug", "08"},
+        {"Sep", "09"}, {"Oct", "10"}, {"Nov", "11"}, {"Dec", "12"}
+    };
+
+    ostringstream oss;
+    oss << year << "-" << month_map[month] << "-" << setw(2) << setfill('0') << day;
+    return oss.str();
+}
+
+#define COMPILE_DATE ("(" + getCompileDate() + " " + __TIME__ + ")")
 
 // Global variables
 string winver, architecture, programpath, log_file = "pmfow.log";
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config;
 float wget_os = 0;
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
@@ -22,7 +42,7 @@ int majorVersion, minorVersion, build;
 int major = 0, minor = 3, patch = 2;
 int altmajor, altminor, altpatch;
 // programversion is the full version of pmfow, including the compile date
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " (2024-12-12) \"A Holly Jolly Update\"";
+string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " " + COMPILE_DATE +  " \"A Holly Jolly Update\"";
 string versionshort = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
 bool configExists = true;
 
@@ -152,9 +172,15 @@ void loadConfig() {
     else if(config.get("log_date_time") == "false"){
         log_date_time = false;
     }
+    if(config.get("update_config") == "true"){
+        upd_config = true;
+    }
+    else if(config.get("update_config") == "false"){
+        upd_config = false;
+    }
 }
 
-static char *getDtTm (char *buff) {
+static char *getDateTime (char *buff) {
     // This function gets the date and time
     time_t t = time (0);
     strftime (buff, DTTMSZ, DTTMFMT, localtime (&t));
@@ -184,7 +210,7 @@ void log_from_main(char** argv, int argc, string message){
             return;
         }
         if(log_date_time){
-            logg << getDtTm(buff) << endl;
+            logg << getDateTime(buff) << endl;
         }
         logg << "pmfow version: " << versionshort << endl;
         logg << "Command: ";

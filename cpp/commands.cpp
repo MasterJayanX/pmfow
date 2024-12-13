@@ -234,7 +234,7 @@ string wchar_to_string(const wchar_t* wchar){
 string getEXEpath(){
     // This function returns the path of pmfow's executable
     wchar_t buffer[MAX_PATH];
-    GetModuleFileName(NULL, buffer, MAX_PATH);
+    GetModuleFileNameW(NULL, buffer, MAX_PATH);
     wstring::size_type pos = wstring(buffer).find_last_of(L"\\/");
     return wchar_to_string(buffer).substr(0, pos);
 }
@@ -340,7 +340,7 @@ void install(char** argv, int argc){
     }
     else{
         string packagename;
-        if(argv[2] == "random"){
+        if(string(argv[2]) == "random"){
             cout << "Installing a random package...\n";
             repo r(winver, "loadRepo");
             string packagename = chooseRandom(r);
@@ -586,6 +586,8 @@ void help(){
     cout << "pmfow install <package> -f/--force-os <os> - Installs a package for a different OS.\n";
     cout << "pmfow install <package> -c/--check-certificates / pmfow update -c/--check-certificates - Installs a package using wget with certificate checking.\n";
     cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget (options: 2000, xp, win).\n";
+    cout << "pmfow install <package> -s/--silent - Toggles between using silent installers or not.\n";
+    cout << "pmfow install random - Installs a random package.\n";
     cout << "pmfow update -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
     cout << "pmfow update --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
     cout << "pmfow update --check - Checks for pmfow updates when updating the app repositories.\n";
@@ -798,6 +800,14 @@ int checkFlags(int argc, char** argv){
             }
             if(string(argv[i]) == "--only-check"){
                 onlyCheck = true;
+            }
+            if(string(argv[i]) == "--silent" || string(argv[i]) == "-s"){
+                if(silent){
+                    silent = false;
+                }
+                else{
+                    silent = true;
+                }
             }
         }
     }

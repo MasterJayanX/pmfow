@@ -21,11 +21,12 @@ string getExtension(string url){
     return extension;
 }
 
-wstring string_to_wstring(const string& str){
-    // This function converts a string to a wstring
-    wstring wstr(str.length(), L' ');
-    copy(str.begin(), str.end(), wstr.begin());
-    return wstr;
+wstring string_to_wstring(const string& str) {
+    // Convert string to wstring
+    int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, NULL, 0);
+    wstring wstrTo(size_needed, 0);
+    MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, &wstrTo[0], size_needed);
+    return wstrTo;
 }
 
 void installPackage(string package, string url, string silentinst){
@@ -53,8 +54,9 @@ void installPackage(string package, string url, string silentinst){
     }
     system(command.c_str());
     if (runasexe || (extension != ".zip" && extension != ".7z" && extension != ".rar")) {
-        SHELLEXECUTEINFO ShExecInfo = {0};
-        ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
+        // Run the file
+        SHELLEXECUTEINFOW ShExecInfo = {0};
+        ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFOW);
         ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS;
         wstring wFullPath = string_to_wstring(fullpath);
         ShExecInfo.lpFile = wFullPath.c_str();
@@ -64,7 +66,7 @@ void installPackage(string package, string url, string silentinst){
         }
         ShExecInfo.nShow = SW_SHOWNORMAL;
 
-        if (ShellExecuteEx(&ShExecInfo)) {
+        if (ShellExecuteExW(&ShExecInfo)) {
             WaitForSingleObject(ShExecInfo.hProcess, INFINITE);
             CloseHandle(ShExecInfo.hProcess);
 
@@ -145,7 +147,7 @@ void updateRepositories(string link){
     string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
     string versionFile = (architectureFolder + "/" + file_winver + ".dat");
 
-    // checks if the user wants to update only one file
+    // Checks if the user wants to update only one file
     if (onefile) {
         command = "del " + fullpath + file_winver + ".dat";
         system(command.c_str());
@@ -172,6 +174,15 @@ void updateRepositories(string link){
         command = wget_exe + " -O " + pmfowpath + "pmfow-updater.exe " + link + certFlag;
         log("Downloading pmfow-updater.exe");
         system(command.c_str());
+        
+        if(upd_config){
+            command = "del " + fullpath + "config.ini";
+            system(command.c_str());
+            command = wget_exe + " -O " + fullpath + "config.ini https://raw.githubusercontent.com/MasterJayanX/pmfow/main/config.ini" + certFlag;
+            log("Downloading config.ini");
+            system(command.c_str());
+        }
+        
         log("Updating repositories");
         for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
             command = "del " + fullpath + version + ".dat";

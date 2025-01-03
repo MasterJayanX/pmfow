@@ -17,6 +17,7 @@ java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/do
 k-meleon=https://archive.org/download/km-74-g-22-20210814.win-2000.7z/KM74-g22-20210814.win2000.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
 libreoffice=https://archive.org/download/lib-363-32b-win-2000-multi/LibO_3.6.3_Win_x86_install_multi.msi
+new-moon=http://o.rthost.win/gpc/files1.rt/palemoon-26.5.0-20241221.win2000.7z
 notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer.exe
 openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
 openttd=https://cdn.openttd.org/openttd-releases/1.8.0/openttd-1.8.0-windows-win32.exe
@@ -35,4 +36,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 42
+# Version: 43

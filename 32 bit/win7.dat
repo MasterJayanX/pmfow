@@ -37,7 +37,7 @@ itunes=https://tinyurl.com/munxjvr3
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe&BHost=javadl.sun.com&File=jre-8u421-windows-i586.exe&AuthParam=1724002063_e762398f1a45c038608fe33ede81f737&ext=.exe
 k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Basic.exe
 k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Standard.exe
-k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241012.7z
+k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
@@ -46,7 +46,7 @@ libreoffice=https://download.documentfoundation.org/libreoffice/stable/24.8.2/wi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-win32-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.6.11/MPC-BE.1.6.11.x86-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.8/MPC-HC.2.3.8.x86.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.9/MPC-HC.2.3.9.x86.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-i686.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.2/naps2-7.5.2-win.exe
@@ -72,9 +72,9 @@ retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86/RetroArch-Win3
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
-sharex=https://github.com/ShareX/ShareX/releases/download/v15.0.0/ShareX-15.0.0-setup.exe
+sharex=https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v126-r5/supermium_126_32_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v126-r6/supermium_126_32_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.171/thorium_WIN32_SSE3_mini_installer.exe
 thorium-sse2=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.171/thorium_WIN32_SSE2_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.13.0/win32/en-US/Thunderbird%20Setup%20115.13.0.exe
@@ -90,4 +90,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 41
+# Version: 43

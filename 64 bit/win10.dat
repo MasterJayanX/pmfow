@@ -34,8 +34,8 @@ inkscape=https://inkscape.org/gallery/item/44617/inkscape-1.3.2_2023-11-25_091e2
 irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/yckernyf
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe&BHost=javadl.sun.com&File=jre-8u421-windows-x64.exe&AuthParam=1724001962_c20e64404085d04573d4652d6d38df4c&ext=.exe
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Basic.exe
-k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Standard.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Basic.exe
+k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Standard.exe
 k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirror.netcologne.de/xbmc/releases/windows/win64/kodi-21.1-Omega-x64.exe
 krita=https://download.kde.org/stable/krita/5.2.2/krita-x64-5.2.2-setup.exe
@@ -63,7 +63,7 @@ python=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.6.7/qbittorrent_4.6.7_lt20_qt6_x64_setup.exe/download
 r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v132.0rc-2/r3dfox-132.0.en-US.win64.installer.exe
-retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86_64/RetroArch-Win64-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.20.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe
 scratch=https://downloads.scratch.mit.edu/desktop/Scratch%20Setup.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win64/en-US/seamonkey-2.53.18.en-US.win64.installer.exe
@@ -73,14 +73,15 @@ thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M128.0.
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/128.0.1esr/win64/en-US/Thunderbird%20Setup%20128.0.1esr.exe
 tor=https://dist.torproject.org/torbrowser/13.5.5/tor-browser-windows-x86_64-portable-13.5.5.exe
 ungoogled-chromium=https://github.com/macchrome/winchrome/releases/download/v127.6533.89-M127.0.6533.89-r1313161-Win64/127.0.6533.89_ungoogled_mini_installer.exe
+vba-m=https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v2.1.11/visualboyadvance-m-Win-x86_64.zip
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.18/VirtualBox-7.0.18-162988-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.7.3329.24.x64.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/31c37ee8f63491495ac49e43b8544550fbae4533/VSCodeUserSetup-x64-1.86.1.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.2.24019/VSCodiumSetup-x64-1.85.2.24019.exe
-waterfox=https://cdn1.waterfox.net/waterfox/releases/G6.0.9/WINNT_x86_64/Waterfox%20Setup%20G6.0.9.exe
+waterfox=https://cdn1.waterfox.net/waterfox/releases/6.5.3/WINNT_x86_64/Waterfox%20Setup%206.5.3.exe
 winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 43
+# Version: 44

@@ -35,8 +35,8 @@ inkscape=https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a0
 irfanview=https://www.irfanview.info/files/iview467_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe&BHost=javadl.sun.com&File=jre-8u421-windows-i586.exe&AuthParam=1724002063_e762398f1a45c038608fe33ede81f737&ext=.exe
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Basic.exe
-k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1870_Standard.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Basic.exe
+k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Standard.exe
 k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
@@ -67,8 +67,8 @@ python=https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe
 python3=https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download
 r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v132.0rc-2/r3dfox-132.0.en-US.win32.installer.exe
-r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.4.0-hotfix/r3dfox_esr-128.4.0.en-US.win32.installer.exe
-retroarch=https://buildbot.libretro.com/stable/1.19.1/windows/x86/RetroArch-Win32-setup.exe
+r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.6.0/r3dfox_esr-128.6.0.en-US.win32.installer.exe
+retroarch=https://buildbot.libretro.com/stable/1.20.0/windows/x86/RetroArch-Win32-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.18/win32/en-US/seamonkey-2.53.18.en-US.win32.installer.exe
@@ -80,6 +80,7 @@ thorium-sse2=https://github.com/Alex313031/thorium-legacy/releases/download/M122
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.13.0/win32/en-US/Thunderbird%20Setup%20115.13.0.exe
 tor=https://dist.torproject.org/torbrowser/13.0.9/tor-browser-windows-i686-portable-13.0.9.exe
 ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/109.0.5414.120-1.1/ungoogled-chromium_109.0.5414.120-1.1_installer_x86.exe
+vba-m=https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v2.1.11/visualboyadvance-m-Win-x86_32.zip
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.exe
 vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win32/vlc-3.0.21-win32.exe
@@ -90,4 +91,4 @@ winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.e
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 xpmode=http://web.archive.org/web/20220424021839/https://03.sendcdn.com/d/abys2vtf6gosj4l46j2frfnfq5cukxrjegqbfcemddgqayr3rucn2uae6q5jyongdgu5vxix/WindowsXPMode_en-us.exe
 
-# Version: 43
+# Version: 44

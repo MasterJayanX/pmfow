@@ -36,16 +36,16 @@ k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
-mailnews=https://o.rthost.win/boc-uxp/mailnews.win32-20241228-7bda12e7-uxp-e5fa99d83c-xpmod.7z
+mailnews=https://o.rthost.win/boc-uxp/mailnews.win32-20250111-7bda12e7-uxp-44f397bea2-xpmod.7z
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.9.1/mGBA-0.9.1-win32-installer.exe
 mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x86.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.14.5b/mypal-68.14.5.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
-new-moon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win32-git-20241228-d849524bd-uxp-e5fa99d83c-xpmod.7z
+new-moon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win32-git-20250111-d849524bd-uxp-44f397bea2-xpmod.7z
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.2/npp.8.7.2.Installer.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.5/npp.8.7.5.Installer.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158-XP/NotoEmoji-Regular_winXP.zip
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
@@ -63,7 +63,7 @@ retroarch=https://buildbot.libretro.com/stable/1.20.0/windows-msvc2010/x86/Retro
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win32/en-US/seamonkey-2.49.5.installer.exe
-serpent=https://o.rthost.win/basilisk/basilisk52-g4.8.win32-git-20241228-3219d2d-uxp-e5fa99d83c-xpmod.7z
+serpent=https://o.rthost.win/basilisk/basilisk52-g4.8.win32-git-20250111-3219d2d-uxp-44f397bea2-xpmod.7z
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
 supermium=https://github.com/win32ss/supermium/releases/download/v126-r6/supermium_126_32_setup.exe
@@ -76,4 +76,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win32/vlc-3.0.21-win32
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/145z1705187853/Qjxzcypm_jQm_KWl_9rWiw/wrar602.exe
 
-# Version: 44
+# Version: 45

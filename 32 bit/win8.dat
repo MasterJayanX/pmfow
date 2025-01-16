@@ -3,6 +3,7 @@ aimp=https://aimp.ru/files/windows/builds/aimp_5.30.2541_w32-ints.exe
 arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
+basilisk=https://dl.basilisk-browser.org/basilisk-20250103024423.win32.installer.exe
 bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5.1/Bitwarden-Installer-2022.5.1.exe
 bleachbit=https://download.bleachbit.org/BleachBit-4.6.2-setup.exe
@@ -24,6 +25,7 @@ epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.16.1esr/win32/en-US/Firefox%20Setup%20115.16.1esr.exe
+floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.36-setup.exe
@@ -48,7 +50,7 @@ mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.9/MPC-HC.2.3.9.x86
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-i686.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.2/naps2-7.5.2-win.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.2/npp.8.7.2.Installer.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.5/npp.8.7.5.Installer.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/NotoEmoji-Regular.ttf.zip
 obsidian=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.1.16/Obsidian.1.1.16-32.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer.exe
@@ -87,4 +89,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 44
+# Version: 45

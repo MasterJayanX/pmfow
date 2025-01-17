@@ -86,7 +86,6 @@ Then, you have to open a terminal window and compile the main.cpp file with the 
 
 ## Limitations and known issues
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
-- Unlike other package managers, pmfow will only allow you to install one package at a time.
 - The repositories currently have a very limited selection of software.
 - The update command doesn't work correctly on Windows 2000 due to SSL limitations. This also affects other downloads.
 
@@ -102,7 +101,7 @@ Unfortunately, due to these versions of Windows being too old for wget to work r
 ### Will this project support other operating systems?
 Unfortunately no, because other OSes probably already have package managers for them. For example, for old versions of macOS, you can use [Tigerbrew](https://github.com/mistydemeo/tigerbrew) and most Linux distributions come with a package manager.
 ### What things do you plan to add?
-I'm planning to add the option of installing multiple packages at once, more flags to configure the way you install packages or update the repositories and of course, I will keep adding more applications to the repositories.
+You can check the [Roadmap](https://github.com/MasterJayanX/pmfow/wiki/Roadmap) for more information on what I will be adding in the future.
 
 ## Donations
 I accept donations through GitHub Sponsors and Ko-fi:

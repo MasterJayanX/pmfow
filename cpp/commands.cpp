@@ -256,7 +256,7 @@ bool updateURL(string url){
             altmajor = versionNumbers[0];
             altminor = versionNumbers[1];
             altpatch = versionNumbers[2];
-            if(altmajor > major || (altminor > minor && altmajor >= major) || (altpatch > patch && altminor  >= minor)){
+            if(altmajor > major || (altminor > minor && altmajor >= major) || (altpatch > patch && altminor >= minor)){
                 return true;
             }
             else{
@@ -340,48 +340,58 @@ void install(char** argv, int argc){
     }
     else{
         string packagename;
-        if(string(argv[2]) == "random"){
-            cout << "Installing a random package...\n";
-            repo r(winver, "loadRepo");
-            string packagename = chooseRandom(r);
-            cout << "The random package is " << packagename << ".\n";
-            log("The random package is " + packagename + ".");
-            cout << "Installing " << packagename << "...\n";
-            log("Installing " + packagename + "...");
-            repo s(winver, "loadSilent");
-            string url = r.repos(packagename);
-            if(r.repos(packagename) == "Package not found"){
-                cout << "Package not found.\n";
-                log("Package not found. The installation of " + packagename + " failed.");
-                return;
+        int counter = argc - 2;
+        int remaining = counter;
+        for(int i = 2; i < argc; i++){
+            if(string(argv[i]) == "random"){
+                cout << "Installing a random package...\n";
+                repo r(winver, "loadRepo");
+                string packagename = chooseRandom(r);
+                cout << "The random package is " << packagename << ".\n";
+                log("The random package is " + packagename + ".");
+                cout << "Installing " << packagename << "...\n";
+                log("Installing " + packagename + "...");
+                repo s(winver, "loadSilent");
+                string url = r.repos(packagename);
+                if(r.repos(packagename) == "Package not found"){
+                    cout << "Package not found.\n";
+                    log("Package not found. The installation of " + packagename + " failed.");
+                    return;
+                }
+                if(s.repos(packagename) == "Package not found"){
+                    silent = false;
+                }
+                cout << url << endl;
+                installPackage(packagename, url, s.repos(packagename));
             }
-            if(s.repos(packagename) == "Package not found"){
-                silent = false;
+            else if(string(argv[i]).at(0) == '-') {
+                break;
             }
-            cout << url << endl;
-            installPackage(packagename, url, s.repos(packagename));
+            else{
+                cout << "Installing " << argv[i] << "...\n";
+                log("Installing " + string(argv[i]) + "...");
+                repo r(winver, "loadRepo");
+                repo s(winver, "loadSilent");
+                if(r.repos(argv[i]) == "Package not found"){
+                    cout << "Package not found.\n";
+                    log("Package not found. The installation of " + string(argv[i]) + " failed.");
+                    return;
+                }
+                if(s.repos(argv[i]) == "Package not found"){
+                    silent = false;
+                }
+                string url = r.repos(argv[i]);
+                string packagename = string(argv[i]);
+                cout << url << endl;
+                installPackage(packagename, url, s.repos(argv[i]));
+            }
+            cout << "Done.\n";
+            log("Installation of " + packagename + " completed successfully.");
+            log("Execution ended with code 0 (success).");
+            remaining--;
         }
-        else{
-            cout << "Installing " << argv[2] << "...\n";
-            log("Installing " + string(argv[2]) + "...");
-            repo r(winver, "loadRepo");
-            repo s(winver, "loadSilent");
-            if(r.repos(argv[2]) == "Package not found"){
-                cout << "Package not found.\n";
-                log("Package not found. The installation of " + string(argv[2]) + " failed.");
-                return;
-            }
-            if(s.repos(argv[2]) == "Package not found"){
-                silent = false;
-            }
-            string url = r.repos(argv[2]);
-            string packagename = string(argv[2]);
-            cout << url << endl;
-            installPackage(packagename, url, s.repos(argv[2]));
-        }
-        cout << "Done.\n";
-        log("Installation of " + packagename + " completed successfully.");
-        log("Execution ended with code 0 (success).");
+        cout << "Installation of " << counter - remaining << " packages completed successfully.\n";
+        log("Installation of " + to_string(counter - remaining) + " packages completed successfully.");
     }
 }
 
@@ -395,21 +405,27 @@ void uninstall(char** argv, int argc){
         return;
     }
     else{
-        cout << "Uninstalling " << argv[2] << "...\n";
-        repo r(winver, "loadUninstaller");
-        if(r.repos(argv[2]) == "Package not found"){
-            cout << argv[2] << "The uninstaller for the specified software could not be found. " << argv[2] << " is either not installed or is installed in a different directory.\n";
-            log("The uninstaller for the specified software could not be found. " + string(argv[2]) + " is either not installed or is installed in a different directory.");
-            return;
+        for(int i = 2; i < argc; i++){
+            cout << "Uninstalling " << argv[2] << "...\n";
+            repo r(winver, "loadUninstaller");
+            if(r.repos(argv[i]) == "Package not found"){
+                cout << argv[i] << "The uninstaller for the specified software could not be found. " << argv[i] << " is either not installed or is installed in a different directory.\n";
+                log("The uninstaller for the specified software could not be found. " + string(argv[i]) + " is either not installed or is installed in a different directory.");
+                return;
+            }
+            else if(string(argv[i]).at(0) == '-') {
+                break;
+            }
+            else{
+                uninstaller = r.repos(argv[i]);
+                command = uninstaller;
+                system(command.c_str());
+                cout << "Done.\n";
+                log("Uninstallation of " + string(argv[i]) + " completed successfully.");
+                log("Execution ended with code 0 (success).");
+            }
         }
-        else{
-            uninstaller = r.repos(argv[2]);
-            command = uninstaller;
-            system(command.c_str());
-            cout << "Done.\n";
-            log("Uninstallation of " + string(argv[2]) + " completed successfully.");
-            log("Execution ended with code 0 (success).");
-        }
+        
     }
 }
 
@@ -425,18 +441,26 @@ void update(){
     string url, pmfow;
     repo r(winver, "loadUpdater");
     if(architecture == "x64"){
+        // Switch between different types of releases
         url = r.repos("pmfow-updater64");
         if(unstable){
             pmfow = r.repos("pmfow-unstable64");
+        }
+        else if(checkLTS){
+            pmfow = r.repos("pmfow-lts64");
         }
         else{
             pmfow = r.repos("pmfow64");
         }
     }
     else if(architecture == "x86"){
+        // Switch between different types of releases
         url = r.repos("pmfow-updater32");
         if(unstable){
             pmfow = r.repos("pmfow-unstable32");
+        }
+        else if(checkLTS){
+            pmfow = r.repos("pmfow-lts32");
         }
         else{
             pmfow = r.repos("pmfow32");
@@ -634,8 +658,8 @@ void version(){
         }
     }
     log("Execution ended with code 0 (success).");
-
 }
+
 void about(int majorVersion, int minorVersion, int build){
     // This function shows the version of pmfow that you are running
     cout << programversion << endl;

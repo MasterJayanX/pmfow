@@ -85,7 +85,6 @@ Luego, debes abrir una ventana de terminal y compilar el archivo main.cpp con el
 
 ## Limitaciones y problemas conocidos
 pmfow está en una etapa temprana de desarrollo, por lo que puedes esperar que algunas cosas no funcionen como deberían. Algunas de las limitaciones que tiene en este momento son:
-- A diferencia de otros gestores de paquetes, pmfow solo te permitirá instalar un paquete a la vez.
 - Los repositorios actualmente tienen una selección muy limitada de software.
 - El comando update no funciona correctamente en Windows 2000, debido a limitaciones de SSL. Esto también afecta a otras descargas.
 
@@ -101,7 +100,7 @@ Desafortunadamente, debido a que estas versiones de Windows son demasiado antigu
 ### ¿Este proyecto admitirá otros sistemas operativos?
 Desafortunadamente no, porque es probable que otros sistemas operativos ya tengan gestores de paquetes para ellos. Por ejemplo, para versiones antiguas de macOS, puedes usar [Tigerbrew](https://github.com/mistydemeo/tigerbrew) y la mayoría de las distribuciones de Linux vienen con un gestor de paquetes.
 ### ¿Qué cosas planeas agregar?
-Estoy planeando agregar la opción de instalar varios paquetes a la vez, más flags para configurar la forma en que se instalan los paquetes o se actualizan los repositorios y, por supuesto, seguiré agregando más aplicaciones a los repositorios.
+Pueden revisar el [Roadmap](https://github.com/MasterJayanX/pmfow/wiki/Roadmap) para más información en lo que tengo planeado para el futuro.
 
 ## Donaciones
 Acepto donaciones a través de GitHub Sponsors y Ko-fi:

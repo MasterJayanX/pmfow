@@ -30,20 +30,45 @@ string getCompileDate() {
     return oss.str();
 }
 
+/*
+Global variables
+----------------
+winver: The Windows version
+architecture: The architecture of the Windows installation
+programpath: The path of the program
+log_file: The path of the log file
+quiet_cmd: The quiet command for wget
+check_cert: Whether to check certificates
+onefile: Whether to only update one file
+unstable: Whether to check for unstable packages
+silent: Whether to use silent installers
+list_uninstall: Whether to list uninstallers
+onlyCheck: Whether to only check for updates
+checkUpd: Whether to check for updates
+runasexe: Whether to run compressed files as executables
+is_reactos: Whether the OS is ReactOS
+show_url: Whether to show the URL of a package
+write_to_log: Whether to write to the log file
+log_date_time: Whether to log the date and time
+upd_config: Whether to update the config file
+checkLTS: Whether to check for LTS versions
+wget_os: The version of Windows to use for wget
+*/
+string winver, architecture, programpath, log_file = "pmfow.log", quiet_cmd = " -q --show-progress";
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config, checkLTS;
+float wget_os = 0;
+
 #define COMPILE_DATE ("(" + getCompileDate() + " " + __TIME__ + ")")
 
-// Global variables
-string winver, architecture, programpath, log_file = "pmfow.log";
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config;
-float wget_os = 0;
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 3, patch = 2;
+int major = 0, minor = 4, patch = 0;
 int altmajor, altminor, altpatch;
+// version is the version of pmfow with the major, minor, and patch variables
+string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
 // programversion is the full version of pmfow, including the compile date
-string programversion = "Package Manager for Old Windows v" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + " " + COMPILE_DATE +  " \"A Holly Jolly Update\"";
-string versionshort = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
+string programversion = "Package Manager for Old Windows v" + ver + " LTS " + COMPILE_DATE;
 bool configExists = true;
 
 class Config {
@@ -178,6 +203,12 @@ void loadConfig() {
     else if(config.get("update_config") == "false"){
         upd_config = false;
     }
+    if(config.get("check_lts") == "true"){
+        checkLTS = true;
+    }
+    else if(config.get("check_lts") == "false"){
+        checkLTS = false;
+    }
 }
 
 static char *getDateTime (char *buff) {
@@ -212,7 +243,7 @@ void log_from_main(char** argv, int argc, string message){
         if(log_date_time){
             logg << getDateTime(buff) << endl;
         }
-        logg << "pmfow version: " << versionshort << endl;
+        logg << "pmfow version: " << ver << endl;
         logg << "Command: ";
         for(int i = 0; i < argc; i++){
             logg << argv[i] << " ";

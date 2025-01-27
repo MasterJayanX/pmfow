@@ -3,3 +3,5 @@
 .wget-hsts
 pmfow.log
 /.vscode
+pmfow-installer/pmfow32
+pmfow-installer/pmfow64

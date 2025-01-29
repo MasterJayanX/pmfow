@@ -22,17 +22,17 @@ pmfow will run on anything that runs Windows 2000 or later and has an internet c
 **Minimum requirements**
 - A CPU
 - Some RAM
-- Storage (optional)
-- An internet connection (not optional)
+- At least 16 MB of storage available
+- An internet connection
 
 **Recommended requirements**
 - A Pentium or better CPU.
 - 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser.
-- Enough storage to store at least a couple of .exe files (300 MB of free space should be more than enough).
-- A good internet connection (at least 5 Mbps, but even something slightly better than a 56k modem should be enough).
+- At least 300 MB of storage available
+- A good internet connection (good enough to download somewhat large files).
 
 ### Software requirements
-pmfow will run in most versions of Windows from Windows 2000 onwards.
+pmfow will run in most versions of Windows from Windows 2000 onwards. Note: some versions of Windows might require you to download [this update](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
 
 **This is the list of fully supported versions:**
 
@@ -41,19 +41,19 @@ pmfow will run in most versions of Windows from Windows 2000 onwards.
 - Windows 7
 - Windows 8
 - Windows 8.1
+- All their server variants
 
 **This is the list of partially supported versions:**
 
 - Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's repository are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
 - Windows 11 for the same reason as Windows 10.
 - Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
-- Windows Server versions from Server 2003 to Server 2022: Only the "regular" versions of Windows are detected, but since the Windows Server releases share the same NT versions as the regular releases, they should work (the only exception is Server 2003, but NT 5.2 is supported).
+- ReactOS: It will run, but certain applications that can be installed with pmfow will not work by default.
 
 ## Installation
 To install pmfow, you need to follow these steps:
-1. Download the .exe file from the Releases page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
-2. Open the .exe file and extract the files in a new folder. To do this, open the .exe, click the three dots, create a new folder and select it.
-3. After extracting the files, add the directory to the system's Path. To do this, go to Control Panel > System > Advanced / Advanced Settings > Environment Variables. Then, go to System Variables and find where it says Path. On Windows XP, just double click where it says Path, add a ; at the end of the text window and paste the full directory where you extracted pmfow's files (for example, `C:\pmfow`). On newer versions of Windows, click on Path, then click on Edit, click on New and paste the full directory.
+1. Download the .exe file from the [Releases](https://github.com/MasterJayanX/pmfow/releases) page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
+2. Open the .exe file and install pmfow it on any directory you want (by default it will be installed in your Program Files folder). The installer will also add the directory to the system's PATH by default, allowing you to run pmfow from any directory.
 
 ## Usage
 To use pmfow, open a CMD window and run the following command: `pmfow <command>` (Note: if you didn't follow step 3 of the installation, you will have to open the cmd window in the same folder you extracted the pmfow executable in and type `pmfow.exe <command>` instead).
@@ -82,7 +82,7 @@ If you are using the install, uninstall, update, list or search commands, you ca
 - Having the g++ compiler installed on your Windows computer (you can install it with MinGW).
 
 To compile this program yourself, you need to download the .cpp files and save them in the same directory. Alternatively, you can download the repository files using the following command on a terminal window: `git clone https://github.com/MasterJayanX/pmfow`. 
-Then, you have to open a terminal window and compile the main.cpp file with the following command: `g++ main.cpp -o output.exe` (you can replace output with any name you want).
+Then, you have to open a terminal window and compile the main.cpp file with the following command: `g++ main.cpp -o output.exe -Wall` (you can replace output with any name you want).
 
 ## Limitations and known issues
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:

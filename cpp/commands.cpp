@@ -430,13 +430,13 @@ void uninstall(char** argv, int argc){
 }
 
 void update(){
-    // This function updates the repositories
+    // This function updates the catalogs
     if(onlyCheck){
         cout << "Checking for updates...\n";
         Sleep(500);
     }
     else{
-        cout << "Updating repositories...\n";
+        cout << "Updating catalogs...\n";
     }
     string url, pmfow;
     repo r(winver, "loadUpdater");
@@ -471,7 +471,7 @@ void update(){
         log("Invalid architecture.");
         return;
     }
-    log("Updating repositories...");
+    log("Updating catalogs...");
     bool updateAvailable = updateURL(pmfow);
     if(!onlyCheck){
         updateRepositories(url);
@@ -517,8 +517,8 @@ void list(){
         return;
     }
     if (!file.is_open()) {
-        cerr << "Repository not found" << endl;
-        log("Repository not found.");
+        cerr << "App catalog not found" << endl;
+        log("App catalog not found.");
         return;
     }
     string line, finalLine;
@@ -538,8 +538,8 @@ void list(){
     int repoversion = stoi(ver);
     cout << "Total packages: " << i << endl;
     cout << "To see a full list of programs and their descriptions, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List." << endl;
-    cout << "Version of the repository: " << repoversion << endl;
-    log("Total packages: " + to_string(i) + "\n" + "Version of the repository: " + to_string(repoversion));
+    cout << "Version of the app catalog: " << repoversion << endl;
+    log("Total packages: " + to_string(i) + "\n" + "Version of the app catalog: " + to_string(repoversion));
     file.close();
 }
 
@@ -598,7 +598,7 @@ void help(){
     cout << "List of commands:\n";
     cout << "pmfow install <package> - Installs a package.\n";
     cout << "pmfow uninstall <package> - Uninstalls a package.\n";
-    cout << "pmfow update - Updates the repositories.\n";
+    cout << "pmfow update - Updates the catalogs.\n";
     cout << "pmfow search <package> - Searches for a package.\n";
     cout << "pmfow list - Lists all the packages.\n";
     cout << "pmfow help - Shows this help message.\n";
@@ -612,10 +612,10 @@ void help(){
     cout << "pmfow install <package> -w <os>/--wget-version <os> - Installs a package using a different version of wget (options: 2000, xp, win).\n";
     cout << "pmfow install <package> -s/--silent - Toggles between using silent installers or not.\n";
     cout << "pmfow install random - Installs a random package.\n";
-    cout << "pmfow update -o/--one-file - Only downloads the repository file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
+    cout << "pmfow update -o/--one-file - Only downloads the catalog file that corresponds to the user's Windows version. It can be used alongside --force-os.\n";
     cout << "pmfow update --unstable - Will check if there is a new unstable/development release of pmfow instead of a stable one.\n";
-    cout << "pmfow update --check - Checks for pmfow updates when updating the app repositories.\n";
-    cout << "pmfow update --only-check - Only checks for pmfow updates and does not update the repositories.\n";
+    cout << "pmfow update --check - Checks for pmfow updates when updating the app catalogs.\n";
+    cout << "pmfow update --only-check - Only checks for pmfow updates and does not update the catalogs.\n";
     cout << "pmfow search <package> -f/--force-os <os> - Searches for a package for a different OS.\n";
     cout << "pmfow search <package> -u/--show-url / pmfow search <package> --show-url - Shows the URL of the package.\n";
     cout << "pmfow list --uninstall - Lists all programs that can be uninstalled with pmfow.\n";
@@ -666,10 +666,14 @@ void about(int majorVersion, int minorVersion, int build){
     log(programversion);
     cout << "Made by MasterJayanX" << endl;
     cout << "This program is licensed under the GNU GPL 3 License. See LICENSE for more information." << endl;
-    cout << "Github repository: https://github.com/MasterJayanX/pmfow" << endl;
+    cout << "GitHub repository: https://github.com/MasterJayanX/pmfow" << endl;
     cout << "Path: " << programpath << endl;
     cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     log("Windows Version: " + winver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
+    if(winver == "Windows 2000"){
+        cout << "Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).\n";
+        log("Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).");
+    }
     cout << "Architecture: " << architecture << endl;
     log("Architecture: " + architecture);
     if(majorVersion < 5){

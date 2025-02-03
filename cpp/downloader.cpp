@@ -53,7 +53,11 @@ void installPackage(string package, string url, string silentinst){
     else{
         command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate" + quiet_cmd;
     }
-    system(command.c_str());
+    if (system(command.c_str()) != 0) {
+        cerr << "Error downloading file: " << strerror(errno) << endl;
+        log("Error downloading file " + fullpath);
+        return;
+    }
     if (runasexe || (extension != ".zip" && extension != ".7z" && extension != ".rar")) {
         // Run the file
         SHELLEXECUTEINFOW ShExecInfo = {0};
@@ -109,7 +113,7 @@ vector<string> repoDirectories(){
 }
 
 void updateRepositories(string link){
-    // Update repositories
+    // Update app catalogs
     string command, file_winver, wget_exe = "wget", fullpath = programpath + "\\files\\", pmfowpath = programpath + "\\";
     if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
         file_winver = "winxp";
@@ -154,7 +158,11 @@ void updateRepositories(string link){
         command = "del " + fullpath + file_winver + ".dat";
         system(command.c_str());
         command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + versionFile + certFlag + quiet_cmd;
-        system(command.c_str());
+        if (system(command.c_str()) != 0) {
+            cerr << "Error downloading file: " << strerror(errno) << endl;
+            log("Error downloading file " + fullpath);
+            return;
+        }
     } else {
         command = "del " + fullpath + "directories.txt";
         system(command.c_str());
@@ -185,7 +193,7 @@ void updateRepositories(string link){
             system(command.c_str());
         }
         
-        log("Updating repositories");
+        log("Updating app catalogs...");
         for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
             command = "del " + fullpath + version + ".dat";
             system(command.c_str());

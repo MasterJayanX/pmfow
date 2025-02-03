@@ -52,7 +52,7 @@ int main(int argc, char** argv){
             }
         }
         else if(string(argv[1]) == "update" || string(argv[1]) == "u"){
-            // Update repositories
+            // Update app catalogs
             int success = checkFlags(argc, argv);
             if(success == 0){
                 log_from_main(argv, argc, "Execution ended with code 1.");

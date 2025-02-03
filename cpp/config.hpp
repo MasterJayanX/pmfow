@@ -14,6 +14,7 @@
 using namespace std;
 
 string getCompileDate() {
+    // This function gets the compile date and returns it in a more readable format
     string timestamp = __TIMESTAMP__;
     istringstream iss(timestamp);
     string dayOfWeek, month, day, time, year;
@@ -63,7 +64,7 @@ float wget_os = 0;
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 0;
+int major = 0, minor = 4, patch = 1;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);

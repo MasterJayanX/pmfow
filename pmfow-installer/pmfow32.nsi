@@ -1,4 +1,6 @@
 !include "WinMessages.nsh"
+!include "MUI2.nsh"
+!include "nsDialogs.nsh"
 
 # Define the installer name and output file
 OutFile "pmfow_win32_installer.exe"
@@ -8,11 +10,54 @@ InstallDir "$PROGRAMFILES\pmfow"
 
 Name "pmfow"
 
-# Set the directory page
-Page directory
+# MUI settings
+!define MUI_ABORTWARNING
+!define MUI_HEADER_TEXT "Welcome to the pmfow Installer"
+!define MUI_HEADER_SUBTEXT "This will install pmfow on your computer."
+!define MUI_BRANDINGTEXT "pmfow Installer"
 
-# Set the instfiles page
-Page instfiles
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_DIRECTORY
+Page custom CustomPageCreate CustomPageLeave
+!insertmacro MUI_PAGE_INSTFILES
+!insertmacro MUI_PAGE_FINISH
+
+!insertmacro MUI_UNPAGE_WELCOME
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
+
+!insertmacro MUI_LANGUAGE "English"
+
+# Set version information
+VIProductVersion "0.4.1.0"
+VIAddVersionKey /LANG=1033 "ProductName" "pmfow"
+VIAddVersionKey /LANG=1033 "CompanyName" "MasterJayanX"
+VIAddVersionKey /LANG=1033 "FileDescription" "Package Manager for Old Windows"
+VIAddVersionKey /LANG=1033 "FileVersion" "1.1"
+VIAddVersionKey /LANG=1033 "LegalCopyright" "© MasterJayanX. All rights reserved."
+
+Var Dialog
+Var CheckBox
+
+Function CustomPageCreate
+  nsDialogs::Create 1018
+  Pop $Dialog
+
+  ${If} $Dialog == error
+    Abort
+  ${EndIf}
+
+  ${NSD_CreateCheckbox} 20u 50u 100% 12u "Add to system PATH (Highly recommended)"
+  Pop $CheckBox
+  ${NSD_Check} $CheckBox
+
+  nsDialogs::Show
+FunctionEnd
+
+Function CustomPageLeave
+  ${NSD_GetState} $CheckBox $0
+  StrCpy $R0 $0
+FunctionEnd
 
 # Section for the installation
 Section "Install pmfow"
@@ -23,9 +68,11 @@ Section "Install pmfow"
   # Copy the program files to the installation directory
   File /r "pmfow32\*.*"
 
-  # Add the installation directory to the system PATH
-  Push "$INSTDIR"
-  Call AddToPath
+  # Add the installation directory to the system PATH if the checkbox is checked
+  ${If} $R0 == 1
+    Push "$INSTDIR"
+    Call AddToPath
+  ${EndIf}
   
   # Write the uninstaller executable
   WriteUninstaller "$INSTDIR\uninstall.exe"
@@ -41,9 +88,6 @@ Function AddToPath
   SendMessage ${HWND_BROADCAST} ${WM_SETTINGCHANGE} 0 "STR:Environment"
 FunctionEnd
 
-# Required includes
-!include "MUI2.nsh"
-
 # Settings for the uninstaller
 Section "Uninstall"
   # Remove the program files
@@ -52,9 +96,11 @@ Section "Uninstall"
   RMDir "$INSTDIR\files"
   RMDir "$INSTDIR"
 
-  # Remove the installation directory from the system PATH
-  Push "$INSTDIR"
-  Call un.RemoveFromPath
+  # Remove the installation directory from the system PATH if the checkbox is checked
+  ${If} $R0 == 1
+    Push "$INSTDIR"
+    Call un.RemoveFromPath
+  ${EndIf}
 
 SectionEnd
 

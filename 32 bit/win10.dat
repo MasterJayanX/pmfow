@@ -4,7 +4,7 @@ arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe
 basilisk=https://dl.basilisk-browser.org/basilisk-20250103024423.win32.installer.exe
-bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
+bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.8.2/BCUninstaller_5.8.2_setup.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2023.12.1/Bitwarden-Installer-2023.12.1.exe
 bleachbit=https://download.bleachbit.org/BleachBit-4.6.2-setup.exe
 blender=https://download.blender.org/release/Blender2.80/blender-2.80-windows32.msi
@@ -23,7 +23,8 @@ dotnet4.8=https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/134.0.1/win32/en-US/Firefox%20Setup%20134.0.1.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/135.0/win32/en-US/Firefox%20Setup%20135.0.exe
+firefox-beta=https://ftp.mozilla.org/pub/firefox/releases/136.0b2/win32/en-US/Firefox%20Setup%20136.0b2.exe
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/128.6.0esr/win32/en-US/Firefox%20Setup%20128.6.0esr.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
@@ -87,4 +88,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 47
+# Version: 48

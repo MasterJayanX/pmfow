@@ -4,7 +4,7 @@ arduino=https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 audacity=https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.exe
 balenaetcher=https://github.com/balena-io/etcher/releases/download/v1.7.9/balenaEtcher-Setup-1.7.9.exe
 basilisk=https://dl.basilisk-browser.org/basilisk-20250103024423.win32.installer.exe
-bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.7/BCUninstaller_5.7_setup.exe
+bcuninstaller=https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v5.8.2/BCUninstaller_5.8.2_setup.exe
 bitwarden=https://github.com/bitwarden/clients/releases/download/desktop-v2022.5.1/Bitwarden-Installer-2022.5.1.exe
 bleachbit=https://download.bleachbit.org/BleachBit-4.6.2-setup.exe
 blender=https://download.blender.org/release/Blender2.80/blender-2.80-windows32.msi
@@ -13,6 +13,7 @@ calibre=https://download.calibre-ebook.com/3.48.0/calibre-3.48.0.msi
 cdburnerxp=https://www.fosshub.com/CDBurnerXP.html?dwl=cdbxp_setup_4.5.8.7042_minimal.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
+chromium-win7=https://github.com/e3kskoy7wqk/Chromium-for-windows-7/releases/download/133.0.6943.57/mini_installer.exe
 clamav=https://www.clamav.net/downloads/production/clamav-1.0.4.win.win32.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
@@ -26,6 +27,7 @@ epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.16.1esr/win32/en-US/Firefox%20Setup%20115.16.1esr.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/137.0.0.212/firefox-137.0a1.zh-CN.win32.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
@@ -95,4 +97,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 47
+# Version: 48

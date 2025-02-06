@@ -21,7 +21,7 @@ pmfow (Package Manager for Old Windows) es un programa que te permite instalar a
 **Requisitos mínimos**
 - Un procesador
 - Algo de RAM
-- Al menos 16 MB de almacenamiento
+- 16 MB de almacenamiento
 - Una conexión a internet
 
 **Requisitos recomendados**
@@ -58,26 +58,27 @@ Para usar pmfow, abre una ventana de CMD y ejecuta el siguiente comando: `pmfow 
 Aquí tienes una lista de comandos que puedes utilizar:
 - `pmfow install <paquete>`: Este comando te permitirá instalar el programa que desees. Alternativamente, puedes usar `pmfow i <paquete>`.
 - `pmfow uninstall <paquete>`: Este comando te permitirá desinstalar el programa que desees. Alternativamente, puedes usar `pmfow remove <paquete>` o `pmfow rm <paquete>`.
-- `pmfow update`: Esto actualizará los repositorios, que son simplemente archivos .txt, pero aún así. Alternativamente, puedes usar `pmfow u`.
+- `pmfow update`: Esto actualizará los catálogos de aplicaciones. Alternativamente, puedes usar `pmfow u`.
 - `pmfow search <paquete>`: Este comando te permitirá buscar un paquete específico en los repositorios de tu sistema operativo. Alternativamente, puedes usar `pmfow s <paquete>`.
-- `pmfow version`: Este comando te mostrará la versión de pmfow que estás utilizando, así como tu versión de Windows. Alternativamente, puedes usar `pmfow about` o `pmfow v`.
+- `pmfow version`: Este comando te mostrará la versión de pmfow que estás utilizando. Alternativamente, puedes usar `pmfow v`.
+- `pmfow about`: Este comandon te mostrará información sobre tu instalación de pmfow, además de tu versión de Windows. Alternativamente, puedes usar `pmfow a`.
 - `pmfow help`: Este comando te mostrará una lista de comandos con una descripción para cada uno, como la que estás viendo aquí. Alternativamente, puedes usar `pmfow h`.
-- `pmfow list`: Este comando lista todos los paquetes disponibles en tu repositorio actual. Alternativamente, puedes usar `pmfow l`.
+- `pmfow list`: Este comando lista todos los paquetes disponibles en tu catálogo actual. Alternativamente, puedes usar `pmfow l`.
 
 Si estás utilizando los comandos install, uninstall, update, list o search, puedes utilizar estas flags (opciones):
-- `-c` o `--check-certificates`: Hace que wget verifique los certificados al descargar un paquete.
+- `-c` o `--check-certificates`: Hace que wget verifique los certificados al descargar un paquete (inestable).
 - `-f <versión>` o `--force-os <versión>`: Obliga a pmfow a instalar paquetes para una versión diferente de Windows.
 - `--show-url`: Muestra la URL desde la cual se descarga el paquete que estás instalando o buscando.
 - `-o` o `--one-file`: El comando update solo actualizará el archivo de repositorio que corresponde a tu versión actual de Windows.
 - `-w <versión>` o `--wget-version <versión>`: Obliga al comando install o update a utilizar una versión de wget para una versión específica de Windows (por ejemplo: Windows XP) en lugar de cambiar el nombre del archivo de la versión que necesitas usar.
 - `-u` o `--show-url`: Muestra la URL del paquete.
-- `--check`: Solo verifica las actualizaciones de pmfow en lugar de actualizar también los repositorios.
+- `--check`: Solo verifica las actualizaciones de pmfow en lugar de actualizar también los catálogos de aplicaciones.
 - `--unstable`: Comprueba si hay una nueva versión inestable/desarrollo de pmfow en lugar de una estable.
 - `--uninstall`: Lista todos los programas que se pueden desinstalar con pmfow (solo se puede usar con el comando list).
 
 ## Compilación
 ### Requisitos
-- Tener el compilador g++ instalado en un computador con Windows (puedes instalarlo con MinGW).
+- Tener el compilador g++ instalado en un computador con Windows (puedes instalarlo con MinGW). Para usuarios de Linux, necesitarás instalar `mingw-w64` y reemplazar `g++` con `x86_64-w64-mingw32-g++` o `i686-w64-mingw32-g++`.
 
 Para compilar este programa tú mismo, debes descargar los archivos .cpp y guardarlos en el mismo directorio. Alternativamente, puedes descargar los archivos del repositorio usando el siguiente comando en una ventana de terminal: `git clone https://github.com/MasterJayanX/pmfow`. 
 Luego, debes abrir una ventana de terminal y compilar el archivo main.cpp con el siguiente comando: `g++ main.cpp -o output.exe -Wall` (puedes reemplazar output con el nombre que desees).
@@ -93,7 +94,7 @@ Si encuentras algún problema con pmfow, abre un problema en la sección de Issu
 ### ¿Qué versiones de Windows son compatibles?
 Como mencioné anteriormente, pmfow funciona en las siguientes versiones de Windows: Windows 2000, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11 y sus equivalentes para servidores. También debería funcionar en ReactOS y en Linux mediante Wine, pero aún no los he probado.
 ### ¿Qué aplicaciones puedo instalar con pmfow?
-Puedes encontrar la lista completa de aplicaciones que se pueden instalar en [Software_List.md](https://github.com/MasterJayanX/pmfow/blob/main/Software_List.md) (ten en cuenta que está en inglés).
+Puedes encontrar la lista completa de aplicaciones que se pueden instalar en la [Lista de Software](https://github.com/MasterJayanX/pmfow/wiki/Software-List) (ten en cuenta que está en inglés).
 ### ¿Se puede usar pmfow en Windows 9x?
 Desafortunadamente, debido a que estas versiones de Windows son demasiado antiguas para que wget funcione de manera confiable en ellas, decidí no agregar soporte para ellas en este proyecto.
 ### ¿Este proyecto admitirá otros sistemas operativos?

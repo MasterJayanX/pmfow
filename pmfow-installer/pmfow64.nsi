@@ -6,7 +6,7 @@
 OutFile "pmfow_win64_installer.exe"
 
 # Define the default installation directory
-InstallDir "$PROGRAMFILES\pmfow"
+InstallDir "C:\pmfow"
 
 Name "pmfow"
 

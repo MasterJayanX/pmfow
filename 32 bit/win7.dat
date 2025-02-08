@@ -27,21 +27,21 @@ epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 filezilla=https://dl3.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=e0cyw8OtNlHk8Sx_xpgSsQ&x=1704996793
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.16.1esr/win32/en-US/Firefox%20Setup%20115.16.1esr.exe
-firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/137.0.0.212/firefox-137.0a1.zh-CN.win32.installer.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/137.0.0.432/firefox-137.0a1.en-US.win32.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
-foobar2000=https://www.foobar2000.org/files/foobar2000_v2.1.1.exe
+foobar2000=https://www.foobar2000.org/files/foobar2000_v2.24.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe
 gimp=https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.38-setup-1.exe
 handbrake=https://github.com/HandBrake/HandBrake/releases/download/1.0.7/HandBrake-1.0.7-i686-Win_GUI.exe
 iexplore=https://download.microsoft.com/download/9/0/8/908B5C6B-F23E-4DED-9906-77CE4E9E8528/EIE11_EN-US_MCM_WIN7.EXE
 imdisk=https://sourceforge.net/projects/imdisk-toolkit/files/20241123/ImDiskTk.zip/download
 inkscape=https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a01da63-x86.exe
-irfanview=https://www.irfanview.info/files/iview467_setup.exe
+irfanview=https://www.irfanview.info/files/iview470_setup.exe
 itunes=https://tinyurl.com/munxjvr3
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-i586.exe&BHost=javadl.sun.com&File=jre-8u421-windows-i586.exe&AuthParam=1724002063_e762398f1a45c038608fe33ede81f737&ext=.exe
 keepass=https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.57.1/KeePass-2.57.1-Setup.exe/download
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Basic.exe
-k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1875_Standard.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1880_Basic.exe
+k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1880_Standard.exe
 k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win32/kodi-20.3-Nexus-x86.exe
 krita=https://download.kde.org/stable/krita/4.4.3/krita-x86-4.4.3-setup.exe
@@ -51,10 +51,10 @@ libreoffice=https://download.documentfoundation.org/libreoffice/stable/24.8.2/wi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-win32-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.8.2/MPC-BE.1.8.2.x86-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.3.9/MPC-HC.2.3.9.x86.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.4.0/MPC-HC.2.4.0.x86.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-i686.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.2/naps2-7.5.2-win.exe
+naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.3/naps2-7.5.3-win.exe
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.6/npp.8.7.6.Installer.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/NotoEmoji-Regular.ttf.zip
@@ -64,7 +64,7 @@ oneclickappinstaller=https://github.com/MasterJayanX/OneClickAppInstaller/releas
 open-shell=https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.191/OpenShellSetup_4_4_191.exe
 openttd=https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-windows-win32.exe
 paint.net=https://github.com/paintdotnet/release/releases/download/v5.0.13/paint.net.5.0.13.install.anycpu.web.zip
-palemoon=https://rm-us.palemoon.org/release/palemoon-33.5.1.win32.installer.exe
+palemoon=https://rm-us.palemoon.org/release/palemoon-33.6.0.win32.installer.exe
 peazip=https://github.com/peazip/PeaZip/releases/download/10.2.0/peazip-10.2.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.14.13/pidgin-2.14.13-offline.exe/download
 playnite=https://playnite.link/download/PlayniteInstaller.exe
@@ -97,4 +97,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 48
+# Version: 49

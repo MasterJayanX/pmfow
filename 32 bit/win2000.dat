@@ -10,6 +10,7 @@ cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_1.04-win9x.zip
 extended-kernel=https://win2k.org/cgi-bin/dl.cgi?file=Windows2000-KB935839-v31lM-x86-ENU.wlu
 firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20Setup%2012.0.exe
 firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en-US/Firefox%20Setup%2010.0.12esr.exe
+foobar2000=https://www.foobar2000.org/files/foobar2000_0.9.exe
 iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
@@ -38,4 +39,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 47
+# Version: 49

@@ -387,11 +387,20 @@ void install(char** argv, int argc){
             }
             cout << "Done.\n";
             log("Installation of " + packagename + " completed successfully.");
-            log("Execution ended with code 0 (success).");
             remaining--;
         }
-        cout << "Installation of " << counter - remaining << " packages completed successfully.\n";
-        log("Installation of " + to_string(counter - remaining) + " packages completed successfully.");
+        string package_word;
+        if(counter - remaining == 1){
+            package_word = "package";
+        }
+        else{
+            package_word = "packages";
+        }
+        cout << "Installation of " << counter - remaining << " " << package_word << " completed successfully.\n";
+        log("Installation of " + to_string(counter - remaining) + " " + package_word + " completed successfully.");
+        if(remaining == 0){
+            log("Execution ended with code 0 (success).");
+        }
     }
 }
 

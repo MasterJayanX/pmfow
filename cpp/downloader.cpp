@@ -86,8 +86,9 @@ void installPackage(string package, string url, string silentinst){
         }
     }
     else{
-        cout << "Please install " << filename << " manually. You can find the file at " << programpath << endl;
-        log(filename + " has to be installed manually. You can find the file at " + programpath);
+        // Extract the file
+        cout << "Please install " << filename << " manually. You can find the file at " << fullpath << endl;
+        log(filename + " has to be installed manually. You can find the file at " + fullpath);
     }
 }
 

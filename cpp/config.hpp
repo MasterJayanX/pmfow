@@ -64,7 +64,7 @@ float wget_os = 0;
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 1;
+int major = 0, minor = 4, patch = 2;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
@@ -112,13 +112,16 @@ void loadConfig() {
         winver = config.get("winver");
     }
     if(config.get("wget_version") != "auto"){
-        if(config.get("wget_version") == "2k"){
+        if(config.get("wget_version") == "2k" || config.get("wget_version") == "2000"){
             wget_os = 5.0;
         }
-        else if(config.get("wget_version") == "xp"){
+        else if(config.get("wget_version") == "xp" || config.get("wget_version") == "XP"){
             wget_os = 5.1;
         }
         else if(config.get("wget_version") == "win"){
+            wget_os = 6.0;
+        }
+        else{
             wget_os = 6.0;
         }
     }

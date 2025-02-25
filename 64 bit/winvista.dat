@@ -38,16 +38,16 @@ k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
-mailnews=hhttps://o.rthost.win/boc-uxp/mailnews.win32-20250208-7bda12e7-uxp-f7298813f9-xpmod.7z
+mailnews=https://o.rthost.win/boc-uxp/mailnews.win32-20250222-7bda12e7-uxp-e43876ec84-xpmod.7z
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.9.1/mGBA-0.9.1-win64-installer.exe
 mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x64.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 mypal=https://www.mypal-browser.org/release/mypal-29.3.0.win64.installer.exe
 mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.14.7b/mypal-68.14.7.en-US.win64.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
-newmoon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win64-git-20250208-d849524bd-uxp-f7298813f9-xpmod.7z
+newmoon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win64-git-20250222-d849524bd-uxp-e43876ec84-xpmod.7z
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.6/npp.8.7.6.Installer.x64.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158-XP/NotoEmoji-Regular_winXP.zip
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/21.0.1/OBS-Studio-21.0.1-Full-Installer.exe
 openoffice=https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.10/binaries/en-US/Apache_OpenOffice_4.1.10_Win_x86_install_en-US.exe/download
@@ -60,8 +60,8 @@ putty=https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.82-installer
 python=https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
 python3=https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.1.9.1/qbittorrent_4.1.9.1_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v132.0rc-2/r3dfox-132.0.en-US.win64.installer.exe
-r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.6.0/r3dfox_esr-128.6.0.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v134.0.3-1/r3dfox-134.0.3.en-US.win64.installer.exe
+r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.7.0-hotfix/r3dfox_esr-128.7.0.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.20.0/windows-msvc2010/x86_64/RetroArch-MSVC10-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
@@ -80,4 +80,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 49
+# Version: 50

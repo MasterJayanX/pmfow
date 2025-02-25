@@ -16,7 +16,7 @@ inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
 keepass=https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.36/KeePass-2.36-Setup.exe/download
-k-meleon=https://archive.org/download/km-74-g-22-20210814.win-2000.7z/KM74-g22-20210814.win2000.7z
+k-meleon=http://o.rthost.win/gpc/files1.rt/KM74-g22-20241221.win2000.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
 libreoffice=https://archive.org/download/lib-363-32b-win-2000-multi/LibO_3.6.3_Win_x86_install_multi.msi
 newmoon=http://o.rthost.win/gpc/files1.rt/palemoon-26.5.0-20241221.win2000.7z
@@ -39,4 +39,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 49
+# Version: 50

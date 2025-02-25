@@ -26,8 +26,8 @@ dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/115.16.1esr/win64/en-US/Firefox%20Setup%20115.16.1esr.exe
-firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/137.0.0.432/firefox-137.0a1.en-US.win64.installer.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/115.20.0esr/win64/en-US/Firefox%20Setup%20115.20.0esr.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/rework/firefox-137.0.en-US.win64.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win64.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.24.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x64_setup.exe
@@ -54,7 +54,7 @@ mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.4.0/MPC-HC.2.4.0.x64
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.3/naps2-7.5.3-win.exe
-notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.6/npp.8.7.6.Installer.x64.exe
+notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/NotoEmoji-Regular.ttf.zip
 obsidian=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.1.16/Obsidian.1.1.16.exe
 obs-studio=https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x64.exe
@@ -70,8 +70,8 @@ putty=https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.82-installer
 python=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v132.0rc-2/r3dfox-132.0.en-US.win64.installer.exe
-r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.6.0/r3dfox_esr-128.6.0.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v134.0.3-1/r3dfox-134.0.3.en-US.win64.installer.exe
+r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.7.0-hotfix/r3dfox_esr-128.7.0.en-US.win64.installer.exe
 retroarch=https://buildbot.libretro.com/stable/1.20.0/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
@@ -96,4 +96,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 49
+# Version: 50

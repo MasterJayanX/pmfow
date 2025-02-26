@@ -26,7 +26,7 @@ epsxe=http://www.epsxe.com/files/ePSXe205.zip
 everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.20.0esr/win32/en-US/Firefox%20Setup%20115.20.0esr.exe
-firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/rework/firefox-137.0.en-US.win32.installer.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/137.0/firefox-137.0a1.en-US.win32.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.24.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe

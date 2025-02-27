@@ -51,7 +51,7 @@ pmfow will run in most versions of Windows from Windows 2000 onwards. Note: some
 
 ## Installation
 To install pmfow, you need to follow these steps:
-1. Download the .exe file from the [Releases](https://github.com/MasterJayanX/pmfow/releases) page that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
+1. Download the .exe file from the [Releases](https://github.com/MasterJayanX/pmfow/releases) page or from [SourceForge](https://sourceforge.net/projects/pmfow/) that corresponds to the architecture of your CPU. If you are not sure which one you should pick, go to Control Panel > System and see if it says "32 bit Operating System" or "64 bit Operating System". If it says 32 bit, choose the version that says win32 and if it says 64 bit, choose the version that says win64.
 2. Open the .exe file and install pmfow on any directory you want (by default it will be installed in your Program Files folder). The installer will also add the directory to the system's PATH by default, allowing you to run pmfow from any directory.
 
 ## Usage

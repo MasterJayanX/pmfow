@@ -465,10 +465,10 @@ void update(){
     else if(architecture == "x86"){
         // Switch between different types of releases
         url = r.repos("pmfow-updater32");
-        if(unstable){
+        if(unstable && winver != "Windows 2000"){
             pmfow = r.repos("pmfow-unstable32");
         }
-        else if(checkLTS){
+        else if(checkLTS || winver == "Windows 2000"){
             pmfow = r.repos("pmfow-lts32");
         }
         else{
@@ -481,10 +481,10 @@ void update(){
         return;
     }
     log("Updating catalogs...");
-    bool updateAvailable = updateURL(pmfow);
     if(!onlyCheck){
         updateRepositories(url);
     }
+    bool updateAvailable = updateURL(pmfow);
     if(updateAvailable){
         cout << "There is an update available for pmfow (" << altmajor << "." << altminor << "." << altpatch << "). Run \"pmfow-updater\" to install it." << endl;
         log("There is an update available for pmfow (" + to_string(altmajor) + "." + to_string(altminor) + "." + to_string(altpatch) + "). Run \"pmfow-updater\" to install it.");
@@ -547,7 +547,9 @@ void list(){
     int repoversion = stoi(ver);
     cout << "Total packages: " << i << endl;
     cout << "To see a full list of programs and their descriptions, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List." << endl;
+    cout << "\n";
     cout << "Version of the app catalog: " << repoversion << endl;
+    cout << "To see the changelog for this version of the app catalog, go to https://github.com/MasterJayanX/pmfow/wiki/Software-List#changelog." << endl;
     log("Total packages: " + to_string(i) + "\n" + "Version of the app catalog: " + to_string(repoversion));
     file.close();
 }
@@ -571,7 +573,7 @@ void listUninstall(){
         }
         Sleep(10);
     }
-    cout << "Total packages: " << i << endl;
+    cout << "Total packages that can be uninstalled: " << i << endl;
     log("Total packages that can be uninstalled: " + to_string(i));
     file.close();
 }

@@ -48,10 +48,10 @@ void installPackage(string package, string url, string silentinst){
     }
     log("wget executable used: " + wget_exe + ".exe");
     if(check_cert){
-        command = wget_exe + " -O " + fullpath + " " + url + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "\" " + url + quiet_cmd;
     }
     else{
-        command = wget_exe + " -O " + fullpath + " " + url + " --no-check-certificate" + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "\" " + url + " --no-check-certificate" + quiet_cmd;
     }
     if (system(command.c_str()) != 0) {
         cerr << "Error downloading file: " << strerror(errno) << endl;
@@ -156,59 +156,61 @@ void updateRepositories(string link){
 
     // Checks if the user wants to update only one file
     if (onefile) {
-        command = "del " + fullpath + file_winver + ".dat";
+        command = "del \"" + fullpath + file_winver + ".dat\"";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + file_winver + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + versionFile + certFlag + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + file_winver + ".dat\"" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + versionFile + certFlag + quiet_cmd;
         if (system(command.c_str()) != 0) {
             cerr << "Error downloading file: " << strerror(errno) << endl;
             log("Error downloading file " + fullpath);
             return;
         }
     } else {
-        command = "del " + fullpath + "directories.txt";
+        command = "del \"" + fullpath + "directories.txt\"";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "directories.txt https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "directories.txt\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag + quiet_cmd;
         log("Downloading directories.txt");
         system(command.c_str());
-        command = "del " + fullpath + "updater.dat";
+        command = "del \"" + fullpath + "updater.dat\"";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "updater.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "updater.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag + quiet_cmd;
         log("Downloading updater.dat");
         system(command.c_str());
-        command = "del " + fullpath + "uninstallers.dat";
+        command = "del \"" + fullpath + "uninstallers.dat\"";
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "uninstallers.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "uninstallers.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag + quiet_cmd;
         log("Downloading uninstallers.dat");
         system(command.c_str());
-        command = "del " + pmfowpath + "pmfow-updater.exe";
+        command = "del \"" + pmfowpath + "pmfow-updater.exe\"";
         system(command.c_str());
-        command = wget_exe + " -O " + pmfowpath + "pmfow-updater.exe " + link + certFlag + quiet_cmd;
+        command = wget_exe + " -O \"" + pmfowpath + "pmfow-updater.exe\" " + link + certFlag + quiet_cmd;
         log("Downloading pmfow-updater.exe");
         system(command.c_str());
         
         if(upd_config){
-            command = "del " + fullpath + "config.ini";
+            command = "del \"" + fullpath + "config.ini\"";
             system(command.c_str());
-            command = wget_exe + " -O " + fullpath + "config.ini https://raw.githubusercontent.com/MasterJayanX/pmfow/main/config.ini" + certFlag + quiet_cmd;
+            command = wget_exe + " -O \"" + fullpath + "config.ini\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/config.ini" + certFlag + quiet_cmd;
             log("Downloading config.ini");
             system(command.c_str());
         }
         
         log("Updating app catalogs...");
-        for (const auto& version : {"winxp", "winvista", "win7", "win8", "win10"}) {
-            command = "del " + fullpath + version + ".dat";
+        vector<string> versions = {"winxp", "winvista", "win7", "win8", "win10"};
+        for (const auto& version : versions) {
+            command = "del \"" + fullpath + version + ".dat\"";
             system(command.c_str());
-            command = wget_exe + " -O " + fullpath + version + ".dat" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + architectureFolder + "/" + version + ".dat" + certFlag + quiet_cmd;
+            command = wget_exe + " -O \"" + fullpath + version + ".dat\"" + " https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + architectureFolder + "/" + version + ".dat" + certFlag + quiet_cmd;
+            log("Downloading " + version + ".dat");
             system(command.c_str());
         }
     }
 
     if (!onefile && architecture == "x86") {
         // Additional file for Windows 2000
-        command = "del " + fullpath + "win2000.dat";
+        command = "del \"" + fullpath + "win2000.dat\"";
         log("Deleting " + fullpath + "win2000.dat");
         system(command.c_str());
-        command = wget_exe + " -O " + fullpath + "win2000.dat https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate") + quiet_cmd;
+        command = wget_exe + " -O \"" + fullpath + "win2000.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate") + quiet_cmd;
         log("Downloading win2000.dat");
         system(command.c_str());
     }

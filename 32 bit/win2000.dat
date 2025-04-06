@@ -5,12 +5,13 @@ arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
 blender=https://download.blender.org/release/Blender2.42/blender-2.42a-windows.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
-clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+clamwin=https://sourceforge.net/projects/clamwin/files/clamwin/0.103.2.1/clamwin-0.103.2.1-setup.exe/download
 cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_1.04-win9x.zip
 extended-kernel=https://win2k.org/cgi-bin/dl.cgi?file=Windows2000-KB935839-v31lM-x86-ENU.wlu
 firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20Setup%2012.0.exe
 firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en-US/Firefox%20Setup%2010.0.12esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_0.9.exe
+gimp=https://download.gimp.org/gimp/v2.4/windows/gimp-2.4.7-i686-setup.exe
 iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
@@ -40,4 +41,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 52
+# Version: 53

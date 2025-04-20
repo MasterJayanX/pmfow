@@ -56,6 +56,7 @@ void installPackage(string package, string url, string silentinst){
     if (system(command.c_str()) != 0) {
         cerr << "Error downloading file: " << strerror(errno) << endl;
         log("Error downloading file " + fullpath);
+        inst_success = false;
         return;
     }
     if (runasexe || (extension != ".zip" && extension != ".7z" && extension != ".rar")) {

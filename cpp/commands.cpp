@@ -335,7 +335,7 @@ void install(char** argv, int argc){
     if(argc < 3){
         cout << "Usage: pmfow install <package>\n";
         log("Usage: pmfow install <package>");
-        log("Execution ended with code 1 (error).");
+        log("Execution ended with code 1 (error).\n");
         return;
     }
     else{
@@ -385,9 +385,16 @@ void install(char** argv, int argc){
                 cout << url << endl;
                 installPackage(packagename, url, s.repos(argv[i]));
             }
-            cout << "Done.\n";
-            log("Installation of " + packagename + " completed successfully.");
-            remaining--;
+            if(inst_success){
+                cout << "Done.\n";
+                log("Installation of " + packagename + " completed successfully.");
+                remaining--;
+            }
+            else{
+                cout << "Installation of " << packagename << " failed.\n";
+                log("Installation of " + packagename + " failed.");
+            }
+            inst_success = true;
         }
         string package_word;
         if(counter - remaining == 1){
@@ -399,7 +406,10 @@ void install(char** argv, int argc){
         cout << "Installation of " << counter - remaining << " " << package_word << " completed successfully.\n";
         log("Installation of " + to_string(counter - remaining) + " " + package_word + " completed successfully.");
         if(remaining == 0){
-            log("Execution ended with code 0 (success).");
+            log("All packages installed successfully.");
+        }
+        else{
+            log("" + to_string(remaining) + " packages failed to install.");
         }
     }
 }
@@ -410,7 +420,7 @@ void uninstall(char** argv, int argc){
     if(argc < 3){
         cout << "Usage: pmfow uninstall <package>\n";
         log("Usage: pmfow uninstall <package>");
-        log("Execution ended with code 1 (error).");
+        log("Execution ended with code 1 (error).\n");
         return;
     }
     else{
@@ -431,7 +441,7 @@ void uninstall(char** argv, int argc){
                 system(command.c_str());
                 cout << "Done.\n";
                 log("Uninstallation of " + string(argv[i]) + " completed successfully.");
-                log("Execution ended with code 0 (success).");
+                log("Execution ended with code 0 (success).\n");
             }
         }
         
@@ -668,7 +678,7 @@ void version(){
             cout << "You are running the latest version of pmfow (" << major << "." << minor << "." << patch << ")." << endl;
         }
     }
-    log("Execution ended with code 0 (success).");
+    log("Execution ended with code 0 (success).\n");
 }
 
 void about(int majorVersion, int minorVersion, int build){
@@ -724,7 +734,7 @@ void about(int majorVersion, int minorVersion, int build){
             log("You are running the latest version of pmfow (" + to_string(major) + "." + to_string(minor) + "." + to_string(patch) + ").");
         }
     }
-    log("Execution ended with code 0 (success).");
+    log("Execution ended with code 0 (success).\n");
 }
 
 int checkFlags(int argc, char** argv){

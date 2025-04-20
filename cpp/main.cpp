@@ -31,7 +31,7 @@ int main(int argc, char** argv){
             // Install package
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -43,7 +43,7 @@ int main(int argc, char** argv){
             // Uninstall package
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -55,7 +55,7 @@ int main(int argc, char** argv){
             // Update app catalogs
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -67,7 +67,7 @@ int main(int argc, char** argv){
             // List packages
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -84,7 +84,7 @@ int main(int argc, char** argv){
             // Search for packages
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -100,7 +100,7 @@ int main(int argc, char** argv){
             // Show the about section
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -111,7 +111,7 @@ int main(int argc, char** argv){
         else if(string(argv[1]) == "about" || string(argv[1]) == "a"){
             int success = checkFlags(argc, argv);
             if(success == 0){
-                log_from_main(argv, argc, "Execution ended with code 1.");
+                log_from_main(argv, argc, "Execution ended with code 1.\n");
                 return 1;
             }
             else{
@@ -121,7 +121,7 @@ int main(int argc, char** argv){
         }
         else{
             cout << "Invalid command. Usage: pmfow <command>. Use pmfow help to see what commands are supported.\n";
-            log_from_main(argv, argc, "Invalid command. Use pmfow help to see what commands are supported.");
+            log_from_main(argv, argc, "Invalid command. Use pmfow help to see what commands are supported.\n");
         }
     }
     else if(argc == 1){
@@ -136,7 +136,7 @@ int main(int argc, char** argv){
         }
         cerr << message << endl;
         log_from_main(argv, argc, message);
-        log("Execution ended with code 1.");
+        log("Execution ended with code 1.\n");
         return 1;
     }
     else{
@@ -158,7 +158,7 @@ int main(int argc, char** argv){
             string message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
             cout << message << endl;
             log_from_main(argv, argc, message);
-            log("Execution ended with code 1.");
+            log("Execution ended with code 1.\n");
             return 1;
         }
         cin.ignore();

@@ -58,13 +58,14 @@ wget_os: The version of Windows to use for wget
 string winver, architecture, programpath, log_file = "pmfow.log", quiet_cmd = " -q --show-progress";
 bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config, checkLTS;
 float wget_os = 0;
+bool inst_success = true;
 
 #define COMPILE_DATE ("(" + getCompileDate() + " " + __TIME__ + ")")
 
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 3;
+int major = 0, minor = 4, patch = 4;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
@@ -79,7 +80,7 @@ public:
         // This function reads the config file
         ifstream file(filename);
         if(!file.is_open()) {
-            cout << "Error: Could not open file " << filename << endl;
+            std::cout << "Error: Could not open file " << filename << endl;
             configExists = false;
             return;
         }
@@ -224,7 +225,7 @@ static char *getDateTime (char *buff) {
 
 void log(string message){
     // This function writes to the log file
-    ofstream logg;
+    fstream logg;
     if(write_to_log){
         logg.open(log_file, ios::app);
         if(!logg.is_open()){
@@ -237,7 +238,7 @@ void log(string message){
 
 void log_from_main(char** argv, int argc, string message){
     // This function writes to the log file from the main function
-    ofstream logg;
+    fstream logg;
     if(write_to_log){
         char buff[DTTMSZ];
         logg.open(log_file, ios::app);

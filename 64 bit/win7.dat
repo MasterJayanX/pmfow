@@ -48,12 +48,12 @@ k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.11.exe
-libreoffice=https://download.documentfoundation.org/libreoffice/stable/24.8.2/win/x86_64/LibreOffice_24.8.2_Win_x86-64.msi
+libreoffice=https://download.documentfoundation.org/libreoffice/stable/25.2.2/win/x86_64/LibreOffice_25.2.2_Win_x86-64.msi
 librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/115.0.2-2/librewolf-115.0.2-2-windows-x86_64-setup.exe
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-win64-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.8.2/MPC-BE.1.8.2.x64-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.4.1/MPC-HC.2.4.1.x64.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.4.2/MPC-HC.2.4.2.x64.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.3/naps2-7.5.3-win.exe
@@ -102,4 +102,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 53
+# Version: 54

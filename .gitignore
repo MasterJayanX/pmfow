@@ -5,3 +5,4 @@ pmfow.log
 /.vscode
 pmfow-installer/pmfow32
 pmfow-installer/pmfow64
+/exe_test

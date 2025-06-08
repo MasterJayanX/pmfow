@@ -6,3 +6,5 @@ pmfow.log
 pmfow-installer/pmfow32
 pmfow-installer/pmfow64
 /exe_test
+/pmfow-make/pmfow32
+/pmfow-make/pmfow64

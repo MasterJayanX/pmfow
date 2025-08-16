@@ -65,7 +65,7 @@ bool inst_success = true;
 // majorVersion, minorVersion, build are used to get the Windows version
 int majorVersion, minorVersion, build;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 4;
+int major = 0, minor = 4, patch = 5;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);

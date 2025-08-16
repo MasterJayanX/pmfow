@@ -183,9 +183,34 @@ string getWindowsVersion(){
     else if(majorVersion == 10 && minorVersion == 0){
         if(build <= 19045){
             winver = "Windows 10";
+            switch(build){
+                case 10240: winver += " (1507)"; break;
+                case 10586: winver += " (1511)"; break;
+                case 14393: winver += " (1607)"; break;
+                case 15063: winver += " (1703)"; break;
+                case 16299: winver += " (1709)"; break;
+                case 17134: winver += " (1803)"; break;
+                case 17763: winver += " (1809)"; break;
+                case 18362: winver += " (1903)"; break;
+                case 18363: winver += " (1909)"; break;
+                case 19041: winver += " (2004)"; break;
+                case 19042: winver += " (20H2)"; break;
+                case 19043: winver += " (21H1)"; break;
+                case 19044: winver += " (21H2)"; break;
+                case 19045: winver += " (22H2)"; break;
+            }
         }
         else if(build >= 22000){
             winver = "Windows 11";
+            if(build <= 22621){
+                winver += " (22H2)";
+            }
+            else if(build > 22621 && build <= 22631){
+                winver += " (23H2)";
+            }
+            else if(build > 22631 && build <= 26100){
+                winver += " (24H2)";
+            }
         }
         else{
             winver = "Windows 10";
@@ -294,7 +319,7 @@ string chooseRandom(repo r){
     else if(winver == "Windows 8" || winver == "Windows 8.1"){
         file.open(fullpath + "win8.dat");
     }
-    else if(winver == "Windows 10" || winver == "Windows 11"){
+    else if(winver.find("Windows 10") != string::npos || winver.find("Windows 11") != string::npos){
         file.open(fullpath + "win10.dat");
     }
     else{

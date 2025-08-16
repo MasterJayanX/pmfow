@@ -36,13 +36,12 @@ k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.11.exe
 libreoffice=http://downloadarchive.documentfoundation.org/libreoffice/old/5.4.7.2/win/x86/LibreOffice_5.4.7.2_Win_x86.msi
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
-mailnews=https://o.rthost.win/boc-uxp/mailnews.win32-20250531-7bda12e7-uxp-4cb39ffa48-xpmod.7z
+mailnews=https://o.rthost.win/boc-uxp/mailnews.win32-20250809-40a79c75-uxp-48ebf49357-xpmod.7z
 mpc-hc=https://github.com/mpc-hc/mpc-hc/releases/download/1.7.13/MPC-HC.1.7.13.x64.exe
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
-mypal=https://github.com/Feodor2/Mypal68/releases/download/68.14.8b/mypal-68.14.8.en-US.win32.zip
-mypal68=https://github.com/Feodor2/Mypal68/releases/download/68.14.8b/mypal-68.14.8.en-US.win32.zip
+mypal=https://github.com/Feodor2/Mypal68/releases/download/74.1.1/mypal-74.1.1.en-US.win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe
-newmoon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win64-git-20250531-d849524bd-uxp-4cb39ffa48-xpmod.7z
+newmoon=https://o.rthost.win/palemoon/palemoon-28.10.7a1.win64-git-20250809-d849524bd-uxp-48ebf49357-xpmod.7z
 nlite=http://www.nliteos.com/download/nLite-1.4.9.3.setup.exe
 notepad++=https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.9.2/npp.7.9.2.Installer.exe
 noto-emoji=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158-XP/NotoEmoji-Regular_winXP.zip
@@ -61,11 +60,11 @@ retroarch=https://buildbot.libretro.com/stable/1.20.0/windows-msvc2010/x86_64/Re
 rufus=https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.49.5/win64/en-US/seamonkey-2.49.5.installer.exe
-serpent=https://o.rthost.win/basilisk/basilisk52-g4.8.win64-git-20250531-3219d2d-uxp-4cb39ffa48-xpmod.7z
+serpent=https://o.rthost.win/basilisk/basilisk52-g4.8.win64-git-20250809-3219d2d-uxp-48ebf49357-xpmod.7z
 sharex=https://github.com/ShareX/ShareX/releases/download/v12.0.0/ShareX-12.0.0-setup.exe
 snes9x=http://files.ipherswipsite.com/snes9x/snes9x-1.60-win32-x64.zip
 sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/3.1.2/SumatraPDF-3.1.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v132-r4/supermium_132_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v132-r5-01/supermium_132_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158-XP/Thorium_SSE2_122.0.6261.158_WINXP.zip
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/52.9.1/win32/en-US/Thunderbird%20Setup%2052.9.1.exe
 tightvnc=https://www.tightvnc.com/download/2.8.85/tightvnc-2.8.85-gpl-setup-64bit.msi
@@ -77,4 +76,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/3.0.20/win64/vlc-3.0.20-win64
 vivaldi=http://web.archive.org/web/20210814163348if_/https://downloads.vivaldi.com/stable/Vivaldi.1.0.435.46.exe
 winrar=https://d.winrar.es/d/144z1705187956/CQQ5lLLHIHSlpPeH2ODt6A/winrar-x64-602.exe
 
-# Version: 55
+# Version: 56

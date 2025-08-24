@@ -6,7 +6,6 @@
 #include <windows.h>
 #include <winver.h>
 #include <functional>
-// I'm too lazy to use a Makefile, sorry
 #include "commands.cpp"
 
 using namespace std;
@@ -21,7 +20,9 @@ int main(int argc, char** argv){
     majorVersion = osv.dwMajorVersion; 
     minorVersion = osv.dwMinorVersion;
     build = osv.dwBuildNumber;
+    service_pack = osv.szCSDVersion;
     winver = getWindowsVersion();
+    fullwinver = getFullWindowsVersion();
     architecture = getArchitecture();
     programpath = getEXEpath();
     if(osv.dwMajorVersion >= 5 && argc > 1){

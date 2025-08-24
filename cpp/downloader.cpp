@@ -24,9 +24,9 @@ string getExtension(string url){
 wstring string_to_wstring(const string& str) {
     // Convert string to wstring
     int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, NULL, 0);
-    wstring wstrTo(size_needed, 0);
-    MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, &wstrTo[0], size_needed);
-    return wstrTo;
+    wstring wstr(size_needed, 0);
+    MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, &wstr[0], size_needed);
+    return wstr;
 }
 
 void installPackage(string package, string url, string silentinst){
@@ -46,7 +46,6 @@ void installPackage(string package, string url, string silentinst){
     else{
         wget_exe = "wget";
     }
-    log("wget executable used: " + wget_exe + ".exe");
     if(check_cert){
         command = wget_exe + " -O \"" + fullpath + "\" " + url + quiet_cmd;
     }
@@ -106,8 +105,8 @@ vector<string> repoDirectories(){
         file.close();
     }
     else{
-        cout << "Error: directories.txt was not found. The default directories will be used." << endl;
-        log("Error: directories.txt was not found. The default directories will be used.");
+        cout << "Warning: directories.txt was not found. The default directories will be used." << endl;
+        log("Warning: directories.txt was not found. The default directories will be used.");
         directories[0] = "64%20bit";
         directories[1] = "32%20bit";
     }

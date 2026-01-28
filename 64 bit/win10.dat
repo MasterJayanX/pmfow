@@ -23,10 +23,10 @@ dolphin=https://dl.dolphin-emu.org/releases/2412/dolphin-2412-x64.7z
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
 dotnet4.8=https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-eabc3d1030e3/NDP481-Web.exe
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
-everything=https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 fastfetch=https://github.com/fastfetch-cli/fastfetch/releases/download/2.55.1/fastfetch-windows-amd64.zip
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/145.0.2/win32/en-US/Firefox%20Setup%20145.0.2.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/147.0.2/win64/en-US/Firefox%20Setup%20147.0.2.exe
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/140.5.0esr/win64/en-US/Firefox%20Setup%20140.5.0esr.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.22.0/floorp-win64.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.24.1.exe
@@ -76,7 +76,7 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.20/win64/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe
 snes9x=http://files.ipherswipsite.com/snes9x/snes9x-1.60-win32-x64.zip
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v138-r7/supermium_138_64_setup_win10_11.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v138-r9/supermium_138_64_setup_win10_11.exe
 thorium=https://github.com/Alex313031/Thorium-Win/releases/download/M128.0.6613.189/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/Thorium-Win/releases/download/M128.0.6613.189/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/128.6.0esr/win64/en-US/Thunderbird%20Setup%20128.6.0esr.exe
@@ -86,7 +86,7 @@ ungoogled-chromium=https://github.com/macchrome/winchrome/releases/download/v127
 vba-m=https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v2.1.11/visualboyadvance-m-Win-x86_64.zip
 virtualbox=https://download.virtualbox.org/virtualbox/7.0.18/VirtualBox-7.0.18-162988-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.7.3329.24.x64.exe
-vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe
+vlc=https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/31c37ee8f63491495ac49e43b8544550fbae4533/VSCodeUserSetup-x64-1.86.1.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.85.2.24019/VSCodiumSetup-x64-1.85.2.24019.exe
 waterfox=https://cdn1.waterfox.net/waterfox/releases/6.5.3/WINNT_x86_64/Waterfox%20Setup%206.5.3.exe
@@ -94,4 +94,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 57
+# Version: 58

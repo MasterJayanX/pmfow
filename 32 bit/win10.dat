@@ -21,9 +21,9 @@ dolphin=https://dl-mirror.dolphin-emu.org/4.0.2/dolphin-x86-4.0.2.exe
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
 dotnet4.8=https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-eabc3d1030e3/NDP481-Web.exe
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
-everything=https://www.voidtools.com/Everything-1.4.1.1026.x86-Setup.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1032.x86-Setup.exe
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win32-setup.exe?h=zNpVzp37iQ3x2JYyaHYhng&x=1704996448
-firefox=https://ftp.mozilla.org/pub/firefox/releases/145.0.2/win64/en-US/Firefox%20Setup%20145.0.2.exe
+firefox=https://ftp.mozilla.org/pub/firefox/releases/147.0.2/win32/en-US/Firefox%20Setup%20147.0.2.exe
 firefox-esr=https://ftp.mozilla.org/pub/firefox/releases/140.5.0esr/win32/en-US/Firefox%20Setup%20140.5.0esr.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win32.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_v2.24.1.exe
@@ -73,7 +73,7 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.20/win32/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe
 snes9x=http://files.ipherswipsite.com/snes9x/snes9x-1.60-win32.zip
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v138-r7/supermium_138_32_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v138-r9/supermium_138_32_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.158/thorium_WIN32_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/128.6.0esr/win32/en-US/Thunderbird%20Setup%20128.6.0esr.exe
 tightvnc=https://www.tightvnc.com/download/2.8.85/tightvnc-2.8.85-gpl-setup-32bit.msi
@@ -82,11 +82,11 @@ ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-wind
 vba-m=https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v2.1.11/visualboyadvance-m-Win-x86_32.zip
 virtualbox=https://download.virtualbox.org/virtualbox/5.2.44/VirtualBox-5.2.44-139111-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.6.7.3329.24.exe
-vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win32/vlc-3.0.21-win32.exe
+vlc=https://get.videolan.org/vlc/3.0.23/win32/vlc-3.0.23-win32.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/3c4e3df9e89829dce27b7b5c24508306b151f30d/VSCodeUserSetup-ia32-1.55.2.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-ia32-1.70.2.22230.exe
 winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x32-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 57
+# Version: 58

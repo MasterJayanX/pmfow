@@ -15,7 +15,7 @@ calibre=https://download.calibre-ebook.com/5.44.0/calibre-64bit-5.44.0.msi
 cdburnerxp=https://download.cdburnerxp.se/minimal/162733f1edafd92c23d07627abab846c/659c3f78/cdbxp_setup_4.5.8.7128_x64_minimal.exe
 chromium=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.sync.exe
 chromium-nosync=https://github.com/Hibbiki/chromium-win64/releases/download/v109.0.5414.120-r1070088/mini_installer.nosync.exe
-chromium-win7=https://github.com/e3kskoy7wqk/Chromium-for-windows-7/releases/download/139.0.7258.86/mini_installer.exe
+chromium-win7=https://github.com/e3kskoy7wqk/Chromium-for-windows-7-REWORK/releases/download/144.0.7559.96/mini_installer_x64.exe
 clamav=https://www.clamav.net/downloads/production/clamav-1.0.4.win.x64.msi
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
 clamwin=https://sourceforge.net/projects/clamwin/files/clamwin/0.103.2.1/clamwin-0.103.2.1-setup.exe/download
@@ -25,11 +25,11 @@ dolphin=https://dl-mirror.dolphin-emu.org/builds/dolphin-master-5.0-16380-x64.7z
 dosbox=https://sitsa.dl.sourceforge.net/project/dosbox/dosbox/0.74-3/DOSBox0.74-3-win32-installer.exe
 dotnet4.8=https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe
 epsxe=http://www.epsxe.com/files/ePSXe205.zip
-everything=https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe
+everything=https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 fastfetch=https://github.com/fastfetch-cli/fastfetch/releases/download/2.55.1/fastfetch-windows-amd64.zip
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.30.0esr/win64/en-US/Firefox%20Setup%20115.30.0esr.exe
-firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/144.0/firefox-144.0.en-US.win64.installer.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/147.0/firefox-147.0.en-US.win64.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win64.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.24.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x64_setup.exe
@@ -81,7 +81,7 @@ seamonkey=https://archive.seamonkey-project.org/releases/2.53.20/win64/en-US/sea
 sharex=https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe
 snes9x=http://files.ipherswipsite.com/snes9x/snes9x-1.60-win32-x64.zip
 sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v138-r7/supermium_138_64_setup.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v138-r9/supermium_138_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/122.0.6261.171/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.171/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.18.0/win64/en-US/Thunderbird%20Setup%20115.18.0.exe
@@ -91,7 +91,7 @@ ungoogled-chromium=https://github.com/ungoogled-software/ungoogled-chromium-wind
 vba-m=https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v2.1.11/visualboyadvance-m-Win-x86_64.zip
 virtualbox=https://download.virtualbox.org/virtualbox/6.1.50/VirtualBox-6.1.50-161033-Win.exe
 vivaldi=https://downloads.vivaldi.com/stable/Vivaldi.5.6.2867.62.x64.exe
-vlc=https://download.videolan.org/pub/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe
+vlc=https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe
 vscode=https://vscode.download.prss.microsoft.com/dbazure/download/stable/e4503b30fc78200f846c62cf8091b76ff5547662/VSCodeUserSetup-x64-1.70.2.exe
 vscodium=https://github.com/VSCodium/vscodium/releases/download/1.70.2.22230/VSCodiumSetup-x64-1.70.2.22230.exe
 waterfox=https://cdn1.waterfox.net/waterfox/releases/G6.0.20/WINNT_x86_64/Waterfox%20Setup%20G6.0.20.exe
@@ -99,4 +99,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 57
+# Version: 58

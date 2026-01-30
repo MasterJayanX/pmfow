@@ -55,7 +55,7 @@ upd_config: Whether to update the config file
 checkLTS: Whether to check for LTS versions
 wget_os: The version of Windows to use for wget
 */
-string winver, architecture, programpath, log_file = "pmfow.log", quiet_cmd = " -q --show-progress";
+string winver, fullwinver, architecture, programpath, log_file = "pmfow.log", quiet_cmd = " -q --show-progress";
 bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config, checkLTS;
 float wget_os = 0;
 bool inst_success = true;
@@ -63,9 +63,10 @@ bool inst_success = true;
 #define COMPILE_DATE ("(" + getCompileDate() + " " + __TIME__ + ")")
 
 // majorVersion, minorVersion, build are used to get the Windows version
-int majorVersion, minorVersion, build;
+int majorVersion, minorVersion, build, spnum;
+wchar_t* service_pack;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 4;
+int major = 0, minor = 4, patch = 5;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
@@ -104,8 +105,8 @@ private:
 
 void loadConfig() {
     // This function loads the config file
-    string fullpath = programpath + "\\files\\" + "config.ini";
-    Config config(fullpath);
+    string cfgpath = programpath + "\\files\\" + "config.ini";
+    Config config(cfgpath);
     if(!configExists){
         return;
     }

@@ -1,35 +1,35 @@
-7-zip=https://www.7-zip.org/a/7z2301.exe
-7-zip-new=https://www.7-zip.org/a/7z2409.exe
+7-zip=https://www.7-zip.org/a/7z2501.exe
 aimp=https://www.aimp.ru/files/windows/builds/aimp_1.77.9.exe
 arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
 blender=https://download.blender.org/release/Blender2.42/blender-2.42a-windows.exe
 clamsentinel=https://sourceforge.net/projects/clamsentinel/files/clamsentinel/1.22/ClamSentinel1.22.exe/download
-clamwin=http://downloads.sourceforge.net/clamwin/clamwin-0.103.2.1-setup.exe
+clamwin=https://sourceforge.net/projects/clamwin/files/clamwin/0.103.2.1/clamwin-0.103.2.1-setup.exe/download
 cpu-z=https://www.cpuid.com/downloads/cpu-z/cpu-z_1.04-win9x.zip
 extended-kernel=https://win2k.org/cgi-bin/dl.cgi?file=Windows2000-KB935839-v31lM-x86-ENU.wlu
 firefox=https://ftp.mozilla.org/pub/firefox/releases/12.0/win32/en-US/Firefox%20Setup%2012.0.exe
 firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en-US/Firefox%20Setup%2010.0.12esr.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000_0.9.exe
+gimp=https://download.gimp.org/gimp/v2.4/windows/gimp-2.4.7-i686-setup.exe
 iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
 keepass=https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.36/KeePass-2.36-Setup.exe/download
 k-meleon=http://o.rthost.win/gpc/files1.rt/KM74-g22-20241221.win2000.7z
-legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.10.exe
+legacyupdate=https://content.legacyupdate.net/legacyupdate/LegacyUpdate-1.11.exe
 libreoffice=https://archive.org/download/lib-363-32b-win-2000-multi/LibO_3.6.3_Win_x86_install_multi.msi
 newmoon=http://o.rthost.win/gpc/files1.rt/palemoon-26.5.0-20241221.win2000.7z
 notepad++=https://notepad-plus-plus.org/repository/6.x/6.6.6/npp.6.6.6.Installer.exe
 openoffice=https://archive.apache.org/dist/incubator/ooo/stable/3.3.0/OOo_3.3.0_Win_x86_install_en-US.exe
 openttd=https://cdn.openttd.org/openttd-releases/1.8.0/openttd-1.8.0-windows-win32.exe
-peazip=https://github.com/peazip/PeaZip/releases/download/10.2.0/peazip-10.2.0.WINDOWS.exe
+peazip=https://github.com/peazip/PeaZip/releases/download/10.4.0/peazip-10.4.0.WINDOWS.exe
 pidgin=https://sourceforge.net/projects/pidgin/files/Pidgin/2.10.0/pidgin-2.10.0-offline.exe/download
 putty=https://the.earth.li/~sgtatham/putty/0.61/x86/putty-0.61-installer.exe
 python=https://www.python.org/ftp/python/2.7.2/python-2.7.2.msi
 python3=https://www.python.org/ftp/python/3.1.3/python-3.1.3.msi
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-2.4.9.1/qbittorrent_2.4.9.1_setup.exe/download
-retroarch=https://buildbot.libretro.com/stable/1.20.0/windows-msvc2005/x86/RetroArch-MSVC05-Win32-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.22.1/windows-msvc2005/x86/RetroArch-MSVC05-Win32-setup.exe
 scratch=https://download.scratch.mit.edu/ScratchInstaller1.4.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.9.1/win32/en-US/SeaMonkey%20Setup%202.9.1.exe
 sumatrapdf=https://www.sumatrapdfreader.org//dl//rel/1.5.1/SumatraPDF-1.5.1-install.exe
@@ -40,4 +40,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 51
+# Version: 57

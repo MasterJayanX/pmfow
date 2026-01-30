@@ -143,6 +143,15 @@ private:
     }
 };
 
+string wchar_to_string(const wchar_t* wchar){
+    // This function converts a wchar_t to a string
+    string str;
+    for(int i = 0; wchar[i] != '\0'; i++){
+        str += static_cast<char>(wchar[i]);
+    }
+    return str;
+}
+
 string getWindowsVersion(){
     // This function returns the Windows version you are running
     string winver;
@@ -197,6 +206,50 @@ string getWindowsVersion(){
     return winver;
 }
 
+string getFullWindowsVersion(){
+    if((winver == "Windows 2000" || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "Windows Vista" || winver == "Windows 7") && service_pack != NULL){
+        string sp = wchar_to_string(service_pack);
+        if(sp == ""){
+            return winver;
+        }
+        string spnum_str = sp.substr(sp.find("Service Pack ") + 13);
+        spnum = stoi(spnum_str);
+        return winver + " " + sp;
+    }
+    else{
+        if(winver == "Windows 10"){
+            switch(build){
+                case 10240: return "Windows 10 (1507)";
+                case 10586: return "Windows 10 (1511)";
+                case 14393: return "Windows 10 (1607)";
+                case 15063: return "Windows 10 (1703)";
+                case 16299: return "Windows 10 (1709)";
+                case 17134: return "Windows 10 (1803)";
+                case 17763: return "Windows 10 (1809)";
+                case 18362: return "Windows 10 (1903)";
+                case 18363: return "Windows 10 (1909)";
+                case 19041: return "Windows 10 (2004)";
+                case 19042: return "Windows 10 (20H2)";
+                case 19043: return "Windows 10 (21H1)";
+                case 19044: return "Windows 10 (21H2)";
+                case 19045: return "Windows 10 (22H2)";
+            }
+        }
+        else if(winver == "Windows 11"){
+            switch(build){
+                case 22000: return "Windows 11 (21H2)";
+                case 22621: return "Windows 11 (22H2)";
+                case 22631: return "Windows 11 (23H2)";
+                case 26100: return "Windows 11 (24H2)";
+            }
+        }
+        else{
+            return winver;
+        }
+    }
+    return winver;
+}
+
 string getArchitecture(){
     // This function returns the architecture of your Windows installation
     string arch;
@@ -220,15 +273,6 @@ string getArchitecture(){
             break;
     }
     return arch;
-}
-
-string wchar_to_string(const wchar_t* wchar){
-    // This function converts a wchar_t to a string
-    string str;
-    for(int i = 0; wchar[i] != '\0'; i++){
-        str += static_cast<char>(wchar[i]);
-    }
-    return str;
 }
 
 string getEXEpath(){
@@ -302,6 +346,7 @@ string chooseRandom(repo r){
         log("Invalid OS.");
         return "Invalid OS";
     }
+
     if (!file.is_open()) {
         cerr << "Repository not found" << endl;
         log("Repository not found.");
@@ -689,11 +734,15 @@ void about(int majorVersion, int minorVersion, int build){
     cout << "This program is licensed under the GNU GPL 3 License. See LICENSE for more information." << endl;
     cout << "GitHub repository: https://github.com/MasterJayanX/pmfow" << endl;
     cout << "Path: " << programpath << endl;
-    cout << "Windows Version: " << winver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
-    log("Windows Version: " + winver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
+    cout << "Windows Version: " << fullwinver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
+    log("Windows Version: " + fullwinver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
     if(winver == "Windows 2000"){
         cout << "Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).\n";
         log("Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).");
+    }
+    else if(winver == "Windows XP" && spnum < 3){
+        cout << "Warning: Windows XP without Service Pack 3 will stop being supported in the next release of pmfow (0.5.x).\n";
+        log("Warning: Windows XP without Service Pack 3 will stop being supported in the next release of pmfow (0.5.x).");
     }
     cout << "Architecture: " << architecture << endl;
     log("Architecture: " + architecture);
@@ -743,7 +792,7 @@ int checkFlags(int argc, char** argv){
     if(argc >= 3){
         for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "-c" || string(argv[i]) == "--check-certificates"){
-                if(string(argv[1]) != "install" && string(argv[1]) != "update"){
+                if(string(argv[1]) != "install" && string(argv[1]) != "update" && string(argv[1]) != "i" && string(argv[1]) != "u"){
                     cout << "This flag is not compatible with the " << argv[1] << " command.\n";
                     string to_log = "This flag is not compatible with the " + string(argv[1]) + " command.";
                     log(to_log);

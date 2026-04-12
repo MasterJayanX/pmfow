@@ -29,7 +29,7 @@ everything=https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 fastfetch=https://github.com/fastfetch-cli/fastfetch/releases/download/2.55.1/fastfetch-windows-amd64.zip
 filezilla=https://dl2.cdn.filezilla-project.org/client/FileZilla_3.66.4_win64-setup.exe?h=U5wUYTSgSOVaAbBqwIO_xA&x=1704996448
 firefox=https://ftp.mozilla.org/pub/firefox/releases/115.30.0esr/win64/en-US/Firefox%20Setup%20115.30.0esr.exe
-firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/147.0/firefox-147.0.en-US.win64.installer.exe
+firefox-win7=https://github.com/e3kskoy7wqk/Firefox-for-windows-7/releases/download/148.0/firefox-148.0.en-US.win64.installer.exe
 floorp=https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-win64.installer.exe
 foobar2000=https://www.foobar2000.org/files/foobar2000-x64_v2.24.1.exe
 freedownloadmanager=https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x64_setup.exe
@@ -41,8 +41,8 @@ irfanview=https://sourceforge.net/projects/irfanview/files/iview473_x64_setup.ex
 itunes=https://secure-appldnld.apple.com/itunes12/091-87819-20180912-69177170-B085-11E8-B6AB-C1D03409AD2A6/iTunes64Setup.exe
 java=https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u421-b09/d8aa705069af427f9b83e66b34f5e380/jre-8u421-windows-x64.exe&BHost=javadl.sun.com&File=jre-8u421-windows-x64.exe&AuthParam=1724001962_c20e64404085d04573d4652d6d38df4c&ext=.exe
 keepass=https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.57.1/KeePass-2.57.1-Setup.exe/download
-k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1880_Basic.exe
-k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1880_Standard.exe
+k-lite-codec=https://files2.codecguide.com/K-Lite_Codec_Pack_1966_Basic.exe
+k-lite-standard=https://files2.codecguide.com/K-Lite_Codec_Pack_1966_Standard.exe
 k-meleon=https://o.rthost.win/kmeleon/KM76.5.5-Goanna-20241221.7z
 kodi=https://mirrors.kodi.tv/releases/windows/win64/kodi-20.3-Nexus-x64.exe
 krita=https://download.kde.org/Attic/krita/5.0.6/krita-x64-5.0.6-setup.exe
@@ -52,7 +52,7 @@ librewolf=https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf
 lightshot=https://app.prntscr.com/build/setup-lightshot.exe
 mgba=https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-win64-installer.exe
 mpc-be=https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.8.2/MPC-BE.1.8.2.x64-installer.zip/download
-mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.5.5/MPC-HC.2.5.5.x64.exe
+mpc-hc=https://github.com/clsid2/mpc-hc/releases/download/2.7.0/MPC-HC.2.7.0.x64.exe
 mpv=https://downloads.sourceforge.net/project/mpv-player-windows/release/mpv-0.37.0-x86_64.7z
 multimc=https://files.multimc.org/downloads/mmc-develop-win32.zip
 naps2=https://github.com/cyanfish/naps2/releases/download/v7.5.3/naps2-7.5.3-win.exe
@@ -71,17 +71,17 @@ putty=https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.82-installer
 python=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 python3=https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe
 qbittorrent=https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.5/qbittorrent_4.5.5_x64_setup.exe/download
-r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v144.0.2/r3dfox-144.0.2.en-US.win64.installer.exe
-r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v128.14.1esr/r3dfox_esr-128.14.1.en-US.win64.installer.exe
+r3dfox=https://github.com/Eclipse-Community/r3dfox/releases/download/v149.0.2/r3dfox-149.0.2.en-US.win64.installer.exe
+r3dfox-esr=https://github.com/Eclipse-Community/r3dfox/releases/download/v140.8.0esr/r3dfox_esr-140.8.0.en-US.win64.installer.exe
 rainmeter=https://github.com/rainmeter/rainmeter/releases/download/v4.5.21.3816/Rainmeter-4.5.21.exe
-retroarch=https://buildbot.libretro.com/stable/1.22.1/windows/x86_64/RetroArch-Win64-setup.exe
+retroarch=https://buildbot.libretro.com/stable/1.22.2/windows/x86_64/RetroArch-Win64-setup.exe
 rufus=https://github.com/pbatard/rufus/releases/download/v4.5/rufus-4.5.exe
 scratch=https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.exe
 seamonkey=https://archive.seamonkey-project.org/releases/2.53.20/win64/en-US/seamonkey-2.53.20.en-US.win64.installer.exe
 sharex=https://github.com/ShareX/ShareX/releases/download/v16.1.0/ShareX-16.1.0-setup.exe
 snes9x=http://files.ipherswipsite.com/snes9x/snes9x-1.60-win32-x64.zip
-sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.5.2/SumatraPDF-3.5.2-64-install.exe
-supermium=https://github.com/win32ss/supermium/releases/download/v138-r9/supermium_138_64_setup.exe
+sumatrapdf=https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe
+supermium=https://github.com/win32ss/supermium/releases/download/v144-r2/supermium_144_64_setup.exe
 thorium=https://github.com/Alex313031/thorium-legacy/releases/download/122.0.6261.171/thorium_AVX2_mini_installer.exe
 thorium-sse3=https://github.com/Alex313031/thorium-legacy/releases/download/M122.0.6261.171/thorium_SSE3_mini_installer.exe
 thunderbird=https://archive.mozilla.org/pub/thunderbird/releases/115.18.0/win64/en-US/Thunderbird%20Setup%20115.18.0.exe
@@ -99,4 +99,4 @@ winaero-tweaker=https://winaerotweaker.com/download/winaerotweaker.zip
 winrar=https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-701.exe
 winscp=https://sourceforge.net/projects/winscp/files/WinSCP/6.3.2/WinSCP-6.3.2-Setup.exe/download
 
-# Version: 58
+# Version: 59

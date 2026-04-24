@@ -3,10 +3,56 @@
 #include <string>
 #include <cstdio>
 #include <windows.h>
+#include <wininet.h>
 #include <vector>
 #include "config.hpp"
 
+#pragma comment(lib, "wininet.lib")
+
 using namespace std;
+
+bool checkNet(){
+    // Check if the user has an internet connection
+    DWORD flags;
+    if (InternetGetConnectedState(&flags, 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool fileDiffs(string file1, string file2){
+    // Compare two files
+    ifstream f1(file1, ios::binary | ios::ate);
+    ifstream f2(file2, ios::binary | ios::ate);
+
+    if (!f1.is_open() || !f2.is_open()) {
+        cerr << "Error opening files for comparison." << endl;
+        return true; // Assume they differ if we can't open them
+    }
+
+    if (f1.tellg() != f2.tellg()) {
+        return true; // Files differ in size
+    }
+
+    f1.seekg(0);
+    f2.seekg(0);
+
+    const size_t bufferSize = 4096;
+    char buffer1[bufferSize];
+    char buffer2[bufferSize];
+
+    while (f1 && f2) {
+        f1.read(buffer1, bufferSize);
+        f2.read(buffer2, bufferSize);
+
+        if (memcmp(buffer1, buffer2, f1.gcount()) != 0) {
+            return true; // Files differ in content
+        }
+    }
+
+    return false; // Files are the same
+}
 
 string getExtension(string url){
     // Get extension from URL
@@ -36,11 +82,7 @@ void installPackage(string package, string url, string silentinst){
     extension = getExtension(url);
     filename = package + extension;
     fullpath += filename;
-    if(wget_os == 5.0 || (winver == "Windows 2000" && wget_os == 0)){
-        wget_exe = "wget_2k";
-        quiet_cmd = " -q";
-    }
-    else if(wget_os == 5.1 || ((winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003") && wget_os == 0)){
+    if(wget_os == 5.1 || ((winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003") && wget_os == 0)){
         wget_exe = "wget_xp";
     }
     else{
@@ -131,19 +173,12 @@ void updateRepositories(string link){
     else if(winver == "Windows 10" || winver == "Windows 11"){
         file_winver = "win10";
     }
-    else if(winver == "Windows 2000"){
-        file_winver = "win2000";
-    }
     else{
         cout << "Error: your Windows version not supported." << endl;
         log("Error: your Windows version not supported.");
         return;
     }
-    if(wget_os == 5.0 || winver == "Windows 2000"){
-        wget_exe = "wget_2k";
-        quiet_cmd = " -q";
-    }
-    else if(wget_os == 5.1 || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+    if(wget_os == 5.1 || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
         wget_exe = "wget_xp";
     }
     else{
@@ -153,6 +188,13 @@ void updateRepositories(string link){
     string certFlag = (check_cert) ? "" : " --no-check-certificate";
     string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
     string versionFile = (architectureFolder + "/" + file_winver + ".dat");
+
+    bool internet = checkNet();
+    if(!internet && !ignore_internet_connection){
+        cout << "Error: no internet connection. Please check your connection and try again." << endl;
+        log("Error: no internet connection. Please check your connection and try again.");
+        return;
+    }
 
     // Checks if the user wants to update only one file
     if (onefile) {
@@ -165,26 +207,75 @@ void updateRepositories(string link){
             return;
         }
     } else {
-        command = "del \"" + fullpath + "directories.txt\"";
-        system(command.c_str());
-        command = wget_exe + " -O \"" + fullpath + "directories.txt\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag + quiet_cmd;
+        bool needUpdate = false;
+
+        command = wget_exe + " -O \"" + fullpath + "directories.txt.temp\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag + quiet_cmd;
         log("Downloading directories.txt");
         system(command.c_str());
-        command = "del \"" + fullpath + "updater.dat\"";
-        system(command.c_str());
-        command = wget_exe + " -O \"" + fullpath + "updater.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag + quiet_cmd;
+        needUpdate = fileDiffs(fullpath + "directories.txt", fullpath + "directories.txt.temp");
+        if (needUpdate) {
+            log("directories.txt has been updated. Updating app catalogs...");
+            command = "del \"" + fullpath + "directories.txt\"";
+            system(command.c_str());
+            command = "ren \"" + fullpath + "directories.txt.temp\" directories.txt";
+            system(command.c_str());
+        }
+        else{
+            log("directories.txt is up to date.");
+            command = "del \"" + fullpath + "directories.txt.temp\"";
+            system(command.c_str());
+        }
+
+        command = wget_exe + " -O \"" + fullpath + "updater.dat.temp\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag + quiet_cmd;
         log("Downloading updater.dat");
         system(command.c_str());
-        command = "del \"" + fullpath + "uninstallers.dat\"";
-        system(command.c_str());
+        needUpdate = fileDiffs(fullpath + "updater.dat", fullpath + "updater.dat.temp");
+        if (needUpdate) {
+            log("updater.dat has been updated. Updating pmfow-updater.exe...");
+            command = "del \"" + fullpath + "updater.dat\"";
+            system(command.c_str());
+            command = "ren \"" + fullpath + "updater.dat.temp\" updater.dat";
+            system(command.c_str());
+        }
+        else{
+            log("updater.dat is up to date.");
+            command = "del \"" + fullpath + "updater.dat.temp\"";
+            system(command.c_str());
+        }
+
         command = wget_exe + " -O \"" + fullpath + "uninstallers.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag + quiet_cmd;
         log("Downloading uninstallers.dat");
         system(command.c_str());
-        command = "del \"" + pmfowpath + "pmfow-updater.exe\"";
-        system(command.c_str());
-        command = wget_exe + " -O \"" + pmfowpath + "pmfow-updater.exe\" " + link + certFlag + quiet_cmd;
+        needUpdate = fileDiffs(fullpath + "uninstallers.dat", fullpath + "uninstallers.dat.temp");
+        if (needUpdate) {
+            log("uninstallers.dat has been updated. Updating uninstallers...");
+            command = "del \"" + fullpath + "uninstallers.dat\"";
+            system(command.c_str());
+            command = "ren \"" + fullpath + "uninstallers.dat.temp\" uninstallers.dat";
+            system(command.c_str());
+        }
+        else{
+            log("uninstallers.dat is up to date.");
+            command = "del \"" + fullpath + "uninstallers.dat.temp\"";
+            system(command.c_str());
+        }
+
+        command = wget_exe + " -O \"" + pmfowpath + "pmfow-updater.exe.temp\" " + link + certFlag + quiet_cmd;
         log("Downloading pmfow-updater.exe");
         system(command.c_str());
+        needUpdate = fileDiffs(pmfowpath + "pmfow-updater.exe", fullpath + "pmfow-updater.exe.temp");
+        if (needUpdate) {
+            log("pmfow-updater.exe has been updated. Updating pmfow-updater.exe...");
+            command = "del \"" + pmfowpath + "pmfow-updater.exe\"";
+            system(command.c_str());
+            command = "ren \"" + pmfowpath + "pmfow-updater.exe.temp\" pmfow-updater.exe";
+            system(command.c_str());
+        }
+        else{
+            log("pmfow-updater.exe is up to date.");
+            command = "del \"" + pmfowpath + "pmfow-updater.exe.temp\"";
+            system(command.c_str());
+        }
         
         if(upd_config){
             command = "del \"" + fullpath + "config.ini\"";
@@ -203,15 +294,5 @@ void updateRepositories(string link){
             log("Downloading " + version + ".dat");
             system(command.c_str());
         }
-    }
-
-    if (!onefile && architecture == "x86") {
-        // Additional file for Windows 2000
-        command = "del \"" + fullpath + "win2000.dat\"";
-        log("Deleting " + fullpath + "win2000.dat");
-        system(command.c_str());
-        command = wget_exe + " -O \"" + fullpath + "win2000.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/" + directories[1] + "/win2000.dat" + ((check_cert) ? "" : " --no-check-certificate") + quiet_cmd;
-        log("Downloading win2000.dat");
-        system(command.c_str());
     }
 }

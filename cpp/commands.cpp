@@ -241,6 +241,9 @@ string getFullWindowsVersion(){
                 case 22621: return "Windows 11 (22H2)";
                 case 22631: return "Windows 11 (23H2)";
                 case 26100: return "Windows 11 (24H2)";
+                case 26200: return "Windows 11 (25H2)";
+                case 28000: return "Windows 11 (26H1)";
+                case 26300: return "Windows 11 (26H2)";
             }
         }
         else{
@@ -285,6 +288,12 @@ string getEXEpath(){
 
 bool updateURL(string url){
     // This function checks if there is an update available
+    bool internet = checkNet();
+    if(!internet && !ignore_internet_connection){
+        cout << "Error: no internet connection. Please check your connection and try again." << endl;
+        log("Error: no internet connection. Please check your connection and try again.");
+        return false;
+    }
     string part;
     size_t startPos = url.find("/download/") + 10;
     size_t endPos = url.find('/', startPos);

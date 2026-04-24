@@ -128,12 +128,12 @@ int main(int argc, char** argv){
     else if(argc == 1){
         string message;
         if(osv.dwMajorVersion >= 5){
-            // Windows 2000 or later (command not specified)
+            // Windows XP or later (command not specified)
             message = "Error: no command specified. Usage: pmfow <command>. Use pmfow help to see what commands are supported.";
         }
         else{
-            // Windows 98 or earlier (command not specified)
-            message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
+            // Windows 2000 or earlier (command not specified)
+            message = "You're using Windows 2000 or earlier, so your OS is not supported. You need Windows XP or later to use pmfow.";
         }
         cerr << message << endl;
         log_from_main(argv, argc, message);
@@ -141,7 +141,7 @@ int main(int argc, char** argv){
         return 1;
     }
     else{
-        // Windows 98 or earlier
+        // Windows 2000 or earlier
         if(string(argv[1]) == "help" || string(argv[1]) == "h"){
             // Show help
             help();
@@ -156,7 +156,7 @@ int main(int argc, char** argv){
         }
         else{
             // Other commands are not supported in these old versions
-            string message = "You're using Windows 98/ME or earlier, so your OS is not supported. You need Windows 2000 or later to use pmfow.";
+            string message = "You're using Windows 2000 or earlier, so your OS is not supported. You need Windows XP or later to use pmfow's features.";
             cout << message << endl;
             log_from_main(argv, argc, message);
             log("Execution ended with code 1.\n");

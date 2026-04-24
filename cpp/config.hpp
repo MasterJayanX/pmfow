@@ -54,9 +54,10 @@ log_date_time: Whether to log the date and time
 upd_config: Whether to update the config file
 checkLTS: Whether to check for LTS versions
 wget_os: The version of Windows to use for wget
+ignore_internet_connection: Whether to ignore the internet connection when running the pmfow update command
 */
 string winver, fullwinver, architecture, programpath, log_file = "pmfow.log", quiet_cmd = " -q --show-progress";
-bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config, checkLTS;
+bool check_cert, onefile, unstable, silent, list_uninstall, onlyCheck, checkUpd, runasexe, is_reactos, show_url, write_to_log, log_date_time, upd_config, checkLTS, ignore_internet_connection;
 float wget_os = 0;
 bool inst_success = true;
 

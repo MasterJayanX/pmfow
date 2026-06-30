@@ -1,4 +1,4 @@
-7-zip=https://www.7-zip.org/a/7z2501.exe
+7-zip=https://www.7-zip.org/a/7z2602.exe
 aimp=https://www.aimp.ru/files/windows/builds/aimp_1.77.9.exe
 arduino=https://downloads.arduino.cc/arduino-1.0.6-windows.exe
 audacity=http://web.archive.org/web/20070124120534/http://superb-west.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.6.exe
@@ -12,6 +12,7 @@ firefox-esr=https://archive.mozilla.org/pub/firefox/releases/10.0.12esr/win32/en
 foobar2000=https://www.foobar2000.org/files/foobar2000_0.9.exe
 gimp=https://download.gimp.org/gimp/v2.4/windows/gimp-2.4.7-i686-setup.exe
 iexplore=http://download.windowsupdaterestored.com/ie/installer/ie6sp1/en/ie6setup.exe
+imgburn=https://download.imgburn.com/SetupImgBurn_2.5.8.0.exe
 inkscape=https://inkscape.org/gallery/item/8396/Inkscape-0.48.5-1-win32.exe
 irfanview=https://archive.org/download/irfanview_444/iview444_setup.exe
 java=https://web.archive.org/web/20121212180640/http://javadl.sun.com/webapps/download/AutoDL?BundleId=69512
@@ -40,4 +41,4 @@ vlc=https://download.videolan.org/pub/videolan/vlc/1.1.9/win32/vlc-1.1.9-win32.e
 winrar=https://d.winrar.es/d/111z1704832566/qKnH1SR1dg_wlLwwj_CxGg/wrar411.exe
 wlupdator=https://win2k.org/cgi-bin/dl.cgi?file=wlupdate16.cab
 
-# Version: 59 (last for Windows 2000)
+# Version: 60 (last for Windows 2000)

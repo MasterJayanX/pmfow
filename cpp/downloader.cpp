@@ -7,8 +7,6 @@
 #include <vector>
 #include "config.hpp"
 
-#pragma comment(lib, "wininet.lib")
-
 using namespace std;
 
 bool checkNet(){
@@ -54,6 +52,12 @@ bool fileDiffs(string file1, string file2){
     return false; // Files are the same
 }
 
+bool fileisEmpty(string filename){
+    // Check if a file is empty
+    ifstream file(filename);
+    return file.peek() == ifstream::traits_type::eof();
+}
+
 string getExtension(string url){
     // Get extension from URL
     string extension, arfterslash;
@@ -73,6 +77,33 @@ wstring string_to_wstring(const string& str) {
     wstring wstr(size_needed, 0);
     MultiByteToWideChar(CP_UTF8, 0, str.c_str(), -1, &wstr[0], size_needed);
     return wstr;
+}
+
+void updateFile(string fullpath, string wget_exe, string certFlag, string filename, string url){
+    // Update a file
+    string tempfile = fullpath + filename + ".temp";
+    string command = wget_exe + " -O \"" + tempfile + "\" " + url + certFlag + quiet_cmd;
+    log("Downloading " + filename);
+    system(command.c_str());
+    bool needUpdate = fileDiffs(fullpath + filename, tempfile);
+    if(fileisEmpty(fullpath + filename)){
+        log("Warning: " + filename + "is empty. The file will not be updated.");
+        command = "del \"" + tempfile + "\"";
+        system(command.c_str());
+        return;
+    }
+    if (needUpdate) {
+        log(filename + " has been updated. Updating app catalogs...");
+        command = "del \"" + fullpath + filename + "\"";
+        system(command.c_str());
+        command = "ren \"" + tempfile + "\" " + filename;
+        system(command.c_str());
+    }
+    else{
+        log(filename + " is up to date.");
+        command = "del \"" + tempfile + "\"";
+        system(command.c_str());
+    }
 }
 
 void installPackage(string package, string url, string silentinst){
@@ -147,7 +178,6 @@ vector<string> repoDirectories(){
         file.close();
     }
     else{
-        cout << "Warning: directories.txt was not found. The default directories will be used." << endl;
         log("Warning: directories.txt was not found. The default directories will be used.");
         directories[0] = "64%20bit";
         directories[1] = "32%20bit";
@@ -178,6 +208,7 @@ void updateRepositories(string link){
         log("Error: your Windows version not supported.");
         return;
     }
+
     if(wget_os == 5.1 || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
         wget_exe = "wget_xp";
     }
@@ -186,7 +217,7 @@ void updateRepositories(string link){
     }
     vector<string> directories = repoDirectories();
     string certFlag = (check_cert) ? "" : " --no-check-certificate";
-    string architectureFolder = (architecture == "x64") ? directories[0] : directories[1];
+    string architectureFolder = (architecture == "x64" || architecture == "x86_64") ? directories[0] : directories[1];
     string versionFile = (architectureFolder + "/" + file_winver + ".dat");
 
     bool internet = checkNet();
@@ -207,75 +238,10 @@ void updateRepositories(string link){
             return;
         }
     } else {
-        bool needUpdate = false;
-
-        command = wget_exe + " -O \"" + fullpath + "directories.txt.temp\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt" + certFlag + quiet_cmd;
-        log("Downloading directories.txt");
-        system(command.c_str());
-        needUpdate = fileDiffs(fullpath + "directories.txt", fullpath + "directories.txt.temp");
-        if (needUpdate) {
-            log("directories.txt has been updated. Updating app catalogs...");
-            command = "del \"" + fullpath + "directories.txt\"";
-            system(command.c_str());
-            command = "ren \"" + fullpath + "directories.txt.temp\" directories.txt";
-            system(command.c_str());
-        }
-        else{
-            log("directories.txt is up to date.");
-            command = "del \"" + fullpath + "directories.txt.temp\"";
-            system(command.c_str());
-        }
-
-        command = wget_exe + " -O \"" + fullpath + "updater.dat.temp\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat" + certFlag + quiet_cmd;
-        log("Downloading updater.dat");
-        system(command.c_str());
-        needUpdate = fileDiffs(fullpath + "updater.dat", fullpath + "updater.dat.temp");
-        if (needUpdate) {
-            log("updater.dat has been updated. Updating pmfow-updater.exe...");
-            command = "del \"" + fullpath + "updater.dat\"";
-            system(command.c_str());
-            command = "ren \"" + fullpath + "updater.dat.temp\" updater.dat";
-            system(command.c_str());
-        }
-        else{
-            log("updater.dat is up to date.");
-            command = "del \"" + fullpath + "updater.dat.temp\"";
-            system(command.c_str());
-        }
-
-        command = wget_exe + " -O \"" + fullpath + "uninstallers.dat\" https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat" + certFlag + quiet_cmd;
-        log("Downloading uninstallers.dat");
-        system(command.c_str());
-        needUpdate = fileDiffs(fullpath + "uninstallers.dat", fullpath + "uninstallers.dat.temp");
-        if (needUpdate) {
-            log("uninstallers.dat has been updated. Updating uninstallers...");
-            command = "del \"" + fullpath + "uninstallers.dat\"";
-            system(command.c_str());
-            command = "ren \"" + fullpath + "uninstallers.dat.temp\" uninstallers.dat";
-            system(command.c_str());
-        }
-        else{
-            log("uninstallers.dat is up to date.");
-            command = "del \"" + fullpath + "uninstallers.dat.temp\"";
-            system(command.c_str());
-        }
-
-        command = wget_exe + " -O \"" + pmfowpath + "pmfow-updater.exe.temp\" " + link + certFlag + quiet_cmd;
-        log("Downloading pmfow-updater.exe");
-        system(command.c_str());
-        needUpdate = fileDiffs(pmfowpath + "pmfow-updater.exe", fullpath + "pmfow-updater.exe.temp");
-        if (needUpdate) {
-            log("pmfow-updater.exe has been updated. Updating pmfow-updater.exe...");
-            command = "del \"" + pmfowpath + "pmfow-updater.exe\"";
-            system(command.c_str());
-            command = "ren \"" + pmfowpath + "pmfow-updater.exe.temp\" pmfow-updater.exe";
-            system(command.c_str());
-        }
-        else{
-            log("pmfow-updater.exe is up to date.");
-            command = "del \"" + pmfowpath + "pmfow-updater.exe.temp\"";
-            system(command.c_str());
-        }
+        updateFile(fullpath, wget_exe, certFlag, "updater.dat", "https://raw.githubusercontent.com/MasterJayanX/pmfow/main/updater.dat");
+        updateFile(fullpath, wget_exe, certFlag, "directories.txt", "https://raw.githubusercontent.com/MasterJayanX/pmfow/main/directories.txt");
+        updateFile(fullpath, wget_exe, certFlag, "uninstallers.dat", "https://raw.githubusercontent.com/MasterJayanX/pmfow/main/uninstallers.dat");
+        updateFile(pmfowpath, wget_exe, certFlag, "pmfow-updater.exe", link);
         
         if(upd_config){
             command = "del \"" + fullpath + "config.ini\"";

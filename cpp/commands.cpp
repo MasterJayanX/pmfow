@@ -332,10 +332,7 @@ string chooseRandom(repo r){
     Sleep(1000);
     ifstream file;
     string fullpath = programpath + "\\files\\";
-    if(winver == "Windows 2000"){
-        file.open(fullpath + "win2000.dat");
-    }
-    else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+    if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
         file.open(fullpath + "winxp.dat");
     }
     else if(winver == "Windows Vista"){
@@ -463,7 +460,7 @@ void install(char** argv, int argc){
             log("All packages installed successfully.");
         }
         else{
-            log("" + to_string(remaining) + " packages failed to install.");
+            log("" + to_string(remaining) + " package(s) failed to install.");
         }
     }
 }
@@ -510,6 +507,7 @@ void update(){
     }
     else{
         cout << "Updating catalogs...\n";
+        Sleep(500);
     }
     string url, pmfow;
     repo r(winver, "loadUpdater");
@@ -741,23 +739,15 @@ void about(int majorVersion, int minorVersion, int build){
     log(programversion);
     cout << "Made by MasterJayanX" << endl;
     cout << "This program is licensed under the GNU GPL 3 License. See LICENSE for more information." << endl;
-    cout << "GitHub repository: https://github.com/MasterJayanX/pmfow" << endl;
-    cout << "Path: " << programpath << endl;
+    cout << "GitHub Repository: https://github.com/MasterJayanX/pmfow" << endl;
+    cout << "Installation Path: " << programpath << endl;
     cout << "Windows Version: " << fullwinver << " (" << majorVersion << "." << minorVersion << "." << build << ")" << endl;
     log("Windows Version: " + fullwinver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
-    if(winver == "Windows 2000"){
-        cout << "Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).\n";
-        log("Warning: Windows 2000 will stop being supported in the next release of pmfow (0.5.x).");
-    }
-    else if(winver == "Windows XP" && spnum < 3){
-        cout << "Warning: Windows XP without Service Pack 3 will stop being supported in the next release of pmfow (0.5.x).\n";
-        log("Warning: Windows XP without Service Pack 3 will stop being supported in the next release of pmfow (0.5.x).");
-    }
     cout << "Architecture: " << architecture << endl;
     log("Architecture: " + architecture);
-    if(majorVersion < 5){
-        cout << "Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.\n";
-        log("Warning: You are using an unsupported version of Windows. You need Windows 2000 or later to use pmfow.");
+    if(majorVersion < 5){ // Windows 2000 or earlier are not supported due to technical issues
+        cout << "Warning: You are using an unsupported version of Windows. You need Windows XP or later to use pmfow.\n";
+        log("Warning: You are using an unsupported version of Windows. You need Windows XP or later to use pmfow.");
     }
     if(checkUpd){
         string pmfow;
@@ -816,16 +806,13 @@ int checkFlags(int argc, char** argv){
                 if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update" && string(argv[1]) != "search" && string(argv[1]) != "list")){
                     string message = "Usage: pmfow install <package> --force-os <os> / pmfow update --force-os <os>";
                     cout << message << endl;
-                    cout << "Valid options: 2000, xp, vista, 7, 8, 8.1, 10\n";
+                    cout << "Valid options: xp, vista, 7, 8, 8.1, 10\n";
                     log(message);
                     success = 0;
                     return success;
                 }
                 else{
-                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
-                        winver = "Windows 2000";
-                    }
-                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                    if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
                         winver = "Windows XP";
                     }
                     else if(string(argv[i+1]) == "vista" || string(argv[i+1]) == "Vista" || string(argv[i+1]) == "WinVista" || string(argv[i+1]) == "winvista"){
@@ -840,7 +827,7 @@ int checkFlags(int argc, char** argv){
                     else if(string(argv[i+1]) == "8.1" || string(argv[i+1]) == "Win8.1" || string(argv[i+1]) == "win8.1"){
                         winver = "Windows 8.1";
                     }
-                    else if(string(argv[i+1]) == "10" || string(argv[i+1]) == "Win10" || string(argv[i+1]) == "win10"){
+                    else if(string(argv[i+1]) == "10" || string(argv[i+1]) == "Win10" || string(argv[i+1]) == "win10" || string(argv[i+1]) == "11" || string(argv[i+1]) == "Win11" || string(argv[i+1]) == "win11"){
                         winver = "Windows 10";
                     }
                     else{
@@ -866,15 +853,12 @@ int checkFlags(int argc, char** argv){
             if(string(argv[i]) == "-w" || string(argv[i]) == "--wget-version"){
                 if(argc < i+1 || (string(argv[1]) != "install" && string(argv[1]) != "update")){
                     cout << "Usage: pmfow install --wget-version <os>\n";
-                    cout << "Valid options: 2000, xp, win\n";
+                    cout << "Valid options: xp, win\n";
                     success = 0;
                     return success;
                 }
                 else{
-                    if(string(argv[i+1]) == "2000" || string(argv[i+1]) == "Win2000" || string(argv[i+1]) == "win2000"){
-                        wget_os = 5.0;
-                    }
-                    else if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
+                    if(string(argv[i+1]) == "xp" || string(argv[i+1]) == "XP" || string(argv[i+1]) == "WinXP" || string(argv[i+1]) == "winxp"){
                         wget_os = 5.1;
                     }
                     else if(string(argv[i+1]) == "standard" || string(argv[i+1]) == "win" || string(argv[i+1]) == "Win"){
@@ -882,7 +866,7 @@ int checkFlags(int argc, char** argv){
                     }
                     else{
                         cout << "Usage: pmfow install --wget-version <os>\n";
-                        cout << "Valid options: 2000, xp, win\n";
+                        cout << "Valid options: xp, win\n";
                         success = 0;
                         return success;
                     }

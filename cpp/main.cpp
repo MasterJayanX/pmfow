@@ -21,12 +21,14 @@ int main(int argc, char** argv){
     minorVersion = osv.dwMinorVersion;
     build = osv.dwBuildNumber;
     service_pack = osv.szCSDVersion;
+    
     winver = getWindowsVersion();
     fullwinver = getFullWindowsVersion();
     architecture = getArchitecture();
     programpath = getEXEpath();
-    if(osv.dwMajorVersion >= 5 && argc > 1){
-        // Windows 2000 or later
+
+    if((osv.dwMajorVersion >= 6 || (osv.dwMajorVersion == 5 && osv.dwMinorVersion >= 1)) && argc > 1){
+        // Windows XP or later
         loadConfig();
         if(string(argv[1]) == "install" || string(argv[1]) == "i"){
             // Install package
@@ -125,9 +127,10 @@ int main(int argc, char** argv){
             log_from_main(argv, argc, "Invalid command. Use pmfow help to see what commands are supported.\n");
         }
     }
+
     else if(argc == 1){
         string message;
-        if(osv.dwMajorVersion >= 5){
+        if((osv.dwMajorVersion >= 6) || (osv.dwMajorVersion == 5 && osv.dwMinorVersion >= 1)){
             // Windows XP or later (command not specified)
             message = "Error: no command specified. Usage: pmfow <command>. Use pmfow help to see what commands are supported.";
         }
@@ -140,6 +143,7 @@ int main(int argc, char** argv){
         log("Execution ended with code 1.\n");
         return 1;
     }
+
     else{
         // Windows 2000 or earlier
         if(string(argv[1]) == "help" || string(argv[1]) == "h"){
@@ -156,7 +160,7 @@ int main(int argc, char** argv){
         }
         else{
             // Other commands are not supported in these old versions
-            string message = "You're using Windows 2000 or earlier, so your OS is not supported. You need Windows XP or later to use pmfow's features.";
+            string message = "You're using Windows 2000 or earlier, so your OS is not supported. You need Windows XP or later to use pmfow's main features.";
             cout << message << endl;
             log_from_main(argv, argc, message);
             log("Execution ended with code 1.\n");

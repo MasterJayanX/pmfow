@@ -67,12 +67,12 @@ bool inst_success = true;
 int majorVersion, minorVersion, build, spnum;
 wchar_t* service_pack;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 4, patch = 5;
+int major = 0, minor = 5, patch = 0;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);
 // programversion is the full version of pmfow, including the compile date
-string programversion = "Package Manager for Old Windows v" + ver + " LTS " + COMPILE_DATE;
+string programversion = "Package Manager for Old Windows v" + ver + " " + COMPILE_DATE;
 bool configExists = true;
 
 class Config {

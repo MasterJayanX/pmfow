@@ -25,13 +25,13 @@ pmfow (Package Manager for Old Windows) is a program that allows you to install 
 - An internet connection
 
 **Recommended requirements**
-- A Pentium or better CPU.
+- A Pentium 4 or better CPU (32-bit) / A Core 2 Duo or better CPU (64-bit).
 - 512 MB of RAM (needed to run versions of Windows newer than XP) or enough RAM to use a web browser.
 - At least 300 MB of storage available
 - A good internet connection (good enough to download somewhat large files).
 
 ### Software requirements
-pmfow will run in most versions of Windows from Windows 2000 onwards. Note: some versions of Windows might require you to download [this update](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
+pmfow will run in most versions of Windows from Windows XP onwards. Note: some versions of Windows might require you to download [this update](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
 
 **This is the list of fully supported versions:**
 
@@ -44,10 +44,9 @@ pmfow will run in most versions of Windows from Windows 2000 onwards. Note: some
 
 **This is the list of partially supported versions:**
 
-- Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's repository are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
+- Windows 10: Windows 10 is partially supported, as most of the packages on Windows 10's app catalog are the same packages as the ones for Windows 8/8.1. For Windows 10 and 11, use winget instead.
 - Windows 11 for the same reason as Windows 10.
-- Windows 2000: Limited selection of packages available for this version of Windows and you can only use it with an old version of wget, which may not work correctly.
-- ReactOS: It will run, but certain applications that can be installed with pmfow will not work by default.
+- ReactOS: It will run, but certain applications that can be installed with pmfow will not work by default (for example: Supermium).
 
 ## Installation
 To install pmfow, you need to follow these steps:
@@ -79,21 +78,33 @@ If you are using the install, uninstall, update, list or search commands, you ca
 
 ## Compiling
 ### Requirements
-- Having the g++ compiler installed on your Windows computer (you can install it with MinGW). For Linux users, you will need to install `mingw-w64` and replace `g++` with `x86_64-w64-mingw32-g++` or `i686-w64-mingw32-g++`.
+- Having the g++ compiler installed on your Windows computer (you can install it with MinGW). For Linux users, you will need to install `mingw-w64`.
+- Having the GNU Make component installed (can be installed through MinGW on Windows and through your default package manager on your Linux distribution).
 
-To compile this program yourself, you need to download the .cpp files and save them in the same directory. Alternatively, you can download the repository files using the following command on a terminal window: `git clone https://github.com/MasterJayanX/pmfow`. 
-Then, you have to open a terminal window and compile the main.cpp file with the following command: `g++ main.cpp -o output.exe -Wall` (you can replace output with any name you want).
+### Procedure
+1. Clone the GitHub repository and move to its directory with the following commands:
+`git clone https://github.com/MasterJayanX/pmfow && cd pmfow`
+2. Go to the cpp folder and compile the program using the provided Makefile:
+`cd cpp && make default`
+3. Move the executable (named `pmfow.exe` by default) to a new directory and copy the following DLL files from MinGW\bin to the same directory:
+ - libgcc_s_dw2-1.dll
+ - libstdc++-6.dll
+ - libwinpthread-1.dll
+
+These correspond to important library files that pmfow uses to function.
 
 ## Limitations and known issues
 pmfow is in an early stage of development, so you can expect some things to not be working as they should. Some of the limitations it has right now are:
-- The repositories currently have a very limited selection of software.
-- The update command doesn't work correctly on Windows 2000 due to SSL limitations. This also affects other downloads.
+- The app catalogs currently have a very limited selection of software.
+- The update command doesn't work correctly on Windows 2000 due to SSL and TLS limitations. This also affects other downloads.
 
 If you find any issues with pmfow, open an issue in the Issues section and I will check it.
 
 ## FAQ (Frequently Asked Questions)
 ### What versions of Windows are supported?
-As I said above, pmfow works on the following Windows versions: Windows 2000, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11 and their server equivalents. It should also work on ReactOS and Linux with Wine, but I haven't tested those yet.
+As I said above, pmfow works on the following Windows versions: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11 and their server equivalents. It should also work on ReactOS and Linux with Wine, but I haven't tested those yet.
+
+Windows 2000 is also compatible, but only with versions up to 0.4.x.
 ### What applications can I install with pmfow?
 You can find the full list of applications that can be installed in the [Software List](https://github.com/MasterJayanX/pmfow/wiki/Software-List).
 ### Does pmfow work on Windows 9x?

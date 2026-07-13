@@ -25,13 +25,13 @@ pmfow (Package Manager for Old Windows) es un programa que te permite instalar a
 - Una conexión a internet
 
 **Requisitos recomendados**
-- Un procesador Pentium o mejor.
+- Un procesador Pentium o mejor (32-bit) / Un procesador Core 2 Duo o mejor (64-bit).
 - 512 MB de RAM (necesarios para ejecutar versiones de Windows más nuevas que XP) o suficiente RAM para usar un navegador web.
 - Al menos 300 MB de almacenamiento disponibles.
 - Una buena conexión a internet (lo suficiente para descargar archivos más o menos pesados).
 
 ### Requisitos de software
-pmfow funciona en la mayoría de las versiones de Windows desde Windows 2000 en adelante. Nota: En algunas versiones de Windows puede que sea necesario instalar [esta actualización](https://support.microsoft.com/es-es/topic/actualizaci%C3%B3n-del-entorno-en-tiempo-de-ejecuci%C3%B3n-de-c-universal-en-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
+pmfow funciona en la mayoría de las versiones de Windows desde Windows XP en adelante. Nota: En algunas versiones de Windows puede que sea necesario instalar [esta actualización](https://support.microsoft.com/es-es/topic/actualizaci%C3%B3n-del-entorno-en-tiempo-de-ejecuci%C3%B3n-de-c-universal-en-windows-c0514201-7fe6-95a3-b0a5-287930f3560c).
 
 **Esta es la lista de versiones completamente compatibles:**
 
@@ -45,8 +45,7 @@ pmfow funciona en la mayoría de las versiones de Windows desde Windows 2000 en 
 **Esta es la lista de versiones parcialmente compatibles:**
 
 - Windows 10: Windows 10 es parcialmente compatible, ya que la mayoría de los paquetes en el repositorio de Windows 10 son los mismos paquetes que los de Windows 8/8.1. Para Windows 10 y 11, es mejor usar winget.
-- Windows 2000: Selección limitada de paquetes disponibles para esta versión de Windows y solo se puede usar con una versión antigua de wget, que puede no funcionar correctamente.
-- ReactOS: Funcionará, pero ciertas aplicaciones que se pueden instalar con pmfow no funcionarán por defecto.
+- ReactOS: Funcionará, pero ciertas aplicaciones que se pueden instalar con pmfow no funcionarán por defecto (por ejemplo: Supermium).
 
 ## Instalación
 Para instalar pmfow, debes seguir estos pasos:
@@ -79,9 +78,19 @@ Si estás utilizando los comandos install, uninstall, update, list o search, pue
 ## Compilación
 ### Requisitos
 - Tener el compilador g++ instalado en un computador con Windows (puedes instalarlo con MinGW). Para usuarios de Linux, necesitarás instalar `mingw-w64` y reemplazar `g++` con `x86_64-w64-mingw32-g++` o `i686-w64-mingw32-g++`.
+- Tener el componente GNU Make instalado (puede instalarse a través de MinGW en Windows o a través del gestor de paquetes de tu distribución Linux).
 
-Para compilar este programa tú mismo, debes descargar los archivos .cpp y guardarlos en el mismo directorio. Alternativamente, puedes descargar los archivos del repositorio usando el siguiente comando en una ventana de terminal: `git clone https://github.com/MasterJayanX/pmfow`. 
-Luego, debes abrir una ventana de terminal y compilar el archivo main.cpp con el siguiente comando: `g++ main.cpp -o output.exe -Wall` (puedes reemplazar output con el nombre que desees).
+### Procedimiento
+1. Clona el repositorio de GitHub y dirígete al directorio creado:
+`git clone https://github.com/MasterJayanX/pmfow && cd pmfow`
+2. Dirígete al directorio cpp y usa el archivo Makefile para compilar el programa:
+`cd cpp && make default`
+3. Mueve el ejecutable (llamado `pmfow.exe` por defecto) a un nuevo directorio y copia los archivos DLL de MinGW\bin al nuevo directorio:
+ - libgcc_s_dw2-1.dll
+ - libstdc++-6.dll
+ - libwinpthread-1.dll
+
+Estos corresponden a librerías importantes que pmfow necesita para funcionar.
 
 ## Limitaciones y problemas conocidos
 pmfow está en una etapa temprana de desarrollo, por lo que puedes esperar que algunas cosas no funcionen como deberían. Algunas de las limitaciones que tiene en este momento son:

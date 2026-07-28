@@ -113,7 +113,7 @@ void installPackage(string package, string url, string silentinst){
     extension = getExtension(url);
     filename = package + extension;
     fullpath += filename;
-    if(wget_os == 5.1 || ((winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003") && wget_os == 0)){
+    if(wget_os == 5.1 || ((winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "ReactOS") && wget_os == 0)){
         wget_exe = "wget_xp";
     }
     else{
@@ -188,7 +188,7 @@ vector<string> repoDirectories(){
 void updateRepositories(string link){
     // Update app catalogs
     string command, file_winver, wget_exe = "wget", fullpath = programpath + "\\files\\", pmfowpath = programpath + "\\";
-    if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
+    if(winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "ReactOS"){
         file_winver = "winxp";
     }
     else if(winver == "Windows Vista"){
@@ -209,7 +209,7 @@ void updateRepositories(string link){
         return;
     }
 
-    if(wget_os == 5.1 || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "ReactOS"){
+    if(wget_os == 5.1 || winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "ReactOS"){
         wget_exe = "wget_xp";
     }
     else{

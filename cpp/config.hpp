@@ -67,7 +67,7 @@ bool inst_success = true;
 int majorVersion, minorVersion, build, spnum;
 wchar_t* service_pack;
 // major, minor, patch are used to get the pmfow version
-int major = 0, minor = 5, patch = 0;
+int major = 0, minor = 5, patch = 1;
 int altmajor, altminor, altpatch;
 // version is the version of pmfow with the major, minor, and patch variables
 string ver = to_string(major) + "." + to_string(minor) + "." + to_string(patch);

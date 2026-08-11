@@ -47,7 +47,7 @@ private:
         if(os == "Windows 2000"){
             file.open(fullpath + "win2000.dat");
         }
-        else if(os == "Windows XP" || os == "Windows XP Professional x64/Windows Server 2003" || os == "ReactOS"){
+        else if(os == "Windows XP" || os == "Windows XP Professional x64" || os == "Windows Server 2003" || os == "ReactOS"){
             file.open(fullpath + "winxp.dat");
         }
         else if(os == "Windows Vista"){
@@ -164,7 +164,7 @@ string getWindowsVersion(){
         }
     }
     else if(majorVersion == 5 && minorVersion == 0){
-        winver = "Windows 2000";
+        winver = "Windows 2000 (unsupported)";
     }
     else if(majorVersion == 5 && (minorVersion == 1)){
         winver = "Windows XP";
@@ -174,7 +174,12 @@ string getWindowsVersion(){
             winver = "ReactOS";
         }
         else{
-            winver = "Windows XP Professional x64/Windows Server 2003";
+            if(architecture == "x64"){
+                winver = "Windows XP Professional x64";
+            }
+            else{
+                winver = "Windows Server 2003";
+            }
         }
     }
     else if(majorVersion == 6 && minorVersion == 0){
@@ -207,7 +212,7 @@ string getWindowsVersion(){
 }
 
 string getFullWindowsVersion(){
-    if((winver == "Windows 2000" || winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003" || winver == "Windows Vista" || winver == "Windows 7") && service_pack != NULL){
+    if((winver == "Windows 2000" || winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "Windows Vista" || winver == "Windows 7") && service_pack != NULL){
         string sp = wchar_to_string(service_pack);
         if(sp == ""){
             return winver;
@@ -326,13 +331,13 @@ bool updateURL(string url){
 }
 
 string chooseRandom(repo r){
-    // This function chooses a random package
-    cout << "Choosing a random package...\n";
-    log("Choosing a random package...");
+    // This function chooses a random application
+    cout << "Choosing a random application...\n";
+    log("Choosing a random application...");
     Sleep(1000);
     ifstream file;
     string fullpath = programpath + "\\files\\";
-    if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+    if(winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "ReactOS"){
         file.open(fullpath + "winxp.dat");
     }
     else if(winver == "Windows Vista"){
@@ -348,15 +353,15 @@ string chooseRandom(repo r){
         file.open(fullpath + "win10.dat");
     }
     else{
-        cout << "Invalid OS.\n";
-        log("Invalid OS.");
-        return "Invalid OS";
+        cout << "Invalid Operating System.\n";
+        log("Invalid Operating System.");
+        return "Invalid Operating System";
     }
 
     if (!file.is_open()) {
-        cerr << "Repository not found" << endl;
-        log("Repository not found.");
-        return "Repository not found";
+        cerr << "App catalog not found" << endl;
+        log("App catalog not found.");
+        return "App catalog not found";
     }
     string line, finalLine;
     vector<string> packages;
@@ -395,21 +400,21 @@ void install(char** argv, int argc){
         int remaining = counter;
         for(int i = 2; i < argc; i++){
             if(string(argv[i]) == "random"){
-                cout << "Installing a random package...\n";
+                cout << "Installing a random application...\n";
                 repo r(winver, "loadRepo");
                 string packagename = chooseRandom(r);
-                cout << "The random package is " << packagename << ".\n";
-                log("The random package is " + packagename + ".");
+                cout << "The random app is " << packagename << ".\n";
+                log("The random app is " + packagename + ".");
                 cout << "Installing " << packagename << "...\n";
                 log("Installing " + packagename + "...");
                 repo s(winver, "loadSilent");
                 string url = r.repos(packagename);
-                if(r.repos(packagename) == "Package not found"){
-                    cout << "Package not found.\n";
-                    log("Package not found. The installation of " + packagename + " failed.");
+                if(r.repos(packagename) == "Application not found"){
+                    cout << "Application not found.\n";
+                    log("Application not found. The installation of " + packagename + " failed.");
                     return;
                 }
-                if(s.repos(packagename) == "Package not found"){
+                if(s.repos(packagename) == "Application not found"){
                     silent = false;
                 }
                 cout << url << endl;
@@ -419,20 +424,20 @@ void install(char** argv, int argc){
                 break;
             }
             else{
-                cout << "Installing " << argv[i] << "...\n";
-                log("Installing " + string(argv[i]) + "...");
+                string packagename = string(argv[i]);
+                cout << "Installing " << packagename << "...\n";
+                log("Installing " + packagename + "...");
                 repo r(winver, "loadRepo");
                 repo s(winver, "loadSilent");
-                if(r.repos(argv[i]) == "Package not found"){
-                    cout << "Package not found.\n";
-                    log("Package not found. The installation of " + string(argv[i]) + " failed.");
+                if(r.repos(argv[i]) == "Application not found"){
+                    cout << "Application not found.\n";
+                    log("Application not found. The installation of " + packagename + " failed.");
                     return;
                 }
-                if(s.repos(argv[i]) == "Package not found"){
+                if(s.repos(argv[i]) == "Application not found"){
                     silent = false;
                 }
                 string url = r.repos(argv[i]);
-                string packagename = string(argv[i]);
                 cout << url << endl;
                 installPackage(packagename, url, s.repos(argv[i]));
             }
@@ -478,7 +483,7 @@ void uninstall(char** argv, int argc){
         for(int i = 2; i < argc; i++){
             cout << "Uninstalling " << argv[2] << "...\n";
             repo r(winver, "loadUninstaller");
-            if(r.repos(argv[i]) == "Package not found"){
+            if(r.repos(argv[i]) == "Application not found"){
                 cout << argv[i] << "The uninstaller for the specified software could not be found. " << argv[i] << " is either not installed or is installed in a different directory.\n";
                 log("The uninstaller for the specified software could not be found. " + string(argv[i]) + " is either not installed or is installed in a different directory.");
                 return;
@@ -567,7 +572,7 @@ void list(){
     if(winver == "Windows 2000"){
         file.open(fullpath + "win2000.dat");
     }
-    else if(winver == "Windows XP" || winver == "Windows XP Professional x64/Windows Server 2003"){
+    else if(winver == "Windows XP" || winver == "Windows XP Professional x64" || winver == "Windows Server 2003" || winver == "ReactOS"){
         file.open(fullpath + "winxp.dat");
     }
     else if(winver == "Windows Vista"){
@@ -583,8 +588,8 @@ void list(){
         file.open(fullpath + "win10.dat");
     }
     else{
-        cout << "Invalid OS.\n";
-        log("Invalid OS.");
+        cout << "Invalid Operating System.\n";
+        log("Invalid Operating System.");
         return;
     }
     if (!file.is_open()) {
@@ -618,7 +623,7 @@ void list(){
 
 void listUninstall(){
     // This function lists all the packages that can be uninstalled
-    cout << "Listing all packages...\n";
+    cout << "Listing all packages that can be uninstalled...\n";
     Sleep(1000);
     ifstream file;
     string fullpath = programpath + "\\files\\";
@@ -745,7 +750,7 @@ void about(int majorVersion, int minorVersion, int build){
     log("Windows Version: " + fullwinver + " (" + to_string(majorVersion) + "." + to_string(minorVersion) + "." + to_string(build) + ")");
     cout << "Architecture: " << architecture << endl;
     log("Architecture: " + architecture);
-    if(majorVersion < 5){ // Windows 2000 or earlier are not supported due to technical issues
+    if(majorVersion < 5 || (majorVersion == 5 && minorVersion < 1)){ // Windows 2000 or earlier are not supported due to technical issues
         cout << "Warning: You are using an unsupported version of Windows. You need Windows XP or later to use pmfow.\n";
         log("Warning: You are using an unsupported version of Windows. You need Windows XP or later to use pmfow.");
     }

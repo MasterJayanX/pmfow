@@ -75,5 +75,5 @@ vivaldi=/silent
 vlc=/L=1033 /S
 vscode=/silent
 vscodium=/silent
-winscp=/S
 winrar=/S
+winscp=/S
